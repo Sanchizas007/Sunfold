@@ -118,7 +118,7 @@ swift Tools/make-appicon.swift Design/app-icon-source.png Sunfold/Assets.xcasset
 
 ## Что осталось сделать до сабмита
 
-Полный список — в [docs/APP-STORE.md](docs/APP-STORE.md). Коротко, это всё
+Порядок подключения покупок — в [docs/RUNBOOK.md](docs/RUNBOOK.md), полный чек-лист сабмита — в [docs/APP-STORE.md](docs/APP-STORE.md). Коротко, это всё
 внешние действия, кода они не касаются:
 
 1. Аккаунт Apple Developer ($99)
