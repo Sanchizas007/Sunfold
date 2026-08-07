@@ -97,7 +97,7 @@ SUNFOLD PRO
 Free forever: the 16:8 schedule and the last seven days of history. Pro unlocks
 every schedule, unlimited history, charts, the metabolic phases and widgets.
 
-$4.99/month, $24.99/year, or $49.99 once.
+$2.99/month, $14.99/year, or $34.99 once.
 
 Payment is charged to your Apple ID. Subscriptions renew automatically unless
 cancelled at least 24 hours before the period ends, and can be managed in App

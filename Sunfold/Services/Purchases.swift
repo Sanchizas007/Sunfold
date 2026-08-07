@@ -14,7 +14,7 @@ nonisolated struct SunfoldProduct: Identifiable, Equatable, Sendable {
     var term: Term
     /// Already localised and currency-formatted by StoreKit.
     var displayPrice: String
-    /// "$2.08 / month" for the yearly plan — nil when there is nothing to
+    /// "$1.25 / month" for the yearly plan — nil when there is nothing to
     /// compare against.
     var perMonthPrice: String?
     /// Percent saved against the monthly plan, for the yearly badge.
@@ -192,12 +192,12 @@ final class UnconfiguredPurchaseProvider: PurchaseProviding, @unchecked Sendable
             SunfoldProduct(
                 id: StoreIDs.yearly,
                 term: .yearly,
-                displayPrice: "$24.99",
-                perMonthPrice: "$2.08",
+                displayPrice: "$14.99",
+                perMonthPrice: "$1.25",
                 savingsPercent: 58
             ),
-            SunfoldProduct(id: StoreIDs.monthly, term: .monthly, displayPrice: "$4.99"),
-            SunfoldProduct(id: StoreIDs.lifetime, term: .lifetime, displayPrice: "$49.99")
+            SunfoldProduct(id: StoreIDs.monthly, term: .monthly, displayPrice: "$2.99"),
+            SunfoldProduct(id: StoreIDs.lifetime, term: .lifetime, displayPrice: "$34.99")
         ]
     }
 

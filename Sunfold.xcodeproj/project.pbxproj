@@ -11,6 +11,16 @@
 		5013A0000000000000000102 /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = 5013A0000000000000000112 /* RevenueCat */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		5013A00000000000000000F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5013A00000000000000000A1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5013A00000000000000000D2;
+			remoteInfo = SunfoldWidgets;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		5013A00000000000000000E4 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -37,10 +47,26 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		5013A00000000000000000C1 /* Shared */ = {isa = PBXFileSystemSynchronizedRootGroup; path = Shared; sourceTree = "<group>"; };
-		5013A00000000000000000C2 /* Sunfold */ = {isa = PBXFileSystemSynchronizedRootGroup; path = Sunfold; sourceTree = "<group>"; };
-		5013A00000000000000000C3 /* SunfoldWidgets */ = {isa = PBXFileSystemSynchronizedRootGroup; path = SunfoldWidgets; sourceTree = "<group>"; };
-		5013A00000000000000000C4 /* SunfoldTests */ = {isa = PBXFileSystemSynchronizedRootGroup; path = SunfoldTests; sourceTree = "<group>"; };
+		5013A00000000000000000C1 /* Shared */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		5013A00000000000000000C2 /* Sunfold */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Sunfold;
+			sourceTree = "<group>";
+		};
+		5013A00000000000000000C3 /* SunfoldWidgets */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = SunfoldWidgets;
+			sourceTree = "<group>";
+		};
+		5013A00000000000000000C4 /* SunfoldTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = SunfoldTests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -277,16 +303,6 @@
 			targetProxy = 5013A00000000000000000F2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXContainerItemProxy section */
-		5013A00000000000000000F2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5013A00000000000000000A1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5013A00000000000000000D2;
-			remoteInfo = SunfoldWidgets;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin XCBuildConfiguration section */
 		5013A0000000000000000131 /* Debug */ = {

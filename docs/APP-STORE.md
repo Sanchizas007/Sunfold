@@ -70,8 +70,9 @@ RevenueCat.
 - [ ] Создать offering `default` и три пакета, привязанных к продуктам ниже
 - [ ] Загрузить App Store Connect API-ключ в RevenueCat (иначе не будет валидации)
 
-Пока ключ пустой, приложение показывает пейвол, но покупка возвращает ошибку
-«магазин не подключён». Ничего не разблокируется по ошибке.
+Пока ключ пустой: debug-сборка покупает через `Config/Sunfold.storekit` (ничего
+не списывается), release-сборка честно отказывается продавать. Ничего не
+разблокируется по ошибке ни в одном случае. Подробности — в [RUNBOOK.md](RUNBOOK.md).
 
 ---
 
@@ -82,9 +83,9 @@ RevenueCat.
 
 | Продукт | ID | Тип | Цена |
 |---|---|---|---|
-| Sunfold Pro Monthly | `app.sunfold.pro.monthly` | Auto-renewable, группа `sunfold_pro` | $4.99 |
-| Sunfold Pro Yearly | `app.sunfold.pro.yearly` | Auto-renewable, та же группа | $24.99 |
-| Sunfold Pro Lifetime | `app.sunfold.pro.lifetime` | Non-consumable | $49.99 |
+| Sunfold Pro Monthly | `app.sunfold.pro.monthly` | Auto-renewable, группа `sunfold_pro` | $2.99 |
+| Sunfold Pro Yearly | `app.sunfold.pro.yearly` | Auto-renewable, та же группа | $14.99 |
+| Sunfold Pro Lifetime | `app.sunfold.pro.lifetime` | Non-consumable | $34.99 |
 
 Для каждого — локализованные название и описание на en/uk/ru и скриншот ревью.
 
@@ -133,8 +134,10 @@ RevenueCat.
 ## 7. Метаданные и материалы
 
 - [ ] Скриншоты **6.9″** (1320×2868) — единственный обязательный размер для
-      iPhone-only приложения. 5 штук: таймер в процессе, фазы, история со
-      стриком, вес, пейвол.
+      iPhone-only приложения. 5–6 штук: таймер до старта, таймер в процессе,
+      история со стриком, настройки, вес, фазы.
+      **Пейвол и цены не показывать** — решение владельца: цены меняются, а
+      каждое изменение скриншота требует нового ревью.
 - [ ] Три локализации метаданных: en-US, uk, ru
 - [ ] Название, подзаголовок и ключевые слова — в [ASO.md](ASO.md)
 - [ ] Support URL: `https://sunfold.app/support`

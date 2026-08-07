@@ -5,7 +5,7 @@
   ],
   "products" : [
     {
-      "displayPrice" : "49.99",
+      "displayPrice" : "34.99",
       "familyShareable" : false,
       "internalID" : "6001000001",
       "localizations" : [
@@ -46,7 +46,7 @@
           "codeOffers" : [
 
           ],
-          "displayPrice" : "4.99",
+          "displayPrice" : "2.99",
           "familyShareable" : false,
           "groupNumber" : 1,
           "internalID" : "6001000002",
@@ -71,7 +71,7 @@
           "codeOffers" : [
 
           ],
-          "displayPrice" : "24.99",
+          "displayPrice" : "14.99",
           "familyShareable" : false,
           "groupNumber" : 1,
           "internalID" : "6001000003",
