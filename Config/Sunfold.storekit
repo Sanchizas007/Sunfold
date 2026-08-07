@@ -1,0 +1,99 @@
+{
+  "identifier" : "A1B2C3D4",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "49.99",
+      "familyShareable" : false,
+      "internalID" : "6001000001",
+      "localizations" : [
+        {
+          "description" : "Every schedule, unlimited history, charts, phases and widgets. One payment, no renewal.",
+          "displayName" : "Sunfold Pro — Lifetime",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "app.sunfold.pro.lifetime",
+      "referenceName" : "Sunfold Pro Lifetime",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {
+    "_applicationInternalID" : "6001000000",
+    "_developerTeamID" : "SUNFOLDDEV",
+    "_failTransactionsEnabled" : false,
+    "_lastSynchronizedDate" : 776000000,
+    "_locale" : "en_US",
+    "_storefront" : "USA",
+    "_storeKitErrors" : [
+
+    ]
+  },
+  "subscriptionGroups" : [
+    {
+      "id" : "5001000001",
+      "localizations" : [
+
+      ],
+      "name" : "Sunfold Pro",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "4.99",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "6001000002",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "Every schedule, unlimited history, charts, phases and widgets.",
+              "displayName" : "Sunfold Pro — Monthly",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "app.sunfold.pro.monthly",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "Sunfold Pro Monthly",
+          "subscriptionGroupID" : "5001000001",
+          "type" : "RecurringSubscription"
+        },
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "24.99",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "6001000003",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "Every schedule, unlimited history, charts, phases and widgets. Best value.",
+              "displayName" : "Sunfold Pro — Yearly",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "app.sunfold.pro.yearly",
+          "recurringSubscriptionPeriod" : "P1Y",
+          "referenceName" : "Sunfold Pro Yearly",
+          "subscriptionGroupID" : "5001000001",
+          "type" : "RecurringSubscription"
+        }
+      ]
+    }
+  ],
+  "version" : {
+    "major" : 4,
+    "minor" : 0
+  }
+}

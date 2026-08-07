@@ -32,36 +32,64 @@ extension View {
 nonisolated struct PrimaryButtonStyle: ButtonStyle {
     var tint: LinearGradient?
 
+    // The body lives in a nested view so it can read `isEnabled`: a
+    // `ButtonStyle` cannot see the environment itself, which is why a
+    // `.disabled()` button styled this way used to look perfectly tappable.
     func makeBody(configuration: Configuration) -> some View {
-        configuration.label
-            .font(Typography.cardTitle)
-            .foregroundStyle(Palette.onAccent)
-            .frame(maxWidth: .infinity)
-            .padding(.vertical, 16)
-            .background {
-                if let tint {
-                    RoundedRectangle(cornerRadius: Metrics.controlRadius).fill(tint)
-                } else {
-                    RoundedRectangle(cornerRadius: Metrics.controlRadius).fill(Palette.accentDeep)
+        StyledLabel(configuration: configuration, tint: tint)
+    }
+
+    nonisolated private struct StyledLabel: View {
+        @Environment(\.isEnabled) private var isEnabled
+        let configuration: Configuration
+        let tint: LinearGradient?
+
+        var body: some View {
+            configuration.label
+                .font(Typography.cardTitle)
+                .foregroundStyle(Palette.onAccent)
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 16)
+                .background {
+                    if let tint {
+                        RoundedRectangle(cornerRadius: Metrics.controlRadius).fill(tint)
+                    } else {
+                        RoundedRectangle(cornerRadius: Metrics.controlRadius)
+                            .fill(Palette.accentDeep)
+                    }
                 }
-            }
-            .opacity(configuration.isPressed ? 0.82 : 1)
-            .scaleEffect(configuration.isPressed ? 0.98 : 1)
-            .animation(.easeOut(duration: 0.12), value: configuration.isPressed)
+                .opacity(opacity)
+                .scaleEffect(configuration.isPressed ? 0.98 : 1)
+                .animation(.easeOut(duration: 0.12), value: configuration.isPressed)
+        }
+
+        private var opacity: Double {
+            if !isEnabled { return 0.4 }
+            return configuration.isPressed ? 0.82 : 1
+        }
     }
 }
 
 nonisolated struct SecondaryButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
-        configuration.label
-            .font(Typography.cardTitle)
-            .foregroundStyle(Palette.ink)
-            .frame(maxWidth: .infinity)
-            .padding(.vertical, 16)
-            .background(Palette.surfaceAlt, in: .rect(cornerRadius: Metrics.controlRadius))
-            .opacity(configuration.isPressed ? 0.82 : 1)
-            .scaleEffect(configuration.isPressed ? 0.98 : 1)
-            .animation(.easeOut(duration: 0.12), value: configuration.isPressed)
+        StyledLabel(configuration: configuration)
+    }
+
+    nonisolated private struct StyledLabel: View {
+        @Environment(\.isEnabled) private var isEnabled
+        let configuration: Configuration
+
+        var body: some View {
+            configuration.label
+                .font(Typography.cardTitle)
+                .foregroundStyle(Palette.ink)
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 16)
+                .background(Palette.surfaceAlt, in: .rect(cornerRadius: Metrics.controlRadius))
+                .opacity(isEnabled ? (configuration.isPressed ? 0.82 : 1) : 0.4)
+                .scaleEffect(configuration.isPressed ? 0.98 : 1)
+                .animation(.easeOut(duration: 0.12), value: configuration.isPressed)
+        }
     }
 }
 

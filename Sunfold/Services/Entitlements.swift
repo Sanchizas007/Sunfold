@@ -24,23 +24,39 @@ final class Entitlements {
     private(set) var isPro = false
     private(set) var products: [SunfoldProduct] = []
     private(set) var isWorking = false
+    /// True while the first product fetch is in flight.
+    private(set) var isLoadingProducts = false
+    /// True once a fetch has finished and come back with nothing. Distinguishes
+    /// "still loading" from "the store did not answer", so the paywall can offer
+    /// a retry instead of spinning forever on a bad connection.
+    private(set) var productsUnavailable = false
     /// Set when a purchase or restore failed for a reason worth showing.
     var errorMessage: String?
-    /// True when the build has no store key, so the paywall can say so instead
-    /// of silently failing.
-    let isStoreConfigured: Bool
+    /// Which billing path this build is using, so the paywall can say so.
+    let storeKind: StoreKind
 
     init(settings: AppSettings = .shared) {
         self.settings = settings
         let key = Bundle.main.object(forInfoDictionaryKey: "RCPublicAPIKey") as? String ?? ""
         let trimmed = key.trimmingCharacters(in: .whitespacesAndNewlines)
 
-        if trimmed.isEmpty {
-            provider = UnconfiguredPurchaseProvider()
-            isStoreConfigured = false
-        } else {
+        if !trimmed.isEmpty {
             provider = RevenueCatProvider(apiKey: trimmed)
-            isStoreConfigured = true
+            storeKind = .revenueCat
+        } else {
+            #if DEBUG
+            // No key yet — buy straight through StoreKit against the local
+            // configuration file so the flow stays testable before the Apple
+            // Developer account exists.
+            provider = StoreKitProvider()
+            storeKind = .localTesting
+            #else
+            // A release build with no key must not sell anything: RevenueCat is
+            // what records the sale, and a purchase it never sees is a purchase
+            // that cannot be restored or supported.
+            provider = UnconfiguredPurchaseProvider()
+            storeKind = .unconfigured
+            #endif
         }
         provider.configure()
         AccessStore.hasFullAccess = hasFullAccess
@@ -89,12 +105,17 @@ final class Entitlements {
         isPro = await provider.isProActive()
         publishAccess()
         if products.isEmpty {
-            products = await provider.loadProducts()
+            await loadProducts()
         }
     }
 
     func loadProducts() async {
-        products = await provider.loadProducts()
+        isLoadingProducts = true
+        defer { isLoadingProducts = false }
+
+        let loaded = await provider.loadProducts()
+        products = loaded
+        productsUnavailable = loaded.isEmpty
     }
 
     @discardableResult

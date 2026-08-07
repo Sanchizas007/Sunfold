@@ -415,6 +415,29 @@
         }
       }
     },
+    "common.retry": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Try again"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Спробувати ще раз"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Попробовать снова"
+          }
+        }
+      }
+    },
     "common.save": {
       "extractionState": "manual",
       "localizations": {
@@ -2338,6 +2361,29 @@
         }
       }
     },
+    "paywall.localStore": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Local test build: purchases run against a StoreKit configuration file. Nothing is charged."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Локальна тестова збірка: покупки йдуть через конфігурацію StoreKit. Гроші не списуються."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Локальная тестовая сборка: покупки идут через конфигурацию StoreKit. Деньги не списываются."
+          }
+        }
+      }
+    },
     "paywall.manage": {
       "extractionState": "manual",
       "localizations": {
@@ -2725,6 +2771,52 @@
           "stringUnit": {
             "state": "translated",
             "value": "Sunfold Pro"
+          }
+        }
+      }
+    },
+    "paywall.unavailable.body": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Check your connection and try again. Everything you have already recorded is unaffected."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Перевірте з'єднання і спробуйте ще раз. Усе, що ви вже записали, у безпеці."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Проверьте соединение и попробуйте снова. Всё, что вы уже записали, в порядке."
+          }
+        }
+      }
+    },
+    "paywall.unavailable.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prices could not be loaded"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Не вдалося завантажити ціни"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Не удалось загрузить цены"
           }
         }
       }

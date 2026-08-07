@@ -132,17 +132,33 @@ struct PaywallScreen: View {
 
     @ViewBuilder
     private var plans: some View {
-        if entitlements.products.isEmpty {
-            ProgressView()
-                .tint(Palette.accent)
-                .frame(maxWidth: .infinity)
-                .padding(.vertical, 24)
-        } else {
+        if !entitlements.products.isEmpty {
             VStack(spacing: 10) {
                 ForEach(entitlements.products) { product in
                     planCard(product)
                 }
             }
+        } else if entitlements.isLoadingProducts {
+            ProgressView()
+                .tint(Palette.accent)
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 24)
+        } else if entitlements.productsUnavailable {
+            // The store did not answer — almost always no connection. Spinning
+            // forever here would look like a broken app rather than a broken
+            // network, and leave the user with nothing to do about it.
+            VStack(spacing: 12) {
+                EmptyStateView(
+                    symbol: "wifi.exclamationmark",
+                    title: "paywall.unavailable.title",
+                    message: "paywall.unavailable.body"
+                )
+                Button("common.retry") {
+                    Task { await entitlements.loadProducts() }
+                }
+                .buttonStyle(SecondaryButtonStyle())
+            }
+            .card()
         }
     }
 
@@ -226,7 +242,12 @@ struct PaywallScreen: View {
 
     private var purchaseSection: some View {
         VStack(spacing: 12) {
-            if !entitlements.isStoreConfigured {
+            switch entitlements.storeKind {
+            case .revenueCat:
+                EmptyView()
+            case .localTesting:
+                DisclaimerNote(text: "paywall.localStore", symbol: "hammer")
+            case .unconfigured:
                 DisclaimerNote(text: "paywall.notConfigured", symbol: "wrench.and.screwdriver")
             }
 

@@ -248,8 +248,9 @@ struct OnboardingScreen: View {
                 }
             }
             .buttonStyle(PrimaryButtonStyle(tint: .fasting))
+            // The style dims disabled buttons itself now; a manual opacity here
+            // would stack on top of it and fade the button almost away.
             .disabled(page == 1 && !acknowledgedHealthNotice)
-            .opacity(page == 1 && !acknowledgedHealthNotice ? 0.5 : 1)
         }
         .padding(.horizontal, Metrics.screenPadding)
         .padding(.bottom, 20)

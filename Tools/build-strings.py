@@ -36,6 +36,7 @@ STRINGS = {
     "common.edit": ("Edit", "Змінити", "Изменить"),
     "common.ok": ("OK", "Гаразд", "Хорошо"),
     "common.save": ("Save", "Зберегти", "Сохранить"),
+    "common.retry": ("Try again", "Спробувати ще раз", "Попробовать снова"),
 
     # -- Timer ----------------------------------------------------------------
     "timer.caption.elapsed": ("Fasting", "Голодування", "Голодание"),
@@ -480,6 +481,21 @@ STRINGS = {
         "Purchases are not available in this build.",
         "Покупки недоступні в цій збірці.",
         "Покупки недоступны в этой сборке.",
+    ),
+    "paywall.unavailable.title": (
+        "Prices could not be loaded",
+        "Не вдалося завантажити ціни",
+        "Не удалось загрузить цены",
+    ),
+    "paywall.unavailable.body": (
+        "Check your connection and try again. Everything you have already recorded is unaffected.",
+        "Перевірте з'єднання і спробуйте ще раз. Усе, що ви вже записали, у безпеці.",
+        "Проверьте соединение и попробуйте снова. Всё, что вы уже записали, в порядке.",
+    ),
+    "paywall.localStore": (
+        "Local test build: purchases run against a StoreKit configuration file. Nothing is charged.",
+        "Локальна тестова збірка: покупки йдуть через конфігурацію StoreKit. Гроші не списуються.",
+        "Локальная тестовая сборка: покупки идут через конфигурацию StoreKit. Деньги не списываются.",
     ),
     "paywall.notConfigured": (
         "Development build: the store is not connected, so nothing can be purchased here.",

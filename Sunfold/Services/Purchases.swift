@@ -53,6 +53,20 @@ nonisolated enum StoreIDs {
     static let yearly = "app.sunfold.pro.yearly"
     static let lifetime = "app.sunfold.pro.lifetime"
     static let entitlement = "pro"
+
+    static let all: Set<String> = [monthly, yearly, lifetime]
+}
+
+/// Which billing path the running build is using. The paywall says so plainly
+/// when it is not the real one, so a purchase made against a local
+/// configuration file can never be mistaken for a real sale.
+nonisolated enum StoreKind {
+    /// Production: RevenueCat, configured with a real key.
+    case revenueCat
+    /// Debug only: StoreKit 2 against `Config/Sunfold.storekit`. Nothing is charged.
+    case localTesting
+    /// No key and no local configuration — the paywall renders but refuses to sell.
+    case unconfigured
 }
 
 final class RevenueCatProvider: PurchaseProviding, @unchecked Sendable {
