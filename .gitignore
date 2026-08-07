@@ -1,0 +1,24 @@
+# Xcode
+build/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+*.xcscmblueprint
+*.xccheckout
+*.moved-aside
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Swift Package Manager — the resolved file is intentionally kept so the
+# RevenueCat version is pinned for every machine that builds this.
+.swiftpm/xcode/xcuserdata/
+.build/
+
+# macOS
+.DS_Store
+
+# Local secrets. The RevenueCat publishable key lives in Config/Solura-Info.plist
+# and is safe to commit; anything genuinely secret belongs here.
+*.local.xcconfig

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!--
+	  Solura collects nothing itself: no account, no analytics, no advertising,
+	  no server. The only third party in the binary is the RevenueCat SDK, which
+	  ships its own privacy manifest declaring purchase history and a device
+	  identifier; Apple aggregates that with this file, so it is not repeated
+	  here.
+	-->
+
+	<key>NSPrivacyTracking</key>
+	<false/>
+
+	<key>NSPrivacyTrackingDomains</key>
+	<array/>
+
+	<key>NSPrivacyCollectedDataTypes</key>
+	<array/>
+
+	<key>NSPrivacyAccessedAPITypes</key>
+	<array>
+		<dict>
+			<key>NSPrivacyAccessedAPIType</key>
+			<string>NSPrivacyAccessedAPICategoryUserDefaults</string>
+			<key>NSPrivacyAccessedAPITypeReasons</key>
+			<array>
+				<!-- Settings and the widget snapshot are read and written in an
+				     App Group shared with the Solura widget extension. -->
+				<string>1C8F.1</string>
+				<!-- Same data, read from the app's own defaults when the App
+				     Group container is unavailable. -->
+				<string>CA92.1</string>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>

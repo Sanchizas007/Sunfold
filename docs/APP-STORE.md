@@ -1,0 +1,174 @@
+# Чек-лист сабмита Solura
+
+Всё, что нужно закрыть до первой отправки в App Store Review. Разбито на то, что
+**уже сделано в коде**, и то, что **нужно сделать руками** в порталах Apple и
+RevenueCat.
+
+---
+
+## 1. Что уже закрыто в коде
+
+| Требование | Где |
+|---|---|
+| Privacy manifest приложения | `Solura/PrivacyInfo.xcprivacy` |
+| Privacy manifest расширения | `SoluraWidgets/PrivacyInfo.xcprivacy` |
+| Required-reason API (UserDefaults, App Group) | Причины `1C8F.1` и `CA92.1` |
+| `ITSAppUsesNonExemptEncryption = false` | `Config/Solura-Info.plist` — вопрос про экспорт не будет задаваться на каждой сборке |
+| Launch screen | `UILaunchScreen` + цвет `LaunchBackground` |
+| Категория приложения | `public.app-category.healthcare-fitness` |
+| Live Activities | `NSSupportsLiveActivities = true` |
+| Медицинский дисклеймер | Онбординг (обязательное подтверждение), `HealthDisclaimerScreen`, экран фаз |
+| Политика приватности внутри бинарника | `PrivacyPolicyScreen` — ссылка работает даже если сайт лежит |
+| Terms of Use (EULA) | Ссылка на стандартный EULA Apple, `Legal.termsURL` |
+| Restore Purchases | Тулбар пейвола + футер |
+| Раскрытие автопродления | Прямо над кнопкой покупки, `paywall.terms.subscription` |
+| Lifetime помечен как разовый платёж | `paywall.plan.lifetime.detail` |
+| Ссылка на управление подпиской | `paywall.manage` → `apps.apple.com/account/subscriptions` |
+| Удаление всех данных | Настройки → Удалить все данные |
+| Экспорт данных (CSV) | Настройки → Экспорт в CSV |
+| Офлайн-работа | Сеть нужна только для покупки; всё остальное локально |
+| Запрос уведомлений в нужный момент | Не на запуске, а при старте первого голодания |
+| Локализации | en, uk, ru — по три поля ключей ASO |
+
+**Guideline 1.4.1 (вред здоровью).** Это главный риск для приложений про
+голодание, поэтому сделано с запасом:
+- максимум своего интервала — 48 часов, жёстко в `CustomFastLimits`;
+- при цели от 24 часов — алерт с предложением сначала сходить к врачу, до старта;
+- во время долгого голодания на экране висит напоминание остановиться при
+  недомогании;
+- отдельный раздел про расстройства пищевого поведения в дисклеймере;
+- фазы метаболизма описаны с оговорками («считается», «приблизительно»), с
+  постоянным уведомлением, что это не медицинская информация;
+- нигде нет целевого веса, «правильного» веса, ИМТ и осуждающих формулировок;
+  прерванное голодание в истории показывается нейтрально, без красного.
+
+---
+
+## 2. Apple Developer Portal
+
+- [ ] Аккаунт Apple Developer, $99/год. **Известный риск:** у украинских
+      разработчиков бывают отказы авторизации платежа картой Payoneer — держите
+      запасную карту.
+- [ ] App ID `app.solura` — включить **App Groups**
+- [ ] App ID `app.solura.widgets` — включить **App Groups**
+- [ ] Создать App Group `group.app.solura` и привязать к обоим App ID
+- [ ] Указать Team в настройках обоих таргетов (сейчас пусто — для симулятора не
+      нужно, для устройства обязательно)
+
+> Push-нотификации, HealthKit, Sign in with Apple и associated domains **не
+> нужны** — приложение их не использует. Не включайте лишние capability: каждая
+> добавляет вопросы на ревью.
+
+---
+
+## 3. RevenueCat
+
+- [ ] Создать проект, добавить приложение iOS с bundle ID `app.solura`
+- [ ] Скопировать **публичный** ключ (`appl_...`) в `RCPublicAPIKey` в
+      `Config/Solura-Info.plist`. Он публикуемый, в бинарнике лежать безопасно.
+- [ ] Создать entitlement с идентификатором ровно `pro`
+- [ ] Создать offering `default` и три пакета, привязанных к продуктам ниже
+- [ ] Загрузить App Store Connect API-ключ в RevenueCat (иначе не будет валидации)
+
+Пока ключ пустой, приложение показывает пейвол, но покупка возвращает ошибку
+«магазин не подключён». Ничего не разблокируется по ошибке.
+
+---
+
+## 4. App Store Connect: покупки
+
+Идентификаторы должны совпадать с `StoreIDs` в `Solura/Services/Purchases.swift`
+символ в символ.
+
+| Продукт | ID | Тип | Цена |
+|---|---|---|---|
+| Solura Pro Monthly | `app.solura.pro.monthly` | Auto-renewable, группа `solura_pro` | $4.99 |
+| Solura Pro Yearly | `app.solura.pro.yearly` | Auto-renewable, та же группа | $24.99 |
+| Solura Pro Lifetime | `app.solura.pro.lifetime` | Non-consumable | $49.99 |
+
+Для каждого — локализованные название и описание на en/uk/ru и скриншот ревью.
+
+> **Про «7 дней»**: это НЕ introductory offer StoreKit, а локальный период
+> полного доступа с первого запуска. Поэтому нигде в интерфейсе он не назван
+> «бесплатным пробным периодом подписки» — иначе это было бы заявление о
+> подписке, которого нет в конфигурации продукта. Если позже захотите настоящий
+> intro offer, добавьте его в App Store Connect и уберите локальный период.
+
+---
+
+## 5. App Privacy (ответы в App Store Connect)
+
+Само приложение не собирает ничего. Но в бинарнике есть SDK RevenueCat, поэтому
+честные ответы такие — **не отвечайте «Data Not Collected»**:
+
+| Категория | Собирается | Связано с личностью | Для трекинга | Назначение |
+|---|---|---|---|---|
+| Purchases → Purchase History | Да | Нет | Нет | App Functionality |
+| Identifiers → User ID | Да | Нет | Нет | App Functionality |
+| Identifiers → Device ID | Да | Нет | Нет | App Functionality |
+
+Всё остальное — нет. Tracking — **нет**, ATT-промпт не нужен.
+
+- [ ] Privacy Policy URL: `https://solura.app/privacy` (обязательное поле)
+- [ ] Опубликовать текст политики по этому адресу. Готовый текст — в приложении,
+      `Tools/build-strings.py`, ключи `privacy.*`, на трёх языках.
+
+---
+
+## 6. Возрастной рейтинг
+
+- Medical/Treatment Information: **Infrequent/Mild** (описание фаз метаболизма)
+- Всё остальное: None
+- Ожидаемый результат — 12+
+
+Не ставьте 4+: приложение прямо адресовано взрослым и в дисклеймере говорит, что
+не предназначено для лиц младше 18 без наблюдения врача.
+
+---
+
+## 7. Метаданные и материалы
+
+- [ ] Скриншоты **6.9″** (1320×2868) — единственный обязательный размер для
+      iPhone-only приложения. 5 штук: таймер в процессе, фазы, история со
+      стриком, вес, пейвол.
+- [ ] Три локализации метаданных: en-US, uk, ru
+- [ ] Название, подзаголовок и ключевые слова — в [ASO.md](ASO.md)
+- [ ] Support URL: `https://solura.app/support`
+- [ ] Marketing URL (необязательно)
+- [ ] Промо-текст (170 символов, меняется без ревью)
+
+---
+
+## 8. Заметка для ревьюера
+
+Скопировать в поле App Review Information → Notes:
+
+> Solura is an offline intermittent fasting timer. There is no account and no
+> sign-in, so no demo credentials are needed — all features are reachable
+> immediately after the onboarding.
+>
+> The app opens with seven days of full access. To review the paywall before
+> that period ends, tap the badge in the top-right corner of the Timer tab, or
+> Settings → Solura Pro.
+>
+> The app is not a medical device and makes no diagnostic or treatment claims.
+> A health notice must be acknowledged during onboarding before the app can be
+> used, and it remains available in Settings → Health notice. Metabolic phase
+> descriptions are presented as approximate, educational information with a
+> standing disclaimer. Fasts longer than 24 hours show an additional advisory to
+> consult a doctor before starting, and custom fasts are capped at 48 hours.
+>
+> All data stays on the device. The only network calls are made by the RevenueCat
+> SDK to validate purchases.
+
+---
+
+## 9. Перед нажатием Submit
+
+- [ ] Собрать Release и прогнать на **живом устройстве**, не только на симуляторе
+      (App Groups и Live Activity на устройстве ведут себя иначе, чем в симуляторе)
+- [ ] Проверить покупку в песочнице: покупка, восстановление, отмена
+- [ ] Проверить, что ссылки на политику и EULA открываются
+- [ ] Проверить виджет и Live Activity на устройстве
+- [ ] Проверить приложение в трёх языках (Настройки iOS → Solura → Язык)
+- [ ] Поднять `CURRENT_PROJECT_VERSION` перед каждой загрузкой
