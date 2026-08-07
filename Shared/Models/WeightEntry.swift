@@ -52,11 +52,24 @@ nonisolated enum WeightUnit: String, CaseIterable, Codable, Identifiable, Sendab
         }
     }
 
-    /// Plausible human range, used to bound the picker and reject typos.
+    /// The plausible human range, in kilograms. The single source of truth for
+    /// both units.
+    private static let kilogramRange: ClosedRange<Double> = 25...350
+
+    /// Plausible human range in this unit, used to bound the picker and reject
+    /// typos.
+    ///
+    /// Derived from `kilogramRange` rather than written out twice: hand-written
+    /// bounds drifted apart once already, leaving the pound range unable to
+    /// express the top of the kilogram one.
     var range: ClosedRange<Double> {
         switch self {
-        case .kilograms: 25...350
-        case .pounds: 55...770
+        case .kilograms:
+            return Self.kilogramRange
+        case .pounds:
+            let lower = (Self.kilogramRange.lowerBound * Self.poundsPerKilogram).rounded(.down)
+            let upper = (Self.kilogramRange.upperBound * Self.poundsPerKilogram).rounded(.up)
+            return lower...upper
         }
     }
 

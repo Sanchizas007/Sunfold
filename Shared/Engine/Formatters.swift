@@ -1,5 +1,18 @@
 import Foundation
 
+/// Anchors localisation to the bundle this code is compiled into.
+///
+/// `String(localized:)` defaults to `Bundle.main`, which is right in the app and
+/// in the widget extension but wrong in a unit-test bundle, where `Bundle.main`
+/// is the test runner and every lookup would silently return the key instead of
+/// the translation. Resolving through a type defined here always finds the
+/// bundle that actually carries the string catalog.
+private final class BundleMarker {}
+
+extension Bundle {
+    nonisolated static let sunfold = Bundle(for: BundleMarker.self)
+}
+
 nonisolated enum DurationFormat {
     /// "14:23:07" — the big number on the timer. Monospaced digits in the view
     /// keep it from jittering as the seconds tick.
@@ -18,18 +31,22 @@ nonisolated enum DurationFormat {
         let hours = total / 3600
         let minutes = (total % 3600) / 60
         if hours == 0 {
-            return String(format: String(localized: "duration.minutes"), minutes)
+            return String(format: String(localized: "duration.minutes", bundle: .sunfold), minutes)
         }
         if minutes == 0 {
-            return String(format: String(localized: "duration.hours"), hours)
+            return String(format: String(localized: "duration.hours", bundle: .sunfold), hours)
         }
-        return String(format: String(localized: "duration.hoursMinutes"), hours, minutes)
+        return String(
+            format: String(localized: "duration.hoursMinutes", bundle: .sunfold),
+            hours,
+            minutes
+        )
     }
 
     /// "16h" — used where space is tightest (widget, ring caption).
     static func hoursOnly(_ seconds: TimeInterval) -> String {
         String(
-            format: String(localized: "duration.hours"),
+            format: String(localized: "duration.hours", bundle: .sunfold),
             Int((max(0, seconds) / 3600).rounded())
         )
     }

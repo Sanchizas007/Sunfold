@@ -28,6 +28,7 @@
 /* Begin PBXFileReference section */
 		5013A00000000000000000B1 /* Sunfold.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sunfold.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5013A00000000000000000B2 /* SunfoldWidgets.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SunfoldWidgets.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		5013A00000000000000000B3 /* SunfoldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SunfoldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5013A0000000000000000141 /* Sunfold-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Sunfold-Info.plist"; sourceTree = "<group>"; };
 		5013A0000000000000000142 /* Sunfold.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sunfold.entitlements; sourceTree = "<group>"; };
 		5013A0000000000000000143 /* SunfoldWidgets-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SunfoldWidgets-Info.plist"; sourceTree = "<group>"; };
@@ -38,6 +39,7 @@
 		5013A00000000000000000C1 /* Shared */ = {isa = PBXFileSystemSynchronizedRootGroup; path = Shared; sourceTree = "<group>"; };
 		5013A00000000000000000C2 /* Sunfold */ = {isa = PBXFileSystemSynchronizedRootGroup; path = Sunfold; sourceTree = "<group>"; };
 		5013A00000000000000000C3 /* SunfoldWidgets */ = {isa = PBXFileSystemSynchronizedRootGroup; path = SunfoldWidgets; sourceTree = "<group>"; };
+		5013A00000000000000000C4 /* SunfoldTests */ = {isa = PBXFileSystemSynchronizedRootGroup; path = SunfoldTests; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5013A00000000000000000E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -66,6 +75,7 @@
 				5013A00000000000000000C1 /* Shared */,
 				5013A00000000000000000C2 /* Sunfold */,
 				5013A00000000000000000C3 /* SunfoldWidgets */,
+				5013A00000000000000000C4 /* SunfoldTests */,
 				5013A00000000000000000A3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -75,6 +85,7 @@
 			children = (
 				5013A00000000000000000B1 /* Sunfold.app */,
 				5013A00000000000000000B2 /* SunfoldWidgets.appex */,
+				5013A00000000000000000B3 /* SunfoldTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -142,6 +153,29 @@
 			productReference = 5013A00000000000000000B2 /* SunfoldWidgets.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		5013A00000000000000000D3 /* SunfoldTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5013A0000000000000000124 /* Build configuration list for PBXNativeTarget "SunfoldTests" */;
+			buildPhases = (
+				5013A00000000000000000E8 /* Sources */,
+				5013A00000000000000000E9 /* Frameworks */,
+				5013A00000000000000000EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				5013A00000000000000000C1 /* Shared */,
+				5013A00000000000000000C4 /* SunfoldTests */,
+			);
+			name = SunfoldTests;
+			packageProductDependencies = (
+			);
+			productName = SunfoldTests;
+			productReference = 5013A00000000000000000B3 /* SunfoldTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -181,6 +215,7 @@
 			targets = (
 				5013A00000000000000000D1 /* Sunfold */,
 				5013A00000000000000000D2 /* SunfoldWidgets */,
+				5013A00000000000000000D3 /* SunfoldTests */,
 			);
 		};
 /* End PBXProject section */
@@ -200,6 +235,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5013A00000000000000000EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -211,6 +253,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		5013A00000000000000000E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5013A00000000000000000E8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -415,6 +464,34 @@
 			};
 			name = Release;
 		};
+		5013A0000000000000000137 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.sunfold.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		5013A0000000000000000138 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.sunfold.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -441,6 +518,15 @@
 			buildConfigurations = (
 				5013A0000000000000000135 /* Debug */,
 				5013A0000000000000000136 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5013A0000000000000000124 /* Build configuration list for PBXNativeTarget "SunfoldTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5013A0000000000000000137 /* Debug */,
+				5013A0000000000000000138 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
