@@ -82,6 +82,23 @@ xcodebuild -exportLocalizations -project Solura.xcodeproj -localizationPath /tmp
 
 и сравнить список ключей из `/tmp/loc/en.xcloc` с таблицей `STRINGS` в скрипте.
 
+## Проверить на своём iPhone
+
+Скачать файл и поставить нельзя — в iOS нет аналога APK. Два рабочих пути
+(бесплатно из Xcode по кабелю, либо TestFlight после оплаты $99) с пошаговыми
+инструкциями и подвохом про App Groups — в
+[docs/TEST-ON-DEVICE.md](docs/TEST-ON-DEVICE.md).
+
+## Иконка
+
+Исходник художника лежит в `Design/app-icon-source.png` — это скруглённый квадрат
+с чёрными углами. Иконка для App Store должна быть полноразмерным квадратом без
+скруглений и без альфа-канала (маску накладывает сама iOS). Пересобрать:
+
+```bash
+swift Tools/make-appicon.swift Design/app-icon-source.png Solura/Assets.xcassets/AppIcon.appiconset/AppIcon.png
+```
+
 ## Что осталось сделать до сабмита
 
 Полный список — в [docs/APP-STORE.md](docs/APP-STORE.md). Коротко, это всё
