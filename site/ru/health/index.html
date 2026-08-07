@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Предупреждение — Sunfold</title>
+    <meta name="description" content="Sunfold отслеживает, когда вы едите. Она ничего не знает о вашем здоровье и не диагностирует, не лечит и не советует.">
+    <link rel="canonical" href="https://sunfold.app/ru/health/">
+    <link rel="alternate" hreflang="en" href="https://sunfold.app/health/">
+    <link rel="alternate" hreflang="uk" href="https://sunfold.app/uk/health/">
+    <link rel="alternate" hreflang="ru" href="https://sunfold.app/ru/health/">
+    <link rel="alternate" hreflang="x-default" href="https://sunfold.app/health/">
+    <style>
+:root {
+  --canvas: #FBF5EE; --surface: #FFFCF8; --ink: #3B2E27;
+  --ink-2: #8B7668; --ink-3: #AE9C8D; --line: #EADCCC; --accent: #B75E3D;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --canvas: #211B18; --surface: #2C2421; --ink: #F5EBE1;
+    --ink-2: #B09C8E; --ink-3: #87766B; --line: #40352F; --accent: #F2A883;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 0 20px 64px; background: var(--canvas); color: var(--ink);
+  font: 17px/1.65 ui-rounded, -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+.wrap { max-width: 680px; margin: 0 auto; }
+header { display: flex; flex-wrap: wrap; gap: 12px; align-items: baseline;
+  justify-content: space-between; padding: 28px 0 8px; }
+.brand { font-weight: 700; font-size: 20px; color: var(--ink); text-decoration: none; }
+nav a { color: var(--ink-2); text-decoration: none; margin-left: 14px; font-size: 15px; }
+nav a:hover { color: var(--accent); }
+h1 { font-size: clamp(28px, 6vw, 38px); line-height: 1.2; margin: 28px 0 12px; }
+h2 { font-size: 20px; margin: 32px 0 8px; }
+.lede { color: var(--ink-2); font-size: 19px; }
+p { margin: 0 0 14px; color: var(--ink-2); }
+h2 + p { margin-top: 0; }
+a { color: var(--accent); }
+.card { background: var(--surface); border: 1px solid var(--line);
+  border-radius: 20px; padding: 20px 22px; margin: 22px 0; }
+.langs { margin: 28px 0 0; font-size: 15px; }
+.langs a { margin-right: 12px; }
+.langs .on { color: var(--ink-3); text-decoration: none; }
+footer { margin-top: 44px; padding-top: 20px; border-top: 1px solid var(--line);
+  color: var(--ink-3); font-size: 14px; }
+.button { display: inline-block; background: var(--accent); color: #fff;
+  padding: 12px 20px; border-radius: 14px; text-decoration: none; font-weight: 600; }
+@media (prefers-color-scheme: dark) { .button { color: #211B18; } }
+</style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <a class="brand" href="/ru/">Sunfold</a>
+        <nav><a href="/ru/privacy/">Конфиденциальность</a><a href="/ru/health/">Предупреждение</a><a href="/ru/terms/">Условия</a><a href="/ru/support/">Поддержка</a></nav>
+      </header>
+      <h1>Sunfold — это таймер, а не врач</h1>
+      <p class="lede">Sunfold отслеживает, когда вы едите. Она ничего не знает о вашем здоровье и не диагностирует, не лечит и не советует.</p>
+      <h2>Это не медицинский совет</h2>
+      <p>Всё в Sunfold, включая фазы метаболизма, — общая образовательная информация. Это не диагноз, не план лечения и не рекомендация лично для вас.</p>
+      <h2>Сначала посоветуйтесь с врачом</h2>
+      <p>Обратитесь к врачу перед голоданием, если вы беременны или кормите грудью, вам меньше 18 лет, у вас диабет или вы принимаете лекарства, влияющие на уровень сахара, принимаете любые лекарства, которые надо пить с едой, имеете недостаточный вес или хроническое заболевание.</p>
+      <h2>Остановитесь, если плохо</h2>
+      <p>Головокружение, слабость, спутанность сознания, учащённое сердцебиение или необычная вялость — повод поесть и обратиться за медицинской помощью. Никакая серия этого не стоит.</p>
+      <h2>Если с едой сложно</h2>
+      <p>Если у вас есть или было расстройство пищевого поведения, или если отслеживание еды вызывает тревогу, приложение для голодания может ухудшить состояние. Сначала поговорите с врачом или службой поддержки в вашей стране.</p>
+      <h2>О фазах</h2>
+      <p>Часы для каждой фазы метаболизма — приблизительные ориентиры из общих исследований. Что происходит на самом деле, зависит от последнего приёма пищи, активности, сна и вашего организма. Воспринимайте это как приблизительную карту, а не измерение.</p>
+      <p class="langs"><a href="/health/">EN</a> <a href="/uk/health/">UK</a> <span class="on">RU</span></p>
+      <footer>© 2026 Sunfold · <a href="mailto:support@sunfold.app">support@sunfold.app</a></footer>
+    </div>
+  </body>
+</html>

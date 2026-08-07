@@ -89,6 +89,23 @@ xcodebuild -exportLocalizations -project Sunfold.xcodeproj -localizationPath /tm
 инструкциями и подвохом про App Groups — в
 [docs/TEST-ON-DEVICE.md](docs/TEST-ON-DEVICE.md).
 
+## Сайт с политиками
+
+App Store требует публичный URL политики приватности, и ревьюеры сверяют его с
+текстом внутри приложения. Поэтому сайт **генерируется из той же таблицы строк**,
+что и экраны приложения — разойтись они не могут:
+
+```bash
+python3 Tools/build-site.py
+```
+
+Кладёт в `site/` пятнадцать страниц (лендинг, политика, застереження о здоровье,
+условия, поддержка — каждая на en/uk/ru) плюс `robots.txt` и `sitemap.xml`, с
+canonical и hreflang. Папка статическая, разворачивается на любой хостинг.
+
+Для локального просмотра есть конфигурация `sunfold-site` в
+`../.claude/launch.json`.
+
 ## Иконка
 
 Исходник художника лежит в `Design/app-icon-source.png` — это скруглённый квадрат

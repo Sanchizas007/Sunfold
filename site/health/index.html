@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Health notice — Sunfold</title>
+    <meta name="description" content="Sunfold tracks when you eat. It cannot know anything about your health, and it does not diagnose, treat or advise.">
+    <link rel="canonical" href="https://sunfold.app/health/">
+    <link rel="alternate" hreflang="en" href="https://sunfold.app/health/">
+    <link rel="alternate" hreflang="uk" href="https://sunfold.app/uk/health/">
+    <link rel="alternate" hreflang="ru" href="https://sunfold.app/ru/health/">
+    <link rel="alternate" hreflang="x-default" href="https://sunfold.app/health/">
+    <style>
+:root {
+  --canvas: #FBF5EE; --surface: #FFFCF8; --ink: #3B2E27;
+  --ink-2: #8B7668; --ink-3: #AE9C8D; --line: #EADCCC; --accent: #B75E3D;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --canvas: #211B18; --surface: #2C2421; --ink: #F5EBE1;
+    --ink-2: #B09C8E; --ink-3: #87766B; --line: #40352F; --accent: #F2A883;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 0 20px 64px; background: var(--canvas); color: var(--ink);
+  font: 17px/1.65 ui-rounded, -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+.wrap { max-width: 680px; margin: 0 auto; }
+header { display: flex; flex-wrap: wrap; gap: 12px; align-items: baseline;
+  justify-content: space-between; padding: 28px 0 8px; }
+.brand { font-weight: 700; font-size: 20px; color: var(--ink); text-decoration: none; }
+nav a { color: var(--ink-2); text-decoration: none; margin-left: 14px; font-size: 15px; }
+nav a:hover { color: var(--accent); }
+h1 { font-size: clamp(28px, 6vw, 38px); line-height: 1.2; margin: 28px 0 12px; }
+h2 { font-size: 20px; margin: 32px 0 8px; }
+.lede { color: var(--ink-2); font-size: 19px; }
+p { margin: 0 0 14px; color: var(--ink-2); }
+h2 + p { margin-top: 0; }
+a { color: var(--accent); }
+.card { background: var(--surface); border: 1px solid var(--line);
+  border-radius: 20px; padding: 20px 22px; margin: 22px 0; }
+.langs { margin: 28px 0 0; font-size: 15px; }
+.langs a { margin-right: 12px; }
+.langs .on { color: var(--ink-3); text-decoration: none; }
+footer { margin-top: 44px; padding-top: 20px; border-top: 1px solid var(--line);
+  color: var(--ink-3); font-size: 14px; }
+.button { display: inline-block; background: var(--accent); color: #fff;
+  padding: 12px 20px; border-radius: 14px; text-decoration: none; font-weight: 600; }
+@media (prefers-color-scheme: dark) { .button { color: #211B18; } }
+</style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <a class="brand" href="/">Sunfold</a>
+        <nav><a href="/privacy/">Privacy</a><a href="/health/">Health notice</a><a href="/terms/">Terms</a><a href="/support/">Support</a></nav>
+      </header>
+      <h1>Sunfold is a timer, not a doctor</h1>
+      <p class="lede">Sunfold tracks when you eat. It cannot know anything about your health, and it does not diagnose, treat or advise.</p>
+      <h2>Not medical advice</h2>
+      <p>Everything in Sunfold, including the metabolic phases, is general educational information. It is not a diagnosis, a treatment plan, or a recommendation for you personally.</p>
+      <h2>Talk to a doctor first</h2>
+      <p>Please speak to a healthcare professional before fasting if you are pregnant or breastfeeding, under 18, living with diabetes or taking medication that affects blood sugar, taking any medicine that must be taken with food, underweight, or living with a chronic condition.</p>
+      <h2>Stop if you feel unwell</h2>
+      <p>Dizziness, faintness, confusion, a racing heart or unusual weakness are reasons to eat and to seek medical help. No streak is worth it.</p>
+      <h2>If food is difficult</h2>
+      <p>If you have or have had an eating disorder, or if tracking meals makes you anxious, a fasting app can make things worse. Please talk to a doctor or a support service where you live before using Sunfold.</p>
+      <h2>About the phases</h2>
+      <p>The hours shown for each metabolic phase are approximations from general research. What actually happens depends on your last meal, your activity, your sleep and your body. Treat them as a rough map, not a measurement.</p>
+      <p class="langs"><span class="on">EN</span> <a href="/uk/health/">UK</a> <a href="/ru/health/">RU</a></p>
+      <footer>© 2026 Sunfold · <a href="mailto:support@sunfold.app">support@sunfold.app</a></footer>
+    </div>
+  </body>
+</html>

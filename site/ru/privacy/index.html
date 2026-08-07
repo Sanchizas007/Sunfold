@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Конфиденциальность — Sunfold</title>
+    <meta name="description" content="У Sunfold нет аккаунта, сервера и аналитики. Всё, что вы записываете, живёт на вашем устройстве.">
+    <link rel="canonical" href="https://sunfold.app/ru/privacy/">
+    <link rel="alternate" hreflang="en" href="https://sunfold.app/privacy/">
+    <link rel="alternate" hreflang="uk" href="https://sunfold.app/uk/privacy/">
+    <link rel="alternate" hreflang="ru" href="https://sunfold.app/ru/privacy/">
+    <link rel="alternate" hreflang="x-default" href="https://sunfold.app/privacy/">
+    <style>
+:root {
+  --canvas: #FBF5EE; --surface: #FFFCF8; --ink: #3B2E27;
+  --ink-2: #8B7668; --ink-3: #AE9C8D; --line: #EADCCC; --accent: #B75E3D;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --canvas: #211B18; --surface: #2C2421; --ink: #F5EBE1;
+    --ink-2: #B09C8E; --ink-3: #87766B; --line: #40352F; --accent: #F2A883;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 0 20px 64px; background: var(--canvas); color: var(--ink);
+  font: 17px/1.65 ui-rounded, -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+.wrap { max-width: 680px; margin: 0 auto; }
+header { display: flex; flex-wrap: wrap; gap: 12px; align-items: baseline;
+  justify-content: space-between; padding: 28px 0 8px; }
+.brand { font-weight: 700; font-size: 20px; color: var(--ink); text-decoration: none; }
+nav a { color: var(--ink-2); text-decoration: none; margin-left: 14px; font-size: 15px; }
+nav a:hover { color: var(--accent); }
+h1 { font-size: clamp(28px, 6vw, 38px); line-height: 1.2; margin: 28px 0 12px; }
+h2 { font-size: 20px; margin: 32px 0 8px; }
+.lede { color: var(--ink-2); font-size: 19px; }
+p { margin: 0 0 14px; color: var(--ink-2); }
+h2 + p { margin-top: 0; }
+a { color: var(--accent); }
+.card { background: var(--surface); border: 1px solid var(--line);
+  border-radius: 20px; padding: 20px 22px; margin: 22px 0; }
+.langs { margin: 28px 0 0; font-size: 15px; }
+.langs a { margin-right: 12px; }
+.langs .on { color: var(--ink-3); text-decoration: none; }
+footer { margin-top: 44px; padding-top: 20px; border-top: 1px solid var(--line);
+  color: var(--ink-3); font-size: 14px; }
+.button { display: inline-block; background: var(--accent); color: #fff;
+  padding: 12px 20px; border-radius: 14px; text-decoration: none; font-weight: 600; }
+@media (prefers-color-scheme: dark) { .button { color: #211B18; } }
+</style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <a class="brand" href="/ru/">Sunfold</a>
+        <nav><a href="/ru/privacy/">Конфиденциальность</a><a href="/ru/health/">Предупреждение</a><a href="/ru/terms/">Условия</a><a href="/ru/support/">Поддержка</a></nav>
+      </header>
+      <h1>Ваши данные остаются на телефоне</h1>
+      <p class="lede">У Sunfold нет аккаунта, сервера и аналитики. Всё, что вы записываете, живёт на вашем устройстве.</p>
+      <h2>Что хранит Sunfold</h2>
+      <p>Ваши голодания, записи веса, заметки и настройки хранятся на этом устройстве. Если у вас включены резервные копии iPhone, они попадают в вашу собственную копию, которую можете открыть только вы.</p>
+      <h2>Чего Sunfold не собирает</h2>
+      <p>Ни аккаунта, ни электронной почты, ни рекламных идентификаторов, ни аналитики или трекинговых SDK, ни геолокации. Ничего из записанного вами никуда не отправляется, потому что у Sunfold просто нет сервера.</p>
+      <h2>Покупки</h2>
+      <p>Покупки обрабатывает Apple. Чтобы проверить, активен ли Sunfold Pro, приложение использует RevenueCat, который получает случайно сгенерированный идентификатор пользователя и ваш чек App Store. Он никогда не получает ваше имя, почту или что-либо записанное в Sunfold.</p>
+      <h2>Уведомления</h2>
+      <p>Все напоминания планирует локально ваш iPhone. У Sunfold нет push-сервера, и содержимое уведомлений никогда не покидает ваше устройство.</p>
+      <h2>Apple Health</h2>
+      <p>Sunfold не читает и не записывает данные в Apple Health.</p>
+      <h2>Удаление данных</h2>
+      <p>Настройки → Удалить все данные мгновенно убирает все голодания, записи веса и заметки. Удаление приложения убирает остальное.</p>
+      <h2>Дети</h2>
+      <p>Sunfold не предназначена для детей и не рекомендована лицам до 18 лет без наблюдения врача.</p>
+      <h2>Изменения</h2>
+      <p>Если политика изменится, обновлённая версия появится здесь и на sunfold.app.</p>
+      <p><a href="mailto:support@sunfold.app">Написать нам</a></p>
+      <p><small>Обновлено: август 2026</small></p>
+      <p class="langs"><a href="/privacy/">EN</a> <a href="/uk/privacy/">UK</a> <span class="on">RU</span></p>
+      <footer>© 2026 Sunfold · <a href="mailto:support@sunfold.app">support@sunfold.app</a></footer>
+    </div>
+  </body>
+</html>
