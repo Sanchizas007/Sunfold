@@ -1,6 +1,6 @@
 import SwiftUI
 
-/// Solura's colour system.
+/// Sunfold's colour system.
 ///
 /// Colours live in code rather than an asset catalog so the app and the widget
 /// extension share one definition without duplicating a catalog per target.

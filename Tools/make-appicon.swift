@@ -1,7 +1,7 @@
 // Turns the source artwork into an App Store-ready icon.
 //
 //     swift Tools/make-appicon.swift Design/app-icon-source.png \
-//         Solura/Assets.xcassets/AppIcon.appiconset/AppIcon.png
+//         Sunfold/Assets.xcassets/AppIcon.appiconset/AppIcon.png
 //
 // The source is a rounded square with black corners. App Store icons must be
 // full-bleed squares with no alpha and no rounded corners of their own — iOS

@@ -1,4 +1,4 @@
-# Чек-лист сабмита Solura
+# Чек-лист сабмита Sunfold
 
 Всё, что нужно закрыть до первой отправки в App Store Review. Разбито на то, что
 **уже сделано в коде**, и то, что **нужно сделать руками** в порталах Apple и
@@ -10,10 +10,10 @@ RevenueCat.
 
 | Требование | Где |
 |---|---|
-| Privacy manifest приложения | `Solura/PrivacyInfo.xcprivacy` |
-| Privacy manifest расширения | `SoluraWidgets/PrivacyInfo.xcprivacy` |
+| Privacy manifest приложения | `Sunfold/PrivacyInfo.xcprivacy` |
+| Privacy manifest расширения | `SunfoldWidgets/PrivacyInfo.xcprivacy` |
 | Required-reason API (UserDefaults, App Group) | Причины `1C8F.1` и `CA92.1` |
-| `ITSAppUsesNonExemptEncryption = false` | `Config/Solura-Info.plist` — вопрос про экспорт не будет задаваться на каждой сборке |
+| `ITSAppUsesNonExemptEncryption = false` | `Config/Sunfold-Info.plist` — вопрос про экспорт не будет задаваться на каждой сборке |
 | Launch screen | `UILaunchScreen` + цвет `LaunchBackground` |
 | Категория приложения | `public.app-category.healthcare-fitness` |
 | Live Activities | `NSSupportsLiveActivities = true` |
@@ -49,9 +49,9 @@ RevenueCat.
 - [ ] Аккаунт Apple Developer, $99/год. **Известный риск:** у украинских
       разработчиков бывают отказы авторизации платежа картой Payoneer — держите
       запасную карту.
-- [ ] App ID `app.solura` — включить **App Groups**
-- [ ] App ID `app.solura.widgets` — включить **App Groups**
-- [ ] Создать App Group `group.app.solura` и привязать к обоим App ID
+- [ ] App ID `app.sunfold` — включить **App Groups**
+- [ ] App ID `app.sunfold.widgets` — включить **App Groups**
+- [ ] Создать App Group `group.app.sunfold` и привязать к обоим App ID
 - [ ] Указать Team в настройках обоих таргетов (сейчас пусто — для симулятора не
       нужно, для устройства обязательно)
 
@@ -63,9 +63,9 @@ RevenueCat.
 
 ## 3. RevenueCat
 
-- [ ] Создать проект, добавить приложение iOS с bundle ID `app.solura`
+- [ ] Создать проект, добавить приложение iOS с bundle ID `app.sunfold`
 - [ ] Скопировать **публичный** ключ (`appl_...`) в `RCPublicAPIKey` в
-      `Config/Solura-Info.plist`. Он публикуемый, в бинарнике лежать безопасно.
+      `Config/Sunfold-Info.plist`. Он публикуемый, в бинарнике лежать безопасно.
 - [ ] Создать entitlement с идентификатором ровно `pro`
 - [ ] Создать offering `default` и три пакета, привязанных к продуктам ниже
 - [ ] Загрузить App Store Connect API-ключ в RevenueCat (иначе не будет валидации)
@@ -77,14 +77,14 @@ RevenueCat.
 
 ## 4. App Store Connect: покупки
 
-Идентификаторы должны совпадать с `StoreIDs` в `Solura/Services/Purchases.swift`
+Идентификаторы должны совпадать с `StoreIDs` в `Sunfold/Services/Purchases.swift`
 символ в символ.
 
 | Продукт | ID | Тип | Цена |
 |---|---|---|---|
-| Solura Pro Monthly | `app.solura.pro.monthly` | Auto-renewable, группа `solura_pro` | $4.99 |
-| Solura Pro Yearly | `app.solura.pro.yearly` | Auto-renewable, та же группа | $24.99 |
-| Solura Pro Lifetime | `app.solura.pro.lifetime` | Non-consumable | $49.99 |
+| Sunfold Pro Monthly | `app.sunfold.pro.monthly` | Auto-renewable, группа `sunfold_pro` | $4.99 |
+| Sunfold Pro Yearly | `app.sunfold.pro.yearly` | Auto-renewable, та же группа | $24.99 |
+| Sunfold Pro Lifetime | `app.sunfold.pro.lifetime` | Non-consumable | $49.99 |
 
 Для каждого — локализованные название и описание на en/uk/ru и скриншот ревью.
 
@@ -109,7 +109,7 @@ RevenueCat.
 
 Всё остальное — нет. Tracking — **нет**, ATT-промпт не нужен.
 
-- [ ] Privacy Policy URL: `https://solura.app/privacy` (обязательное поле)
+- [ ] Privacy Policy URL: `https://sunfold.app/privacy` (обязательное поле)
 - [ ] Опубликовать текст политики по этому адресу. Готовый текст — в приложении,
       `Tools/build-strings.py`, ключи `privacy.*`, на трёх языках.
 
@@ -133,7 +133,7 @@ RevenueCat.
       стриком, вес, пейвол.
 - [ ] Три локализации метаданных: en-US, uk, ru
 - [ ] Название, подзаголовок и ключевые слова — в [ASO.md](ASO.md)
-- [ ] Support URL: `https://solura.app/support`
+- [ ] Support URL: `https://sunfold.app/support`
 - [ ] Marketing URL (необязательно)
 - [ ] Промо-текст (170 символов, меняется без ревью)
 
@@ -143,13 +143,13 @@ RevenueCat.
 
 Скопировать в поле App Review Information → Notes:
 
-> Solura is an offline intermittent fasting timer. There is no account and no
+> Sunfold is an offline intermittent fasting timer. There is no account and no
 > sign-in, so no demo credentials are needed — all features are reachable
 > immediately after the onboarding.
 >
 > The app opens with seven days of full access. To review the paywall before
 > that period ends, tap the badge in the top-right corner of the Timer tab, or
-> Settings → Solura Pro.
+> Settings → Sunfold Pro.
 >
 > The app is not a medical device and makes no diagnostic or treatment claims.
 > A health notice must be acknowledged during onboarding before the app can be
@@ -170,5 +170,5 @@ RevenueCat.
 - [ ] Проверить покупку в песочнице: покупка, восстановление, отмена
 - [ ] Проверить, что ссылки на политику и EULA открываются
 - [ ] Проверить виджет и Live Activity на устройстве
-- [ ] Проверить приложение в трёх языках (Настройки iOS → Solura → Язык)
+- [ ] Проверить приложение в трёх языках (Настройки iOS → Sunfold → Язык)
 - [ ] Поднять `CURRENT_PROJECT_VERSION` перед каждой загрузкой

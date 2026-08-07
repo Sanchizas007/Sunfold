@@ -21,7 +21,7 @@ import sys
 # key: (en, uk, ru)
 STRINGS = {
     # -- App / tabs -----------------------------------------------------------
-    "app.name": ("Solura", "Solura", "Solura"),
+    "app.name": ("Sunfold", "Sunfold", "Sunfold"),
     "tab.timer": ("Timer", "Таймер", "Таймер"),
     "tab.history": ("History", "Історія", "История"),
     "tab.weight": ("Weight", "Вага", "Вес"),
@@ -59,9 +59,9 @@ STRINGS = {
     ),
     "timer.idle.title": ("No fast running", "Голодування не триває", "Голодание не идёт"),
     "timer.idle.body": (
-        "Start whenever you finish your last meal. Solura counts from that moment and tells you when your goal is reached.",
-        "Запускайте таймер після останнього прийому їжі. Solura рахує від цієї миті й повідомить, коли ціль досягнуто.",
-        "Запускайте таймер после последнего приёма пищи. Solura считает с этого момента и сообщит, когда цель достигнута.",
+        "Start whenever you finish your last meal. Sunfold counts from that moment and tells you when your goal is reached.",
+        "Запускайте таймер після останнього прийому їжі. Sunfold рахує від цієї миті й повідомить, коли ціль досягнуто.",
+        "Запускайте таймер после последнего приёма пищи. Sunfold считает с этого момента и сообщит, когда цель достигнута.",
     ),
     "timer.end.confirm.title": ("End this fast?", "Завершити голодування?", "Завершить голодание?"),
     "timer.end.confirm.message": (
@@ -306,9 +306,9 @@ STRINGS = {
     ),
     "weight.empty.title": ("No weight recorded", "Вага ще не записана", "Вес ещё не записан"),
     "weight.empty.body": (
-        "Weighing yourself is optional. Solura works perfectly well without it.",
-        "Зважуватися необов'язково. Solura чудово працює й без цього.",
-        "Взвешиваться необязательно. Solura прекрасно работает и без этого.",
+        "Weighing yourself is optional. Sunfold works perfectly well without it.",
+        "Зважуватися необов'язково. Sunfold чудово працює й без цього.",
+        "Взвешиваться необязательно. Sunfold прекрасно работает и без этого.",
     ),
     "unit.kilograms": ("Kilograms", "Кілограми", "Килограммы"),
     "unit.pounds": ("Pounds", "Фунти", "Фунты"),
@@ -363,12 +363,12 @@ STRINGS = {
     "settings.support": ("Contact support", "Написати в підтримку", "Написать в поддержку"),
     "settings.version": ("Version", "Версія", "Версия"),
     "settings.footer": (
-        "Solura keeps everything on your device. No account, no server, no tracking.",
-        "Solura зберігає все на вашому пристрої. Без акаунта, без сервера, без стеження.",
-        "Solura хранит всё на вашем устройстве. Без аккаунта, без сервера, без слежки.",
+        "Sunfold keeps everything on your device. No account, no server, no tracking.",
+        "Sunfold зберігає все на вашому пристрої. Без акаунта, без сервера, без стеження.",
+        "Sunfold хранит всё на вашем устройстве. Без аккаунта, без сервера, без слежки.",
     ),
-    "settings.pro.title": ("Solura Pro", "Solura Pro", "Solura Pro"),
-    "settings.pro.active": ("Solura Pro is active", "Solura Pro активний", "Solura Pro активен"),
+    "settings.pro.title": ("Sunfold Pro", "Sunfold Pro", "Sunfold Pro"),
+    "settings.pro.active": ("Sunfold Pro is active", "Sunfold Pro активний", "Sunfold Pro активен"),
     "settings.pro.body": (
         "Every schedule, your full history, charts and widgets.",
         "Усі графіки, повна історія, діаграми та віджети.",
@@ -386,7 +386,7 @@ STRINGS = {
     ),
 
     # -- Paywall --------------------------------------------------------------
-    "paywall.title": ("Solura Pro", "Solura Pro", "Solura Pro"),
+    "paywall.title": ("Sunfold Pro", "Sunfold Pro", "Sunfold Pro"),
     "paywall.subtitle": (
         "Every schedule, your whole history, the charts and the metabolic phases.",
         "Усі графіки, вся ваша історія, діаграми та фази метаболізму.",
@@ -448,7 +448,7 @@ STRINGS = {
     ),
     "paywall.save": ("Save %lld%%", "Вигода %lld%%", "Выгода %lld%%"),
     "paywall.cta.subscribe": ("Subscribe", "Оформити підписку", "Оформить подписку"),
-    "paywall.cta.buy": ("Buy Solura Pro", "Купити Solura Pro", "Купить Solura Pro"),
+    "paywall.cta.buy": ("Buy Sunfold Pro", "Купити Sunfold Pro", "Купить Sunfold Pro"),
     "paywall.restore": ("Restore", "Відновити", "Восстановить"),
     "paywall.manage": (
         "Manage subscription",
@@ -466,9 +466,9 @@ STRINGS = {
         "Оплата списывается с вашего Apple ID. Подписка продлевается автоматически, если её не отменить минимум за 24 часа до конца периода. Управлять или отменить можно в любой момент в настройках App Store.",
     ),
     "paywall.terms.lifetime": (
-        "A single payment with no renewal. Solura Pro stays with your Apple ID.",
-        "Один платіж без поновлення. Solura Pro залишається на вашому Apple ID.",
-        "Один платёж без продления. Solura Pro остаётся на вашем Apple ID.",
+        "A single payment with no renewal. Sunfold Pro stays with your Apple ID.",
+        "Один платіж без поновлення. Sunfold Pro залишається на вашому Apple ID.",
+        "Один платёж без продления. Sunfold Pro остаётся на вашем Apple ID.",
     ),
     "paywall.error.title": ("Something went wrong", "Щось пішло не так", "Что-то пошло не так"),
     "paywall.error.unavailable": (
@@ -488,7 +488,7 @@ STRINGS = {
     ),
 
     # -- Onboarding -----------------------------------------------------------
-    "onboarding.welcome.title": ("Welcome to Solura", "Вітаємо в Solura", "Добро пожаловать в Solura"),
+    "onboarding.welcome.title": ("Welcome to Sunfold", "Вітаємо в Sunfold", "Добро пожаловать в Sunfold"),
     "onboarding.welcome.body": (
         "A calm timer for intermittent fasting. No feed, no streak-shaming, no ads.",
         "Спокійний таймер для інтервального голодування. Без стрічки, без докорів за зірвану серію, без реклами.",
@@ -511,9 +511,9 @@ STRINGS = {
     ),
     "onboarding.health.title": ("Before you start", "Перш ніж почати", "Прежде чем начать"),
     "onboarding.health.body": (
-        "Solura is a timer and a journal. It is not a medical device and it gives no medical advice.",
-        "Solura — це таймер і щоденник. Це не медичний пристрій, і він не дає медичних порад.",
-        "Solura — это таймер и дневник. Это не медицинское устройство, и оно не даёт медицинских советов.",
+        "Sunfold is a timer and a journal. It is not a medical device and it gives no medical advice.",
+        "Sunfold — це таймер і щоденник. Це не медичний пристрій, і він не дає медичних порад.",
+        "Sunfold — это таймер и дневник. Это не медицинское устройство, и оно не даёт медицинских советов.",
     ),
     "onboarding.health.list": (
         "Please talk to a doctor before fasting if you are pregnant or breastfeeding, under 18, living with diabetes or taking medication that affects blood sugar, taking any medicine that must be taken with food, underweight, or living with a chronic condition.\n\nIf you have or have had an eating disorder, fasting apps can make things harder. Please seek support first.",
@@ -522,9 +522,9 @@ STRINGS = {
     ),
     "onboarding.health.readMore": ("Read the full notice", "Прочитати повне застереження", "Прочитать полное предупреждение"),
     "onboarding.health.acknowledge": (
-        "I have read this and understand that Solura does not give medical advice.",
-        "Я прочитав це й розумію, що Solura не дає медичних порад.",
-        "Я прочитал это и понимаю, что Solura не даёт медицинских советов.",
+        "I have read this and understand that Sunfold does not give medical advice.",
+        "Я прочитав це й розумію, що Sunfold не дає медичних порад.",
+        "Я прочитал это и понимаю, что Sunfold не даёт медицинских советов.",
     ),
     "onboarding.protocol.title": ("Pick a schedule", "Оберіть графік", "Выберите график"),
     "onboarding.protocol.body": (
@@ -558,14 +558,14 @@ STRINGS = {
         "Додайте віджет і стежте за таймером з екрана блокування.",
         "Добавьте виджет и следите за таймером с экрана блокировки.",
     ),
-    "onboarding.start": ("Start using Solura", "Почати користуватися", "Начать пользоваться"),
+    "onboarding.start": ("Start using Sunfold", "Почати користуватися", "Начать пользоваться"),
 
     # -- Notifications --------------------------------------------------------
     "notification.complete.title": ("Fast complete", "Голодування завершено", "Голодание завершено"),
     "notification.complete.body": (
-        "You reached your goal. Open Solura to end the fast whenever you are ready.",
-        "Ви досягли цілі. Відкрийте Solura й завершіть голодування, коли будете готові.",
-        "Вы достигли цели. Откройте Solura и завершите голодание, когда будете готовы.",
+        "You reached your goal. Open Sunfold to end the fast whenever you are ready.",
+        "Ви досягли цілі. Відкрийте Sunfold й завершіть голодування, коли будете готові.",
+        "Вы достигли цели. Откройте Sunfold и завершите голодание, когда будете готовы.",
     ),
     "notification.endingSoon.title": ("30 minutes to go", "Лишилось 30 хвилин", "Осталось 30 минут"),
     "notification.endingSoon.body": (
@@ -591,9 +591,9 @@ STRINGS = {
     "widget.tapToStart": ("Tap to start", "Торкніться, щоб почати", "Нажмите, чтобы начать"),
     "widget.window": ("eating window", "вікно їжі", "окно еды"),
     "widget.locked": (
-        "Widgets are part of Solura Pro",
-        "Віджети входять у Solura Pro",
-        "Виджеты входят в Solura Pro",
+        "Widgets are part of Sunfold Pro",
+        "Віджети входять у Sunfold Pro",
+        "Виджеты входят в Sunfold Pro",
     ),
     "activity.goalAt": ("Goal %@", "Ціль %@", "Цель %@"),
 
@@ -605,43 +605,43 @@ STRINGS = {
         "Ваши данные остаются на телефоне",
     ),
     "privacy.lede": (
-        "Solura has no account, no server and no analytics. Everything you record lives on your device.",
-        "У Solura немає акаунта, сервера й аналітики. Усе, що ви записуєте, живе на вашому пристрої.",
-        "У Solura нет аккаунта, сервера и аналитики. Всё, что вы записываете, живёт на вашем устройстве.",
+        "Sunfold has no account, no server and no analytics. Everything you record lives on your device.",
+        "У Sunfold немає акаунта, сервера й аналітики. Усе, що ви записуєте, живе на вашому пристрої.",
+        "У Sunfold нет аккаунта, сервера и аналитики. Всё, что вы записываете, живёт на вашем устройстве.",
     ),
-    "privacy.stored.title": ("What Solura stores", "Що зберігає Solura", "Что хранит Solura"),
+    "privacy.stored.title": ("What Sunfold stores", "Що зберігає Sunfold", "Что хранит Sunfold"),
     "privacy.stored.body": (
         "Your fasts, weight entries, notes and settings are saved on this device. If you have iPhone backups switched on, they are included in your own backup, which only you can open.",
         "Ваші голодування, записи ваги, нотатки й налаштування зберігаються на цьому пристрої. Якщо у вас увімкнено резервні копії iPhone, вони потрапляють до вашої власної копії, яку можете відкрити лише ви.",
         "Ваши голодания, записи веса, заметки и настройки хранятся на этом устройстве. Если у вас включены резервные копии iPhone, они попадают в вашу собственную копию, которую можете открыть только вы.",
     ),
     "privacy.notCollected.title": (
-        "What Solura does not collect",
-        "Чого Solura не збирає",
-        "Чего Solura не собирает",
+        "What Sunfold does not collect",
+        "Чого Sunfold не збирає",
+        "Чего Sunfold не собирает",
     ),
     "privacy.notCollected.body": (
-        "No account, no email address, no advertising identifiers, no analytics or tracking SDKs, no location. Nothing you record is sent anywhere, because Solura has no server to send it to.",
-        "Ні акаунта, ні електронної пошти, ні рекламних ідентифікаторів, ні аналітики чи трекінгових SDK, ні геолокації. Нічого із записаного вами нікуди не надсилається, бо в Solura просто немає сервера.",
-        "Ни аккаунта, ни электронной почты, ни рекламных идентификаторов, ни аналитики или трекинговых SDK, ни геолокации. Ничего из записанного вами никуда не отправляется, потому что у Solura просто нет сервера.",
+        "No account, no email address, no advertising identifiers, no analytics or tracking SDKs, no location. Nothing you record is sent anywhere, because Sunfold has no server to send it to.",
+        "Ні акаунта, ні електронної пошти, ні рекламних ідентифікаторів, ні аналітики чи трекінгових SDK, ні геолокації. Нічого із записаного вами нікуди не надсилається, бо в Sunfold просто немає сервера.",
+        "Ни аккаунта, ни электронной почты, ни рекламных идентификаторов, ни аналитики или трекинговых SDK, ни геолокации. Ничего из записанного вами никуда не отправляется, потому что у Sunfold просто нет сервера.",
     ),
     "privacy.purchases.title": ("Purchases", "Покупки", "Покупки"),
     "privacy.purchases.body": (
-        "Purchases are processed by Apple. To check whether Solura Pro is active, the app uses RevenueCat, which receives a randomly generated app user ID and your App Store receipt. It never receives your name, your email, or anything you record in Solura.",
-        "Покупки обробляє Apple. Щоб перевірити, чи активний Solura Pro, застосунок використовує RevenueCat, який отримує випадково згенерований ідентифікатор користувача та ваш чек App Store. Він ніколи не отримує ваше ім'я, пошту чи будь-що записане в Solura.",
-        "Покупки обрабатывает Apple. Чтобы проверить, активен ли Solura Pro, приложение использует RevenueCat, который получает случайно сгенерированный идентификатор пользователя и ваш чек App Store. Он никогда не получает ваше имя, почту или что-либо записанное в Solura.",
+        "Purchases are processed by Apple. To check whether Sunfold Pro is active, the app uses RevenueCat, which receives a randomly generated app user ID and your App Store receipt. It never receives your name, your email, or anything you record in Sunfold.",
+        "Покупки обробляє Apple. Щоб перевірити, чи активний Sunfold Pro, застосунок використовує RevenueCat, який отримує випадково згенерований ідентифікатор користувача та ваш чек App Store. Він ніколи не отримує ваше ім'я, пошту чи будь-що записане в Sunfold.",
+        "Покупки обрабатывает Apple. Чтобы проверить, активен ли Sunfold Pro, приложение использует RevenueCat, который получает случайно сгенерированный идентификатор пользователя и ваш чек App Store. Он никогда не получает ваше имя, почту или что-либо записанное в Sunfold.",
     ),
     "privacy.notifications.title": ("Notifications", "Сповіщення", "Уведомления"),
     "privacy.notifications.body": (
-        "All reminders are scheduled locally by your iPhone. Solura has no push server, and notification content never leaves your device.",
-        "Усі нагадування планує локально ваш iPhone. У Solura немає push-сервера, і вміст сповіщень ніколи не залишає ваш пристрій.",
-        "Все напоминания планирует локально ваш iPhone. У Solura нет push-сервера, и содержимое уведомлений никогда не покидает ваше устройство.",
+        "All reminders are scheduled locally by your iPhone. Sunfold has no push server, and notification content never leaves your device.",
+        "Усі нагадування планує локально ваш iPhone. У Sunfold немає push-сервера, і вміст сповіщень ніколи не залишає ваш пристрій.",
+        "Все напоминания планирует локально ваш iPhone. У Sunfold нет push-сервера, и содержимое уведомлений никогда не покидает ваше устройство.",
     ),
     "privacy.health.title": ("Apple Health", "Apple Health", "Apple Health"),
     "privacy.health.body": (
-        "Solura does not read from or write to Apple Health.",
-        "Solura не читає та не записує дані в Apple Health.",
-        "Solura не читает и не записывает данные в Apple Health.",
+        "Sunfold does not read from or write to Apple Health.",
+        "Sunfold не читає та не записує дані в Apple Health.",
+        "Sunfold не читает и не записывает данные в Apple Health.",
     ),
     "privacy.deletion.title": ("Deleting your data", "Видалення даних", "Удаление данных"),
     "privacy.deletion.body": (
@@ -651,15 +651,15 @@ STRINGS = {
     ),
     "privacy.children.title": ("Children", "Діти", "Дети"),
     "privacy.children.body": (
-        "Solura is not directed at children and is not intended for anyone under 18 without medical supervision.",
-        "Solura не призначена для дітей і не рекомендована особам до 18 років без нагляду лікаря.",
-        "Solura не предназначена для детей и не рекомендована лицам до 18 лет без наблюдения врача.",
+        "Sunfold is not directed at children and is not intended for anyone under 18 without medical supervision.",
+        "Sunfold не призначена для дітей і не рекомендована особам до 18 років без нагляду лікаря.",
+        "Sunfold не предназначена для детей и не рекомендована лицам до 18 лет без наблюдения врача.",
     ),
     "privacy.changes.title": ("Changes", "Зміни", "Изменения"),
     "privacy.changes.body": (
-        "If this policy changes, the updated version appears here and on solura.app.",
-        "Якщо політика зміниться, оновлена версія з'явиться тут і на solura.app.",
-        "Если политика изменится, обновлённая версия появится здесь и на solura.app.",
+        "If this policy changes, the updated version appears here and on sunfold.app.",
+        "Якщо політика зміниться, оновлена версія з'явиться тут і на sunfold.app.",
+        "Если политика изменится, обновлённая версия появится здесь и на sunfold.app.",
     ),
     "privacy.contact": ("Contact us", "Написати нам", "Написать нам"),
     "privacy.updated": ("Last updated: August 2026", "Оновлено: серпень 2026", "Обновлено: август 2026"),
@@ -667,20 +667,20 @@ STRINGS = {
     # -- Health disclaimer ----------------------------------------------------
     "disclaimer.title": ("Health notice", "Застереження", "Предупреждение"),
     "disclaimer.heading": (
-        "Solura is a timer, not a doctor",
-        "Solura — це таймер, а не лікар",
-        "Solura — это таймер, а не врач",
+        "Sunfold is a timer, not a doctor",
+        "Sunfold — це таймер, а не лікар",
+        "Sunfold — это таймер, а не врач",
     ),
     "disclaimer.lede": (
-        "Solura tracks when you eat. It cannot know anything about your health, and it does not diagnose, treat or advise.",
-        "Solura відстежує, коли ви їсте. Вона нічого не знає про ваше здоров'я й не діагностує, не лікує та не радить.",
-        "Solura отслеживает, когда вы едите. Она ничего не знает о вашем здоровье и не диагностирует, не лечит и не советует.",
+        "Sunfold tracks when you eat. It cannot know anything about your health, and it does not diagnose, treat or advise.",
+        "Sunfold відстежує, коли ви їсте. Вона нічого не знає про ваше здоров'я й не діагностує, не лікує та не радить.",
+        "Sunfold отслеживает, когда вы едите. Она ничего не знает о вашем здоровье и не диагностирует, не лечит и не советует.",
     ),
     "disclaimer.notMedical.title": ("Not medical advice", "Це не медична порада", "Это не медицинский совет"),
     "disclaimer.notMedical.body": (
-        "Everything in Solura, including the metabolic phases, is general educational information. It is not a diagnosis, a treatment plan, or a recommendation for you personally.",
-        "Усе в Solura, включно з фазами метаболізму, — загальна освітня інформація. Це не діагноз, не план лікування й не рекомендація особисто для вас.",
-        "Всё в Solura, включая фазы метаболизма, — общая образовательная информация. Это не диагноз, не план лечения и не рекомендация лично для вас.",
+        "Everything in Sunfold, including the metabolic phases, is general educational information. It is not a diagnosis, a treatment plan, or a recommendation for you personally.",
+        "Усе в Sunfold, включно з фазами метаболізму, — загальна освітня інформація. Це не діагноз, не план лікування й не рекомендація особисто для вас.",
+        "Всё в Sunfold, включая фазы метаболизма, — общая образовательная информация. Это не диагноз, не план лечения и не рекомендация лично для вас.",
     ),
     "disclaimer.askFirst.title": ("Talk to a doctor first", "Спершу порадьтеся з лікарем", "Сначала посоветуйтесь с врачом"),
     "disclaimer.askFirst.body": (
@@ -696,7 +696,7 @@ STRINGS = {
     ),
     "disclaimer.eatingDisorders.title": ("If food is difficult", "Якщо з їжею складно", "Если с едой сложно"),
     "disclaimer.eatingDisorders.body": (
-        "If you have or have had an eating disorder, or if tracking meals makes you anxious, a fasting app can make things worse. Please talk to a doctor or a support service where you live before using Solura.",
+        "If you have or have had an eating disorder, or if tracking meals makes you anxious, a fasting app can make things worse. Please talk to a doctor or a support service where you live before using Sunfold.",
         "Якщо у вас є або був розлад харчової поведінки, або якщо відстеження їжі викликає тривогу, застосунок для голодування може погіршити стан. Спершу поговоріть із лікарем або службою підтримки у вашій країні.",
         "Если у вас есть или было расстройство пищевого поведения, или если отслеживание еды вызывает тревогу, приложение для голодания может ухудшить состояние. Сначала поговорите с врачом или службой поддержки в вашей стране.",
     ),

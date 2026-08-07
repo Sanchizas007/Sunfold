@@ -1,4 +1,20 @@
-# ASO: метаданные Solura
+# ASO: метаданные Sunfold
+
+> **Про имя.** Первоначальное название Solura пришлось сменить: в App Store уже
+> есть опубликованное приложение SOLURA, причём в той же категории «Здоровье и
+> фитнес» — это верный отказ по правилам 4.1 и 5.2.1.
+>
+> Проверять кандидатов можно без аккаунта, публичным поиском:
+>
+> ```bash
+> curl -s --get https://itunes.apple.com/search \
+>   --data-urlencode "term=НАЗВАНИЕ" --data-urlencode "entity=software" \
+>   --data-urlencode "country=us" | python3 -m json.tool | grep trackName
+> ```
+>
+> ⚠️ Этот API видит только **опубликованные** приложения. Имена, зарезервированные
+> в App Store Connect, и торговые марки он не показывает. Окончательная проверка —
+> попытка зарезервировать имя в App Store Connect.
 
 Индексируются только **название (30)**, **подзаголовок (30)** и **поле ключевых
 слов (100)**. Описание в поиске не участвует — оно работает на конверсию, а не на
@@ -18,9 +34,9 @@
 
 ## en-US
 
-**Название** (28)
+**Название** (29)
 ```
-Solura: Intermittent Fasting
+Sunfold: Intermittent Fasting
 ```
 
 **Подзаголовок** (27)
@@ -40,11 +56,11 @@ A calm fasting timer that stays on your phone. No account, no ads, no feed — j
 
 **Описание**
 ```
-Solura is a quiet, warm intermittent fasting tracker. One ring, one number, and
+Sunfold is a quiet, warm intermittent fasting tracker. One ring, one number, and
 everything you need to know about where you are in your fast.
 
 THE TIMER
-Start when you finish your last meal. Solura counts from that moment — close the
+Start when you finish your last meal. Sunfold counts from that moment — close the
 app, restart your phone, the timer never drifts. A full-screen ring shows how far
 along you are, and the metabolic phases are marked around it.
 
@@ -70,14 +86,14 @@ Live Activity, ticking without draining your battery.
 
 REMINDERS
 When your fast is complete, thirty minutes before, and when your eating window
-closes. All scheduled locally — Solura has no push server.
+closes. All scheduled locally — Sunfold has no push server.
 
 PRIVACY
 No account. No sign-in. No analytics, no advertising, no tracking. Everything you
 record stays on your device, and you can export it all as CSV or delete it in one
 tap.
 
-SOLURA PRO
+SUNFOLD PRO
 Free forever: the 16:8 schedule and the last seven days of history. Pro unlocks
 every schedule, unlimited history, charts, the metabolic phases and widgets.
 
@@ -88,10 +104,10 @@ cancelled at least 24 hours before the period ends, and can be managed in App
 Store settings at any time.
 
 Terms of Use: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
-Privacy Policy: https://solura.app/privacy
+Privacy Policy: https://sunfold.app/privacy
 
 IMPORTANT
-Solura is a timer and a journal, not a medical device. It does not diagnose,
+Sunfold is a timer and a journal, not a medical device. It does not diagnose,
 treat or give medical advice. Talk to a doctor before fasting if you are pregnant
 or breastfeeding, under 18, living with diabetes or taking medication that
 affects blood sugar, taking medicine that must be taken with food, underweight,
@@ -103,12 +119,12 @@ please seek support before using a fasting app.
 
 ## uk
 
-**Название** (24)
+**Название** (25)
 ```
-Solura: голодування 16:8
+Sunfold: голодування 16:8
 ```
 
-**Подзаголовок** (26)
+**Подзаголовок** (27)
 ```
 Таймер посту, фази, історія
 ```
@@ -130,9 +146,9 @@ Solura: голодування 16:8
 
 ## ru
 
-**Название** (22)
+**Название** (23)
 ```
-Solura: голодание 16:8
+Sunfold: голодание 16:8
 ```
 
 **Подзаголовок** (28)

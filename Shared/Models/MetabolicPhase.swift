@@ -1,12 +1,12 @@
 import Foundation
 import SwiftUI
 
-/// The metabolic phases Solura shows around the ring.
+/// The metabolic phases Sunfold shows around the ring.
 ///
 /// Everything here is presented as approximate and educational. The copy is
 /// deliberately hedged ("typically", "in many people") and the phases screen
 /// carries a standing disclaimer: real timings depend on the person, their last
-/// meal, activity and health. Solura makes no diagnostic or treatment claim —
+/// meal, activity and health. Sunfold makes no diagnostic or treatment claim —
 /// that is both honest and what keeps it clear of guideline 1.4.1.
 nonisolated enum MetabolicPhase: String, CaseIterable, Identifiable, Sendable {
     case fed
@@ -29,7 +29,7 @@ nonisolated enum MetabolicPhase: String, CaseIterable, Identifiable, Sendable {
     }
 
     /// Hours at which the phase typically gives way to the next one.
-    /// `autophagy` is open-ended; Solura caps display at 48 hours.
+    /// `autophagy` is open-ended; Sunfold caps display at 48 hours.
     var endHour: Double {
         switch self {
         case .fed: 4

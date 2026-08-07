@@ -74,7 +74,7 @@ final class AppSettings {
         didSet { defaults.set(firstLaunchDate.timeIntervalSince1970, forKey: Key.firstLaunchDate) }
     }
 
-    /// Set once the user has been asked for notification permission, so Solura
+    /// Set once the user has been asked for notification permission, so Sunfold
     /// never asks twice and never asks before the first fast is started.
     var hasRequestedNotificationPermission: Bool {
         didSet {

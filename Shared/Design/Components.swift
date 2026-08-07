@@ -147,7 +147,7 @@ nonisolated struct Pill: View {
 }
 
 /// The standing health notice. Shown in onboarding, on the phases screen and in
-/// settings — Solura is an educational timer, not a clinician, and says so
+/// settings — Sunfold is an educational timer, not a clinician, and says so
 /// wherever it talks about the body.
 nonisolated struct DisclaimerNote: View {
     var text: LocalizedStringKey
@@ -192,7 +192,7 @@ nonisolated struct EmptyStateView: View {
 }
 
 /// The app's background, used by every screen so the warm field is unbroken.
-nonisolated struct SoluraBackground: View {
+nonisolated struct SunfoldBackground: View {
     var body: some View {
         Palette.canvas
             .overlay(alignment: .top) {

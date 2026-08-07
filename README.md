@@ -1,23 +1,23 @@
-# Solura
+# Sunfold
 
 Трекер интервального голодания для iOS. Нативный SwiftUI, всё на устройстве,
 без аккаунта и без сервера.
 
-- **Bundle ID:** `app.solura` · виджет `app.solura.widgets`
-- **App Group:** `group.app.solura`
+- **Bundle ID:** `app.sunfold` · виджет `app.sunfold.widgets`
+- **App Group:** `group.app.sunfold`
 - **Минимум:** iOS 17.0 · только iPhone · только портрет
 - **Собрано на:** Xcode 26.6, Swift 6 (язык 6.0, `MainActor` по умолчанию)
 
 ## Как собрать
 
 ```bash
-open Solura.xcodeproj
+open Sunfold.xcodeproj
 ```
 
-Схема `Solura` собирает приложение вместе с расширением виджета. Из терминала:
+Схема `Sunfold` собирает приложение вместе с расширением виджета. Из терминала:
 
 ```bash
-xcodebuild -project Solura.xcodeproj -scheme Solura -destination 'platform=iOS Simulator,name=iPhone 17 Pro' build
+xcodebuild -project Sunfold.xcodeproj -scheme Sunfold -destination 'platform=iOS Simulator,name=iPhone 17 Pro' build
 ```
 
 Единственная внешняя зависимость — RevenueCat (SPM, зафиксирован на 5.83.1).
@@ -31,11 +31,11 @@ Shared/          Код, который компилируется в ОБА т�
   Models/        FastSession, WeightEntry, протоколы, фазы метаболизма
   Engine/        Настройки, статистика, снапшот для виджета, форматтеры
   Resources/     Localizable.xcstrings (en/uk/ru)
-Solura/          Только приложение
+Sunfold/          Только приложение
   App/           Точка входа, RootView с табами
   Features/      Экраны: Timer, History, Weight, Settings, Paywall, Onboarding
   Services/      SwiftData, уведомления, Live Activity, покупки, экспорт
-SoluraWidgets/   Только расширение: виджеты + Live Activity
+SunfoldWidgets/   Только расширение: виджеты + Live Activity
 Tools/           build-strings.py — генератор строкового каталога
 docs/            Чек-лист сабмита и ASO
 ```
@@ -62,7 +62,7 @@ docs/            Чек-лист сабмита и ASO
 голодание уходит несколько обновлений.
 
 **Покупки за абстракцией.** `PurchaseProviding` с двумя реализациями. Если в
-`Config/Solura-Info.plist` пустой `RCPublicAPIKey`, подставляется
+`Config/Sunfold-Info.plist` пустой `RCPublicAPIKey`, подставляется
 `UnconfiguredPurchaseProvider`: пейвол показывается с реальными ценами, но
 покупка честно падает с ошибкой — ничего не разблокируется молча. Так приложение
 разрабатывается и тестируется до создания аккаунта RevenueCat.
@@ -77,7 +77,7 @@ python3 Tools/build-strings.py
 Сверить, что в коде нет непереведённых ключей:
 
 ```bash
-xcodebuild -exportLocalizations -project Solura.xcodeproj -localizationPath /tmp/loc -exportLanguage en
+xcodebuild -exportLocalizations -project Sunfold.xcodeproj -localizationPath /tmp/loc -exportLanguage en
 ```
 
 и сравнить список ключей из `/tmp/loc/en.xcloc` с таблицей `STRINGS` в скрипте.
@@ -96,7 +96,7 @@ xcodebuild -exportLocalizations -project Solura.xcodeproj -localizationPath /tmp
 скруглений и без альфа-канала (маску накладывает сама iOS). Пересобрать:
 
 ```bash
-swift Tools/make-appicon.swift Design/app-icon-source.png Solura/Assets.xcassets/AppIcon.appiconset/AppIcon.png
+swift Tools/make-appicon.swift Design/app-icon-source.png Sunfold/Assets.xcassets/AppIcon.appiconset/AppIcon.png
 ```
 
 ## Что осталось сделать до сабмита
@@ -108,5 +108,5 @@ swift Tools/make-appicon.swift Design/app-icon-source.png Solura/Assets.xcassets
 2. Аккаунт RevenueCat → ключ в `RCPublicAPIKey`
 3. Зарегистрировать App Group и оба bundle ID в портале
 4. Создать три покупки в App Store Connect с ID из `StoreIDs`
-5. Опубликовать политику приватности на `solura.app/privacy`
+5. Опубликовать политику приватности на `sunfold.app/privacy`
 6. Скриншоты 6.9″

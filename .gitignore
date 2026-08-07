@@ -19,6 +19,6 @@ xcuserdata/
 # macOS
 .DS_Store
 
-# Local secrets. The RevenueCat publishable key lives in Config/Solura-Info.plist
+# Local secrets. The RevenueCat publishable key lives in Config/Sunfold-Info.plist
 # and is safe to commit; anything genuinely secret belongs here.
 *.local.xcconfig

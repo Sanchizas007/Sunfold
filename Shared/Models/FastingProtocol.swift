@@ -1,6 +1,6 @@
 import Foundation
 
-/// The fasting schedules Solura supports.
+/// The fasting schedules Sunfold supports.
 ///
 /// A protocol is stored by its `rawValue` so it survives in SwiftData, in the
 /// shared app-group defaults the widget reads, and in exported CSV without a
@@ -87,7 +87,7 @@ nonisolated enum FastingProtocol: String, CaseIterable, Codable, Identifiable, S
     }
 
     /// One line on who the schedule suits. Descriptive, never prescriptive —
-    /// Solura does not tell anyone what to do with their body.
+    /// Sunfold does not tell anyone what to do with their body.
     var blurbKey: String.LocalizationValue {
         switch self {
         case .sixteenEight: "protocol.16_8.blurb"

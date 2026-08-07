@@ -1,8 +1,8 @@
 import Foundation
 
-/// The app group shared by Solura and its widget extension.
+/// The app group shared by Sunfold and its widget extension.
 nonisolated enum AppGroup {
-    static let identifier = "group.app.solura"
+    static let identifier = "group.app.sunfold"
 
     /// Defaults shared with the widget. Falls back to `.standard` if the group
     /// is unavailable (which only happens if the entitlement is missing) so the
@@ -83,13 +83,13 @@ nonisolated enum SnapshotStore {
     static func load() -> FastingSnapshot {
         guard
             let data = AppGroup.defaults.data(forKey: key),
-            let snapshot = try? JSONDecoder.solura.decode(FastingSnapshot.self, from: data)
+            let snapshot = try? JSONDecoder.sunfold.decode(FastingSnapshot.self, from: data)
         else { return .idle }
         return snapshot
     }
 
     static func save(_ snapshot: FastingSnapshot) {
-        guard let data = try? JSONEncoder.solura.encode(snapshot) else { return }
+        guard let data = try? JSONEncoder.sunfold.encode(snapshot) else { return }
         AppGroup.defaults.set(data, forKey: key)
     }
 
@@ -99,7 +99,7 @@ nonisolated enum SnapshotStore {
 }
 
 extension JSONEncoder {
-    nonisolated static var solura: JSONEncoder {
+    nonisolated static var sunfold: JSONEncoder {
         let encoder = JSONEncoder()
         encoder.dateEncodingStrategy = .iso8601
         return encoder
@@ -107,7 +107,7 @@ extension JSONEncoder {
 }
 
 extension JSONDecoder {
-    nonisolated static var solura: JSONDecoder {
+    nonisolated static var sunfold: JSONDecoder {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .iso8601
         return decoder

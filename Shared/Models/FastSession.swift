@@ -3,7 +3,7 @@ import SwiftData
 
 /// One fast, from the moment it was started to the moment it was ended.
 ///
-/// A session with `endDate == nil` is the one in progress; Solura keeps at most
+/// A session with `endDate == nil` is the one in progress; Sunfold keeps at most
 /// one of those. Elapsed time is always derived from `startDate` against the
 /// clock — never accumulated by a running timer — so backgrounding the app,
 /// rebooting the phone, or killing the process cannot drift the count.
