@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sunfold.app/sitemap.xml
+Sitemap: https://sanchizas007.github.io/Sunfold/sitemap.xml

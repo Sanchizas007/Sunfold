@@ -25,7 +25,20 @@ import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LANGUAGES = ("en", "uk", "ru")
-DOMAIN = "https://sunfold.app"
+
+# Where the pages will live. Two knobs so the same generator serves both the
+# eventual domain and GitHub Pages, which hosts project sites under a
+# subdirectory — root-relative links written for a bare domain would all 404
+# there.
+#
+#     SUNFOLD_ORIGIN=https://sanchizas007.github.io SUNFOLD_BASE=/Sunfold \
+#         python3 Tools/build-site.py
+ORIGIN = os.environ.get("SUNFOLD_ORIGIN", "https://sunfold.app").rstrip("/")
+# The support address shown on every page. Overridable because support@sunfold.app
+# does not exist until the domain is bought, and a support contact that bounces
+# is worse than no site at all.
+EMAIL = os.environ.get("SUNFOLD_EMAIL", "support@sunfold.app")
+BASE = "/" + os.environ.get("SUNFOLD_BASE", "").strip("/") if os.environ.get("SUNFOLD_BASE") else ""
 
 
 def load_strings():
@@ -157,11 +170,16 @@ def prefix(language):
     return "" if language == "en" else f"/{language}"
 
 
+def path(language, slug):
+    """Site-root-relative path for links inside the pages."""
+    return f"{BASE}{prefix(language)}/{slug}"
+
+
 def url(language, slug):
     """Absolute URL. Every directory keeps its trailing slash, so canonical,
     hreflang, sitemap and the in-page links all agree — a mismatch there is a
     self-inflicted duplicate-content problem."""
-    return f"{DOMAIN}{prefix(language)}/{slug}"
+    return f"{ORIGIN}{path(language, slug)}"
 
 
 def page(language, slug, title, body_html, description):
@@ -172,7 +190,7 @@ def page(language, slug, title, body_html, description):
         for lang in LANGUAGES
     )
     nav = "".join(
-        f'<a href="{prefix(language)}/{target}">{html.escape(site(key, language))}</a>'
+        f'<a href="{path(language, target)}">{html.escape(site(key, language))}</a>'
         for key, target in (
             ("site.nav.privacy", "privacy/"),
             ("site.nav.health", "health/"),
@@ -183,7 +201,7 @@ def page(language, slug, title, body_html, description):
     langs = " ".join(
         f'<span class="on">{lang.upper()}</span>'
         if lang == language
-        else f'<a href="{prefix(lang)}/{slug}">{lang.upper()}</a>'
+        else f'<a href="{path(lang, slug)}">{lang.upper()}</a>'
         for lang in LANGUAGES
     )
 
@@ -202,12 +220,12 @@ def page(language, slug, title, body_html, description):
   <body>
     <div class="wrap">
       <header>
-        <a class="brand" href="{prefix(language)}/">Sunfold</a>
+        <a class="brand" href="{path(language, '')}">Sunfold</a>
         <nav>{nav}</nav>
       </header>
       {body_html}
       <p class="langs">{langs}</p>
-      <footer>© 2026 Sunfold · <a href="mailto:support@sunfold.app">support@sunfold.app</a></footer>
+      <footer>© 2026 Sunfold · <a href="mailto:{EMAIL}">{EMAIL}</a></footer>
     </div>
   </body>
 </html>
@@ -270,7 +288,7 @@ def build():
         body = f"""<h1>{html.escape(tr("privacy.heading", language))}</h1>
       <p class="lede">{html.escape(tr("privacy.lede", language))}</p>
       {sections_html(language, PRIVACY_SECTIONS)}
-      <p><a href="mailto:support@sunfold.app">{html.escape(tr("privacy.contact", language))}</a></p>
+      <p><a href="mailto:{EMAIL}">{html.escape(tr("privacy.contact", language))}</a></p>
       <p><small>{html.escape(tr("privacy.updated", language))}</small></p>"""
         written.append(write(f"{base}privacy/index.html", page(
             language, "privacy/", f'{tr("privacy.title", language)} — Sunfold',
@@ -300,7 +318,7 @@ def build():
       <div class="card">
         <h2 style="margin-top:0">{html.escape(site("site.support.contact.title", language))}</h2>
         <p>{html.escape(site("site.support.contact.body", language))}</p>
-        <p><a class="button" href="mailto:support@sunfold.app">support@sunfold.app</a></p>
+        <p><a class="button" href="mailto:{EMAIL}">{EMAIL}</a></p>
       </div>
       <h2>{html.escape(site("site.support.data.title", language))}</h2>
       <p>{html.escape(site("site.support.data.body", language))}</p>
@@ -311,7 +329,10 @@ def build():
             body, site("site.support.lede", language))))
 
     # robots + sitemap
-    written.append(write("robots.txt", f"User-agent: *\nAllow: /\n\nSitemap: {DOMAIN}/sitemap.xml\n"))
+    written.append(write(
+        "robots.txt",
+        f"User-agent: *\nAllow: /\n\nSitemap: {ORIGIN}{BASE}/sitemap.xml\n"
+    ))
 
     urls = []
     for language in LANGUAGES:
