@@ -116,8 +116,12 @@ App Store требует публичный URL политики приватн�
 что и экраны приложения — разойтись они не могут:
 
 ```bash
-python3 Tools/build-site.py
+SUNFOLD_ORIGIN=https://sanchizas007.github.io SUNFOLD_BASE=/Sunfold python3 Tools/build-site.py
 ```
+
+Опубликовано на GitHub Pages: **https://sanchizas007.github.io/Sunfold/**.
+Деплой автоматический — любой пуш, меняющий `site/`, публикует заново.
+Когда появится домен, пересобрать без переменных окружения.
 
 Кладёт в `site/` пятнадцать страниц (лендинг, политика, застереження о здоровье,
 условия, поддержка — каждая на en/uk/ru) плюс `robots.txt` и `sitemap.xml`, с
@@ -141,9 +145,11 @@ swift Tools/make-appicon.swift Design/app-icon-source.png Sunfold/Assets.xcasset
 Порядок подключения покупок — в [docs/RUNBOOK.md](docs/RUNBOOK.md), полный чек-лист сабмита — в [docs/APP-STORE.md](docs/APP-STORE.md). Коротко, это всё
 внешние действия, кода они не касаются:
 
-1. Аккаунт Apple Developer ($99)
-2. Аккаунт RevenueCat → ключ в `RCPublicAPIKey`
-3. Зарегистрировать App Group и оба bundle ID в портале
-4. Создать три покупки в App Store Connect с ID из `StoreIDs`
-5. Опубликовать политику приватности на `sunfold.app/privacy`
-6. Скриншоты 6.9″
+1. ~~Аккаунт Apple Developer~~ — оплачен 2026-08-07
+2. ~~Политика приватности и Support URL~~ — опубликованы на GitHub Pages
+3. Paid Apps Agreement, банк и налоговые формы (делать первым — самая долгая проверка)
+4. Зарегистрировать App Group и оба bundle ID в портале
+5. Создать приложение в App Store Connect — этот шаг резервирует имя Sunfold
+6. Создать три покупки с ID из `StoreIDs`
+7. Аккаунт RevenueCat → ключ в `RCPublicAPIKey`
+8. Скриншоты 6.9″

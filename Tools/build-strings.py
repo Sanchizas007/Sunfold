@@ -672,10 +672,13 @@ STRINGS = {
         "Sunfold не предназначена для детей и не рекомендована лицам до 18 лет без наблюдения врача.",
     ),
     "privacy.changes.title": ("Changes", "Зміни", "Изменения"),
+    # Deliberately names no domain: the hosted copy may move, and a privacy
+    # policy that points at an address which does not resolve is worse than one
+    # that simply says where to look.
     "privacy.changes.body": (
-        "If this policy changes, the updated version appears here and on sunfold.app.",
-        "Якщо політика зміниться, оновлена версія з'явиться тут і на sunfold.app.",
-        "Если политика изменится, обновлённая версия появится здесь и на sunfold.app.",
+        "If this policy changes, the updated version appears here and in the app itself.",
+        "Якщо політика зміниться, оновлена версія з'явиться тут і в самому застосунку.",
+        "Если политика изменится, обновлённая версия появится здесь и в самом приложении.",
     ),
     "privacy.contact": ("Contact us", "Написати нам", "Написать нам"),
     "privacy.updated": ("Last updated: August 2026", "Оновлено: серпень 2026", "Обновлено: август 2026"),

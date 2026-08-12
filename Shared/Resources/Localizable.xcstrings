@@ -3287,19 +3287,19 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "If this policy changes, the updated version appears here and on sunfold.app."
+            "value": "If this policy changes, the updated version appears here and in the app itself."
           }
         },
         "uk": {
           "stringUnit": {
             "state": "translated",
-            "value": "Якщо політика зміниться, оновлена версія з'явиться тут і на sunfold.app."
+            "value": "Якщо політика зміниться, оновлена версія з'явиться тут і в самому застосунку."
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Если политика изменится, обновлённая версия появится здесь и на sunfold.app."
+            "value": "Если политика изменится, обновлённая версия появится здесь и в самом приложении."
           }
         }
       }
