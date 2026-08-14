@@ -12,6 +12,7 @@ struct PaywallScreen: View {
     @Environment(Entitlements.self) private var entitlements
     @Environment(\.dismiss) private var dismiss
     @Environment(\.openURL) private var openURL
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
 
     @State private var selectedID: String?
     @State private var showingPrivacy = false
@@ -279,20 +280,31 @@ struct PaywallScreen: View {
 
     private var legalFooter: some View {
         VStack(spacing: 10) {
-            HStack(spacing: 18) {
-                Button("paywall.restore") { Task { await restore() } }
-                    .buttonStyle(QuietButtonStyle())
-                Button("settings.terms") { openURL(Legal.termsURL) }
-                    .buttonStyle(QuietButtonStyle())
-                Button("settings.privacy") { showingPrivacy = true }
-                    .buttonStyle(QuietButtonStyle())
+            // Guideline 3.1.2 requires these three to be present and usable.
+            // Side by side they collapse into one-syllable columns at the
+            // accessibility text sizes, so past that point they stack.
+            if dynamicTypeSize.isAccessibilitySize {
+                VStack(spacing: 14) { legalLinks }
+            } else {
+                HStack(spacing: 18) { legalLinks }
             }
 
             Button("paywall.manage") { openURL(Legal.manageSubscriptionsURL) }
                 .buttonStyle(QuietButtonStyle())
                 .foregroundStyle(Palette.inkTertiary)
         }
+        .multilineTextAlignment(.center)
         .padding(.top, 2)
+    }
+
+    @ViewBuilder
+    private var legalLinks: some View {
+        Button("paywall.restore") { Task { await restore() } }
+            .buttonStyle(QuietButtonStyle())
+        Button("settings.terms") { openURL(Legal.termsURL) }
+            .buttonStyle(QuietButtonStyle())
+        Button("settings.privacy") { showingPrivacy = true }
+            .buttonStyle(QuietButtonStyle())
     }
 
     // MARK: Actions

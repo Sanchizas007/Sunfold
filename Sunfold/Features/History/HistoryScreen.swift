@@ -324,6 +324,18 @@ private struct SessionEditor: View {
                                             .frame(maxWidth: .infinity)
                                     }
                                     .buttonStyle(.plain)
+                                    // These are five weather glyphs with no
+                                    // text; spoken aloud they need to say what
+                                    // they rate and which one is chosen.
+                                    .accessibilityLabel(
+                                        Text(String(
+                                            localized: "history.editor.feeling.value",
+                                            defaultValue: "\(value) of 5"
+                                        ))
+                                    )
+                                    .accessibilityAddTraits(
+                                        feeling == value ? [.isSelected] : []
+                                    )
                                 }
                             }
                         }

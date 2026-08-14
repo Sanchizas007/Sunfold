@@ -310,13 +310,17 @@ struct SettingsScreen: View {
             .labelsHidden()
             .pickerStyle(.menu)
             .tint(Palette.accentDeep)
-            // Without this the selected value wraps onto a second line and
-            // pushes through the divider below it.
+            // One line, but allowed to truncate. `.fixedSize()` here forced the
+            // picker to its ideal width, and at the largest accessibility sizes
+            // that made the row wider than the screen — which, inside a vertical
+            // ScrollView, shifted and clipped *every* row on the page.
             .lineLimit(1)
-            .fixedSize()
         }
         .padding(.horizontal, Metrics.cardPadding)
         .frame(minHeight: Self.rowHeight)
+        // A compact control row: the label and the value share one line, so
+        // growth is capped rather than allowed to run to AX5.
+        .dynamicTypeSize(...DynamicTypeSize.accessibility2)
     }
 }
 

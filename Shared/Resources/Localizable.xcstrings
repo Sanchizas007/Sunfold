@@ -852,6 +852,29 @@
         }
       }
     },
+    "history.calendar.nextMonth": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Next month"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Наступний місяць"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Следующий месяц"
+          }
+        }
+      }
+    },
     "history.calendar.none": {
       "extractionState": "manual",
       "localizations": {
@@ -871,6 +894,29 @@
           "stringUnit": {
             "state": "translated",
             "value": "без голодания"
+          }
+        }
+      }
+    },
+    "history.calendar.previousMonth": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Previous month"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Попередній місяць"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Предыдущий месяц"
           }
         }
       }
@@ -1032,6 +1078,29 @@
           "stringUnit": {
             "state": "translated",
             "value": "Как это ощущалось?"
+          }
+        }
+      }
+    },
+    "history.editor.feeling.value": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld of 5"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld з 5"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld из 5"
           }
         }
       }

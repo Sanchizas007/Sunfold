@@ -44,6 +44,8 @@ struct StreakCalendar: View {
                     .foregroundStyle(Palette.inkSecondary)
                     .frame(width: 32, height: 32)
             }
+            // Without a label VoiceOver announces a bare "button" here.
+            .accessibilityLabel("history.calendar.previousMonth")
 
             Spacer()
 
@@ -59,6 +61,7 @@ struct StreakCalendar: View {
                     .foregroundStyle(canStepForward ? Palette.inkSecondary : Palette.hairline)
                     .frame(width: 32, height: 32)
             }
+            .accessibilityLabel("history.calendar.nextMonth")
             .disabled(!canStepForward)
         }
     }
