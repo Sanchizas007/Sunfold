@@ -130,6 +130,8 @@ struct TimerScreen: View {
                 .font(Typography.overline)
                 .textCase(.uppercase)
                 .foregroundStyle(Palette.inkSecondary)
+                .lineLimit(1)
+                .minimumScaleFactor(0.6)
 
             Text(centerValue(now: now))
                 .font(Typography.timer)
@@ -140,8 +142,15 @@ struct TimerScreen: View {
             Text(centerSubtitle(now: now))
                 .font(Typography.caption)
                 .foregroundStyle(Palette.inkSecondary)
+                .lineLimit(1)
+                .minimumScaleFactor(0.6)
         }
         .multilineTextAlignment(.center)
+        // The ring is a circle of fixed size, so its centre cannot grow with the
+        // text the way a normal column can. Letting the largest accessibility
+        // sizes through would push the caption and the goal line outside the
+        // stroke; capping growth here keeps them legible and inside.
+        .dynamicTypeSize(...DynamicTypeSize.accessibility1)
     }
 
     private var centerCaption: LocalizedStringKey {
@@ -289,6 +298,9 @@ struct TimerScreen: View {
                 .font(Typography.caption)
                 .foregroundStyle(Palette.inkTertiary)
         }
+        // Two columns share one row, so neither may wrap into the other.
+        .lineLimit(1)
+        .minimumScaleFactor(0.6)
         .frame(maxWidth: .infinity)
     }
 

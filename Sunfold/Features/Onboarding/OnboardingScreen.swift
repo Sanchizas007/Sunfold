@@ -16,6 +16,9 @@ struct OnboardingScreen: View {
 
     private let lastPage = 3
 
+    /// The health notice is the one page that gates progress.
+    private var isBlocked: Bool { page == 1 && !acknowledgedHealthNotice }
+
     var body: some View {
         ZStack {
             SunfoldBackground()
@@ -250,7 +253,22 @@ struct OnboardingScreen: View {
             .buttonStyle(PrimaryButtonStyle(tint: .fasting))
             // The style dims disabled buttons itself now; a manual opacity here
             // would stack on top of it and fade the button almost away.
-            .disabled(page == 1 && !acknowledgedHealthNotice)
+            .disabled(isBlocked)
+            .accessibilityHint(isBlocked ? Text("onboarding.health.blocked") : Text(""))
+
+            // Without this the button is simply dead with no stated reason. At
+            // the largest text sizes the checkbox is several screens down, so
+            // the reader sees a greyed-out button and nothing explaining it.
+            if isBlocked {
+                Text("onboarding.health.blocked")
+                    .font(Typography.caption)
+                    .foregroundStyle(Palette.inkSecondary)
+                    .multilineTextAlignment(.center)
+                    .fixedSize(horizontal: false, vertical: true)
+                    // Secondary text: allowed to grow, but not to the point of
+                    // crowding out the notice it is pointing at.
+                    .dynamicTypeSize(...DynamicTypeSize.accessibility1)
+            }
         }
         .padding(.horizontal, Metrics.screenPadding)
         .padding(.bottom, 20)
