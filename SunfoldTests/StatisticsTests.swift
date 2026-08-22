@@ -96,6 +96,59 @@ struct StatisticsTests {
         #expect(Statistics.currentStreak(for: [], now: Self.now, calendar: Self.calendar) == 0)
     }
 
+    // MARK: Minimum counted duration
+
+    // A tap on "start" followed straight away by "end" used to credit a whole
+    // streak day and leave the average reading zero. Found on a real device
+    // with an 11-second session.
+
+    @Test("A misfired fast of seconds does not earn a streak day")
+    func shortFastEarnsNoStreak() {
+        let misfire = Self.fast(daysAgo: 0, hours: 11.0 / 3600.0)
+        #expect(Statistics.currentStreak(for: [misfire], now: Self.now, calendar: Self.calendar) == 0)
+    }
+
+    @Test("A misfired fast stays out of every aggregate")
+    func shortFastLeavesAggregatesEmpty() {
+        let misfire = Self.fast(daysAgo: 0, hours: 11.0 / 3600.0)
+        let summary = Statistics.summary(for: [misfire], now: Self.now, calendar: Self.calendar)
+        #expect(summary == Statistics.Summary())
+    }
+
+    @Test("A misfire on an off day cannot extend a streak across the gap")
+    func shortFastDoesNotBridgeAGap() {
+        // Real fasts two and four days ago, a misfire on the day between: the
+        // current streak is still nothing, and the longest run is one.
+        let sessions = [
+            Self.fast(daysAgo: 2),
+            Self.fast(daysAgo: 3, hours: 0.5),
+            Self.fast(daysAgo: 4)
+        ]
+        #expect(Statistics.longestStreak(for: sessions, calendar: Self.calendar) == 1)
+    }
+
+    @Test("A fast exactly at the threshold counts")
+    func thresholdIsInclusive() {
+        let exact = Self.fast(daysAgo: 0, hours: Statistics.minimumCountedSeconds / 3600)
+        #expect(Statistics.currentStreak(for: [exact], now: Self.now, calendar: Self.calendar) == 1)
+
+        let justUnder = Self.fast(daysAgo: 0, hours: (Statistics.minimumCountedSeconds - 1) / 3600)
+        #expect(Statistics.currentStreak(for: [justUnder], now: Self.now, calendar: Self.calendar) == 0)
+    }
+
+    @Test("The chart leaves misfires out, so its bars match the calendar")
+    func shortFastLeavesNoBar() throws {
+        let sessions = [Self.fast(daysAgo: 0, hours: 16), Self.fast(daysAgo: 1, hours: 0.2)]
+        let totals = Statistics.dailyTotals(
+            for: sessions,
+            days: 3,
+            now: Self.now,
+            calendar: Self.calendar
+        )
+        #expect(try #require(totals.last).seconds == 16 * 3600)
+        #expect(totals[totals.count - 2].seconds == 0)
+    }
+
     // MARK: Longest streak
 
     @Test("The longest run is found even when it is not the current one")

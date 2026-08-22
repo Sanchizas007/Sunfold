@@ -7,10 +7,27 @@ import Foundation
 /// history screen can recompute cheaply as filters change.
 nonisolated enum Statistics {
 
+    /// Below this, a fast is treated as a misfire rather than data.
+    ///
+    /// Found on a real device: a tap on "start" followed straight away by
+    /// "end" recorded an 11-second fast, which credited a full streak day,
+    /// filled in the calendar and left the average reading 0h 0m. The session
+    /// still belongs in the history list — the app does not delete what the
+    /// user did — but it has no business in an aggregate.
+    static let minimumCountedSeconds: TimeInterval = 3600
+
     /// A finished fast is one with an end date. Running fasts never count
     /// toward totals; they would make every average drift while on screen.
     static func finished(_ sessions: [FastSession]) -> [FastSession] {
         sessions.filter { !$0.isRunning }
+    }
+
+    /// Finished fasts long enough to aggregate. Everything on the history
+    /// screen that is a number rather than a row goes through here, so the
+    /// streak, the calendar and the chart can never disagree about what
+    /// counted.
+    static func counted(_ sessions: [FastSession]) -> [FastSession] {
+        finished(sessions).filter { ($0.duration ?? 0) >= minimumCountedSeconds }
     }
 
     struct Summary: Equatable, Sendable {
@@ -18,7 +35,7 @@ nonisolated enum Statistics {
         var totalSeconds: TimeInterval = 0
         var averageSeconds: TimeInterval = 0
         var longestSeconds: TimeInterval = 0
-        /// Fasts that reached their goal, over all finished fasts, 0…1.
+        /// Fasts that reached their goal, over all counted fasts, 0…1.
         var goalRate: Double = 0
         var currentStreak: Int = 0
         var longestStreak: Int = 0
@@ -29,7 +46,7 @@ nonisolated enum Statistics {
         now: Date = .now,
         calendar: Calendar = .current
     ) -> Summary {
-        let done = finished(sessions)
+        let done = counted(sessions)
         guard !done.isEmpty else { return Summary() }
 
         let durations = done.compactMap(\.duration)
@@ -47,12 +64,12 @@ nonisolated enum Statistics {
         )
     }
 
-    /// Distinct days that carry at least one finished fast.
+    /// Distinct days that carry at least one fast long enough to count.
     static func activeDays(
         for sessions: [FastSession],
         calendar: Calendar = .current
     ) -> Set<Date> {
-        Set(finished(sessions).map { $0.creditedDay(in: calendar) })
+        Set(counted(sessions).map { $0.creditedDay(in: calendar) })
     }
 
     /// Consecutive days ending today.
@@ -123,7 +140,7 @@ nonisolated enum Statistics {
     ) -> [DailyTotal] {
         let today = calendar.startOfDay(for: now)
         var totals: [Date: TimeInterval] = [:]
-        for session in finished(sessions) {
+        for session in counted(sessions) {
             totals[session.creditedDay(in: calendar), default: 0] += session.duration ?? 0
         }
         return (0..<days).reversed().compactMap { offset in
