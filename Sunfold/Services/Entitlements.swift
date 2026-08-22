@@ -48,7 +48,10 @@ final class Entitlements {
             // No key yet — buy straight through StoreKit against the local
             // configuration file so the flow stays testable before the Apple
             // Developer account exists.
-            provider = StoreKitProvider()
+            // No sync: the configuration file is the whole store here, and
+            // `AppStore.sync()` would only send the tester to the real App
+            // Store for a password it cannot use.
+            provider = StoreKitProvider(canSyncWithAppStore: false)
             storeKind = .localTesting
             #else
             // A release build with no key must not sell anything: RevenueCat is

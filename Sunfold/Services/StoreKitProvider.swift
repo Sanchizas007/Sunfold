@@ -14,6 +14,19 @@ import StoreKit
 final class StoreKitProvider: PurchaseProviding, @unchecked Sendable {
     private var products: [String: Product] = [:]
 
+    /// Whether `restore` may fall back to `AppStore.sync()`.
+    ///
+    /// False while the build runs against `Config/Sunfold.storekit`. A
+    /// configuration file cannot stand in for `sync`: the call leaves for the
+    /// real App Store, demands the Apple ID password, and comes back knowing
+    /// nothing about the fake products — a password prompt with no possible
+    /// outcome.
+    private let canSyncWithAppStore: Bool
+
+    init(canSyncWithAppStore: Bool) {
+        self.canSyncWithAppStore = canSyncWithAppStore
+    }
+
     func configure() {}
 
     func isProActive() async -> Bool {
@@ -81,6 +94,17 @@ final class StoreKitProvider: PurchaseProviding, @unchecked Sendable {
     }
 
     func restore() async throws -> Bool {
+        // `currentEntitlements` already carries every purchase this Apple ID
+        // owns, and StoreKit keeps it up to date across reinstalls and devices
+        // on its own — so the ordinary case needs no sync at all.
+        //
+        // `AppStore.sync()` is kept for the case where nothing was found,
+        // because it is the only thing that can recover a genuinely missing
+        // transaction. It is deliberately last: it always prompts for the
+        // Apple ID password, and asking someone to retype their password to
+        // be told what the device already knew is a bad trade.
+        if await isProActive() { return true }
+        guard canSyncWithAppStore else { return false }
         try await AppStore.sync()
         return await isProActive()
     }
