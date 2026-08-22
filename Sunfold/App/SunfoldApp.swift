@@ -12,6 +12,15 @@ struct SunfoldApp: App {
     init() {
         let container = DataStore.makeContainer()
         self.container = container
+
+        #if DEBUG
+        // Screenshot seeding, gated behind a launch argument. Runs before the
+        // controller reads state so the first frame already has history.
+        if DemoData.isRequested {
+            DemoData.seed(into: container.mainContext)
+        }
+        #endif
+
         _fasting = State(initialValue: FastingController(context: container.mainContext))
     }
 
@@ -34,10 +43,21 @@ struct RootView: View {
     @Environment(FastingController.self) private var fasting
     @Environment(\.scenePhase) private var scenePhase
 
-    @State private var selectedTab: Tab = .timer
+    /// `.timer` for every real launch; the screenshot run asks for a tab by
+    /// name so a whole set can be shot without tapping through the app.
+    @State private var selectedTab: Tab = .fromDemoScreen(DemoData.requestedScreen)
 
     enum Tab: Hashable {
         case timer, history, weight, settings
+
+        static func fromDemoScreen(_ screen: DemoData.Screen?) -> Tab {
+            switch screen {
+            case .history: .history
+            case .weight: .weight
+            case .settings: .settings
+            default: .timer
+            }
+        }
     }
 
     var body: some View {

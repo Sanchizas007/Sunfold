@@ -104,7 +104,7 @@ cancelled at least 24 hours before the period ends, and can be managed in App
 Store settings at any time.
 
 Terms of Use: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
-Privacy Policy: https://sunfold.app/privacy
+Privacy Policy: https://sanchizas007.github.io/Sunfold/privacy/
 
 IMPORTANT
 Sunfold is a timer and a journal, not a medical device. It does not diagnose,

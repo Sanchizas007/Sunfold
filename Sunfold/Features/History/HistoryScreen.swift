@@ -126,7 +126,10 @@ struct HistoryScreen: View {
                 }
                 .chartXAxis {
                     AxisMarks(values: .stride(by: .day, count: 3)) { value in
-                        AxisValueLabel(format: .dateTime.day().month(.narrow))
+                        // `.narrow` renders July as a bare "J", which reads as
+                        // January just as easily. Three letters is worth the
+                        // width.
+                        AxisValueLabel(format: .dateTime.day().month(.abbreviated))
                             .foregroundStyle(Palette.inkTertiary)
                     }
                 }

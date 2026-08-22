@@ -66,6 +66,11 @@ nonisolated struct ProgressRing<Content: View>: View {
                 content()
                     .frame(width: side - lineWidth * 2.6)
                     .position(center)
+                    // The arc animation below covers the whole stack, and the
+                    // centre content changes in step with `clamped` — once a
+                    // second, on the timer. Without this the seconds digit
+                    // crossfades into the next one and reads as a smear.
+                    .animation(nil, value: clamped)
             }
             .frame(width: geometry.size.width, height: geometry.size.height)
         }

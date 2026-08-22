@@ -146,8 +146,9 @@ final class AppSettings {
         hasCompletedOnboarding = true
     }
 
-    /// Pounds for the handful of locales that actually use them.
-    private static func localeWeightUnit() -> WeightUnit {
+    /// Pounds for the handful of locales that actually use them. Not private:
+    /// the screenshot seeder pins the unit to the locale it is shooting in.
+    static func localeWeightUnit() -> WeightUnit {
         switch Locale.current.region?.identifier {
         case "US", "LR", "MM": .pounds
         default: .kilograms

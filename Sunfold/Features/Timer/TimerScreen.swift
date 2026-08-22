@@ -10,8 +10,10 @@ struct TimerScreen: View {
     @Environment(Entitlements.self) private var entitlements
     @Environment(FastingController.self) private var fasting
 
-    @State private var showingProtocols = false
-    @State private var showingPhases = false
+    // Both sheets open closed, except in a screenshot run that asked for one
+    // by name — `DemoData.requestedScreen` is always nil in release.
+    @State private var showingProtocols = DemoData.requestedScreen == .protocols
+    @State private var showingPhases = DemoData.requestedScreen == .phases
     @State private var showingPaywall = false
     @State private var showingStartEditor = false
     @State private var showingLongFastNotice = false
