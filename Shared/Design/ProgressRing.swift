@@ -20,13 +20,19 @@ nonisolated struct ProgressRing<Content: View>: View {
     var body: some View {
         GeometryReader { geometry in
             let side = min(geometry.size.width, geometry.size.height)
-            let radius = (side - lineWidth) / 2
+            // A GeometryReader reports zero on its first pass, and again while a
+            // sheet is being presented over it. Taking the stroke off that gives
+            // a negative frame — SwiftUI clamps it, but logs "Invalid frame
+            // dimension" once per frame below, three times per pass.
+            let ringSide = max(0, side - lineWidth)
+            let contentSide = max(0, side - lineWidth * 2.6)
+            let radius = ringSide / 2
             let center = CGPoint(x: geometry.size.width / 2, y: geometry.size.height / 2)
 
             ZStack {
                 Circle()
                     .stroke(Palette.surfaceAlt, style: StrokeStyle(lineWidth: lineWidth, lineCap: .round))
-                    .frame(width: side - lineWidth, height: side - lineWidth)
+                    .frame(width: ringSide, height: ringSide)
 
                 ForEach(phaseTicks.filter { $0 > 0.001 && $0 < 0.999 }, id: \.self) { tick in
                     Capsule()
@@ -48,7 +54,7 @@ nonisolated struct ProgressRing<Content: View>: View {
                         style: StrokeStyle(lineWidth: lineWidth, lineCap: .round)
                     )
                     .rotationEffect(.degrees(-90))
-                    .frame(width: side - lineWidth, height: side - lineWidth)
+                    .frame(width: ringSide, height: ringSide)
 
                 // Held back until the arc is long enough to read as an arc.
                 // Below that the round cap and the dot overlap into a shape
@@ -64,7 +70,7 @@ nonisolated struct ProgressRing<Content: View>: View {
                 }
 
                 content()
-                    .frame(width: side - lineWidth * 2.6)
+                    .frame(width: contentSide)
                     .position(center)
                     // The arc animation below covers the whole stack, and the
                     // centre content changes in step with `clamped` — once a
