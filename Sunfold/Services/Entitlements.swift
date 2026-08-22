@@ -139,7 +139,10 @@ final class Entitlements {
         defer { isWorking = false }
         do {
             let entitled = try await provider.purchase(id: product.id)
-            isPro = entitled
+            // Only ever grants. A purchase that came back pending — Ask to Buy,
+            // say — says nothing about what the user already owned, and must
+            // not take a standing entitlement away.
+            if entitled { isPro = true }
             publishAccess()
             return entitled
         } catch PurchaseError.cancelled {
@@ -157,7 +160,16 @@ final class Entitlements {
         defer { isWorking = false }
         do {
             let entitled = try await provider.restore()
-            isPro = entitled
+            // Restore is a search, not a verdict. "Nothing found on this Apple
+            // ID" is not the same statement as "this user is not entitled" —
+            // it can also mean a different Apple ID, or a store that answered
+            // badly. Writing it into `isPro` once cost a live subscriber their
+            // access the moment they pressed the button.
+            //
+            // `refresh` is the only thing allowed to clear the flag, because it
+            // is the only one that asks the store what is true rather than
+            // what it could find.
+            if entitled { isPro = true }
             publishAccess()
             if !entitled {
                 errorMessage = String(localized: "paywall.restore.nothing")
