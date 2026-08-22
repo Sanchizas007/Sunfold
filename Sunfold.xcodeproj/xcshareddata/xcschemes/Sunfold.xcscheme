@@ -53,6 +53,16 @@
       <StoreKitConfigurationFileReference
          identifier = "../../../Config/Sunfold.storekit">
       </StoreKitConfigurationFileReference>
+      <CommandLineArguments>
+         <CommandLineArgument
+            argument = "-SunfoldExpireAccess"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "-SunfoldDemoData"
+            isEnabled = "NO">
+         </CommandLineArgument>
+      </CommandLineArguments>
       <BuildableProductRunnable
          runnableDebuggingMode = "0">
          <BuildableReference

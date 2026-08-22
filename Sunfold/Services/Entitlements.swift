@@ -73,8 +73,20 @@ final class Entitlements {
         ) ?? settings.firstLaunchDate
     }
 
+    /// Debug-only switch that pretends the opening period has run out, so the
+    /// paywall and every gate behind it can be checked today.
+    ///
+    /// The alternative — editing `fullAccessDays` to 0 and remembering to put
+    /// it back — is the kind of temporary change that ships. This one cannot:
+    /// it is a launch argument, off unless ticked in the scheme, and compiled
+    /// out of release entirely.
+    static let expireAccessArgument = "-SunfoldExpireAccess"
+
     var isInFullAccessPeriod: Bool {
-        Date.now < fullAccessEndDate
+        #if DEBUG
+        if CommandLine.arguments.contains(Self.expireAccessArgument) { return false }
+        #endif
+        return Date.now < fullAccessEndDate
     }
 
     /// Whole days left in the opening period, rounded up so the last partial
