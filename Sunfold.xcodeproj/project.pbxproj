@@ -43,7 +43,7 @@
 		5013A0000000000000000142 /* Sunfold.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sunfold.entitlements; sourceTree = "<group>"; };
 		5013A0000000000000000143 /* SunfoldWidgets-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SunfoldWidgets-Info.plist"; sourceTree = "<group>"; };
 		5013A0000000000000000144 /* SunfoldWidgets.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SunfoldWidgets.entitlements; sourceTree = "<group>"; };
-		5013A0000000000000000145 /* Sunfold.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Sunfold.storekit; sourceTree = "<group>"; };
+		5013A0000000000000000145 /* Sunfold.storekit */ = {isa = PBXFileReference; lastKnownFileType = file.storekit; path = Sunfold.storekit; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
