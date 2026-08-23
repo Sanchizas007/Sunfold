@@ -37,6 +37,16 @@ struct SunfoldApp: App {
                 // `Localization`, so changing the language redraws every screen
                 // at once instead of waiting for the next launch.
                 .environment(\.locale, settings.language.locale)
+                // Rebuild the tree outright when the language changes.
+                //
+                // The environment locale alone only refreshes what SwiftUI
+                // localises itself — `Text("key")`. Strings built by hand
+                // through `String.sunfold` are plain values with nothing for
+                // SwiftUI to invalidate, so they survived the switch: picking
+                // English left "Темна" sitting under an English "Theme" until
+                // the next launch. Changing the identity forces every one of
+                // them to be computed again.
+                .id(settings.language)
         }
     }
 }
