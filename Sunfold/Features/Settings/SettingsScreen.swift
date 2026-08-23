@@ -89,7 +89,24 @@ struct SettingsScreen: View {
                                     Text(String(localized: option.titleKey)).tag(option)
                                 }
                             }
+                            divider
+                            Button {
+                                openAppSettings()
+                            } label: {
+                                row(
+                                    icon: "globe",
+                                    title: "settings.language",
+                                    value: Self.currentLanguageName
+                                )
+                            }
+                            .buttonStyle(.plain)
                         }
+
+                        Text("settings.language.note")
+                            .font(Typography.caption)
+                            .foregroundStyle(Palette.inkTertiary)
+                            .fixedSize(horizontal: false, vertical: true)
+                            .padding(.horizontal, 4)
 
                         group("settings.section.data") {
                             if let exportURL {
@@ -276,6 +293,30 @@ struct SettingsScreen: View {
     /// so the dividers land on an even rhythm instead of following whatever
     /// each control happens to measure.
     private static let rowHeight: CGFloat = 50
+
+    /// The language the app is actually running in, named in itself:
+    /// "Українська" reads as its own name whatever the rest of the screen is in,
+    /// which is the point — the row has to be legible to someone who opened it
+    /// precisely because the app is in a language they do not read.
+    private static var currentLanguageName: String {
+        let code = Bundle.main.preferredLocalizations.first ?? "en"
+        return Locale(identifier: code)
+            .localizedString(forLanguageCode: code)?
+            .localizedCapitalized
+            ?? code.uppercased()
+    }
+
+    /// Hands the language over to iOS rather than keeping a switch of our own.
+    ///
+    /// The per-app language is the only one that also moves the notifications,
+    /// the widget and the Live Activity: those are scheduled ahead of time or
+    /// run in another process, and neither would ever see a setting stored in
+    /// here. A picker on this screen would change the screens and leave the
+    /// push notification in the old language.
+    private func openAppSettings() {
+        guard let url = URL(string: UIApplication.openSettingsURLString) else { return }
+        openURL(url)
+    }
 
     private func toggle(_ title: LocalizedStringKey, isOn: Binding<Bool>) -> some View {
         Toggle(isOn: isOn) {

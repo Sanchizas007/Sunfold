@@ -4454,6 +4454,52 @@
         }
       }
     },
+    "settings.language": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Language"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Мова"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Язык"
+          }
+        }
+      }
+    },
+    "settings.language.note": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Opens iOS settings, where the language applies to notifications and the widget too."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Відкриє налаштування iOS — там мова застосується і до сповіщень, і до віджета."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Откроет настройки iOS — там язык применится и к уведомлениям, и к виджету."
+          }
+        }
+      }
+    },
     "settings.liveActivity": {
       "extractionState": "manual",
       "localizations": {
