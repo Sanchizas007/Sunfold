@@ -78,23 +78,23 @@ struct SettingsScreen: View {
                         .onChange(of: settings.notifyOnEatingWindowEnd) { _, _ in fasting.syncExternalState() }
 
                         group("settings.section.appearance") {
-                            picker("settings.theme", selection: $settings.appearance) {
-                                ForEach(AppearanceSetting.allCases) { option in
-                                    Text(String.sunfold(option.titleKey)).tag(option)
-                                }
-                            }
+                            picker(
+                                "settings.theme",
+                                selection: $settings.appearance,
+                                options: AppearanceSetting.allCases
+                            ) { String.sunfold($0.titleKey) }
                             divider
-                            picker("settings.units", selection: $settings.weightUnit) {
-                                ForEach(WeightUnit.allCases) { option in
-                                    Text(String.sunfold(option.titleKey)).tag(option)
-                                }
-                            }
+                            picker(
+                                "settings.units",
+                                selection: $settings.weightUnit,
+                                options: WeightUnit.allCases
+                            ) { String.sunfold($0.titleKey) }
                             divider
-                            picker("settings.language", selection: $settings.language) {
-                                ForEach(AppLanguage.allCases) { option in
-                                    Text(option.displayName).tag(option)
-                                }
-                            }
+                            picker(
+                                "settings.language",
+                                selection: $settings.language,
+                                options: AppLanguage.allCases
+                            ) { $0.displayName }
                         }
                         // Rewrites the widget snapshot and re-schedules the
                         // pending notifications, which were built in the old
@@ -298,33 +298,56 @@ struct SettingsScreen: View {
         .frame(minHeight: Self.rowHeight)
     }
 
-    private func picker<Value: Hashable, Content: View>(
+    /// A settings row whose value opens a menu.
+    ///
+    /// Built out of `Menu` rather than `Picker(.menu)`. A menu-style Picker
+    /// draws its own value label and honours nothing set on it from outside:
+    /// with `.lineLimit(1)` applied, at accessibility sizes "Кілограми" still
+    /// broke across two lines and spilled over the row beneath it, leaving both
+    /// unreadable. Owning the label is the only way to hold it to one line.
+    private func picker<Value: Hashable>(
         _ title: LocalizedStringKey,
         selection: Binding<Value>,
-        @ViewBuilder content: () -> Content
+        options: [Value],
+        label: @escaping (Value) -> String
     ) -> some View {
-        // Laid out by hand rather than relying on Picker's own label: outside a
-        // Form, a menu-style Picker draws only its value, which left the row
-        // showing "Kilograms" with nothing to say what it referred to.
+        // Laid out by hand rather than relying on the control's own label:
+        // outside a Form it shows only the value, which left the row reading
+        // "Kilograms" with nothing to say what it referred to.
         HStack(spacing: 12) {
             Text(title)
                 .font(Typography.body)
                 .foregroundStyle(Palette.ink)
                 .lineLimit(1)
             Spacer(minLength: 8)
-            Picker(selection: selection) {
-                content()
+            Menu {
+                ForEach(options, id: \.self) { option in
+                    Button {
+                        selection.wrappedValue = option
+                    } label: {
+                        if option == selection.wrappedValue {
+                            Label(label(option), systemImage: "checkmark")
+                        } else {
+                            Text(label(option))
+                        }
+                    }
+                }
             } label: {
-                EmptyView()
+                HStack(spacing: 4) {
+                    Text(label(selection.wrappedValue))
+                        .font(Typography.body)
+                        // One line, truncated. Growing sideways is not an
+                        // option either: `.fixedSize()` here once forced the
+                        // row to its ideal width, and inside a vertical
+                        // ScrollView that shifted and clipped every row on the
+                        // page, not just this one.
+                        .lineLimit(1)
+                        .truncationMode(.tail)
+                    Image(systemName: "chevron.up.chevron.down")
+                        .font(.system(size: 12, weight: .semibold))
+                }
+                .foregroundStyle(Palette.accentDeep)
             }
-            .labelsHidden()
-            .pickerStyle(.menu)
-            .tint(Palette.accentDeep)
-            // One line, but allowed to truncate. `.fixedSize()` here forced the
-            // picker to its ideal width, and at the largest accessibility sizes
-            // that made the row wider than the screen — which, inside a vertical
-            // ScrollView, shifted and clipped *every* row on the page.
-            .lineLimit(1)
         }
         .padding(.horizontal, Metrics.cardPadding)
         .frame(minHeight: Self.rowHeight)
