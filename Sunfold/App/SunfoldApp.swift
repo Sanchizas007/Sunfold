@@ -97,6 +97,7 @@ struct RootView: View {
         }
         .task {
             await entitlements.refresh()
+            fasting.downgradeProtocolIfAccessLapsed(hasFullAccess: entitlements.hasFullAccess)
             await NotificationService.shared.refreshStatus()
         }
         .onOpenURL { url in
@@ -115,7 +116,14 @@ struct RootView: View {
             // purchase may have been made on another device.
             fasting.refreshOnForeground()
             entitlements.revalidate()
-            Task { await entitlements.refresh() }
+            Task {
+                await entitlements.refresh()
+                // A subscription can lapse while the app is away, so the check
+                // belongs after the store has answered, not before.
+                fasting.downgradeProtocolIfAccessLapsed(
+                    hasFullAccess: entitlements.hasFullAccess
+                )
+            }
         }
     }
 }

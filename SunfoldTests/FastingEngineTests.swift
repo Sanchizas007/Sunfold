@@ -155,6 +155,59 @@ struct FastSessionTests {
 }
 
 /// Protocol definitions and the free-tier gate.
+/// What happens to a paid schedule when the subscription ends.
+///
+/// A month of subscription must buy a month of the schedule, not the schedule
+/// for good — and equally, nothing may be taken away mid-fast.
+struct AccessLapseTests {
+
+    @Test("A paid schedule falls back to the free one once access lapses")
+    func paidScheduleFallsBack() {
+        for paid in [FastingProtocol.eighteenSix, .twentyFour, .fiveTwo, .custom] {
+            #expect(
+                FastingProtocol.afterAccessLapse(
+                    current: paid, hasFullAccess: false, isFasting: false
+                ) == .sixteenEight
+            )
+        }
+    }
+
+    @Test("Nothing changes while access is still valid")
+    func paidScheduleSurvivesWithAccess() {
+        #expect(
+            FastingProtocol.afterAccessLapse(
+                current: .fiveTwo, hasFullAccess: true, isFasting: false
+            ) == nil
+        )
+    }
+
+    @Test("A fast in progress is never interrupted by a downgrade")
+    func downgradeWaitsForTheFastToEnd() {
+        #expect(
+            FastingProtocol.afterAccessLapse(
+                current: .fiveTwo, hasFullAccess: false, isFasting: true
+            ) == nil
+        )
+    }
+
+    @Test("The free schedule is left alone rather than rewritten to itself")
+    func freeScheduleIsNotTouched() {
+        #expect(
+            FastingProtocol.afterAccessLapse(
+                current: .sixteenEight, hasFullAccess: false, isFasting: false
+            ) == nil
+        )
+    }
+
+    @Test("The fallback is a schedule the free tier may actually use")
+    func fallbackIsFree() {
+        let fallback = FastingProtocol.afterAccessLapse(
+            current: .fiveTwo, hasFullAccess: false, isFasting: false
+        )
+        #expect(fallback?.isFree == true)
+    }
+}
+
 struct FastingProtocolTests {
 
     @Test("Only 16:8 is free — the free tier has to be genuinely usable")

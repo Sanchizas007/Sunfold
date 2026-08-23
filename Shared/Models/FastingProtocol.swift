@@ -22,6 +22,27 @@ nonisolated enum FastingProtocol: String, CaseIterable, Codable, Identifiable, S
 
     var isFree: Bool { Self.freeTier.contains(self) }
 
+    /// What a paid schedule falls back to once access lapses, or `nil` to leave
+    /// the current one alone.
+    ///
+    /// Kept here, as a plain function over three facts, because it is the rule
+    /// that decides whether a month of subscription buys a schedule for a month
+    /// or for good — worth pinning with tests rather than leaving inside a
+    /// controller the test bundle cannot see.
+    ///
+    /// Never while a fast is running: the fast's own goal is safe, since
+    /// `targetSeconds` is stored per session, but the phase ticks on the ring
+    /// come from the settings, and moving those under a fast in progress
+    /// redraws the ring the user is watching.
+    static func afterAccessLapse(
+        current: FastingProtocol,
+        hasFullAccess: Bool,
+        isFasting: Bool
+    ) -> FastingProtocol? {
+        guard !hasFullAccess, !isFasting, !current.isFree else { return nil }
+        return .sixteenEight
+    }
+
     /// Planned fasting length, in seconds, for everything but `.custom`.
     /// `.custom` resolves through `duration(customMinutes:)`.
     var defaultFastSeconds: TimeInterval {

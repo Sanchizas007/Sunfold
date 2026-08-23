@@ -169,6 +169,30 @@ final class FastingController {
         revision += 1
     }
 
+    /// Puts a paid schedule back to the free one once access has lapsed.
+    ///
+    /// Without this a subscription bought for one month bought the schedule
+    /// outright: `canUse` only draws a padlock in the picker, and nothing ever
+    /// reset `selectedProtocol`, so 5:2 stayed selected and running forever
+    /// after the subscription ended.
+    ///
+    /// Deliberately never mid-fast. The running fast keeps its own
+    /// `targetSeconds`, so its goal is safe either way — but the phase ticks on
+    /// the ring are drawn from the *settings*, and swapping those under a
+    /// 24-hour fast already in progress would redraw the ring while the user is
+    /// watching it. It waits for the fast to end instead.
+    @discardableResult
+    func downgradeProtocolIfAccessLapsed(hasFullAccess: Bool) -> Bool {
+        guard let fallback = FastingProtocol.afterAccessLapse(
+            current: settings.selectedProtocol,
+            hasFullAccess: hasFullAccess,
+            isFasting: active != nil
+        ) else { return false }
+        settings.selectedProtocol = fallback
+        syncExternalState()
+        return true
+    }
+
     /// Called when the app comes back to the foreground: re-derives state and
     /// re-pushes anything that may have gone stale while it was away.
     func refreshOnForeground() {

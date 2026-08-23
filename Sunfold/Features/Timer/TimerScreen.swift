@@ -63,7 +63,14 @@ struct TimerScreen: View {
                 isPresented: $showingEndConfirmation,
                 titleVisibility: .visible
             ) {
-                Button("timer.end.confirm.action", role: .destructive) { fasting.stop() }
+                Button("timer.end.confirm.action", role: .destructive) {
+                    fasting.stop()
+                    // The moment a lapsed user is no longer mid-fast is the
+                    // moment a paid schedule can be handed back.
+                    fasting.downgradeProtocolIfAccessLapsed(
+                        hasFullAccess: entitlements.hasFullAccess
+                    )
+                }
                 Button("common.cancel", role: .cancel) {}
             } message: {
                 Text("timer.end.confirm.message")
