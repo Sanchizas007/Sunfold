@@ -62,8 +62,8 @@ final class NotificationService {
             let fireDate = endDate.addingTimeInterval(-Self.headsUpLead)
             await add(
                 id: ID.fastEndingSoon,
-                title: String(localized: "notification.endingSoon.title"),
-                body: String(localized: "notification.endingSoon.body"),
+                title: String.sunfold("notification.endingSoon.title"),
+                body: String.sunfold("notification.endingSoon.body"),
                 at: fireDate
             )
         }
@@ -71,8 +71,8 @@ final class NotificationService {
         if settings.notifyOnFastComplete {
             await add(
                 id: ID.fastComplete,
-                title: String(localized: "notification.complete.title"),
-                body: String(localized: "notification.complete.body"),
+                title: String.sunfold("notification.complete.title"),
+                body: String.sunfold("notification.complete.body"),
                 at: endDate
             )
         }
@@ -80,8 +80,8 @@ final class NotificationService {
         if settings.notifyOnEatingWindowEnd, let eatingWindowSeconds {
             await add(
                 id: ID.eatingWindowEnd,
-                title: String(localized: "notification.windowEnd.title"),
-                body: String(localized: "notification.windowEnd.body"),
+                title: String.sunfold("notification.windowEnd.title"),
+                body: String.sunfold("notification.windowEnd.body"),
                 at: endDate.addingTimeInterval(eatingWindowSeconds)
             )
         }
@@ -93,8 +93,8 @@ final class NotificationService {
         guard settings.notifyOnEatingWindowEnd, await isAuthorized() else { return }
         await add(
             id: ID.eatingWindowEnd,
-            title: String(localized: "notification.windowEnd.title"),
-            body: String(localized: "notification.windowEnd.body"),
+            title: String.sunfold("notification.windowEnd.title"),
+            body: String.sunfold("notification.windowEnd.body"),
             at: endDate
         )
     }

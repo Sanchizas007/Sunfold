@@ -8,7 +8,20 @@ struct StreakCalendar: View {
     @Binding var anchor: Date
     let activeDays: Set<Date>
 
-    private var calendar: Calendar { .current }
+    /// The calendar the grid is laid out on.
+    ///
+    /// The weekday initials follow the language the user picked — left on
+    /// `.current` they stayed Russian above an otherwise English calendar.
+    /// Which day the week starts on deliberately does not: that is a regional
+    /// habit, not a reading preference, and someone in Kyiv who reads English
+    /// should not suddenly get weeks running Sunday to Saturday.
+    private var calendar: Calendar {
+        var calendar = Calendar.current
+        let firstWeekday = calendar.firstWeekday
+        calendar.locale = Localization.locale
+        calendar.firstWeekday = firstWeekday
+        return calendar
+    }
 
     var body: some View {
         VStack(spacing: 12) {
@@ -49,7 +62,7 @@ struct StreakCalendar: View {
 
             Spacer()
 
-            Text(anchor.formatted(.dateTime.month(.wide).year()))
+            Text(anchor.sunfoldFormatted(.dateTime.month(.wide).year()))
                 .font(Typography.cardTitle)
                 .foregroundStyle(Palette.ink)
 
@@ -83,7 +96,7 @@ struct StreakCalendar: View {
                         .frame(width: 32, height: 32)
                 }
             }
-            .accessibilityLabel(day.formatted(date: .long, time: .omitted))
+            .accessibilityLabel(day.sunfoldFormatted(date: .long, time: .omitted))
             .accessibilityValue(isActive ? Text("history.calendar.fasted") : Text("history.calendar.none"))
     }
 

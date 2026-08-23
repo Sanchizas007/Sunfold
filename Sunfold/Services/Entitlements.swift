@@ -172,7 +172,7 @@ final class Entitlements {
             if entitled { isPro = true }
             publishAccess()
             if !entitled {
-                errorMessage = String(localized: "paywall.restore.nothing")
+                errorMessage = String.sunfold("paywall.restore.nothing")
             }
             return entitled
         } catch {

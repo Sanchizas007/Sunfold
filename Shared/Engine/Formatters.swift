@@ -7,6 +7,9 @@ import Foundation
 /// is the test runner and every lookup would silently return the key instead of
 /// the translation. Resolving through a type defined here always finds the
 /// bundle that actually carries the string catalog.
+///
+/// `Localization` narrows this further to the `.lproj` of the chosen language;
+/// see `String.sunfold(_:)`, which is what callers should use.
 private final class BundleMarker {}
 
 extension Bundle {
@@ -31,13 +34,13 @@ nonisolated enum DurationFormat {
         let hours = total / 3600
         let minutes = (total % 3600) / 60
         if hours == 0 {
-            return String(format: String(localized: "duration.minutes", bundle: .sunfold), minutes)
+            return String(format: String.sunfold("duration.minutes"), minutes)
         }
         if minutes == 0 {
-            return String(format: String(localized: "duration.hours", bundle: .sunfold), hours)
+            return String(format: String.sunfold("duration.hours"), hours)
         }
         return String(
-            format: String(localized: "duration.hoursMinutes", bundle: .sunfold),
+            format: String.sunfold("duration.hoursMinutes"),
             hours,
             minutes
         )
@@ -46,7 +49,7 @@ nonisolated enum DurationFormat {
     /// "16h" — used where space is tightest (widget, ring caption).
     static func hoursOnly(_ seconds: TimeInterval) -> String {
         String(
-            format: String(localized: "duration.hours", bundle: .sunfold),
+            format: String.sunfold("duration.hours"),
             Int((max(0, seconds) / 3600).rounded())
         )
     }
@@ -73,6 +76,9 @@ nonisolated enum WeightFormat {
 
     private static var formatter: MeasurementFormatter {
         let formatter = MeasurementFormatter()
+        // "kg" / "кг" / "фнт" and the decimal separator follow the language the
+        // user picked in the app, not the one the device happens to be set to.
+        formatter.locale = Localization.locale
         // Show the unit the user picked, never the locale's preferred one: a
         // user in a metric country who chose pounds means it.
         formatter.unitOptions = .providedUnit

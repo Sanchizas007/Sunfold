@@ -61,7 +61,7 @@ struct ProtocolPickerScreen: View {
 
                 VStack(alignment: .leading, spacing: 3) {
                     HStack(spacing: 7) {
-                        Text(String(localized: item.titleKey))
+                        Text(String.sunfold(item.titleKey))
                             .font(Typography.cardTitle)
                             .foregroundStyle(Palette.ink)
                         if locked {
@@ -70,10 +70,10 @@ struct ProtocolPickerScreen: View {
                                 .foregroundStyle(Palette.inkTertiary)
                         }
                     }
-                    Text(String(localized: item.subtitleKey))
+                    Text(String.sunfold(item.subtitleKey))
                         .font(Typography.caption)
                         .foregroundStyle(Palette.inkSecondary)
-                    Text(String(localized: item.blurbKey))
+                    Text(String.sunfold(item.blurbKey))
                         .font(Typography.caption)
                         .foregroundStyle(Palette.inkTertiary)
                         .fixedSize(horizontal: false, vertical: true)

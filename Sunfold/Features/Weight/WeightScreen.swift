@@ -66,7 +66,7 @@ struct WeightScreen: View {
                     }
                 }
 
-                Text(latest.date.formatted(date: .abbreviated, time: .omitted))
+                Text(latest.date.sunfoldFormatted(date: .abbreviated, time: .omitted))
                     .font(Typography.caption)
                     .foregroundStyle(Palette.inkTertiary)
             }
@@ -170,7 +170,7 @@ struct WeightScreen: View {
                                 }
                             }
                             Spacer()
-                            Text(entry.date.formatted(date: .abbreviated, time: .omitted))
+                            Text(entry.date.sunfoldFormatted(date: .abbreviated, time: .omitted))
                                 .font(Typography.caption)
                                 .foregroundStyle(Palette.inkSecondary)
                         }

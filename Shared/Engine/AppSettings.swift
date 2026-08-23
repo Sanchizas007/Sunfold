@@ -44,6 +44,13 @@ final class AppSettings {
         didSet { defaults.set(appearance.rawValue, forKey: Key.appearance) }
     }
 
+    /// Interface language. Stored in the shared container because the widget and
+    /// the Live Activity resolve their own strings against it, in a process that
+    /// never sees this object.
+    var language: AppLanguage {
+        didSet { defaults.set(language.rawValue, forKey: Localization.defaultsKey) }
+    }
+
     // MARK: Notifications
 
     var notifyOnFastComplete: Bool {
@@ -100,6 +107,9 @@ final class AppSettings {
         appearance = defaults.string(forKey: Key.appearance)
             .flatMap(AppearanceSetting.init(rawValue:)) ?? .system
 
+        language = defaults.string(forKey: Localization.defaultsKey)
+            .flatMap(AppLanguage.init(rawValue:)) ?? .system
+
         notifyOnFastComplete = defaults.object(forKey: Key.notifyOnFastComplete) as? Bool ?? true
         notifyBeforeFastEnds = defaults.object(forKey: Key.notifyBeforeFastEnds) as? Bool ?? true
         notifyOnEatingWindowEnd = defaults.object(forKey: Key.notifyOnEatingWindowEnd) as? Bool ?? true
@@ -139,6 +149,7 @@ final class AppSettings {
         selectedProtocol = .sixteenEight
         customFastMinutes = 14 * 60
         appearance = .system
+        language = .system
         notifyOnFastComplete = true
         notifyBeforeFastEnds = true
         notifyOnEatingWindowEnd = true
@@ -173,7 +184,7 @@ final class AppSettings {
         static let allResettable = [
             selectedProtocol, customFastMinutes, weightUnit, appearance,
             notifyOnFastComplete, notifyBeforeFastEnds, notifyOnEatingWindowEnd,
-            liveActivityEnabled
+            liveActivityEnabled, Localization.defaultsKey
         ]
     }
 }

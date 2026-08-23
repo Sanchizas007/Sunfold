@@ -180,8 +180,8 @@ struct PaywallScreen: View {
 
                         if let savings = product.savingsPercent, savings > 0 {
                             Text(
-                                String(
-                                    localized: "paywall.save",
+                                String.sunfold(
+                                    "paywall.save",
                                     defaultValue: "Save \(savings)%"
                                 )
                             )
@@ -224,18 +224,18 @@ struct PaywallScreen: View {
     private func subtitle(for product: SunfoldProduct) -> String {
         switch product.term {
         case .monthly:
-            String(localized: "paywall.plan.monthly.detail")
+            String.sunfold("paywall.plan.monthly.detail")
         case .yearly:
             if let perMonth = product.perMonthPrice {
-                String(
-                    localized: "paywall.plan.yearly.detailPerMonth",
+                String.sunfold(
+                    "paywall.plan.yearly.detailPerMonth",
                     defaultValue: "Billed yearly · \(perMonth) / month"
                 )
             } else {
-                String(localized: "paywall.plan.yearly.detail")
+                String.sunfold("paywall.plan.yearly.detail")
             }
         case .lifetime:
-            String(localized: "paywall.plan.lifetime.detail")
+            String.sunfold("paywall.plan.lifetime.detail")
         }
     }
 

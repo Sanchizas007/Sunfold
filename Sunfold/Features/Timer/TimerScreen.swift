@@ -177,12 +177,12 @@ struct TimerScreen: View {
     private func centerSubtitle(now: Date) -> String {
         switch fasting.mode {
         case .fasting:
-            String(
-                localized: "timer.subtitle.goal",
+            String.sunfold(
+                "timer.subtitle.goal",
                 defaultValue: "of \(DurationFormat.compact(settings.targetFastSeconds))"
             )
         case .eating:
-            String(localized: "timer.subtitle.windowLeft")
+            String.sunfold("timer.subtitle.windowLeft")
         case .idle:
             DurationFormat.compact(settings.targetFastSeconds)
         }
@@ -191,11 +191,11 @@ struct TimerScreen: View {
     private var accessibilitySummary: String {
         switch fasting.mode {
         case .fasting:
-            String(localized: "a11y.fasting")
+            String.sunfold("a11y.fasting")
         case .eating:
-            String(localized: "a11y.eating")
+            String.sunfold("a11y.eating")
         case .idle:
-            String(localized: "a11y.idle")
+            String.sunfold("a11y.idle")
         }
     }
 
@@ -210,7 +210,7 @@ struct TimerScreen: View {
             } label: {
                 HStack(spacing: 6) {
                     Pill(
-                        text: String(localized: phase.titleKey),
+                        text: String.sunfold(phase.titleKey),
                         symbol: phase.symbol,
                         tint: phase.color
                     )
@@ -233,14 +233,14 @@ struct TimerScreen: View {
                 HStack(spacing: 0) {
                     scheduleColumn(
                         title: "timer.started",
-                        value: session.startDate.formatted(date: .omitted, time: .shortened),
-                        detail: session.startDate.formatted(.dateTime.weekday(.abbreviated))
+                        value: session.startDate.sunfoldFormatted(date: .omitted, time: .shortened),
+                        detail: session.startDate.sunfoldFormatted(.dateTime.weekday(.abbreviated))
                     )
                     Divider().frame(height: 34).overlay(Palette.hairline)
                     scheduleColumn(
                         title: "timer.goal",
-                        value: session.targetEndDate.formatted(date: .omitted, time: .shortened),
-                        detail: session.targetEndDate.formatted(.dateTime.weekday(.abbreviated))
+                        value: session.targetEndDate.sunfoldFormatted(date: .omitted, time: .shortened),
+                        detail: session.targetEndDate.sunfoldFormatted(.dateTime.weekday(.abbreviated))
                     )
                 }
                 .card()
@@ -260,14 +260,14 @@ struct TimerScreen: View {
                 HStack(spacing: 0) {
                     scheduleColumn(
                         title: "timer.window.until",
-                        value: end.formatted(date: .omitted, time: .shortened),
-                        detail: end.formatted(.dateTime.weekday(.abbreviated))
+                        value: end.sunfoldFormatted(date: .omitted, time: .shortened),
+                        detail: end.sunfoldFormatted(.dateTime.weekday(.abbreviated))
                     )
                     Divider().frame(height: 34).overlay(Palette.hairline)
                     scheduleColumn(
                         title: "timer.lastFast",
                         value: DurationFormat.compact(fasting.lastFinished?.duration ?? 0),
-                        detail: String(localized: "timer.completed")
+                        detail: String.sunfold("timer.completed")
                     )
                 }
                 .card()
@@ -366,18 +366,18 @@ private struct AccessBadge: View {
     var body: some View {
         Button { showingPaywall = true } label: {
             if entitlements.isPro {
-                Pill(text: String(localized: "badge.pro"), symbol: "checkmark.seal.fill", tint: Palette.accentDeep)
+                Pill(text: String.sunfold("badge.pro"), symbol: "checkmark.seal.fill", tint: Palette.accentDeep)
             } else if entitlements.isInFullAccessPeriod {
                 Pill(
-                    text: String(
-                        localized: "badge.daysLeft",
+                    text: String.sunfold(
+                        "badge.daysLeft",
                         defaultValue: "\(entitlements.fullAccessDaysRemaining) d"
                     ),
                     symbol: "sparkles",
                     tint: Palette.accent
                 )
             } else {
-                Pill(text: String(localized: "badge.upgrade"), symbol: "lock.fill", tint: Palette.inkSecondary)
+                Pill(text: String.sunfold("badge.upgrade"), symbol: "lock.fill", tint: Palette.inkSecondary)
             }
         }
         .buttonStyle(.plain)

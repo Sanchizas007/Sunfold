@@ -33,6 +33,10 @@ struct SunfoldApp: App {
                 .modelContainer(container)
                 .preferredColorScheme(settings.appearance.colorScheme)
                 .tint(Palette.accentDeep)
+                // Read through the observed settings, not through
+                // `Localization`, so changing the language redraws every screen
+                // at once instead of waiting for the next launch.
+                .environment(\.locale, settings.language.locale)
         }
     }
 }

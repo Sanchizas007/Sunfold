@@ -344,11 +344,7 @@ STRINGS = {
     "settings.theme": ("Theme", "Тема", "Тема"),
     "settings.units": ("Weight units", "Одиниці ваги", "Единицы веса"),
     "settings.language": ("Language", "Мова", "Язык"),
-    "settings.language.note": (
-        "Opens iOS settings, where the language applies to notifications and the widget too.",
-        "Відкриє налаштування iOS — там мова застосується і до сповіщень, і до віджета.",
-        "Откроет настройки iOS — там язык применится и к уведомлениям, и к виджету.",
-    ),
+    "language.system": ("System", "Системна", "Системный"),
     # Kept to one word: this is the value of a menu picker in a narrow row, and
     # a two-word label wrapped onto a second line.
     "appearance.system": ("System", "Системна", "Системная"),

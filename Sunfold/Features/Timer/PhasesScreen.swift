@@ -54,7 +54,7 @@ struct PhasesScreen: View {
                     .background(phase.color.opacity(0.14), in: .circle)
 
                 VStack(alignment: .leading, spacing: 1) {
-                    Text(String(localized: phase.titleKey))
+                    Text(String.sunfold(phase.titleKey))
                         .font(Typography.cardTitle)
                         .foregroundStyle(Palette.ink)
                     Text(hourRange(phase))
@@ -65,7 +65,7 @@ struct PhasesScreen: View {
                 Spacer()
 
                 if isCurrent {
-                    Pill(text: String(localized: "phases.now"), symbol: nil, tint: phase.color)
+                    Pill(text: String.sunfold("phases.now"), symbol: nil, tint: phase.color)
                 } else if isPassed {
                     Image(systemName: "checkmark")
                         .font(.system(size: 12, weight: .bold))
@@ -73,12 +73,12 @@ struct PhasesScreen: View {
                 }
             }
 
-            Text(String(localized: phase.summaryKey))
+            Text(String.sunfold(phase.summaryKey))
                 .font(Typography.body)
                 .foregroundStyle(Palette.ink)
                 .fixedSize(horizontal: false, vertical: true)
 
-            Text(String(localized: phase.detailKey))
+            Text(String.sunfold(phase.detailKey))
                 .font(Typography.caption)
                 .foregroundStyle(Palette.inkSecondary)
                 .fixedSize(horizontal: false, vertical: true)
@@ -93,10 +93,10 @@ struct PhasesScreen: View {
     private func hourRange(_ phase: MetabolicPhase) -> String {
         let start = Int(phase.startHour)
         if phase == .autophagy {
-            return String(localized: "phases.range.open", defaultValue: "\(start)h+")
+            return String.sunfold("phases.range.open", defaultValue: "\(start)h+")
         }
-        return String(
-            localized: "phases.range",
+        return String.sunfold(
+            "phases.range",
             defaultValue: "\(start)–\(Int(phase.endHour)) h"
         )
     }

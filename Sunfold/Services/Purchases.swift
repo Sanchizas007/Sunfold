@@ -38,8 +38,8 @@ nonisolated enum PurchaseError: LocalizedError {
     var errorDescription: String? {
         switch self {
         case .cancelled: nil
-        case .productUnavailable: String(localized: "paywall.error.unavailable")
-        case .notConfigured: String(localized: "paywall.error.notConfigured")
+        case .productUnavailable: String.sunfold("paywall.error.unavailable")
+        case .notConfigured: String.sunfold("paywall.error.notConfigured")
         }
     }
 }

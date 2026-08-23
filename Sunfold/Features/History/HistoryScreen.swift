@@ -67,8 +67,8 @@ struct HistoryScreen: View {
         ) {
             StatTile(
                 title: "history.stat.streak",
-                value: String(
-                    localized: "history.stat.days",
+                value: String.sunfold(
+                    "history.stat.days",
                     defaultValue: "\(summary.currentStreak) d"
                 ),
                 symbol: "flame.fill",
@@ -195,15 +195,15 @@ private struct SessionRow: View {
                 .frame(width: 4, height: 38)
 
             VStack(alignment: .leading, spacing: 3) {
-                Text(session.startDate.formatted(date: .abbreviated, time: .omitted))
+                Text(session.startDate.sunfoldFormatted(date: .abbreviated, time: .omitted))
                     .font(Typography.cardTitle)
                     .foregroundStyle(Palette.ink)
 
                 HStack(spacing: 5) {
-                    Text(session.startDate.formatted(date: .omitted, time: .shortened))
+                    Text(session.startDate.sunfoldFormatted(date: .omitted, time: .shortened))
                     Image(systemName: "arrow.right").font(.system(size: 8, weight: .bold))
                     if let end = session.endDate {
-                        Text(end.formatted(date: .omitted, time: .shortened))
+                        Text(end.sunfoldFormatted(date: .omitted, time: .shortened))
                     } else {
                         Text("history.running")
                     }
@@ -304,7 +304,7 @@ private struct SessionEditor: View {
                             Text(DurationFormat.compact(session.duration ?? session.elapsed()))
                                 .font(Typography.screenTitle)
                                 .foregroundStyle(Palette.ink)
-                            Text(session.startDate.formatted(date: .long, time: .shortened))
+                            Text(session.startDate.sunfoldFormatted(date: .long, time: .shortened))
                                 .font(Typography.caption)
                                 .foregroundStyle(Palette.inkTertiary)
                         }
@@ -331,8 +331,8 @@ private struct SessionEditor: View {
                                     // text; spoken aloud they need to say what
                                     // they rate and which one is chosen.
                                     .accessibilityLabel(
-                                        Text(String(
-                                            localized: "history.editor.feeling.value",
+                                        Text(String.sunfold(
+                                            "history.editor.feeling.value",
                                             defaultValue: "\(value) of 5"
                                         ))
                                     )

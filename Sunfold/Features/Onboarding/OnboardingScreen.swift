@@ -137,10 +137,10 @@ struct OnboardingScreen: View {
                                 .frame(width: 24)
 
                             VStack(alignment: .leading, spacing: 1) {
-                                Text(String(localized: item.titleKey))
+                                Text(String.sunfold(item.titleKey))
                                     .font(Typography.cardTitle)
                                     .foregroundStyle(Palette.ink)
-                                Text(String(localized: item.subtitleKey))
+                                Text(String.sunfold(item.subtitleKey))
                                     .font(Typography.caption)
                                     .foregroundStyle(Palette.inkSecondary)
                             }

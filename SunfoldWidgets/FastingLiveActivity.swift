@@ -13,6 +13,9 @@ struct FastingLiveActivity: Widget {
             lockScreen(context)
                 .activityBackgroundTint(Palette.canvas)
                 .activitySystemActionForegroundColor(Palette.accentDeep)
+                // Same story as the widget: a separate process that has to be
+                // told which language the app is running in.
+                .environment(\.locale, Localization.locale)
         } dynamicIsland: { context in
             DynamicIsland {
                 DynamicIslandExpandedRegion(.leading) {
@@ -50,7 +53,7 @@ struct FastingLiveActivity: Widget {
                     HStack {
                         if let phase = context.state.phase, !context.state.isEatingWindow {
                             Label {
-                                Text(String(localized: phase.titleKey))
+                                Text(String.sunfold(phase.titleKey))
                             } icon: {
                                 Image(systemName: phase.symbol)
                             }
@@ -124,7 +127,7 @@ struct FastingLiveActivity: Widget {
                 HStack(spacing: 8) {
                     if let phase = context.state.phase, !context.state.isEatingWindow {
                         Label {
-                            Text(String(localized: phase.titleKey))
+                            Text(String.sunfold(phase.titleKey))
                         } icon: {
                             Image(systemName: phase.symbol)
                         }
@@ -169,9 +172,9 @@ struct FastingLiveActivity: Widget {
     }
 
     private func goalLabel(_ state: FastingActivityAttributes.ContentState) -> String {
-        String(
-            localized: "activity.goalAt",
-            defaultValue: "Goal \(state.endDate.formatted(date: .omitted, time: .shortened))"
+        String.sunfold(
+            "activity.goalAt",
+            defaultValue: "Goal \(state.endDate.sunfoldFormatted(date: .omitted, time: .shortened))"
         )
     }
 }

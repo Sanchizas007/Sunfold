@@ -63,6 +63,9 @@ struct FastingTimerWidget: Widget {
         StaticConfiguration(kind: "SunfoldFastingTimer", provider: FastingProvider()) { entry in
             FastingWidgetView(entry: entry)
                 .containerBackground(Palette.canvas, for: .widget)
+                // Another process, so nothing here inherits the app's
+                // environment: the language comes from the shared container.
+                .environment(\.locale, Localization.locale)
         }
         .configurationDisplayName("widget.title")
         .description("widget.description")
@@ -174,7 +177,7 @@ struct FastingWidgetView: View {
                     HStack(spacing: 8) {
                         if let phase = snapshot.phase, snapshot.mode == .fasting {
                             Label {
-                                Text(String(localized: phase.titleKey))
+                                Text(String.sunfold(phase.titleKey))
                             } icon: {
                                 Image(systemName: phase.symbol)
                             }
@@ -277,9 +280,9 @@ struct FastingWidgetView: View {
         case .fasting:
             snapshot.protocolLabel
         case .eating:
-            String(localized: "widget.window")
+            String.sunfold("widget.window")
         case .idle:
-            String(localized: "widget.tapToStart")
+            String.sunfold("widget.tapToStart")
         }
     }
 }
