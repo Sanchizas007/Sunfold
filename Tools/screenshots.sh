@@ -74,6 +74,15 @@ for locale in "${LOCALES[@]}"; do
         sleep 5
         file=$(printf "%s/%s/%02d-%s.png" "$OUT" "$locale" "$index" "$screen")
         xcrun simctl io "$UDID" screenshot --type png "$file" 2>/dev/null
+        # `simctl` writes RGBA. App Store Connect rejects an image with an
+        # alpha channel — and reports it as "invalid dimensions", which sends
+        # you hunting for the wrong problem. Flatten to RGB at 72 dpi.
+        python3 - "$file" <<'PY'
+import sys
+from PIL import Image
+path = sys.argv[1]
+Image.open(path).convert("RGB").save(path, "PNG", dpi=(72, 72))
+PY
         echo "    $locale/$(basename "$file")"
         index=$((index + 1))
     done
