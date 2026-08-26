@@ -23,7 +23,12 @@ OUT="$ROOT/screenshots"
 
 # Sheets over the timer (phases, protocols) are shot by asking the timer to
 # open them on launch, which is why they are screens here and not tabs.
-SCREENS=(timer phases history weight protocols paywall settings)
+#
+# The paywall is deliberately NOT in this list. It is shot separately below and
+# saved unnumbered: it carries prices, and a store listing that shows a price
+# needs a fresh review every time that price changes. It exists only for the
+# "review screenshot" field of an in-app purchase.
+SCREENS=(timer phases history weight protocols settings)
 
 if [ $# -gt 0 ]; then LOCALES=("$@"); else LOCALES=(en uk ru); fi
 
@@ -86,6 +91,23 @@ PY
         echo "    $locale/$(basename "$file")"
         index=$((index + 1))
     done
+
+    # The paywall, for the in-app purchase review field. Unnumbered so it can
+    # never be mistaken for part of the store set.
+    xcrun simctl terminate "$UDID" "$BUNDLE" 2>/dev/null || true
+    xcrun simctl launch "$UDID" "$BUNDLE" \
+        -SunfoldDemoData -SunfoldDemoScreen paywall \
+        -AppleLanguages "($locale)" -AppleLocale "$(locale_id "$locale")" >/dev/null
+    sleep 5
+    paywall="$OUT/$locale/paywall-for-review.png"
+    xcrun simctl io "$UDID" screenshot --type png "$paywall" 2>/dev/null
+    python3 - "$paywall" <<'FLATTEN'
+import sys
+from PIL import Image
+path = sys.argv[1]
+Image.open(path).convert("RGB").save(path, "PNG", dpi=(72, 72))
+FLATTEN
+    echo "    $locale/paywall-for-review.png"
 done
 
 xcrun simctl terminate "$UDID" "$BUNDLE" 2>/dev/null || true

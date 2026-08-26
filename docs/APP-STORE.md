@@ -170,8 +170,19 @@ RevenueCat.
 
 ## 7. Метаданные и материалы
 
-- [ ] Скриншоты **6.9″** (1320×2868) — единственный обязательный размер для
-      iPhone-only приложения. Снимаются одной командой, тапать ничего не надо:
+- [ ] Скриншоты **6.5″ (1284×2778)** — именно этот размер просит форма карточки
+      («iPhone, 6,5-дюймовый дисплей», принимает 1242×2688 или 1284×2778).
+      ⚠️ Не 6.9″: 1320×2868 форма не берёт. Снимается на временном симуляторе:
+
+      ```
+      xcrun simctl create "Sunfold-65" \
+        com.apple.CoreSimulator.SimDeviceType.iPhone-14-Plus \
+        com.apple.CoreSimulator.SimRuntime.iOS-26-5
+      SUNFOLD_DEVICE="Sunfold-65" Tools/screenshots.sh
+      xcrun simctl delete "Sunfold-65"
+      ```
+
+      Тапать ничего не надо:
 
       ```
       Tools/screenshots.sh          # en, uk, ru — по 6 кадров на локаль
