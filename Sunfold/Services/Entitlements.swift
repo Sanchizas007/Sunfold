@@ -50,6 +50,28 @@ final class Entitlements {
 
     init(settings: AppSettings = .shared) {
         self.settings = settings
+
+        #if DEBUG
+        if DemoData.isRequested {
+            // A screenshot run never talks to a store. `simctl` cannot apply
+            // the StoreKit configuration file, and a live store answers with
+            // whatever App Store Connect happens to hold that day — a product
+            // still in Missing Metadata simply is not returned. Either way the
+            // frame would capture "couldn't load prices" instead of the
+            // paywall. This provider carries the real plan prices and needs
+            // nothing to talk to.
+            //
+            // Checked before the key, not after: once a key exists, the live
+            // provider would win and the screenshots would start depending on
+            // the weather.
+            provider = UnconfiguredPurchaseProvider()
+            storeKind = .localTesting
+            provider.configure()
+            AccessStore.hasFullAccess = hasFullAccess
+            return
+        }
+        #endif
+
         let key = Bundle.main.object(forInfoDictionaryKey: "RCPublicAPIKey") as? String ?? ""
         let trimmed = key.trimmingCharacters(in: .whitespacesAndNewlines)
 
@@ -58,19 +80,6 @@ final class Entitlements {
             storeKind = .revenueCat
         } else {
             #if DEBUG
-            if DemoData.isRequested {
-                // A screenshot run has no store: `simctl` cannot apply the
-                // StoreKit configuration file, so the live provider would come
-                // back empty and the frame would capture "couldn't load
-                // prices". This one carries the real plan prices and needs
-                // nothing to talk to.
-                provider = UnconfiguredPurchaseProvider()
-                storeKind = .localTesting
-                provider.configure()
-                AccessStore.hasFullAccess = hasFullAccess
-                return
-            }
-
             // No key yet — buy straight through StoreKit against the local
             // configuration file so the flow stays testable before the Apple
             // Developer account exists.
