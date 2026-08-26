@@ -787,9 +787,29 @@ def main() -> None:
     root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     out = os.path.join(root, "Shared", "Resources", "Localizable.xcstrings")
     catalog = build()
+    rendered = json.dumps(catalog, ensure_ascii=False, indent=2) + "\n"
+
+    # `--check` reports drift instead of fixing it, for a hook or for CI.
+    #
+    # Worth having: Xcode rewrites the catalog on its own whenever the project
+    # is open in it, adding keys its scanner finds in code — including the
+    # `defaultValue:` literals, which are not keys at all. Twice now that churn
+    # was picked up by `git add -A` and nearly shipped, buried in an 8000-line
+    # diff of a file nobody edited.
+    if "--check" in sys.argv:
+        current = open(out, encoding="utf-8").read() if os.path.exists(out) else ""
+        if current == rendered:
+            print("string catalog matches the table")
+            return
+        print(
+            "string catalog has drifted from Tools/build-strings.py.\n"
+            "Run `python3 Tools/build-strings.py` and commit the result.",
+            file=sys.stderr,
+        )
+        raise SystemExit(1)
+
     with open(out, "w", encoding="utf-8") as handle:
-        json.dump(catalog, handle, ensure_ascii=False, indent=2)
-        handle.write("\n")
+        handle.write(rendered)
     print(f"wrote {len(catalog['strings'])} keys to {out}")
 
 
