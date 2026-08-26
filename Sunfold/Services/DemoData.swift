@@ -21,7 +21,7 @@ enum DemoData {
     /// sheets over the timer rather than tabs, which is why the views read this
     /// themselves instead of a single router doing it.
     enum Screen: String {
-        case timer, phases, protocols, history, weight, settings
+        case timer, phases, protocols, paywall, history, weight, settings
     }
 
     #if DEBUG

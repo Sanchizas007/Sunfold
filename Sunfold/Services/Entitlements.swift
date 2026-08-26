@@ -20,6 +20,19 @@ final class Entitlements {
     private let provider: any PurchaseProviding
     private let settings: AppSettings
 
+    /// Whether the paywall shows its note about which store this build talks to.
+    ///
+    /// True for every real build. Suppressed only in a screenshot run: the note
+    /// is accurate but it is scaffolding, and these frames go to App Store
+    /// review as "the purchase as the user sees it".
+    var showsStoreKindNotice: Bool {
+        #if DEBUG
+        return !DemoData.isRequested
+        #else
+        return true
+        #endif
+    }
+
     /// True when the store says the Pro entitlement is active.
     private(set) var isPro = false
     private(set) var products: [SunfoldProduct] = []
@@ -45,6 +58,19 @@ final class Entitlements {
             storeKind = .revenueCat
         } else {
             #if DEBUG
+            if DemoData.isRequested {
+                // A screenshot run has no store: `simctl` cannot apply the
+                // StoreKit configuration file, so the live provider would come
+                // back empty and the frame would capture "couldn't load
+                // prices". This one carries the real plan prices and needs
+                // nothing to talk to.
+                provider = UnconfiguredPurchaseProvider()
+                storeKind = .localTesting
+                provider.configure()
+                AccessStore.hasFullAccess = hasFullAccess
+                return
+            }
+
             // No key yet — buy straight through StoreKit against the local
             // configuration file so the flow stays testable before the Apple
             // Developer account exists.

@@ -243,13 +243,15 @@ struct PaywallScreen: View {
 
     private var purchaseSection: some View {
         VStack(spacing: 12) {
-            switch entitlements.storeKind {
-            case .revenueCat:
-                EmptyView()
-            case .localTesting:
-                DisclaimerNote(text: "paywall.localStore", symbol: "hammer")
-            case .unconfigured:
-                DisclaimerNote(text: "paywall.notConfigured", symbol: "wrench.and.screwdriver")
+            if entitlements.showsStoreKindNotice {
+                switch entitlements.storeKind {
+                case .revenueCat:
+                    EmptyView()
+                case .localTesting:
+                    DisclaimerNote(text: "paywall.localStore", symbol: "hammer")
+                case .unconfigured:
+                    DisclaimerNote(text: "paywall.notConfigured", symbol: "wrench.and.screwdriver")
+                }
             }
 
             // The renewal terms sit immediately above the button, where they

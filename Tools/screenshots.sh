@@ -23,7 +23,7 @@ OUT="$ROOT/screenshots"
 
 # Sheets over the timer (phases, protocols) are shot by asking the timer to
 # open them on launch, which is why they are screens here and not tabs.
-SCREENS=(timer phases history weight protocols settings)
+SCREENS=(timer phases history weight protocols paywall settings)
 
 if [ $# -gt 0 ]; then LOCALES=("$@"); else LOCALES=(en uk ru); fi
 
@@ -69,7 +69,9 @@ for locale in "${LOCALES[@]}"; do
             -AppleLanguages "($locale)" -AppleLocale "$(locale_id "$locale")" >/dev/null
         # The seed writes on the main actor before the first frame; the wait is
         # for the sheet presentation animation, which no launch flag skips.
-        sleep 3
+        # Five seconds, not three: the paywall is the tallest sheet and three
+        # caught it mid-slide, giving a frame with nothing but the background.
+        sleep 5
         file=$(printf "%s/%s/%02d-%s.png" "$OUT" "$locale" "$index" "$screen")
         xcrun simctl io "$UDID" screenshot --type png "$file" 2>/dev/null
         echo "    $locale/$(basename "$file")"

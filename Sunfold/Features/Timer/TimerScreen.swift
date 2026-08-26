@@ -14,7 +14,7 @@ struct TimerScreen: View {
     // by name — `DemoData.requestedScreen` is always nil in release.
     @State private var showingProtocols = DemoData.requestedScreen == .protocols
     @State private var showingPhases = DemoData.requestedScreen == .phases
-    @State private var showingPaywall = false
+    @State private var showingPaywall = DemoData.requestedScreen == .paywall
     @State private var showingStartEditor = false
     @State private var showingLongFastNotice = false
     @State private var showingEndConfirmation = false
