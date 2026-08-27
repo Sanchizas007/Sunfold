@@ -64,51 +64,76 @@ xcrun simctl status_bar "$UDID" override \
     --time "9:41" --batteryState charged --batteryLevel 100 \
     --cellularBars 4 --wifiBars 3
 
-for locale in "${LOCALES[@]}"; do
-    mkdir -p "$OUT/$locale"
-    index=1
-    for screen in "${SCREENS[@]}"; do
+# Takes one screenshot and reports whether it actually caught the screen.
+#
+# A fixed sleep is not enough and never was: the app can be slow on its first
+# launch after install, the seeder writes before the first frame, and a sheet
+# slides in on its own schedule. Waiting longer only moves the race — six of
+# twenty-one frames still came out as bare background, and blank frames are
+# easy to miss when you are looking at a folder of thumbnails.
+#
+# So the frame is measured instead. A screen with content has a wide spread of
+# brightness; a bare background is flat. Flattens to RGB on success, because
+# App Store Connect rejects an alpha channel and blames the dimensions.
+shoot() {
+    python3 - "$1" <<'CHECK'
+import sys
+from PIL import Image, ImageStat
+path = sys.argv[1]
+try:
+    im = Image.open(path)
+except Exception:
+    sys.exit(1)
+w, h = im.size
+# Ignore the status bar and the tab bar: both carry content on an empty screen.
+body = im.convert("L").crop((0, int(h * 0.12), w, int(h * 0.88)))
+if ImageStat.Stat(body).stddev[0] < 8:
+    sys.exit(1)
+im.convert("RGB").save(path, "PNG", dpi=(72, 72))
+CHECK
+}
+
+# Launches the app on one screen and shoots it, retrying until the frame has
+# something on it.
+capture() {
+    local screen="$1" file="$2"
+    local attempt
+    for attempt in 1 2 3 4 5 6; do
         xcrun simctl terminate "$UDID" "$BUNDLE" 2>/dev/null || true
         xcrun simctl launch "$UDID" "$BUNDLE" \
             -SunfoldDemoData -SunfoldDemoScreen "$screen" \
             -AppleLanguages "($locale)" -AppleLocale "$(locale_id "$locale")" >/dev/null
-        # The seed writes on the main actor before the first frame; the wait is
-        # for the sheet presentation animation, which no launch flag skips.
-        # Five seconds, not three: the paywall is the tallest sheet and three
-        # caught it mid-slide, giving a frame with nothing but the background.
-        sleep 5
-        file=$(printf "%s/%s/%02d-%s.png" "$OUT" "$locale" "$index" "$screen")
+        sleep $((2 + attempt))
         xcrun simctl io "$UDID" screenshot --type png "$file" 2>/dev/null
-        # `simctl` writes RGBA. App Store Connect rejects an image with an
-        # alpha channel — and reports it as "invalid dimensions", which sends
-        # you hunting for the wrong problem. Flatten to RGB at 72 dpi.
-        python3 - "$file" <<'PY'
-import sys
-from PIL import Image
-path = sys.argv[1]
-Image.open(path).convert("RGB").save(path, "PNG", dpi=(72, 72))
-PY
-        echo "    $locale/$(basename "$file")"
+        if shoot "$file"; then
+            echo "    $locale/$(basename "$file")"
+            return 0
+        fi
+    done
+    echo "    !! $locale/$(basename "$file") came out blank after 6 tries" >&2
+    return 1
+}
+
+blank=0
+
+for locale in "${LOCALES[@]}"; do
+    mkdir -p "$OUT/$locale"
+    index=1
+    for screen in "${SCREENS[@]}"; do
+        file=$(printf "%s/%s/%02d-%s.png" "$OUT" "$locale" "$index" "$screen")
+        capture "$screen" "$file" || blank=$((blank + 1))
         index=$((index + 1))
     done
 
     # The paywall, for the in-app purchase review field. Unnumbered so it can
     # never be mistaken for part of the store set.
-    xcrun simctl terminate "$UDID" "$BUNDLE" 2>/dev/null || true
-    xcrun simctl launch "$UDID" "$BUNDLE" \
-        -SunfoldDemoData -SunfoldDemoScreen paywall \
-        -AppleLanguages "($locale)" -AppleLocale "$(locale_id "$locale")" >/dev/null
-    sleep 5
-    paywall="$OUT/$locale/paywall-for-review.png"
-    xcrun simctl io "$UDID" screenshot --type png "$paywall" 2>/dev/null
-    python3 - "$paywall" <<'FLATTEN'
-import sys
-from PIL import Image
-path = sys.argv[1]
-Image.open(path).convert("RGB").save(path, "PNG", dpi=(72, 72))
-FLATTEN
-    echo "    $locale/paywall-for-review.png"
+    capture paywall "$OUT/$locale/paywall-for-review.png" || blank=$((blank + 1))
 done
+
+if [ "$blank" -gt 0 ]; then
+    echo "==> $blank frame(s) failed. Do not upload this set." >&2
+    exit 1
+fi
 
 xcrun simctl terminate "$UDID" "$BUNDLE" 2>/dev/null || true
 echo "==> Done: $OUT"
