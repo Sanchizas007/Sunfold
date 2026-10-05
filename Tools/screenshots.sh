@@ -30,14 +30,30 @@ OUT="$ROOT/screenshots"
 # "review screenshot" field of an in-app purchase.
 SCREENS=(timer phases history weight protocols settings)
 
-if [ $# -gt 0 ]; then LOCALES=("$@"); else LOCALES=(en uk ru); fi
+# Keep in step with LANGUAGES in Tools/build-strings.py: a locale shot here but
+# not translated there comes out in English and looks like a working frame.
+if [ $# -gt 0 ]; then LOCALES=("$@"); else LOCALES=(en de ru uk); fi
 
+# The language code goes to AppleLanguages as the bundle spells it; AppleLocale
+# wants a region, which drives dates, numbers and the weight unit.
 locale_id() {
     case "$1" in
-        en) echo "en_US" ;;
-        uk) echo "uk_UA" ;;
-        ru) echo "ru_RU" ;;
-        *)  echo "$1" ;;
+        en)      echo "en_US" ;;
+        de)      echo "de_DE" ;;
+        fr)      echo "fr_FR" ;;
+        es-MX)   echo "es_MX" ;;
+        es-ES)   echo "es_ES" ;;
+        pt-BR)   echo "pt_BR" ;;
+        it)      echo "it_IT" ;;
+        ja)      echo "ja_JP" ;;
+        ko)      echo "ko_KR" ;;
+        ru)      echo "ru_RU" ;;
+        uk)      echo "uk_UA" ;;
+        zh-Hans) echo "zh_Hans_CN" ;;
+        zh-Hant) echo "zh_Hant_TW" ;;
+        nl)      echo "nl_NL" ;;
+        pl)      echo "pl_PL" ;;
+        *)       echo "$1" ;;
     esac
 }
 
@@ -53,10 +69,35 @@ xcodebuild -project "$ROOT/Sunfold.xcodeproj" -scheme Sunfold -configuration Deb
 
 APP="$DERIVED/Build/Products/Debug-iphonesimulator/Sunfold.app"
 
+# Erased, not just rebooted. This simulator is shared with the other apps in the
+# folder, and their runs leave marks that land in the frames: a "back to Tintaq"
+# breadcrumb in the status bar, a forced 12-hour clock, and a Sunfold container
+# whose first-launch date is old enough that the opening week has lapsed — so
+# the timer showed "Upgrade" with a padlock instead of "7 days left". None of
+# that is visible while shooting; it is visible in the App Store.
+echo "==> Erasing the simulator so no other app's state reaches the frames"
+xcrun simctl shutdown "$UDID" 2>/dev/null || true
+xcrun simctl erase "$UDID"
+
 xcrun simctl boot "$UDID" 2>/dev/null || true
 xcrun simctl bootstatus "$UDID" -b >/dev/null
 xcrun simctl ui "$UDID" appearance light
+
+# Let the locale decide 12- or 24-hour time rather than whatever the device was
+# last forced to. A German frame showing "8:45 AM" is wrong in the one way a
+# reviewer in Germany would notice immediately.
+xcrun simctl spawn "$UDID" defaults delete .GlobalPreferences AppleICUForce24HourTime 2>/dev/null || true
+xcrun simctl spawn "$UDID" defaults delete .GlobalPreferences AppleICUForce12HourTime 2>/dev/null || true
+
 xcrun simctl install "$UDID" "$APP"
+
+# An erased device boots before SpringBoard is ready to launch anything. The
+# first frame of the first locale came out as the Home Screen because of it —
+# so the app is launched once and thrown away before any shooting starts.
+echo "==> Warming up"
+xcrun simctl launch "$UDID" "$BUNDLE" >/dev/null 2>&1 || true
+python3 -c "import time; time.sleep(8)"
+xcrun simctl terminate "$UDID" "$BUNDLE" >/dev/null 2>&1 || true
 
 # A clean, plausible status bar. Apple rejects shots of a half-empty battery
 # and a carrier name that is really "Simulator".
@@ -86,8 +127,17 @@ except Exception:
     sys.exit(1)
 w, h = im.size
 # Ignore the status bar and the tab bar: both carry content on an empty screen.
-body = im.convert("L").crop((0, int(h * 0.12), w, int(h * 0.88)))
-if ImageStat.Stat(body).stddev[0] < 8:
+body = im.crop((0, int(h * 0.12), w, int(h * 0.88)))
+if ImageStat.Stat(body.convert("L")).stddev[0] < 8:
+    sys.exit(1)
+
+# Contrast alone says "something is on screen", not "the right thing is on
+# screen". The first frame after an erase came out as the iOS Home Screen —
+# plenty of contrast, entirely wrong, and it would have shipped. Sunfold's
+# background is warm sand in light mode, so red leads blue by a wide margin on
+# every one of its screens; no system screen looks like that.
+red, _, blue = [round(channel) for channel in ImageStat.Stat(body).mean]
+if red < blue + 10:
     sys.exit(1)
 im.convert("RGB").save(path, "PNG", dpi=(72, 72))
 CHECK

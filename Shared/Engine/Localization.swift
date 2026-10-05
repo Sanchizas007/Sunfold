@@ -9,8 +9,10 @@ import Foundation
 nonisolated enum AppLanguage: String, CaseIterable, Identifiable, Sendable {
     case system
     case english = "en"
-    case ukrainian = "uk"
+    case german = "de"
+    case french = "fr"
     case russian = "ru"
+    case ukrainian = "uk"
 
     var id: String { rawValue }
 

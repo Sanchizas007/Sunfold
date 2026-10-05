@@ -36,22 +36,22 @@ PLURAL_ORDER = ("zero", "one", "two", "few", "many", "other")
 # Spain does not, and the App Store indexes them separately. Ukrainian is kept
 # even though it is outside the thirteen-language house list — the app already
 # had it, and it is the home market.
+# Languages that are fully translated and therefore shipped. The list grows one
+# entry at a time, together with the file that backs it, so the catalog builds
+# and the app is shippable at every commit rather than only at the end.
+#
+# Target set (house list of thirteen languages, fifteen storefront locales):
+#   en de fr es-MX es-ES pt-BR it ja ko ru uk zh-Hans zh-Hant nl pl
+#
+# Spanish ships as two locales: Latin America follows Mexican usage, Spain does
+# not, and the App Store indexes them separately. Ukrainian is outside the house
+# list but kept — the app already had it, and it is the home market.
 LANGUAGES = (
     "en",
     "de",
     "fr",
-    "es-MX",
-    "es-ES",
-    "pt-BR",
-    "it",
-    "ja",
-    "ko",
     "ru",
     "uk",
-    "zh-Hans",
-    "zh-Hant",
-    "nl",
-    "pl",
 )
 
 
