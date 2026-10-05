@@ -50,6 +50,8 @@ LANGUAGES = (
     "en",
     "de",
     "fr",
+    "es-MX",
+    "es-ES",
     "ru",
     "uk",
 )

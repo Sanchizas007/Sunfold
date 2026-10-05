@@ -11,6 +11,8 @@ nonisolated enum AppLanguage: String, CaseIterable, Identifiable, Sendable {
     case english = "en"
     case german = "de"
     case french = "fr"
+    case spanishMexico = "es-MX"
+    case spanishSpain = "es-ES"
     case russian = "ru"
     case ukrainian = "uk"
 
@@ -36,8 +38,13 @@ nonisolated enum AppLanguage: String, CaseIterable, Identifiable, Sendable {
     /// translated into it.
     var displayName: String {
         guard let code else { return .sunfold("language.system") }
-        return Locale(identifier: code)
-            .localizedString(forLanguageCode: code)?
+        let locale = Locale(identifier: code)
+        // `forLanguageCode:` alone is not enough once a region is involved:
+        // "es-MX" is an identifier, not a language code, so the lookup returns
+        // nil and the picker falls through to "ES-MX". `forIdentifier:` handles
+        // both shapes — "Deutsch" for "de", "Español (México)" for "es-MX".
+        return (locale.localizedString(forIdentifier: code)
+            ?? locale.localizedString(forLanguageCode: code))?
             .localizedCapitalized
             ?? code.uppercased()
     }

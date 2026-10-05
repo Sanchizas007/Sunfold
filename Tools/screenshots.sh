@@ -15,7 +15,11 @@
 # exist.
 set -euo pipefail
 
-DEVICE="${SUNFOLD_DEVICE:-iPhone 17 Pro Max}"
+# iPhone 14 Plus, because it shoots 1284x2778 — the exact size of the English
+# set that App Review approved. A newer Pro Max shoots 1320x2868, and the
+# localised frames have to be the approved frames with the language swapped,
+# not a new set at a new size.
+DEVICE="${SUNFOLD_DEVICE:-iPhone 14 Plus}"
 BUNDLE="app.sunfold"
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 DERIVED="${SUNFOLD_DERIVED:-$ROOT/.build/screenshots}"

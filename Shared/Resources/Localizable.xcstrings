@@ -22,6 +22,18 @@
             "value": "Fenêtre alimentaire. Temps restant avant le prochain jeûne."
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ventana de alimentación. Tiempo restante antes del próximo ayuno."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ventana de alimentación. Tiempo restante antes del próximo ayuno."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -55,6 +67,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Jeûne en cours. Touchez deux fois pour voir les phases métaboliques."
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ayuno en curso. Toca dos veces para ver las fases metabólicas."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ayuno en curso. Toca dos veces para ver las fases metabólicas."
           }
         },
         "ru": {
@@ -92,6 +116,18 @@
             "value": "Aucun jeûne en cours. Utilisez le bouton de démarrage ci-dessous."
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No hay ayuno en curso. Usa el botón de inicio de abajo."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No hay ningún ayuno en curso. Usa el botón de inicio de abajo."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -127,6 +163,18 @@
             "value": "Objectif %@"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Meta %@"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Objetivo %@"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -157,6 +205,18 @@
           }
         },
         "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sunfold"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sunfold"
+          }
+        },
+        "es-ES": {
           "stringUnit": {
             "state": "translated",
             "value": "Sunfold"
@@ -197,6 +257,18 @@
             "value": "Sombre"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Oscuro"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Oscuro"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -230,6 +302,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Clair"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Claro"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Claro"
           }
         },
         "ru": {
@@ -267,6 +351,18 @@
             "value": "Système"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sistema"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sistema"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -302,6 +398,18 @@
             "value": "%lld j"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld d"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld d"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -332,6 +440,18 @@
           }
         },
         "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pro"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pro"
+          }
+        },
+        "es-ES": {
           "stringUnit": {
             "state": "translated",
             "value": "Pro"
@@ -372,6 +492,18 @@
             "value": "Passer à Pro"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mejorar"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mejorar"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -405,6 +537,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Annuler"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancelar"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancelar"
           }
         },
         "ru": {
@@ -442,6 +586,18 @@
             "value": "Fermer"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cerrar"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cerrar"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -475,6 +631,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Continuer"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Continuar"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Continuar"
           }
         },
         "ru": {
@@ -512,6 +680,18 @@
             "value": "Supprimer"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eliminar"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eliminar"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -542,6 +722,18 @@
           }
         },
         "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OK"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OK"
+          }
+        },
+        "es-ES": {
           "stringUnit": {
             "state": "translated",
             "value": "OK"
@@ -582,6 +774,18 @@
             "value": "Modifier"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Editar"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Editar"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -612,6 +816,18 @@
           }
         },
         "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OK"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OK"
+          }
+        },
+        "es-ES": {
           "stringUnit": {
             "state": "translated",
             "value": "OK"
@@ -652,6 +868,18 @@
             "value": "Réessayer"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Intentar de nuevo"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Volver a intentarlo"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -685,6 +913,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Enregistrer"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Guardar"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Guardar"
           }
         },
         "ru": {
@@ -722,6 +962,18 @@
             "value": "Parlez-en à un professionnel de santé avant de jeûner si vous êtes enceinte ou allaitez, avez moins de 18 ans, vivez avec un diabète ou prenez un traitement qui agit sur la glycémie, prenez un médicament à prendre au cours d’un repas, êtes en insuffisance pondérale ou vivez avec une maladie chronique."
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Habla con un profesional de la salud antes de ayunar si estás embarazada o amamantando, eres menor de 18 años, vives con diabetes o tomas medicamentos que afectan el azúcar en sangre, tomas algún medicamento que debe tomarse con alimentos, tienes bajo peso o vives con una enfermedad crónica."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Habla con un profesional sanitario antes de ayunar si estás embarazada o dando el pecho, eres menor de 18 años, convives con diabetes o tomas medicación que afecta al azúcar en sangre, tomas algún medicamento que debe tomarse con comida, tienes bajo peso o convives con una enfermedad crónica."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -755,6 +1007,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Parlez-en d’abord à un médecin"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Habla primero con tu médico"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Habla antes con tu médico"
           }
         },
         "ru": {
@@ -792,6 +1056,18 @@
             "value": "Si vous avez ou avez eu un trouble du comportement alimentaire, ou si le suivi des repas vous angoisse, une application de jeûne peut aggraver les choses. Parlez-en à un médecin ou à un service d’accompagnement près de chez vous avant d’utiliser Sunfold."
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Si tienes o has tenido un trastorno alimentario, o si llevar un registro de las comidas te genera ansiedad, una app de ayuno puede empeorar las cosas. Habla con tu médico o con un servicio de apoyo en tu zona antes de usar Sunfold."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Si tienes o has tenido un trastorno de la conducta alimentaria, o si llevar un registro de las comidas te genera ansiedad, una app de ayuno puede empeorar las cosas. Habla con tu médico o con un servicio de apoyo de tu zona antes de usar Sunfold."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -825,6 +1101,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Si manger est difficile"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Si comer es difícil"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Si comer es difícil"
           }
         },
         "ru": {
@@ -862,6 +1150,18 @@
             "value": "Sunfold est un minuteur, pas un médecin"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sunfold es un temporizador, no un médico"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sunfold es un temporizador, no un médico"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -895,6 +1195,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Sunfold enregistre quand vous mangez. Il ne peut rien savoir de votre santé, et il ne diagnostique pas, ne traite pas et ne conseille pas."
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sunfold registra cuándo comes. No puede saber nada sobre tu salud, y no diagnostica, no trata ni aconseja."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sunfold registra cuándo comes. No puede saber nada sobre tu salud, y no diagnostica, no trata ni aconseja."
           }
         },
         "ru": {
@@ -932,6 +1244,18 @@
             "value": "Tout ce que contient Sunfold, y compris les phases métaboliques, relève de l’information générale. Ce n’est ni un diagnostic, ni un plan de traitement, ni une recommandation vous concernant personnellement."
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Todo lo que hay en Sunfold, incluidas las fases metabólicas, es información general con fines educativos. No es un diagnóstico, ni un plan de tratamiento, ni una recomendación para ti en particular."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Todo lo que hay en Sunfold, incluidas las fases metabólicas, es información general con fines divulgativos. No es un diagnóstico, ni un plan de tratamiento, ni una recomendación para ti en particular."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -965,6 +1289,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Pas un avis médical"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No es consejo médico"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No es consejo médico"
           }
         },
         "ru": {
@@ -1002,6 +1338,18 @@
             "value": "Les heures indiquées pour chaque phase métabolique sont des approximations issues de la recherche générale. Ce qui se passe réellement dépend de votre dernier repas, de votre activité, de votre sommeil et de votre corps. Voyez-les comme une carte approximative, pas comme une mesure."
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Las horas que se muestran para cada fase metabólica son aproximaciones tomadas de investigación general. Lo que ocurre en realidad depende de tu última comida, tu actividad, tu descanso y tu cuerpo. Tómalas como un mapa aproximado, no como una medición."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Las horas que se muestran para cada fase metabólica son aproximaciones tomadas de la investigación general. Lo que ocurre en realidad depende de tu última comida, tu actividad, tu descanso y tu cuerpo. Tómalas como un mapa aproximado, no como una medición."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -1035,6 +1383,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "À propos des phases"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sobre las fases"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sobre las fases"
           }
         },
         "ru": {
@@ -1072,6 +1432,18 @@
             "value": "Vertiges, malaise, confusion, cœur qui s’emballe ou faiblesse inhabituelle sont des raisons de manger et de consulter. Aucune série ne vaut cela."
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mareo, desmayo, confusión, taquicardia o debilidad poco habitual son motivos para comer y buscar atención médica. Ninguna racha lo vale."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mareo, sensación de desmayo, confusión, taquicardia o debilidad poco habitual son motivos para comer y buscar atención médica. Ninguna racha lo vale."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -1105,6 +1477,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Arrêtez si vous vous sentez mal"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Detente si te sientes mal"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Para si te encuentras mal"
           }
         },
         "ru": {
@@ -1142,6 +1526,18 @@
             "value": "Avis santé"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aviso de salud"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aviso de salud"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -1172,6 +1568,18 @@
           }
         },
         "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld h"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld h"
+          }
+        },
+        "es-ES": {
           "stringUnit": {
             "state": "translated",
             "value": "%lld h"
@@ -1212,6 +1620,18 @@
             "value": "%1$lld h %2$lld min"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$lld h %2$lld min"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$lld h %2$lld min"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -1242,6 +1662,18 @@
           }
         },
         "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld min"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld min"
+          }
+        },
+        "es-ES": {
           "stringUnit": {
             "state": "translated",
             "value": "%lld min"
@@ -1282,6 +1714,18 @@
             "value": "jeûné"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "con ayuno"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "con ayuno"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -1315,6 +1759,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Mois suivant"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mes siguiente"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mes siguiente"
           }
         },
         "ru": {
@@ -1352,6 +1808,18 @@
             "value": "aucun jeûne"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "sin ayuno"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "sin ayuno"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -1385,6 +1853,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Mois précédent"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mes anterior"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mes anterior"
           }
         },
         "ru": {
@@ -1422,6 +1902,18 @@
             "value": "Jour"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Día"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Día"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -1455,6 +1947,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Heures"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Horas"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Horas"
           }
         },
         "ru": {
@@ -1492,6 +1996,18 @@
             "value": "Voyez vos heures de jeûne s’accumuler au fil du temps."
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mira cómo se suman tus horas de ayuno con el tiempo."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comprueba cómo se suman tus horas de ayuno con el tiempo."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -1525,6 +2041,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Les graphiques sont dans Pro"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Las gráficas están en Pro"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Los gráficos están en Pro"
           }
         },
         "ru": {
@@ -1562,6 +2090,18 @@
             "value": "14 derniers jours"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Últimos 14 días"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Últimos 14 días"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -1595,6 +2135,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Durée"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Duración"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Duración"
           }
         },
         "ru": {
@@ -1632,6 +2184,18 @@
             "value": "Comment c’était ?"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "¿Cómo se sintió?"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "¿Cómo te fue?"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -1665,6 +2229,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "%lld sur 5"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld de 5"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld de 5"
           }
         },
         "ru": {
@@ -1702,6 +2278,18 @@
             "value": "Note"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nota"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nota"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -1735,6 +2323,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Ce qui mérite d’être retenu"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Algo que valga la pena recordar"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Algo que merezca la pena recordar"
           }
         },
         "ru": {
@@ -1772,6 +2372,18 @@
             "value": "Détails du jeûne"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Detalles del ayuno"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Detalles del ayuno"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -1805,6 +2417,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Vos jeûnes terminés apparaîtront ici."
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tus ayunos terminados aparecerán aquí."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tus ayunos terminados aparecerán aquí."
           }
         },
         "ru": {
@@ -1842,6 +2466,18 @@
             "value": "Rien pour l’instant"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aún no hay nada"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Todavía no hay nada"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -1875,6 +2511,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Vos jeûnes plus anciens sont toujours enregistrés. Débloquez Pro pour tous les voir."
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tus ayunos anteriores siguen guardados. Desbloquea Pro para verlos todos."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tus ayunos anteriores siguen guardados. Desbloquea Pro para verlos todos."
           }
         },
         "ru": {
@@ -1912,6 +2560,18 @@
             "value": "7 derniers jours affichés"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostrando los últimos 7 días"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostrando los últimos 7 días"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -1945,6 +2605,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "en cours"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "en curso"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "en curso"
           }
         },
         "ru": {
@@ -1982,6 +2654,18 @@
             "value": "Tous les jeûnes"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Todos los ayunos"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Todos los ayunos"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -2015,6 +2699,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Moyenne"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Promedio"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Media"
           }
         },
         "ru": {
@@ -2083,6 +2779,42 @@
                 "stringUnit": {
                   "state": "translated",
                   "value": "%lld jours"
+                }
+              }
+            }
+          }
+        },
+        "es-MX": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld día"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld días"
+                }
+              }
+            }
+          }
+        },
+        "es-ES": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld día"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld días"
                 }
               }
             }
@@ -2171,6 +2903,18 @@
             "value": "Série"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Racha"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Racha"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -2206,6 +2950,18 @@
             "value": "Jeûnes"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ayunos"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ayunos"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -2236,6 +2992,18 @@
           }
         },
         "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Total"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Total"
+          }
+        },
+        "es-ES": {
           "stringUnit": {
             "state": "translated",
             "value": "Total"
@@ -2276,6 +3044,18 @@
             "value": "Historique"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Historial"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Historial"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -2309,6 +3089,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Système"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sistema"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sistema"
           }
         },
         "ru": {
@@ -2346,6 +3138,18 @@
             "value": "Vous avez atteint votre objectif. Ouvrez Sunfold pour terminer le jeûne quand vous le souhaitez."
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alcanzaste tu meta. Abre Sunfold para terminar el ayuno cuando quieras."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Has alcanzado tu objetivo. Abre Sunfold para terminar el ayuno cuando quieras."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -2379,6 +3183,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Jeûne terminé"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ayuno completado"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ayuno completado"
           }
         },
         "ru": {
@@ -2416,6 +3232,18 @@
             "value": "Votre jeûne atteint son objectif dans une demi-heure."
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tu ayuno alcanza su meta en media hora."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tu ayuno alcanza su objetivo en media hora."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -2449,6 +3277,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Plus que 30 minutes"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Faltan 30 minutos"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quedan 30 minutos"
           }
         },
         "ru": {
@@ -2486,6 +3326,18 @@
             "value": "Vous pourrez commencer le prochain jeûne quand vous serez prêt."
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Puedes empezar el próximo ayuno cuando estés listo."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Puedes empezar el siguiente ayuno cuando te apetezca."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -2519,6 +3371,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Fin de la fenêtre alimentaire"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La ventana se cierra"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La ventana se cierra"
           }
         },
         "ru": {
@@ -2556,6 +3420,18 @@
             "value": "J’ai lu ceci et je comprends que Sunfold ne donne pas d’avis médical."
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "He leído esto y entiendo que Sunfold no da consejo médico."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "He leído esto y entiendo que Sunfold no da consejo médico."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -2589,6 +3465,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Cochez la case ci-dessus pour continuer."
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Marca la casilla de arriba para continuar."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Marca la casilla de arriba para continuar."
           }
         },
         "ru": {
@@ -2626,6 +3514,18 @@
             "value": "Sunfold est un minuteur et un journal. Ce n’est pas un dispositif médical et il ne donne aucun avis médical."
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sunfold es un temporizador y un diario. No es un dispositivo médico y no da consejo médico."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sunfold es un temporizador y un diario. No es un producto sanitario y no da consejo médico."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -2659,6 +3559,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Parlez-en à un médecin avant de jeûner si vous êtes enceinte ou allaitez, avez moins de 18 ans, vivez avec un diabète ou prenez un traitement qui agit sur la glycémie, prenez un médicament à prendre au cours d’un repas, êtes en insuffisance pondérale ou vivez avec une maladie chronique.\n\nSi vous avez ou avez eu un trouble du comportement alimentaire, les applications de jeûne peuvent rendre les choses plus difficiles. Cherchez d’abord du soutien."
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Habla con tu médico antes de ayunar si estás embarazada o amamantando, eres menor de 18 años, vives con diabetes o tomas medicamentos que afectan el azúcar en sangre, tomas algún medicamento que debe tomarse con alimentos, tienes bajo peso o vives con una enfermedad crónica.\n\nSi tienes o has tenido un trastorno alimentario, las apps de ayuno pueden hacerlo más difícil. Busca apoyo primero."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Habla con tu médico antes de ayunar si estás embarazada o dando el pecho, eres menor de 18 años, convives con diabetes o tomas medicación que afecta al azúcar en sangre, tomas algún medicamento que debe tomarse con comida, tienes bajo peso o convives con una enfermedad crónica.\n\nSi tienes o has tenido un trastorno de la conducta alimentaria, las apps de ayuno pueden hacerlo más difícil. Busca apoyo primero."
           }
         },
         "ru": {
@@ -2696,6 +3608,18 @@
             "value": "Lire l’avis complet"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leer el aviso completo"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leer el aviso completo"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -2729,6 +3653,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Avant de commencer"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Antes de empezar"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Antes de empezar"
           }
         },
         "ru": {
@@ -2766,6 +3702,18 @@
             "value": "Vous hésitez ? La plupart des gens commencent par 16:8."
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "¿No sabes cuál? La mayoría empieza con 16:8."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "¿No lo tienes claro? La mayoría empieza con 16:8."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -2799,6 +3747,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Vous pouvez changer à tout moment, même en plein jeûne."
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Puedes cambiarlo cuando quieras, incluso a mitad del ayuno."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Puedes cambiarlo cuando quieras, incluso a mitad del ayuno."
           }
         },
         "ru": {
@@ -2836,6 +3796,18 @@
             "value": "Choisissez un rythme"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Elige un esquema"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Elige una pauta"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -2869,6 +3841,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Votre première semaine est entièrement débloquée, pour que vous voyiez toute l’app avant de décider quoi que ce soit."
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tu primera semana tiene todo desbloqueado, para que veas la app completa antes de decidir nada."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tu primera semana la tienes entera desbloqueada, para que veas toda la app antes de decidir nada."
           }
         },
         "ru": {
@@ -2906,6 +3890,18 @@
             "value": "Tous les rythmes et l’historique complet pendant sept jours."
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Todos los esquemas y el historial completo durante siete días."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Todas las pautas y el historial completo durante siete días."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -2939,6 +3935,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Des rappels à la fin de votre jeûne — vous décidez de les autoriser ou non."
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avisos cuando termine tu ayuno: tú decides si los permites."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avisos cuando termine tu ayuno: tú decides si los permites."
           }
         },
         "ru": {
@@ -2976,6 +3984,18 @@
             "value": "Ajoutez le widget et suivez le minuteur depuis l’écran verrouillé."
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Agrega el widget y mira el temporizador desde la pantalla bloqueada."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Añade el widget y mira el temporizador desde la pantalla bloqueada."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -3009,6 +4029,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Tout est prêt"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Todo listo"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Todo listo"
           }
         },
         "ru": {
@@ -3046,6 +4078,18 @@
             "value": "Commencer avec Sunfold"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Empezar con Sunfold"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Empezar con Sunfold"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -3079,6 +4123,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Un minuteur paisible pour le jeûne intermittent. Pas de fil d’actualité, pas de culpabilisation, pas de publicité."
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Un temporizador tranquilo para el ayuno intermitente. Sin feed, sin presión por la racha, sin anuncios."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Un temporizador tranquilo para el ayuno intermitente. Sin feed, sin presión por la racha, sin anuncios."
           }
         },
         "ru": {
@@ -3116,6 +4172,18 @@
             "value": "Un anneau montre exactement où vous en êtes."
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Un anillo muestra exactamente dónde vas."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Un anillo muestra exactamente por dónde vas."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -3149,6 +4217,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Voyez quelle phase métabolique votre jeûne a atteinte."
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mira qué fase metabólica alcanzó tu ayuno."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mira qué fase metabólica ha alcanzado tu ayuno."
           }
         },
         "ru": {
@@ -3186,6 +4266,18 @@
             "value": "Tout reste sur votre téléphone. Aucun compte nécessaire."
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Todo se queda en tu teléfono. No necesitas cuenta."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Todo se queda en tu móvil. No hace falta cuenta."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -3219,6 +4311,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Bienvenue dans Sunfold"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Te damos la bienvenida a Sunfold"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Te damos la bienvenida a Sunfold"
           }
         },
         "ru": {
@@ -3256,6 +4360,18 @@
             "value": "Graphiques"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gráficas"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gráficos"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -3289,6 +4405,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Heures de jeûne et évolution du poids dans le temps."
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Horas de ayuno y evolución del peso con el tiempo."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Horas de ayuno y evolución del peso con el tiempo."
           }
         },
         "ru": {
@@ -3326,6 +4454,18 @@
             "value": "Historique illimité"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Historial ilimitado"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Historial ilimitado"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -3359,6 +4499,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Tous les jeûnes que vous avez enregistrés, pas seulement la dernière semaine."
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Todos los ayunos que hayas registrado, no solo la última semana."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Todos los ayunos que hayas registrado, no solo la última semana."
           }
         },
         "ru": {
@@ -3396,6 +4548,18 @@
             "value": "Phases métaboliques"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fases metabólicas"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fases metabólicas"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -3429,6 +4593,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Voyez dans quelle phase est votre jeûne, et ce qu’elle signifie."
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mira en qué fase está tu ayuno y qué significa."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mira en qué fase está tu ayuno y qué significa."
           }
         },
         "ru": {
@@ -3466,6 +4642,18 @@
             "value": "Tous les rythmes"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Todos los esquemas"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Todas las pautas"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -3501,6 +4689,18 @@
             "value": "18:6, 20:4, 5:2 et votre propre durée de 4 à 48 heures."
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "18:6, 20:4, 5:2 y tu propia duración de 4 a 48 horas."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "18:6, 20:4, 5:2 y tu propia duración de 4 a 48 horas."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -3531,6 +4731,18 @@
           }
         },
         "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Widgets"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Widgets"
+          }
+        },
+        "es-ES": {
           "stringUnit": {
             "state": "translated",
             "value": "Widgets"
@@ -3571,6 +4783,18 @@
             "value": "Le minuteur sur l’écran d’accueil, l’écran verrouillé et la Dynamic Island."
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El temporizador en la pantalla de inicio, la bloqueada y la Dynamic Island."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El temporizador en la pantalla de inicio, la bloqueada y la Dynamic Island."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -3604,6 +4828,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Acheter Sunfold Pro"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comprar Sunfold Pro"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comprar Sunfold Pro"
           }
         },
         "ru": {
@@ -3641,6 +4877,18 @@
             "value": "S’abonner"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Suscribirse"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Suscribirse"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -3674,6 +4922,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Les achats ne sont pas disponibles dans cette version."
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Las compras no están disponibles en esta versión."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Las compras no están disponibles en esta versión."
           }
         },
         "ru": {
@@ -3711,6 +4971,18 @@
             "value": "Un problème est survenu"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Algo salió mal"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Algo ha ido mal"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -3744,6 +5016,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Cette formule n’est pas disponible pour le moment. Réessayez plus tard."
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ese plan no está disponible ahora. Inténtalo más tarde."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ese plan no está disponible ahora mismo. Inténtalo más tarde."
           }
         },
         "ru": {
@@ -3781,6 +5065,18 @@
             "value": "Version de test locale : les achats passent par un fichier de configuration StoreKit. Rien n’est débité."
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Versión de prueba local: las compras usan un archivo de configuración de StoreKit. No se cobra nada."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Versión de prueba local: las compras usan un archivo de configuración de StoreKit. No se cobra nada."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -3814,6 +5110,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Gérer l’abonnement"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Administrar suscripción"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gestionar suscripción"
           }
         },
         "ru": {
@@ -3851,6 +5159,18 @@
             "value": "Version de développement : la boutique n’est pas connectée, rien ne peut être acheté ici."
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Versión de desarrollo: la tienda no está conectada, aquí no se puede comprar nada."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Versión de desarrollo: la tienda no está conectada, aquí no se puede comprar nada."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -3884,6 +5204,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "À vie"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "De por vida"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "De por vida"
           }
         },
         "ru": {
@@ -3921,6 +5253,18 @@
             "value": "Un seul paiement, sans renouvellement"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Un solo pago, sin renovación"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Un solo pago, sin renovación"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -3954,6 +5298,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Mensuel"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mensual"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mensual"
           }
         },
         "ru": {
@@ -3991,6 +5347,18 @@
             "value": "Facturé chaque mois"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Se cobra cada mes"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Se cobra cada mes"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -4024,6 +5392,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Annuel"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Anual"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Anual"
           }
         },
         "ru": {
@@ -4061,6 +5441,18 @@
             "value": "Facturé chaque année"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Se cobra cada año"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Se cobra cada año"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -4094,6 +5486,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Facturé annuellement · %@ / mois"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cobro anual · %@ / mes"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cobro anual · %@ / mes"
           }
         },
         "ru": {
@@ -4131,6 +5535,18 @@
             "value": "Restaurer"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Restaurar"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Restaurar"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -4164,6 +5580,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Aucun achat précédent n’a été trouvé sur cet identifiant Apple."
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No se encontró ninguna compra previa en este ID de Apple."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No se ha encontrado ninguna compra anterior en este ID de Apple."
           }
         },
         "ru": {
@@ -4201,6 +5629,18 @@
             "value": "%lld %% d’économie"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ahorra %lld %%"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ahorra %lld %%"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -4234,6 +5674,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Tous les rythmes, tout votre historique, les graphiques et les phases métaboliques."
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Todos los esquemas, tu historial completo, las gráficas y las fases metabólicas."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Todas las pautas, tu historial completo, los gráficos y las fases metabólicas."
           }
         },
         "ru": {
@@ -4271,6 +5723,18 @@
             "value": "Vous avez un accès complet pendant votre première semaine. Gardez-le à la fin de la semaine."
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tienes acceso completo durante tu primera semana. Consérvalo cuando termine."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tienes acceso completo durante tu primera semana. Consérvalo cuando termine."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -4304,6 +5768,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Un paiement unique, sans renouvellement. Sunfold Pro reste lié à votre identifiant Apple."
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Un pago único sin renovación. Sunfold Pro queda ligado a tu ID de Apple."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Un pago único sin renovación. Sunfold Pro queda vinculado a tu ID de Apple."
           }
         },
         "ru": {
@@ -4341,6 +5817,18 @@
             "value": "Le paiement est débité de votre identifiant Apple. L’abonnement se renouvelle automatiquement sauf résiliation au moins 24 heures avant la fin de la période. Vous pouvez le gérer ou le résilier à tout moment dans les réglages de l’App Store."
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El pago se carga a tu ID de Apple. La suscripción se renueva automáticamente salvo que se cancele al menos 24 horas antes de que termine el periodo. Puedes administrarla o cancelarla cuando quieras en los ajustes del App Store."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El pago se carga a tu ID de Apple. La suscripción se renueva automáticamente salvo que se cancele al menos 24 horas antes de que termine el periodo. Puedes gestionarla o cancelarla cuando quieras en los ajustes del App Store."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -4371,6 +5859,18 @@
           }
         },
         "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sunfold Pro"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sunfold Pro"
+          }
+        },
+        "es-ES": {
           "stringUnit": {
             "state": "translated",
             "value": "Sunfold Pro"
@@ -4411,6 +5911,18 @@
             "value": "Vérifiez votre connexion et réessayez. Tout ce que vous avez déjà enregistré reste intact."
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Revisa tu conexión e inténtalo de nuevo. Nada de lo que ya registraste se ve afectado."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comprueba tu conexión e inténtalo de nuevo. Nada de lo que ya has registrado se ve afectado."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -4444,6 +5956,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Impossible de charger les tarifs"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No se pudieron cargar los precios"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No se han podido cargar los precios"
           }
         },
         "ru": {
@@ -4481,6 +6005,18 @@
             "value": "L’essentiel de ce que l’on sait vient d’études animales. La recherche chez l’humain reste limitée, et rien ne permet de le mesurer depuis un téléphone."
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Casi todo lo que se sabe viene de estudios en animales. La investigación en humanos todavía es limitada, y no hay forma de medirlo desde un teléfono."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Casi todo lo que se sabe viene de estudios en animales. La investigación en humanos todavía es limitada, y no hay forma de medirlo desde un móvil."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -4514,6 +6050,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "On pense que le recyclage cellulaire augmente lors des jeûnes longs."
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Se cree que el reciclaje celular aumenta durante los ayunos largos."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Se cree que el reciclaje celular aumenta durante los ayunos largos."
           }
         },
         "ru": {
@@ -4551,6 +6099,18 @@
             "value": "Autophagie"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Autofagia"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Autofagia"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -4584,6 +6144,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Le glycogène — le glucose stocké dans le foie et les muscles — couvre généralement les besoins en énergie sur cette période."
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El glucógeno —glucosa almacenada en el hígado y los músculos— suele cubrir las necesidades de energía durante este periodo."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El glucógeno —glucosa almacenada en el hígado y los músculos— suele cubrir las necesidades de energía durante este periodo."
           }
         },
         "ru": {
@@ -4621,6 +6193,18 @@
             "value": "L’insuline baisse et le foie commence à libérer le glucose stocké."
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La insulina baja y el hígado empieza a liberar glucosa almacenada."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La insulina baja y el hígado empieza a liberar glucosa almacenada."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -4654,6 +6238,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Début du jeûne"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inicio del ayuno"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inicio del ayuno"
           }
         },
         "ru": {
@@ -4691,6 +6287,18 @@
             "value": "Le passage est progressif plutôt qu’un basculement, et sa rapidité varie beaucoup d’une personne à l’autre."
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El cambio es gradual, no un interruptor, y la rapidez con que ocurre varía mucho de una persona a otra."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El cambio es gradual, no un interruptor, y lo rápido que ocurre varía mucho de una persona a otra."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -4724,6 +6332,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Le glycogène s’épuise et le corps se tourne davantage vers les graisses."
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El glucógeno se agota y el cuerpo recurre más a la grasa como combustible."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El glucógeno se agota y el cuerpo recurre más a la grasa como combustible."
           }
         },
         "ru": {
@@ -4761,6 +6381,18 @@
             "value": "Combustion des graisses"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quema de grasa"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quema de grasa"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -4794,6 +6426,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "La glycémie et l’insuline montent généralement après le repas, et l’énergie vient du repas plutôt que des réserves."
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El azúcar en sangre y la insulina suelen subir después de comer, y la energía viene de la comida y no de las reservas."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El azúcar en sangre y la insulina suelen subir después de comer, y la energía viene de la comida y no de las reservas."
           }
         },
         "ru": {
@@ -4831,6 +6475,18 @@
             "value": "Votre corps digère le dernier repas et fonctionne avec."
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tu cuerpo está digiriendo la última comida y funcionando con ella."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tu cuerpo está digiriendo la última comida y funcionando con ella."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -4864,6 +6520,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "État postprandial"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Estado posprandial"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Estado posprandial"
           }
         },
         "ru": {
@@ -4901,6 +6569,18 @@
             "value": "Certaines personnes rapportent ici une énergie plus stable et moins de faim ; d’autres ne remarquent rien de particulier. Les deux sont normaux."
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Algunas personas notan aquí energía más estable y menos hambre; otras no notan nada en particular. Las dos cosas son normales."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Algunas personas notan aquí energía más estable y menos hambre; otras no notan nada en particular. Las dos cosas son normales."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -4934,6 +6614,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Le foie produit des cétones à partir des graisses, que le cerveau peut utiliser."
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El hígado produce cetonas a partir de la grasa, que el cerebro puede usar."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El hígado produce cetonas a partir de la grasa, que el cerebro puede usar."
           }
         },
         "ru": {
@@ -4971,6 +6663,18 @@
             "value": "Cétose"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cetosis"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cetosis"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -5004,6 +6708,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Ces heures sont des approximations issues de la recherche générale. Ce qui se passe réellement dépend de votre dernier repas, de votre activité et de votre corps. Il s’agit d’information générale, pas d’un avis médical."
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Estas horas son aproximaciones tomadas de investigación general. Lo que ocurre en realidad depende de tu última comida, tu actividad y tu cuerpo. Es información educativa, no consejo médico."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Estas horas son aproximaciones tomadas de la investigación general. Lo que ocurre en realidad depende de tu última comida, tu actividad y tu cuerpo. Es información divulgativa, no consejo médico."
           }
         },
         "ru": {
@@ -5041,6 +6757,18 @@
             "value": "Maintenant"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ahora"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ahora"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -5071,6 +6799,18 @@
           }
         },
         "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$lld–%2$lld h"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$lld–%2$lld h"
+          }
+        },
+        "es-ES": {
           "stringUnit": {
             "state": "translated",
             "value": "%1$lld–%2$lld h"
@@ -5111,6 +6851,18 @@
             "value": "%lld h et au-delà"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld h en adelante"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld h en adelante"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -5144,6 +6896,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Phases métaboliques"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fases metabólicas"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fases metabólicas"
           }
         },
         "ru": {
@@ -5181,6 +6945,18 @@
             "value": "Si cette politique change, la version mise à jour apparaîtra ici et dans l’app elle-même."
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Si esta política cambia, la versión actualizada aparecerá aquí y en la propia app."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Si esta política cambia, la versión actualizada aparecerá aquí y en la propia app."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -5214,6 +6990,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Modifications"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cambios"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cambios"
           }
         },
         "ru": {
@@ -5251,6 +7039,18 @@
             "value": "Sunfold ne s’adresse pas aux enfants et n’est pas destiné aux personnes de moins de 18 ans sans suivi médical."
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sunfold no está dirigida a menores y no está pensada para personas menores de 18 años sin supervisión médica."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sunfold no está dirigida a menores y no está pensada para personas menores de 18 años sin supervisión médica."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -5284,6 +7084,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Enfants"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Menores"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Menores"
           }
         },
         "ru": {
@@ -5321,6 +7133,18 @@
             "value": "Nous contacter"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Contáctanos"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Contacta con nosotros"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -5354,6 +7178,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Réglages → Supprimer toutes les données retire immédiatement chaque jeûne, chaque pesée et chaque note. Supprimer l’app retire tout le reste."
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ajustes → Eliminar todos los datos borra de inmediato cada ayuno, cada registro de peso y cada nota. Eliminar la app borra todo lo demás."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ajustes → Eliminar todos los datos borra al instante cada ayuno, cada registro de peso y cada nota. Eliminar la app borra todo lo demás."
           }
         },
         "ru": {
@@ -5391,6 +7227,18 @@
             "value": "Supprimer vos données"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eliminar tus datos"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eliminar tus datos"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -5424,6 +7272,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Vos données restent sur votre téléphone"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tus datos se quedan en tu teléfono"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tus datos se quedan en tu móvil"
           }
         },
         "ru": {
@@ -5461,6 +7321,18 @@
             "value": "Sunfold ne lit rien dans Apple Santé et n’y écrit rien."
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sunfold no lee ni escribe nada en Apple Salud."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sunfold no lee ni escribe nada en Apple Salud."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -5494,6 +7366,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Apple Santé"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Salud"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Salud"
           }
         },
         "ru": {
@@ -5531,6 +7415,18 @@
             "value": "Sunfold n’a ni compte, ni serveur, ni analyse d’audience. Tout ce que vous enregistrez reste sur votre appareil."
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sunfold no tiene cuenta, ni servidor, ni analítica. Todo lo que registras vive en tu dispositivo."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sunfold no tiene cuenta, ni servidor, ni analítica. Todo lo que registras vive en tu dispositivo."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -5564,6 +7460,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Pas de compte, pas d’adresse e-mail, pas d’identifiant publicitaire, pas de SDK d’analyse ou de pistage, pas de localisation. Rien de ce que vous enregistrez n’est envoyé où que ce soit, car Sunfold n’a aucun serveur où l’envoyer."
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sin cuenta, sin correo electrónico, sin identificadores publicitarios, sin SDK de analítica o rastreo, sin ubicación. Nada de lo que registras se envía a ningún sitio, porque Sunfold no tiene servidor al que enviarlo."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sin cuenta, sin correo electrónico, sin identificadores publicitarios, sin SDK de analítica o rastreo, sin ubicación. Nada de lo que registras se envía a ningún sitio, porque Sunfold no tiene servidor al que enviarlo."
           }
         },
         "ru": {
@@ -5601,6 +7509,18 @@
             "value": "Ce que Sunfold ne collecte pas"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lo que Sunfold no recopila"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lo que Sunfold no recopila"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -5634,6 +7554,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Tous les rappels sont programmés localement par votre iPhone. Sunfold n’a pas de serveur de notifications, et leur contenu ne quitte jamais votre appareil."
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Todos los avisos los programa localmente tu iPhone. Sunfold no tiene servidor de notificaciones, y su contenido nunca sale de tu dispositivo."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Todos los avisos los programa localmente tu iPhone. Sunfold no tiene servidor de notificaciones, y su contenido nunca sale de tu dispositivo."
           }
         },
         "ru": {
@@ -5671,6 +7603,18 @@
             "value": "Notifications"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Notificaciones"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Notificaciones"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -5704,6 +7648,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Les achats sont traités par Apple. Pour vérifier si Sunfold Pro est actif, l’app utilise RevenueCat, qui reçoit un identifiant d’utilisateur généré aléatoirement et votre reçu App Store. Il ne reçoit jamais votre nom, votre e-mail, ni rien de ce que vous enregistrez dans Sunfold."
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Las compras las procesa Apple. Para comprobar si Sunfold Pro está activo, la app usa RevenueCat, que recibe un ID de usuario generado al azar y tu recibo del App Store. Nunca recibe tu nombre, tu correo ni nada de lo que registras en Sunfold."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Las compras las procesa Apple. Para comprobar si Sunfold Pro está activo, la app usa RevenueCat, que recibe un ID de usuario generado al azar y tu recibo del App Store. Nunca recibe tu nombre, tu correo ni nada de lo que registras en Sunfold."
           }
         },
         "ru": {
@@ -5741,6 +7697,18 @@
             "value": "Achats"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Compras"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Compras"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -5774,6 +7742,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Vos jeûnes, vos pesées, vos notes et vos réglages sont enregistrés sur cet appareil. Si les sauvegardes iPhone sont activées, ils y sont inclus, et vous seul pouvez les ouvrir."
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tus ayunos, registros de peso, notas y ajustes se guardan en este dispositivo. Si tienes activadas las copias de seguridad del iPhone, se incluyen en tu propia copia, que solo tú puedes abrir."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tus ayunos, registros de peso, notas y ajustes se guardan en este dispositivo. Si tienes activadas las copias de seguridad del iPhone, se incluyen en tu propia copia, que solo tú puedes abrir."
           }
         },
         "ru": {
@@ -5811,6 +7791,18 @@
             "value": "Ce que Sunfold enregistre"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lo que Sunfold guarda"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lo que Sunfold guarda"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -5844,6 +7836,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Confidentialité"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Privacidad"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Privacidad"
           }
         },
         "ru": {
@@ -5881,6 +7885,18 @@
             "value": "Dernière mise à jour : août 2026"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Última actualización: agosto de 2026"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Última actualización: agosto de 2026"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -5914,6 +7930,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Le point de départ habituel — pour la plupart, un petit-déjeuner plus tard ou un dîner plus tôt."
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El punto de partida habitual: para la mayoría significa desayunar más tarde o cenar más temprano."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El punto de partida habitual: para la mayoría significa desayunar más tarde o cenar más pronto."
           }
         },
         "ru": {
@@ -5951,6 +7979,18 @@
             "value": "16 h de jeûne · 8 h pour manger"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "16 h de ayuno · 8 h para comer"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "16 h de ayuno · 8 h para comer"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -5981,6 +8021,18 @@
           }
         },
         "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "16:8"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "16:8"
+          }
+        },
+        "es-ES": {
           "stringUnit": {
             "state": "translated",
             "value": "16:8"
@@ -6021,6 +8073,18 @@
             "value": "Un cran au-dessus du 16:8, une fois qu’il est devenu une habitude."
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Un paso más que el 16:8, cuando ya se volvió rutina."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Un paso más que el 16:8, cuando ya se ha vuelto rutina."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -6056,6 +8120,18 @@
             "value": "18 h de jeûne · 6 h pour manger"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "18 h de ayuno · 6 h para comer"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "18 h de ayuno · 6 h para comer"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -6086,6 +8162,18 @@
           }
         },
         "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "18:6"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "18:6"
+          }
+        },
+        "es-ES": {
           "stringUnit": {
             "state": "translated",
             "value": "18:6"
@@ -6126,6 +8214,18 @@
             "value": "Un long jeûne et une fenêtre courte. Exigeant — mieux vaut y aller progressivement."
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Un ayuno largo y una ventana corta. Exigente: conviene llegar poco a poco."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Un ayuno largo y una ventana corta. Exigente: mejor llegar poco a poco."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -6161,6 +8261,18 @@
             "value": "20 h de jeûne · 4 h pour manger"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "20 h de ayuno · 4 h para comer"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "20 h de ayuno · 4 h para comer"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -6191,6 +8303,18 @@
           }
         },
         "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "20:4"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "20:4"
+          }
+        },
+        "es-ES": {
           "stringUnit": {
             "state": "translated",
             "value": "20:4"
@@ -6231,6 +8355,18 @@
             "value": "Deux jeûnes plus longs par semaine, en mangeant normalement les autres jours."
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dos ayunos largos por semana, comiendo normal los demás días."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dos ayunos largos por semana, comiendo con normalidad el resto de días."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -6266,6 +8402,18 @@
             "value": "24 h de jeûne · deux fois par semaine"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "24 h de ayuno · dos veces por semana"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "24 h de ayuno · dos veces por semana"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -6296,6 +8444,18 @@
           }
         },
         "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "5:2"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "5:2"
+          }
+        },
+        "es-ES": {
           "stringUnit": {
             "state": "translated",
             "value": "5:2"
@@ -6336,6 +8496,18 @@
             "value": "De 4 à 48 heures, par pas d’une demi-heure."
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "De 4 a 48 horas, en pasos de media hora."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "De 4 a 48 horas, en pasos de media hora."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -6369,6 +8541,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Définissez votre durée"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Define tu propia duración"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Define tu propia duración"
           }
         },
         "ru": {
@@ -6406,6 +8590,18 @@
             "value": "Perso"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Personal"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Personal"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -6439,6 +8635,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Durée du jeûne"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Duración del ayuno"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Duración del ayuno"
           }
         },
         "ru": {
@@ -6476,6 +8684,18 @@
             "value": "Un jeûne de 24 heures ou plus mérite d’en parler d’abord à un médecin."
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Los ayunos de 24 horas o más conviene consultarlos antes con un médico."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Los ayunos de 24 horas o más conviene consultarlos antes con un médico."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -6509,6 +8729,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Aucun rythme ne convient à tout le monde. Choisissez celui qui s’accorde à votre journée, et parlez-en à un médecin en cas de doute."
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ningún esquema le va bien a todo el mundo. Elige el que encaje con tu día y habla con tu médico si tienes dudas."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ninguna pauta le va bien a todo el mundo. Elige la que encaje con tu día y habla con tu médico si tienes dudas."
           }
         },
         "ru": {
@@ -6546,6 +8778,18 @@
             "value": "Rythme de jeûne"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esquema de ayuno"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pauta de ayuno"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -6579,6 +8823,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Supprimer toutes les données"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eliminar todos los datos"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eliminar todos los datos"
           }
         },
         "ru": {
@@ -6616,6 +8872,18 @@
             "value": "Tout supprimer"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eliminar todo"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eliminarlo todo"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -6649,6 +8917,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Chaque jeûne, chaque pesée et chaque note sera retiré de cet appareil. Cette action est irréversible."
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cada ayuno, registro de peso y nota se borrará de este dispositivo. Esto no se puede deshacer."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cada ayuno, registro de peso y nota se borrará de este dispositivo. Esto no se puede deshacer."
           }
         },
         "ru": {
@@ -6686,6 +8966,18 @@
             "value": "Tout supprimer ?"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "¿Eliminar todo?"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "¿Eliminarlo todo?"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -6719,6 +9011,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Avis santé"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aviso de salud"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aviso de salud"
           }
         },
         "ru": {
@@ -6756,6 +9060,18 @@
             "value": "Exporter en CSV"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Exportar como CSV"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Exportar como CSV"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -6789,6 +9105,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Sunfold garde tout sur votre appareil. Pas de compte, pas de serveur, pas de pistage."
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sunfold guarda todo en tu dispositivo. Sin cuenta, sin servidor, sin rastreo."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sunfold lo guarda todo en tu dispositivo. Sin cuenta, sin servidor, sin rastreo."
           }
         },
         "ru": {
@@ -6826,6 +9154,18 @@
             "value": "Langue"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Idioma"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Idioma"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -6859,6 +9199,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Activité en direct"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Actividad en vivo"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Actividad en vivo"
           }
         },
         "ru": {
@@ -6896,6 +9248,18 @@
             "value": "30 minutes avant"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "30 minutos antes"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "30 minutos antes"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -6929,6 +9293,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Jeûne terminé"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ayuno completado"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ayuno completado"
           }
         },
         "ru": {
@@ -6966,6 +9342,18 @@
             "value": "Notifications désactivées dans Réglages iOS"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Las notificaciones están desactivadas en Ajustes de iOS"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Las notificaciones están desactivadas en Ajustes de iOS"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -6999,6 +9387,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Fin de la fenêtre"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fin de la ventana"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fin de la ventana"
           }
         },
         "ru": {
@@ -7036,6 +9436,18 @@
             "value": "Confidentialité"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Privacidad"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Privacidad"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -7069,6 +9481,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Sunfold Pro est actif"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sunfold Pro está activo"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sunfold Pro está activo"
           }
         },
         "ru": {
@@ -7106,6 +9530,18 @@
             "value": "Merci. Tout est débloqué."
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gracias. Todo está desbloqueado."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gracias. Está todo desbloqueado."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -7141,6 +9577,18 @@
             "value": "Tous les rythmes, tout votre historique, les graphiques et les widgets."
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Todos los esquemas, tu historial completo, gráficas y widgets."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Todas las pautas, tu historial completo, gráficos y widgets."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -7171,6 +9619,18 @@
           }
         },
         "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sunfold Pro"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sunfold Pro"
+          }
+        },
+        "es-ES": {
           "stringUnit": {
             "state": "translated",
             "value": "Sunfold Pro"
@@ -7211,6 +9671,18 @@
             "value": "Vous avez un accès complet pendant votre première semaine."
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tienes acceso completo durante tu primera semana."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tienes acceso completo durante tu primera semana."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -7244,6 +9716,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Rythme"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esquema"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pauta"
           }
         },
         "ru": {
@@ -7281,6 +9765,18 @@
             "value": "À propos"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Acerca de"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Información"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -7314,6 +9810,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Apparence"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apariencia"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aspecto"
           }
         },
         "ru": {
@@ -7351,6 +9859,18 @@
             "value": "Vos données"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tus datos"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tus datos"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -7384,6 +9904,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Jeûne"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ayuno"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ayuno"
           }
         },
         "ru": {
@@ -7421,6 +9953,18 @@
             "value": "Notifications"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Notificaciones"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Notificaciones"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -7454,6 +9998,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Contacter l’assistance"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Contactar a soporte"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Contactar con soporte"
           }
         },
         "ru": {
@@ -7491,6 +10047,18 @@
             "value": "Conditions d’utilisation"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Términos de uso"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Términos de uso"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -7524,6 +10092,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Thème"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tema"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tema"
           }
         },
         "ru": {
@@ -7561,6 +10141,18 @@
             "value": "Réglages"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ajustes"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ajustes"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -7594,6 +10186,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Unité de poids"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unidad de peso"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unidad de peso"
           }
         },
         "ru": {
@@ -7631,6 +10235,18 @@
             "value": "Version"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Versión"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Versión"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -7664,6 +10280,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Historique"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Historial"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Historial"
           }
         },
         "ru": {
@@ -7701,6 +10329,18 @@
             "value": "Réglages"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ajustes"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ajustes"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -7734,6 +10374,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Minuteur"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Temporiz."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Temporiz."
           }
         },
         "ru": {
@@ -7771,6 +10423,18 @@
             "value": "Poids"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Peso"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Peso"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -7804,6 +10468,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Fenêtre alimentaire"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ventana para comer"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ventana para comer"
           }
         },
         "ru": {
@@ -7841,6 +10517,18 @@
             "value": "Jeûne"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ayuno"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ayuno"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -7874,6 +10562,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Prêt"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Listo"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Listo"
           }
         },
         "ru": {
@@ -7911,6 +10611,18 @@
             "value": "changer"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "cambiar"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "cambiar"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -7944,6 +10656,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "atteint"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "completado"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "completado"
           }
         },
         "ru": {
@@ -7981,6 +10705,18 @@
             "value": "Modifier l’heure de début"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Editar hora de inicio"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Editar hora de inicio"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -8014,6 +10750,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Début décalé ? Indiquez l’heure à laquelle vous avez vraiment arrêté de manger. Vous pouvez remonter jusqu’à deux jours."
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "¿Moviste el inicio? Pon la hora en que de verdad dejaste de comer. Puedes retroceder hasta dos días."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "¿Has movido el inicio? Pon la hora en la que de verdad dejaste de comer. Puedes retroceder hasta dos días."
           }
         },
         "ru": {
@@ -8051,6 +10799,18 @@
             "value": "Terminer le jeûne"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Terminar ayuno"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Terminar ayuno"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -8084,6 +10844,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Terminer le jeûne"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Terminar ayuno"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Terminar ayuno"
           }
         },
         "ru": {
@@ -8121,6 +10893,18 @@
             "value": "Il sera enregistré dans votre historique avec la durée déjà jeûnée."
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Se guardará en tu historial con el tiempo que llevas ayunando."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Se guardará en tu historial con el tiempo que llevas ayunando."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -8154,6 +10938,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Terminer ce jeûne ?"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "¿Terminar este ayuno?"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "¿Terminar este ayuno?"
           }
         },
         "ru": {
@@ -8191,6 +10987,18 @@
             "value": "Objectif"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Meta"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Objetivo"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -8224,6 +11032,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Démarrez dès que vous finissez votre dernier repas. Sunfold compte à partir de ce moment et vous prévient quand l’objectif est atteint."
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Empieza cuando termines tu última comida. Sunfold cuenta desde ese momento y te avisa cuando alcances tu meta."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Empieza cuando termines tu última comida. Sunfold cuenta desde ese momento y te avisa cuando alcances tu objetivo."
           }
         },
         "ru": {
@@ -8261,6 +11081,18 @@
             "value": "Aucun jeûne en cours"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No hay ayuno en curso"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No hay ningún ayuno en curso"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -8294,6 +11126,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Dernier jeûne"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Último ayuno"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Último ayuno"
           }
         },
         "ru": {
@@ -8331,6 +11175,18 @@
             "value": "Vous allez commencer un jeûne de 24 heures ou plus. Les jeûnes longs ne conviennent pas à tout le monde — si vous avez un problème de santé ou prenez un traitement, parlez-en d’abord à un médecin."
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Estás por empezar un ayuno de 24 horas o más. Los ayunos largos no le van bien a todo el mundo: si tienes alguna condición de salud o tomas medicamentos, habla antes con tu médico."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Estás a punto de empezar un ayuno de 24 horas o más. Los ayunos largos no le van bien a todo el mundo: si tienes alguna enfermedad o tomas medicación, habla antes con tu médico."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -8364,6 +11220,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "C’est un jeûne long. Arrêtez et mangez si vous avez des vertiges ou vous sentez mal."
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Este es un ayuno largo. Detente y come si te mareas o te sientes mal."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Este es un ayuno largo. Para y come si te mareas o te encuentras mal."
           }
         },
         "ru": {
@@ -8401,6 +11269,18 @@
             "value": "Démarrer quand même"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Empezar de todos modos"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Empezar igualmente"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -8434,6 +11314,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Un jeûne long"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Un ayuno largo"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Un ayuno largo"
           }
         },
         "ru": {
@@ -8471,6 +11363,18 @@
             "value": "Démarrer le jeûne"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Iniciar ayuno"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Iniciar ayuno"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -8504,6 +11408,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Début"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inicio"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inicio"
           }
         },
         "ru": {
@@ -8541,6 +11457,18 @@
             "value": "sur %@"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "de %@"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "de %@"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -8574,6 +11502,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "pour manger"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "para comer"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "para comer"
           }
         },
         "ru": {
@@ -8611,6 +11551,18 @@
             "value": "Manger jusqu’à"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comer hasta"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comer hasta"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -8644,6 +11596,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Kilogrammes"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kilogramos"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kilogramos"
           }
         },
         "ru": {
@@ -8681,6 +11645,18 @@
             "value": "Livres"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Libras"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Libras"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -8714,6 +11690,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Ajouter un poids"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Agregar peso"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Añadir peso"
           }
         },
         "ru": {
@@ -8751,6 +11739,18 @@
             "value": "Date"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fecha"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fecha"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -8784,6 +11784,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Ajoutez un poids de plus pour voir la tendance."
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Agrega un peso más para ver la tendencia."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Añade un peso más para ver la tendencia."
           }
         },
         "ru": {
@@ -8821,6 +11833,18 @@
             "value": "Deux entrées nécessaires"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hacen falta dos registros"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hacen falta dos registros"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -8854,6 +11878,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Suivez la tendance plutôt que des chiffres isolés."
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mira la tendencia en vez de números sueltos."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mira la tendencia en vez de números sueltos."
           }
         },
         "ru": {
@@ -8891,6 +11927,18 @@
             "value": "Le graphique est dans Pro"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La gráfica está en Pro"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El gráfico está en Pro"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -8924,6 +11972,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Tendance"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tendencia"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tendencia"
           }
         },
         "ru": {
@@ -8961,6 +12021,18 @@
             "value": "Poids"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Peso"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Peso"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -8994,6 +12066,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Dernier"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Último"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Último"
           }
         },
         "ru": {
@@ -9031,6 +12115,18 @@
             "value": "Date"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fecha"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fecha"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -9064,6 +12160,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Vous peser est facultatif. Sunfold fonctionne très bien sans."
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pesarte es opcional. Sunfold funciona perfectamente sin eso."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pesarte es opcional. Sunfold funciona perfectamente sin eso."
           }
         },
         "ru": {
@@ -9101,6 +12209,18 @@
             "value": "Aucun poids enregistré"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sin peso registrado"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sin peso registrado"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -9134,6 +12254,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Entrées"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Registros"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Registros"
           }
         },
         "ru": {
@@ -9171,6 +12303,18 @@
             "value": "Note"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nota"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nota"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -9204,6 +12348,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Facultatif"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Opcional"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Opcional"
           }
         },
         "ru": {
@@ -9241,6 +12397,18 @@
             "value": "Poids"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Peso"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Peso"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -9276,6 +12444,18 @@
             "value": "Votre jeûne en cours d’un coup d’œil."
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tu ayuno actual de un vistazo."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tu ayuno actual de un vistazo."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -9306,6 +12486,18 @@
           }
         },
         "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "—"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "—"
+          }
+        },
+        "es-ES": {
           "stringUnit": {
             "state": "translated",
             "value": "—"
@@ -9346,6 +12538,18 @@
             "value": "Les widgets font partie de Sunfold Pro"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Los widgets son parte de Sunfold Pro"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Los widgets forman parte de Sunfold Pro"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -9379,6 +12583,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "Toucher pour démarrer"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Toca para empezar"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Toca para empezar"
           }
         },
         "ru": {
@@ -9416,6 +12632,18 @@
             "value": "Minuteur de jeûne"
           }
         },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Temporizador de ayuno"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Temporizador de ayuno"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
@@ -9449,6 +12677,18 @@
           "stringUnit": {
             "state": "translated",
             "value": "fenêtre alimentaire"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ventana para comer"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ventana para comer"
           }
         },
         "ru": {
