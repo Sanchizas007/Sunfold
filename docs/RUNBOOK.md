@@ -187,3 +187,31 @@ Financial, Technical, Legal. Для соло-разработчика это о�
 4. Прошло меньше нескольких часов с создания продуктов — они не сразу доступны
 5. Offering в RevenueCat не помечен **current**
 6. Сборка запущена не под тем bundle ID
+
+## Тесты: собирать в каталог без пробелов
+
+```bash
+xcodebuild test -project Sunfold.xcodeproj -scheme Sunfold \
+  -destination 'platform=iOS Simulator,name=iPhone 17' \
+  -derivedDataPath /tmp/sunfold-dd
+```
+
+🔴 **`-derivedDataPath` не должен содержать пробел.** Проект лежит в
+`~/Documents/Claude Code/Sunfold`, поэтому привычное `-derivedDataPath .build/test`
+оказывается внутри пути с пробелом, и прогон падает так:
+
+```
+Failed to create a bundle instance representing '…/SunfoldTests.xctest'.
+Check that the bundle exists on disk.
+```
+
+Бандл при этом на диске есть и собран правильно. Ни чистая пересборка, ни смена
+симулятора, ни версия SDK на это не влияют — лечится только путём без пробелов.
+
+🟡 **Тесты написаны на Swift Testing, не на XCTest.** Строка
+`Executed 0 tests, with 0 failures` в логе относится к пустому XCTest-набору и
+ничего не означает. Настоящий итог — строка вида:
+
+```
+✔ Test run with 68 tests in 9 suites passed after 0.978 seconds.
+```

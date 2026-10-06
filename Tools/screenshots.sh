@@ -36,7 +36,7 @@ SCREENS=(timer phases history weight protocols settings)
 
 # Keep in step with LANGUAGES in Tools/build-strings.py: a locale shot here but
 # not translated there comes out in English and looks like a working frame.
-if [ $# -gt 0 ]; then LOCALES=("$@"); else LOCALES=(en de ru uk); fi
+if [ $# -gt 0 ]; then LOCALES=("$@"); else LOCALES=(en de fr es-MX es-ES pt-BR it ja ko ru uk zh-Hans zh-Hant nl pl); fi
 
 # The language code goes to AppleLanguages as the bundle spells it; AppleLocale
 # wants a region, which drives dates, numbers and the weight unit.
@@ -131,7 +131,9 @@ except Exception:
     sys.exit(1)
 w, h = im.size
 # Ignore the status bar and the tab bar: both carry content on an empty screen.
-body = im.crop((0, int(h * 0.12), w, int(h * 0.88)))
+# Converted first: simctl writes RGBA, and the mean of four channels does not
+# unpack into three — which made every single frame fail this check.
+body = im.convert("RGB").crop((0, int(h * 0.12), w, int(h * 0.88)))
 if ImageStat.Stat(body.convert("L")).stddev[0] < 8:
     sys.exit(1)
 
