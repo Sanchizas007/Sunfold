@@ -6,8 +6,8 @@
 Output goes to `site/`, ready to drop on any static host:
 
     site/index.html                landing
-    site/privacy/index.html        privacy policy       (en, + /uk/ /ru/)
-    site/health/index.html         health notice        (en, + /uk/ /ru/)
+    site/privacy/index.html        privacy policy       (en, + one path per language)
+    site/health/index.html         health notice        (en, + one path per language)
     site/terms/index.html          licence, points at Apple's standard EULA
     site/support/index.html        support contact
     site/robots.txt, sitemap.xml
@@ -20,11 +20,11 @@ two copies maintained by hand drift apart within a release or two.
 
 import html
 import importlib.util
+import json
 import os
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-LANGUAGES = ("en", "uk", "ru")
 
 # Where the pages will live. Two knobs so the same generator serves both the
 # eventual domain and GitHub Pages, which hosts project sites under a
@@ -41,86 +41,44 @@ EMAIL = os.environ.get("SUNFOLD_EMAIL", "support@sunfold.app")
 BASE = "/" + os.environ.get("SUNFOLD_BASE", "").strip("/") if os.environ.get("SUNFOLD_BASE") else ""
 
 
-def load_strings():
-    """Imports the STRINGS table from build-strings.py (hyphen = not importable)."""
+def load_app_strings():
+    """The app's own tables, so the hosted policy and the in-app one cannot drift.
+
+    App Review compares the two, and that is the entire reason this script
+    exists rather than a hand-written page.
+    """
     path = os.path.join(ROOT, "Tools", "build-strings.py")
     spec = importlib.util.spec_from_file_location("build_strings", path)
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
-    return module.STRINGS
+    return {language: module.load(language)["strings"] for language in module.LANGUAGES}, module.LANGUAGES
 
 
-STRINGS = load_strings()
+STRINGS, LANGUAGES = load_app_strings()
 
 
 def tr(key, language):
-    """One translation from the shared table."""
-    index = LANGUAGES.index(language)
-    return STRINGS[key][index]
+    """One translation from the app's table."""
+    return STRINGS[language][key]
 
 
 # Copy that only ever appears on the website, never in the app.
-SITE = {
-    "site.tagline": (
-        "A calm intermittent fasting timer for iPhone. Everything stays on your device.",
-        "Спокійний таймер інтервального голодування для iPhone. Усе лишається на вашому пристрої.",
-        "Спокойный таймер интервального голодания для iPhone. Всё остаётся на вашем устройстве.",
-    ),
-    "site.nav.privacy": ("Privacy", "Приватність", "Конфиденциальность"),
-    "site.nav.health": ("Health notice", "Застереження", "Предупреждение"),
-    "site.nav.terms": ("Terms", "Умови", "Условия"),
-    "site.nav.support": ("Support", "Підтримка", "Поддержка"),
-    "site.support.heading": ("Support", "Підтримка", "Поддержка"),
-    "site.support.lede": (
-        "Sunfold has no account and no sign-in, so there is nothing to recover and no password to reset. If something is wrong, write and describe what you saw.",
-        "У Sunfold немає акаунта й входу, тож нічого відновлювати й жодного пароля скидати не треба. Якщо щось не так — напишіть і опишіть, що ви побачили.",
-        "У Sunfold нет аккаунта и входа, поэтому нечего восстанавливать и незачем сбрасывать пароль. Если что-то не так — напишите и опишите, что вы увидели.",
-    ),
-    "site.support.contact.title": ("Write to us", "Напишіть нам", "Напишите нам"),
-    "site.support.contact.body": (
-        "We answer every message. Please include your iPhone model and iOS version — it makes most problems obvious straight away.",
-        "Ми відповідаємо на кожне повідомлення. Вкажіть модель iPhone і версію iOS — з ними більшість проблем стає очевидною одразу.",
-        "Мы отвечаем на каждое сообщение. Укажите модель iPhone и версию iOS — с ними большинство проблем становится очевидным сразу.",
-    ),
-    "site.support.data.title": ("Where is my data?", "Де мої дані?", "Где мои данные?"),
-    "site.support.data.body": (
-        "On your iPhone, and nowhere else. Settings → Export as CSV gives you a copy; Settings → Delete all data removes everything at once. Deleting the app removes the rest.",
-        "На вашому iPhone і більше ніде. Налаштування → Експорт у CSV дасть копію; Налаштування → Видалити всі дані прибере все одразу. Видалення застосунку прибере решту.",
-        "На вашем iPhone и больше нигде. Настройки → Экспорт в CSV даст копию; Настройки → Удалить все данные уберёт всё сразу. Удаление приложения уберёт остальное.",
-    ),
-    "site.support.subscription.title": (
-        "Managing a subscription",
-        "Керування підпискою",
-        "Управление подпиской",
-    ),
-    "site.support.subscription.body": (
-        "Subscriptions live on your Apple ID, not with us. Open the App Store, tap your photo, then Subscriptions to change or cancel. Restoring a purchase on a new device: Sunfold Pro → Restore.",
-        "Підписки живуть на вашому Apple ID, не в нас. Відкрийте App Store, торкніться свого фото, далі «Підписки», щоб змінити чи скасувати. Відновити покупку на новому пристрої: Sunfold Pro → Відновити.",
-        "Подписки живут на вашем Apple ID, не у нас. Откройте App Store, коснитесь своего фото, далее «Подписки», чтобы изменить или отменить. Восстановить покупку на новом устройстве: Sunfold Pro → Восстановить.",
-    ),
-    "site.terms.heading": ("Terms of Use", "Умови використання", "Условия использования"),
-    "site.terms.lede": (
-        "Sunfold is licensed under Apple's Standard End User Licence Agreement, the default licence for apps distributed on the App Store.",
-        "Sunfold ліцензується за стандартною ліцензійною угодою Apple — типовою ліцензією для застосунків з App Store.",
-        "Sunfold лицензируется по стандартному лицензионному соглашению Apple — типовой лицензии для приложений из App Store.",
-    ),
-    "site.terms.eula": (
-        "Read the Standard EULA",
-        "Читати стандартну угоду",
-        "Читать стандартное соглашение",
-    ),
-    "site.terms.pricing.title": ("Subscriptions", "Підписки", "Подписки"),
-    "site.terms.pricing.body": (
-        "Sunfold is free to use with the 16:8 schedule and the last seven days of history. Sunfold Pro is available monthly, yearly, or as a single lifetime payment. Payment is charged to your Apple ID; subscriptions renew automatically unless cancelled at least 24 hours before the period ends.",
-        "Sunfold безкоштовний із графіком 16:8 та історією за останній тиждень. Sunfold Pro доступний помісячно, щорічно або одним платежем назавжди. Оплата списується з вашого Apple ID; підписка поновлюється автоматично, якщо її не скасувати щонайменше за 24 години до кінця періоду.",
-        "Sunfold бесплатен с графиком 16:8 и историей за последнюю неделю. Sunfold Pro доступен помесячно, ежегодно или одним платежом навсегда. Оплата списывается с вашего Apple ID; подписка продлевается автоматически, если её не отменить минимум за 24 часа до конца периода.",
-    ),
-    "site.back": ("Sunfold", "Sunfold", "Sunfold"),
-}
+def load_site_strings(language):
+    """Site-only text: nav, support and terms copy that never appears in the app.
+
+    Kept out of the app's own table deliberately — shipping these in the binary
+    would mean nineteen strings per language that no screen ever reads.
+    """
+    path = os.path.join(ROOT, "Tools", "site-strings", f"{language}.json")
+    with open(path, encoding="utf-8") as handle:
+        return json.load(handle)
+
+
+SITE = {language: load_site_strings(language) for language in LANGUAGES}
 
 
 def site(key, language):
-    return SITE[key][LANGUAGES.index(language)]
+    return SITE[language][key]
 
 
 STYLE = """

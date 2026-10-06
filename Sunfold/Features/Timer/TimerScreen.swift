@@ -1,3 +1,4 @@
+import StoreKit
 import SwiftUI
 
 /// The home screen: one ring, one number, one button.
@@ -9,6 +10,7 @@ struct TimerScreen: View {
     @Environment(AppSettings.self) private var settings
     @Environment(Entitlements.self) private var entitlements
     @Environment(FastingController.self) private var fasting
+    @Environment(\.requestReview) private var requestReview
 
     // Both sheets open closed, except in a screenshot run that asked for one
     // by name — `DemoData.requestedScreen` is always nil in release.
@@ -70,6 +72,7 @@ struct TimerScreen: View {
                     fasting.downgradeProtocolIfAccessLapsed(
                         hasFullAccess: entitlements.hasFullAccess
                     )
+                    askForReviewIfEarned()
                 }
                 Button("common.cancel", role: .cancel) {}
             } message: {
@@ -81,6 +84,20 @@ struct TimerScreen: View {
             } message: {
                 Text("timer.longFast.message")
             }
+        }
+    }
+
+    /// Asked only after a finished fast, and only once enough of them exist.
+    ///
+    /// The wait is deliberate: the confirmation dialog is still animating away
+    /// when `stop` returns, and a system alert thrown on top of it reads as a
+    /// glitch rather than a question.
+    private func askForReviewIfEarned() {
+        guard ReviewPrompt.shouldAsk(finishedFasts: fasting.countedFastCount) else { return }
+        ReviewPrompt.record()
+        Task {
+            try? await Task.sleep(for: .seconds(1.5))
+            requestReview()
         }
     }
 

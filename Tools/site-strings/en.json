@@ -1,0 +1,21 @@
+{
+  "site.back": "Sunfold",
+  "site.nav.health": "Health notice",
+  "site.nav.privacy": "Privacy",
+  "site.nav.support": "Support",
+  "site.nav.terms": "Terms",
+  "site.support.contact.body": "We answer every message. Please include your iPhone model and iOS version — it makes most problems obvious straight away.",
+  "site.support.contact.title": "Write to us",
+  "site.support.data.body": "On your iPhone, and nowhere else. Settings → Export as CSV gives you a copy; Settings → Delete all data removes everything at once. Deleting the app removes the rest.",
+  "site.support.data.title": "Where is my data?",
+  "site.support.heading": "Support",
+  "site.support.lede": "Sunfold has no account and no sign-in, so there is nothing to recover and no password to reset. If something is wrong, write and describe what you saw.",
+  "site.support.subscription.body": "Subscriptions live on your Apple ID, not with us. Open the App Store, tap your photo, then Subscriptions to change or cancel. Restoring a purchase on a new device: Sunfold Pro → Restore.",
+  "site.support.subscription.title": "Managing a subscription",
+  "site.tagline": "A calm intermittent fasting timer for iPhone. Everything stays on your device.",
+  "site.terms.eula": "Read the Standard EULA",
+  "site.terms.heading": "Terms of Use",
+  "site.terms.lede": "Sunfold is licensed under Apple's Standard End User Licence Agreement, the default licence for apps distributed on the App Store.",
+  "site.terms.pricing.body": "Sunfold is free to use with the 16:8 schedule and the last seven days of history. Sunfold Pro is available monthly, yearly, or as a single lifetime payment. Payment is charged to your Apple ID; subscriptions renew automatically unless cancelled at least 24 hours before the period ends.",
+  "site.terms.pricing.title": "Subscriptions"
+}

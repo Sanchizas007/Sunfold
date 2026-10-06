@@ -1,0 +1,21 @@
+{
+  "site.back": "Sunfold",
+  "site.nav.health": "Avis santé",
+  "site.nav.privacy": "Confidentialité",
+  "site.nav.support": "Assistance",
+  "site.nav.terms": "Conditions",
+  "site.support.contact.body": "Nous répondons à chaque message. Indiquez votre modèle d’iPhone et votre version d’iOS — cela rend la plupart des problèmes évidents tout de suite.",
+  "site.support.contact.title": "Écrivez-nous",
+  "site.support.data.body": "Sur votre iPhone, et nulle part ailleurs. Réglages → Exporter en CSV vous en donne une copie ; Réglages → Supprimer toutes les données retire tout d’un coup. Supprimer l’app retire le reste.",
+  "site.support.data.title": "Où sont mes données ?",
+  "site.support.heading": "Assistance",
+  "site.support.lede": "Sunfold n’a ni compte ni connexion : il n’y a donc rien à récupérer et aucun mot de passe à réinitialiser. Si quelque chose ne va pas, écrivez-nous en décrivant ce que vous avez vu.",
+  "site.support.subscription.body": "Les abonnements dépendent de votre identifiant Apple, pas de nous. Ouvrez l’App Store, touchez votre photo, puis Abonnements pour modifier ou résilier. Pour restaurer un achat sur un nouvel appareil : Sunfold Pro → Restaurer.",
+  "site.support.subscription.title": "Gérer un abonnement",
+  "site.tagline": "Un minuteur paisible de jeûne intermittent pour iPhone. Tout reste sur votre appareil.",
+  "site.terms.eula": "Lire la licence standard",
+  "site.terms.heading": "Conditions d’utilisation",
+  "site.terms.lede": "Sunfold est concédé sous la licence utilisateur final standard d’Apple, la licence par défaut des apps distribuées sur l’App Store.",
+  "site.terms.pricing.body": "Sunfold est gratuit avec le rythme 16:8 et les sept derniers jours d’historique. Sunfold Pro est proposé au mois, à l’année ou en un paiement unique à vie. Le paiement est débité de votre identifiant Apple ; les abonnements se renouvellent automatiquement sauf résiliation au moins 24 heures avant la fin de la période.",
+  "site.terms.pricing.title": "Abonnements"
+}

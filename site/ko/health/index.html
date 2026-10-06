@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>건강 안내 — Sunfold</title>
+    <meta name="description" content="Sunfold는 언제 먹었는지를 기록합니다. 건강 상태에 대해서는 아무것도 알 수 없으며, 진단하거나 치료하거나 조언하지 않습니다.">
+    <link rel="canonical" href="https://sunfold.app/ko/health/">
+    <link rel="alternate" hreflang="en" href="https://sunfold.app/health/">
+    <link rel="alternate" hreflang="de" href="https://sunfold.app/de/health/">
+    <link rel="alternate" hreflang="fr" href="https://sunfold.app/fr/health/">
+    <link rel="alternate" hreflang="es-MX" href="https://sunfold.app/es-MX/health/">
+    <link rel="alternate" hreflang="es-ES" href="https://sunfold.app/es-ES/health/">
+    <link rel="alternate" hreflang="pt-BR" href="https://sunfold.app/pt-BR/health/">
+    <link rel="alternate" hreflang="it" href="https://sunfold.app/it/health/">
+    <link rel="alternate" hreflang="nl" href="https://sunfold.app/nl/health/">
+    <link rel="alternate" hreflang="pl" href="https://sunfold.app/pl/health/">
+    <link rel="alternate" hreflang="ja" href="https://sunfold.app/ja/health/">
+    <link rel="alternate" hreflang="ko" href="https://sunfold.app/ko/health/">
+    <link rel="alternate" hreflang="ru" href="https://sunfold.app/ru/health/">
+    <link rel="alternate" hreflang="uk" href="https://sunfold.app/uk/health/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://sunfold.app/zh-Hans/health/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://sunfold.app/zh-Hant/health/">
+    <link rel="alternate" hreflang="x-default" href="https://sunfold.app/health/">
+    <style>
+:root {
+  --canvas: #FBF5EE; --surface: #FFFCF8; --ink: #3B2E27;
+  --ink-2: #8B7668; --ink-3: #AE9C8D; --line: #EADCCC; --accent: #B75E3D;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --canvas: #211B18; --surface: #2C2421; --ink: #F5EBE1;
+    --ink-2: #B09C8E; --ink-3: #87766B; --line: #40352F; --accent: #F2A883;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 0 20px 64px; background: var(--canvas); color: var(--ink);
+  font: 17px/1.65 ui-rounded, -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+.wrap { max-width: 680px; margin: 0 auto; }
+header { display: flex; flex-wrap: wrap; gap: 12px; align-items: baseline;
+  justify-content: space-between; padding: 28px 0 8px; }
+.brand { font-weight: 700; font-size: 20px; color: var(--ink); text-decoration: none; }
+nav a { color: var(--ink-2); text-decoration: none; margin-left: 14px; font-size: 15px; }
+nav a:hover { color: var(--accent); }
+h1 { font-size: clamp(28px, 6vw, 38px); line-height: 1.2; margin: 28px 0 12px; }
+h2 { font-size: 20px; margin: 32px 0 8px; }
+.lede { color: var(--ink-2); font-size: 19px; }
+p { margin: 0 0 14px; color: var(--ink-2); }
+h2 + p { margin-top: 0; }
+a { color: var(--accent); }
+.card { background: var(--surface); border: 1px solid var(--line);
+  border-radius: 20px; padding: 20px 22px; margin: 22px 0; }
+.langs { margin: 28px 0 0; font-size: 15px; }
+.langs a { margin-right: 12px; }
+.langs .on { color: var(--ink-3); text-decoration: none; }
+footer { margin-top: 44px; padding-top: 20px; border-top: 1px solid var(--line);
+  color: var(--ink-3); font-size: 14px; }
+.button { display: inline-block; background: var(--accent); color: #fff;
+  padding: 12px 20px; border-radius: 14px; text-decoration: none; font-weight: 600; }
+@media (prefers-color-scheme: dark) { .button { color: #211B18; } }
+</style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <a class="brand" href="/ko/">Sunfold</a>
+        <nav><a href="/ko/privacy/">개인정보</a><a href="/ko/health/">건강 안내</a><a href="/ko/terms/">이용 약관</a><a href="/ko/support/">지원</a></nav>
+      </header>
+      <h1>Sunfold는 타이머이지 의사가 아닙니다</h1>
+      <p class="lede">Sunfold는 언제 먹었는지를 기록합니다. 건강 상태에 대해서는 아무것도 알 수 없으며, 진단하거나 치료하거나 조언하지 않습니다.</p>
+      <h2>의학적 조언이 아닙니다</h2>
+      <p>대사 단계를 포함해 Sunfold의 모든 내용은 일반적인 참고 정보입니다. 진단도, 치료 계획도, 개인을 위한 권고도 아닙니다.</p>
+      <h2>먼저 의사와 상담하세요</h2>
+      <p>임신 중이거나 모유 수유 중인 경우, 18세 미만인 경우, 당뇨가 있거나 혈당에 영향을 주는 약을 복용하는 경우, 음식과 함께 먹어야 하는 약을 복용하는 경우, 저체중인 경우, 만성 질환이 있는 경우에는 단식을 시작하기 전에 의료 전문가와 상담하세요.</p>
+      <h2>몸이 좋지 않으면 멈추세요</h2>
+      <p>어지럼증, 실신할 듯한 느낌, 혼란, 두근거림, 평소와 다른 심한 무력감은 음식을 먹고 의료 도움을 받아야 한다는 신호입니다. 어떤 연속 기록도 그만한 가치는 없습니다.</p>
+      <h2>먹는 일이 힘들다면</h2>
+      <p>섭식장애가 있거나 있었던 경우, 또는 식사를 기록하는 일이 불안을 준다면 단식 앱은 상황을 더 어렵게 만들 수 있습니다. Sunfold를 사용하기 전에 의사나 가까운 상담 기관과 이야기해 보세요.</p>
+      <h2>단계에 대하여</h2>
+      <p>각 대사 단계에 표시된 시간은 일반 연구에서 나온 대략적인 값입니다. 실제로 일어나는 일은 마지막 식사, 활동량, 수면, 그리고 몸 상태에 따라 달라집니다. 측정값이 아니라 대략적인 지도로 봐 주세요.</p>
+      <p class="langs"><a href="/health/">EN</a> <a href="/de/health/">DE</a> <a href="/fr/health/">FR</a> <a href="/es-MX/health/">ES-MX</a> <a href="/es-ES/health/">ES-ES</a> <a href="/pt-BR/health/">PT-BR</a> <a href="/it/health/">IT</a> <a href="/nl/health/">NL</a> <a href="/pl/health/">PL</a> <a href="/ja/health/">JA</a> <span class="on">KO</span> <a href="/ru/health/">RU</a> <a href="/uk/health/">UK</a> <a href="/zh-Hans/health/">ZH-HANS</a> <a href="/zh-Hant/health/">ZH-HANT</a></p>
+      <footer>© 2026 Sunfold · <a href="mailto:support@sunfold.app">support@sunfold.app</a></footer>
+    </div>
+  </body>
+</html>

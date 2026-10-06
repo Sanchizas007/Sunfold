@@ -1,0 +1,21 @@
+{
+  "site.back": "Sunfold",
+  "site.nav.health": "Gesundheitshinweis",
+  "site.nav.privacy": "Datenschutz",
+  "site.nav.support": "Support",
+  "site.nav.terms": "Bedingungen",
+  "site.support.contact.body": "Wir beantworten jede Nachricht. Nenne bitte dein iPhone-Modell und die iOS-Version — damit wird das meiste sofort klar.",
+  "site.support.contact.title": "Schreib uns",
+  "site.support.data.body": "Auf deinem iPhone und sonst nirgends. Einstellungen → Als CSV exportieren gibt dir eine Kopie; Einstellungen → Alle Daten löschen entfernt alles auf einmal. Die App zu löschen entfernt den Rest.",
+  "site.support.data.title": "Wo sind meine Daten?",
+  "site.support.heading": "Support",
+  "site.support.lede": "Sunfold hat kein Konto und keine Anmeldung, also gibt es nichts wiederherzustellen und kein Passwort zurückzusetzen. Wenn etwas nicht stimmt, schreib uns und beschreibe, was du gesehen hast.",
+  "site.support.subscription.body": "Abos liegen bei deiner Apple-ID, nicht bei uns. Öffne den App Store, tippe auf dein Foto und dann auf Abonnements, um zu ändern oder zu kündigen. Einen Kauf auf einem neuen Gerät wiederherstellen: Sunfold Pro → Wiederherstellen.",
+  "site.support.subscription.title": "Abo verwalten",
+  "site.tagline": "Ein ruhiger Intervallfasten-Timer für das iPhone. Alles bleibt auf deinem Gerät.",
+  "site.terms.eula": "Standard-Lizenzvereinbarung lesen",
+  "site.terms.heading": "Nutzungsbedingungen",
+  "site.terms.lede": "Sunfold wird unter Apples Standard-Lizenzvereinbarung für Endbenutzer lizenziert, der Standardlizenz für Apps aus dem App Store.",
+  "site.terms.pricing.body": "Sunfold ist mit dem 16:8-Rhythmus und den letzten sieben Tagen Verlauf kostenlos nutzbar. Sunfold Pro gibt es monatlich, jährlich oder als einmalige Zahlung. Die Zahlung wird über deine Apple-ID abgerechnet; Abos verlängern sich automatisch, sofern sie nicht mindestens 24 Stunden vor Ende des Zeitraums gekündigt werden.",
+  "site.terms.pricing.title": "Abonnements"
+}

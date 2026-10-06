@@ -1,0 +1,21 @@
+{
+  "site.back": "Sunfold",
+  "site.nav.health": "Avviso sulla salute",
+  "site.nav.privacy": "Privacy",
+  "site.nav.support": "Assistenza",
+  "site.nav.terms": "Termini",
+  "site.support.contact.body": "Rispondiamo a ogni messaggio. Indica il modello di iPhone e la versione di iOS: con questi, la maggior parte dei problemi si capisce subito.",
+  "site.support.contact.title": "Scrivici",
+  "site.support.data.body": "Sul tuo iPhone, e da nessun’altra parte. Impostazioni → Esporta in CSV ti dà una copia; Impostazioni → Elimina tutti i dati rimuove tutto in una volta. Eliminare l’app rimuove il resto.",
+  "site.support.data.title": "Dove sono i miei dati?",
+  "site.support.heading": "Assistenza",
+  "site.support.lede": "Sunfold non ha account né accesso, quindi non c’è nulla da recuperare e nessuna password da reimpostare. Se qualcosa non va, scrivici descrivendo cosa hai visto.",
+  "site.support.subscription.body": "Gli abbonamenti stanno sul tuo ID Apple, non da noi. Apri l’App Store, tocca la tua foto e poi Abbonamenti per modificarlo o annullarlo. Per ripristinare un acquisto su un nuovo dispositivo: Sunfold Pro → Ripristina.",
+  "site.support.subscription.title": "Gestire un abbonamento",
+  "site.tagline": "Un timer tranquillo per il digiuno intermittente su iPhone. Resta tutto sul tuo dispositivo.",
+  "site.terms.eula": "Leggi il contratto standard",
+  "site.terms.heading": "Termini d’uso",
+  "site.terms.lede": "Sunfold è concesso in licenza secondo il Contratto di licenza con l’utente finale standard di Apple, la licenza predefinita per le app distribuite sull’App Store.",
+  "site.terms.pricing.body": "Sunfold è gratuito con lo schema 16:8 e gli ultimi sette giorni di cronologia. Sunfold Pro è disponibile al mese, all’anno o con un pagamento unico per sempre. Il pagamento viene addebitato sul tuo ID Apple; gli abbonamenti si rinnovano automaticamente se non vengono annullati almeno 24 ore prima della fine del periodo.",
+  "site.terms.pricing.title": "Abbonamenti"
+}

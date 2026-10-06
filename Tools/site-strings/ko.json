@@ -1,0 +1,21 @@
+{
+  "site.back": "Sunfold",
+  "site.nav.health": "건강 안내",
+  "site.nav.privacy": "개인정보",
+  "site.nav.support": "지원",
+  "site.nav.terms": "이용 약관",
+  "site.support.contact.body": "모든 메시지에 답변합니다. iPhone 기종과 iOS 버전을 함께 적어 주시면 대부분의 문제는 바로 짚입니다.",
+  "site.support.contact.title": "문의 보내기",
+  "site.support.data.body": "사용 중인 iPhone 안에만 있습니다. 설정 → CSV로 내보내기로 사본을 받을 수 있고, 설정 → 모든 데이터 삭제로 한 번에 지울 수 있습니다. 앱을 삭제하면 나머지도 사라집니다.",
+  "site.support.data.title": "제 데이터는 어디에 있나요?",
+  "site.support.heading": "지원",
+  "site.support.lede": "Sunfold에는 계정도 로그인도 없습니다. 그래서 복구할 것도, 재설정할 비밀번호도 없습니다. 문제가 있으면 무엇을 보셨는지 적어 보내 주세요.",
+  "site.support.subscription.body": "구독은 Apple 계정에 있고 저희 쪽에 있지 않습니다. App Store를 열고 사진을 누른 다음 구독에서 변경하거나 취소하세요. 새 기기에서 구입을 되살리려면 Sunfold Pro → 복원.",
+  "site.support.subscription.title": "구독 관리",
+  "site.tagline": "iPhone를 위한 조용한 간헐적 단식 타이머. 모든 것은 기기 안에 남습니다.",
+  "site.terms.eula": "표준 사용권 계약 읽기",
+  "site.terms.heading": "이용 약관",
+  "site.terms.lede": "Sunfold는 Apple의 표준 최종 사용자 사용권 계약에 따라 제공됩니다. App Store에서 배포되는 앱의 기본 사용권입니다.",
+  "site.terms.pricing.body": "Sunfold는 16:8 방식과 최근 7일 기록까지 무료로 쓸 수 있습니다. Sunfold Pro는 월간, 연간, 또는 한 번 결제하는 평생 방식으로 제공됩니다. 결제는 Apple 계정으로 청구되며, 기간이 끝나기 최소 24시간 전에 취소하지 않으면 구독이 자동으로 갱신됩니다.",
+  "site.terms.pricing.title": "구독"
+}

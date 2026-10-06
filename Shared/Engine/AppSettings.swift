@@ -92,6 +92,13 @@ final class AppSettings {
         }
     }
 
+    /// App version that last asked for a review. Empty until the first ask.
+    /// Stored rather than counted so the ask survives a data wipe: deleting
+    /// history should not make the app start pestering again.
+    var lastReviewRequestVersion: String {
+        didSet { defaults.set(lastReviewRequestVersion, forKey: Key.lastReviewRequestVersion) }
+    }
+
     private init() {
         let defaults = AppGroup.defaults
 
@@ -118,6 +125,7 @@ final class AppSettings {
         hasRequestedNotificationPermission = defaults.bool(
             forKey: Key.hasRequestedNotificationPermission
         )
+        lastReviewRequestVersion = defaults.string(forKey: Key.lastReviewRequestVersion) ?? ""
 
         let stored = defaults.double(forKey: Key.firstLaunchDate)
         if stored > 0 {
@@ -178,6 +186,7 @@ final class AppSettings {
         static let hasCompletedOnboarding = "settings.onboarded"
         static let firstLaunchDate = "settings.firstLaunch"
         static let hasRequestedNotificationPermission = "settings.notifyAsked"
+        static let lastReviewRequestVersion = "settings.reviewAskedVersion"
 
         /// `firstLaunchDate` is deliberately absent: wiping it would hand the
         /// user a fresh 7-day access period every time they cleared data.

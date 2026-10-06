@@ -193,6 +193,15 @@ final class FastingController {
         return true
     }
 
+    /// Fasts long enough to count, which is what "has this person actually
+    /// used the app" means for the review prompt. Lives here because the
+    /// controller already holds the context; the timer screen has no query of
+    /// its own and should not grow one just to count rows.
+    var countedFastCount: Int {
+        let sessions = (try? context.fetch(FastSession.allDescriptor)) ?? []
+        return Statistics.counted(sessions).count
+    }
+
     /// Called when the app comes back to the foreground: re-derives state and
     /// re-pushes anything that may have gone stale while it was away.
     func refreshOnForeground() {

@@ -1,0 +1,21 @@
+{
+  "site.back": "Sunfold",
+  "site.nav.health": "Informacja o zdrowiu",
+  "site.nav.privacy": "Prywatność",
+  "site.nav.support": "Pomoc",
+  "site.nav.terms": "Warunki",
+  "site.support.contact.body": "Odpowiadamy na każdą wiadomość. Podaj model iPhone’a i wersję iOS — dzięki temu większość problemów widać od razu.",
+  "site.support.contact.title": "Napisz do nas",
+  "site.support.data.body": "Na twoim iPhonie i nigdzie indziej. Ustawienia → Eksportuj do CSV daje kopię; Ustawienia → Usuń wszystkie dane kasuje wszystko naraz. Usunięcie aplikacji kasuje resztę.",
+  "site.support.data.title": "Gdzie są moje dane?",
+  "site.support.heading": "Pomoc",
+  "site.support.lede": "Sunfold nie ma konta ani logowania, więc nie ma czego odzyskiwać ani jakiego hasła resetować. Jeśli coś jest nie tak, napisz i opisz, co zobaczyłeś.",
+  "site.support.subscription.body": "Subskrypcje są przypisane do twojego Apple ID, nie do nas. Otwórz App Store, stuknij swoje zdjęcie, a potem Subskrypcje, aby je zmienić lub anulować. Przywracanie zakupu na nowym urządzeniu: Sunfold Pro → Przywróć.",
+  "site.support.subscription.title": "Zarządzanie subskrypcją",
+  "site.tagline": "Spokojny minutnik postu przerywanego na iPhone’a. Wszystko zostaje na twoim urządzeniu.",
+  "site.terms.eula": "Przeczytaj standardową umowę",
+  "site.terms.heading": "Warunki korzystania",
+  "site.terms.lede": "Sunfold jest licencjonowany na warunkach standardowej umowy licencyjnej użytkownika końcowego Apple, domyślnej licencji dla aplikacji z App Store.",
+  "site.terms.pricing.body": "Sunfold jest bezpłatny z planem 16:8 i historią z ostatnich siedmiu dni. Sunfold Pro jest dostępny w wariancie miesięcznym, rocznym lub jako jednorazowa płatność na zawsze. Płatność jest pobierana z twojego Apple ID; subskrypcje odnawiają się automatycznie, o ile nie zostaną anulowane co najmniej 24 godziny przed końcem okresu.",
+  "site.terms.pricing.title": "Subskrypcje"
+}

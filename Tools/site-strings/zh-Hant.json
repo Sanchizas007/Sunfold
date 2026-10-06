@@ -1,0 +1,21 @@
+{
+  "site.back": "Sunfold",
+  "site.nav.health": "健康提醒",
+  "site.nav.privacy": "隱私",
+  "site.nav.support": "支援",
+  "site.nav.terms": "條款",
+  "site.support.contact.body": "每一封信我們都會回。請附上你的 iPhone 型號和 iOS 版本——有了它們，大多數問題一眼就能看明白。",
+  "site.support.contact.title": "寫信給我們",
+  "site.support.data.body": "在你的 iPhone 上，別無他處。設定 →「輸出為 CSV」可以拿到一份副本；設定 →「刪除所有資料」會一次清空。刪除 App 則會清掉其餘部分。",
+  "site.support.data.title": "我的資料在哪裡？",
+  "site.support.heading": "支援",
+  "site.support.lede": "Sunfold 沒有帳號，也不需要登入，所以沒有什麼需要找回，也沒有密碼需要重設。如果哪裡不對，寫信告訴我們你看到了什麼。",
+  "site.support.subscription.body": "訂閱在你的 Apple 帳號下，不在我們這裡。打開 App Store，點一下你的大頭照，再進入「訂閱」即可更改或取消。在新裝置上回復購買：Sunfold Pro →「回復購買」。",
+  "site.support.subscription.title": "管理訂閱",
+  "site.tagline": "一個為 iPhone 而做的安靜間歇性斷食計時器。一切都留在你的裝置上。",
+  "site.terms.eula": "閱讀標準授權合約",
+  "site.terms.heading": "使用條款",
+  "site.terms.lede": "Sunfold 依據 Apple 的標準使用者授權合約授權，這是 App Store 上發布的 App 的預設授權。",
+  "site.terms.pricing.body": "Sunfold 在 16:8 方式和最近七天紀錄的範圍內免費使用。Sunfold Pro 提供每月、每年或一次性永久購買。費用將從你的 Apple 帳號扣除；除非在當期結束前至少 24 小時取消，否則訂閱會自動續訂。",
+  "site.terms.pricing.title": "訂閱"
+}

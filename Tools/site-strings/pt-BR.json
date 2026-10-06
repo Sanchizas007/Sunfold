@@ -1,0 +1,21 @@
+{
+  "site.back": "Sunfold",
+  "site.nav.health": "Aviso de saúde",
+  "site.nav.privacy": "Privacidade",
+  "site.nav.support": "Suporte",
+  "site.nav.terms": "Termos",
+  "site.support.contact.body": "Respondemos todas as mensagens. Inclua o modelo do seu iPhone e a versão do iOS — com isso a maioria dos problemas fica óbvia na hora.",
+  "site.support.contact.title": "Escreva para a gente",
+  "site.support.data.body": "No seu iPhone, e em nenhum outro lugar. Ajustes → Exportar como CSV dá uma cópia; Ajustes → Apagar todos os dados remove tudo de uma vez. Apagar o app remove o resto.",
+  "site.support.data.title": "Onde ficam meus dados?",
+  "site.support.heading": "Suporte",
+  "site.support.lede": "O Sunfold não tem conta nem login, então não há nada para recuperar e nenhuma senha para redefinir. Se algo estiver errado, escreva e descreva o que você viu.",
+  "site.support.subscription.body": "As assinaturas ficam no seu ID Apple, não conosco. Abra a App Store, toque na sua foto e depois em Assinaturas para alterar ou cancelar. Para restaurar uma compra num aparelho novo: Sunfold Pro → Restaurar.",
+  "site.support.subscription.title": "Gerenciar uma assinatura",
+  "site.tagline": "Um cronômetro tranquilo de jejum intermitente para iPhone. Tudo fica no seu aparelho.",
+  "site.terms.eula": "Ler o contrato padrão",
+  "site.terms.heading": "Termos de Uso",
+  "site.terms.lede": "O Sunfold é licenciado sob o Contrato de Licença de Usuário Final padrão da Apple, a licença predefinida para apps distribuídos na App Store.",
+  "site.terms.pricing.body": "O Sunfold é gratuito com o ritmo 16:8 e os últimos sete dias de histórico. O Sunfold Pro está disponível por mês, por ano ou em um pagamento único vitalício. O pagamento é cobrado no seu ID Apple; as assinaturas renovam automaticamente, a menos que sejam canceladas pelo menos 24 horas antes do fim do período.",
+  "site.terms.pricing.title": "Assinaturas"
+}

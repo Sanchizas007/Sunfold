@@ -1,0 +1,21 @@
+{
+  "site.back": "Sunfold",
+  "site.nav.health": "健康に関するお知らせ",
+  "site.nav.privacy": "プライバシー",
+  "site.nav.support": "サポート",
+  "site.nav.terms": "利用規約",
+  "site.support.contact.body": "いただいたメッセージにはすべてお返事します。iPhoneの機種とiOSのバージョンを添えていただけると、たいていの問題はすぐに見当がつきます。",
+  "site.support.contact.title": "ご連絡ください",
+  "site.support.data.body": "お使いのiPhoneの中だけです。設定 →「CSVで書き出す」で控えが手に入ります。設定 →「すべてのデータを削除」で一度に消えます。アプリを削除すれば残りも消えます。",
+  "site.support.data.title": "データはどこにありますか？",
+  "site.support.heading": "サポート",
+  "site.support.lede": "Sunfoldにはアカウントもログインもありません。復旧するものも、再設定するパスワードもありません。うまくいかないことがあれば、見えた内容を書いてお送りください。",
+  "site.support.subscription.body": "サブスクリプションはあなたのApple IDにあり、こちらでは預かっていません。App Storeを開き、ご自身の写真をタップして「サブスクリプション」から変更・解約できます。新しい端末で購入を戻すには、Sunfold Pro →「復元」。",
+  "site.support.subscription.title": "サブスクリプションの管理",
+  "site.tagline": "iPhoneのための、静かな間欠的ファスティングタイマー。すべては端末の中に残ります。",
+  "site.terms.eula": "標準の使用許諾契約を読む",
+  "site.terms.heading": "利用規約",
+  "site.terms.lede": "SunfoldはAppleの標準エンドユーザー使用許諾契約のもとで提供されます。App Storeで配信されるアプリの既定のライセンスです。",
+  "site.terms.pricing.body": "Sunfoldは16:8のスケジュールと直近7日間の履歴まで無料で使えます。Sunfold Proは月額、年額、または買い切りからお選びいただけます。料金はあなたのApple IDに請求されます。期間終了の24時間前までに解約しない限り、サブスクリプションは自動的に更新されます。",
+  "site.terms.pricing.title": "サブスクリプション"
+}
