@@ -53,6 +53,10 @@ LANGUAGES = (
     "es-MX",
     "es-ES",
     "pt-BR",
+    "it",
+    "nl",
+    "pl",
+    "ja",
     "ru",
     "uk",
 )

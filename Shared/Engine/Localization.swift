@@ -14,6 +14,10 @@ nonisolated enum AppLanguage: String, CaseIterable, Identifiable, Sendable {
     case spanishMexico = "es-MX"
     case spanishSpain = "es-ES"
     case portugueseBrazil = "pt-BR"
+    case italian = "it"
+    case dutch = "nl"
+    case polish = "pl"
+    case japanese = "ja"
     case russian = "ru"
     case ukrainian = "uk"
 
