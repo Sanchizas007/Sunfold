@@ -18,6 +18,9 @@ nonisolated enum AppLanguage: String, CaseIterable, Identifiable, Sendable {
     case dutch = "nl"
     case polish = "pl"
     case japanese = "ja"
+    case korean = "ko"
+    case chineseSimplified = "zh-Hans"
+    case chineseTraditional = "zh-Hant"
     case russian = "ru"
     case ukrainian = "uk"
 

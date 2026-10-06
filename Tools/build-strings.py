@@ -57,8 +57,11 @@ LANGUAGES = (
     "nl",
     "pl",
     "ja",
+    "ko",
     "ru",
     "uk",
+    "zh-Hans",
+    "zh-Hant",
 )
 
 
