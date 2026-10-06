@@ -15,11 +15,15 @@
 # exist.
 set -euo pipefail
 
-# iPhone 14 Plus, because it shoots 1284x2778 — the exact size of the English
-# set that App Review approved. A newer Pro Max shoots 1320x2868, and the
-# localised frames have to be the approved frames with the language swapped,
-# not a new set at a new size.
-DEVICE="${SUNFOLD_DEVICE:-iPhone 14 Plus}"
+# iPhone 17: it shoots 1206x2622, the size App Store Connect now demands.
+#
+# The 1.0 set was 1284x2778 and was approved, so the localised frames were shot
+# to match it. App Store Connect has since changed what it requires: the only
+# mandatory iPhone size is now "iPhone with Dynamic Island (medium display)",
+# 1179x2556 or 1206x2622, and 1284x2778 is refused outright — "one or more
+# screenshots do not meet the requirements and must be deleted". An iPhone 14
+# Plus cannot produce it: that model has a notch, not an island.
+DEVICE="${SUNFOLD_DEVICE:-iPhone 17}"
 BUNDLE="app.sunfold"
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 DERIVED="${SUNFOLD_DERIVED:-$ROOT/.build/screenshots}"

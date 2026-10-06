@@ -31,9 +31,15 @@ VERSION = "1.1"
 COPYRIGHT = "2026 Olexandr Zhovnir"
 SITE = "https://sanchizas007.github.io/Sunfold"
 
-# The 6.7"/6.9" iPhone slot. The approved 1.0 set was shot at 1284x2778 and
-# lives here; the localised shots match it exactly, which is the point.
-DISPLAY_TYPE = "APP_IPHONE_67"
+# The slot App Store Connect now requires: "iPhone with Dynamic Island (medium
+# display)", which takes 1179x2556 or 1206x2622. The API calls it APP_IPHONE_61.
+#
+# The 1.0 set lived in APP_IPHONE_67 at 1284x2778 and was approved there, but
+# Apple has since changed the requirement — a draft holding only that size is
+# refused with "one or more screenshots do not meet the requirements and must be
+# deleted". Sets of any other display type are removed rather than left behind,
+# because a stale one is exactly what that error is about.
+DISPLAY_TYPE = "APP_IPHONE_61"
 
 # App Store locale -> the folder Tools/screenshots.sh writes. They differ where
 # Apple wants a region and the app's own language codes do not.
@@ -145,6 +151,17 @@ def upload_screenshots(localization, folder):
         return "no files"
 
     sets, _ = asc.get_all(f"/v1/appStoreVersionLocalizations/{localization}/appScreenshotSets")
+
+    # Anything in another display type is left over from an older requirement
+    # and blocks submission. The screenshots here are this script's to own.
+    for item in sets:
+        if item["attributes"]["screenshotDisplayType"] != DISPLAY_TYPE:
+            stale, _ = asc.get_all(f"/v1/appScreenshotSets/{item['id']}/appScreenshots")
+            for shot in stale:
+                asc.request("DELETE", f"/v1/appScreenshots/{shot['id']}")
+            asc.request("DELETE", f"/v1/appScreenshotSets/{item['id']}")
+            log(f"    removed stale {item['attributes']['screenshotDisplayType']} set")
+
     screenshot_set = next(
         (item["id"] for item in sets
          if item["attributes"]["screenshotDisplayType"] == DISPLAY_TYPE), None)

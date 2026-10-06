@@ -76,14 +76,26 @@ def get_all(path, params=None):
 
 
 def upload_asset(reservation, file_path):
-    """Sends a file to the upload operations App Store Connect handed out for an asset."""
+    """Sends a file to the upload operations App Store Connect handed out for an asset.
+
+    Retried: a run of a hundred-odd screenshots hits a dropped connection sooner
+    or later, and without this one broken pipe throws away everything after it.
+    """
     content = pathlib.Path(file_path).read_bytes()
     for operation in reservation["data"]["attributes"]["uploadOperations"]:
         chunk = content[operation["offset"]:operation["offset"] + operation["length"]]
         headers = {header["name"]: header["value"] for header in operation.get("requestHeaders", [])}
-        upload = urllib.request.Request(operation["url"], data=chunk, method=operation["method"], headers=headers)
-        with urllib.request.urlopen(upload) as response:
-            response.read()
+        for attempt in range(5):
+            upload = urllib.request.Request(operation["url"], data=chunk,
+                                            method=operation["method"], headers=headers)
+            try:
+                with urllib.request.urlopen(upload, timeout=120) as response:
+                    response.read()
+                break
+            except (urllib.error.URLError, urllib.error.HTTPError, OSError):
+                if attempt == 4:
+                    raise
+                time.sleep(2 ** attempt)
 
 
 def main():
