@@ -14,8 +14,13 @@ import WidgetKit
 /// subscription itself.
 @Observable
 final class Entitlements {
-    /// Length of the opening full-access period.
-    static let fullAccessDays = 7
+    /// Whether this install was given an opening period of full access at all.
+    ///
+    /// From 1.2 a new install is not: it meets the paywall straight after
+    /// onboarding and is offered a three-day trial. Installs from 1.1 and
+    /// earlier keep the seven days they were promised — see
+    /// `AppSettings.openAccessDays`, which is fixed at install time.
+    var hasOpeningPeriod: Bool { settings.openAccessDays > 0 }
 
     private let provider: any PurchaseProviding
     private let settings: AppSettings
@@ -102,11 +107,12 @@ final class Entitlements {
 
     // MARK: Access
 
-    /// When the opening full-access period runs out.
+    /// When the opening full-access period runs out. Equal to the first launch
+    /// for an install that was never given one.
     var fullAccessEndDate: Date {
         Calendar.current.date(
             byAdding: .day,
-            value: Self.fullAccessDays,
+            value: settings.openAccessDays,
             to: settings.firstLaunchDate
         ) ?? settings.firstLaunchDate
     }
@@ -114,8 +120,9 @@ final class Entitlements {
     /// Debug-only switch that pretends the opening period has run out, so the
     /// paywall and every gate behind it can be checked today.
     ///
-    /// The alternative — editing `fullAccessDays` to 0 and remembering to put
-    /// it back — is the kind of temporary change that ships. This one cannot:
+    /// The alternative — editing the stored open-access days by hand and
+    /// remembering to put them back — is the kind of temporary change that
+    /// ships. This one cannot:
     /// it is a launch argument, off unless ticked in the scheme, and compiled
     /// out of release entirely.
     static let expireAccessArgument = "-SunfoldExpireAccess"
@@ -124,6 +131,7 @@ final class Entitlements {
         #if DEBUG
         if CommandLine.arguments.contains(Self.expireAccessArgument) { return false }
         #endif
+        guard hasOpeningPeriod else { return false }
         return Date.now < fullAccessEndDate
     }
 

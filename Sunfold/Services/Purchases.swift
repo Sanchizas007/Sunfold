@@ -19,6 +19,13 @@ nonisolated struct SunfoldProduct: Identifiable, Equatable, Sendable {
     var perMonthPrice: String?
     /// Percent saved against the monthly plan, for the yearly badge.
     var savingsPercent: Int?
+    /// Free days this customer would actually get, or nil for none.
+    ///
+    /// Eligibility, not merely the existence of an offer: Apple gives an
+    /// introductory offer only to someone who has never subscribed in this
+    /// group, so a returning customer must not be shown "3 days free" and then
+    /// charged at once.
+    var freeTrialDays: Int?
 }
 
 nonisolated protocol PurchaseProviding: AnyObject, Sendable {
@@ -107,6 +114,10 @@ final class RevenueCatProvider: PurchaseProviding, @unchecked Sendable {
             .first { $0.storeProduct.productIdentifier == StoreIDs.monthly }?
             .storeProduct.price
 
+        // One round trip for the whole offering rather than one per product.
+        let eligibility = await Purchases.shared
+            .checkTrialOrIntroDiscountEligibility(packages: current.availablePackages)
+
         return current.availablePackages.compactMap { package in
             let store = package.storeProduct
             guard let term = Self.term(for: store.productIdentifier) else { return nil }
@@ -123,15 +134,34 @@ final class RevenueCatProvider: PurchaseProviding, @unchecked Sendable {
                 }
             }
 
+            var trialDays: Int?
+            if eligibility[package]?.status == .eligible,
+               let offer = store.introductoryDiscount,
+               offer.paymentMode == .freeTrial {
+                trialDays = Self.days(in: offer.subscriptionPeriod)
+            }
+
             return SunfoldProduct(
                 id: store.productIdentifier,
                 term: term,
                 displayPrice: store.localizedPriceString,
                 perMonthPrice: perMonth,
-                savingsPercent: savings
+                savingsPercent: savings,
+                freeTrialDays: trialDays
             )
         }
         .sorted { lhs, rhs in Self.order(lhs.term) < Self.order(rhs.term) }
+    }
+
+    /// An offer is written as a count of some unit; the paywall says days.
+    private static func days(in period: SubscriptionPeriod) -> Int {
+        switch period.unit {
+        case .day: return period.value
+        case .week: return period.value * 7
+        case .month: return period.value * 30
+        case .year: return period.value * 365
+        @unknown default: return period.value
+        }
     }
 
     func purchase(id: String) async throws -> Bool {
@@ -192,12 +222,18 @@ final class UnconfiguredPurchaseProvider: PurchaseProviding, @unchecked Sendable
             SunfoldProduct(
                 id: StoreIDs.yearly,
                 term: .yearly,
-                displayPrice: "$14.99",
-                perMonthPrice: "$1.25",
-                savingsPercent: 58
+                displayPrice: "$29.99",
+                perMonthPrice: "$2.49",
+                savingsPercent: 16,
+                freeTrialDays: 3
             ),
-            SunfoldProduct(id: StoreIDs.monthly, term: .monthly, displayPrice: "$2.99"),
-            SunfoldProduct(id: StoreIDs.lifetime, term: .lifetime, displayPrice: "$34.99")
+            SunfoldProduct(
+                id: StoreIDs.monthly,
+                term: .monthly,
+                displayPrice: "$2.99",
+                freeTrialDays: 3
+            ),
+            SunfoldProduct(id: StoreIDs.lifetime, term: .lifetime, displayPrice: "$79.99")
         ]
     }
 

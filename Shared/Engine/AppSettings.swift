@@ -92,6 +92,18 @@ final class AppSettings {
         }
     }
 
+    /// Days of full access this install was given on arrival, with no purchase.
+    ///
+    /// Decided once, at install, and never again. Sunfold 1.1 and earlier opened
+    /// everything for seven days and never showed the paywall, which is why
+    /// almost nobody reached it: by the time the first padlock appeared, the
+    /// user was gone. From 1.2 a new install gets no open period and is offered
+    /// a three-day trial instead, right after onboarding.
+    ///
+    /// Stored per install rather than read from a constant so that an upgrade
+    /// cannot take away days somebody was already promised.
+    private(set) var openAccessDays: Int
+
     /// App version that last asked for a review. Empty until the first ask.
     /// Stored rather than counted so the ask survives a data wipe: deleting
     /// history should not make the app start pestering again.
@@ -130,12 +142,23 @@ final class AppSettings {
         let stored = defaults.double(forKey: Key.firstLaunchDate)
         if stored > 0 {
             firstLaunchDate = Date(timeIntervalSince1970: stored)
+            // A launch date already on disk means this install predates 1.2, so
+            // it keeps the seven open days it was given. Written once: after
+            // this the key exists and the branch never runs again.
+            if defaults.object(forKey: Key.openAccessDays) == nil {
+                defaults.set(Self.legacyOpenAccessDays, forKey: Key.openAccessDays)
+            }
         } else {
             let now = Date.now
             firstLaunchDate = now
             defaults.set(now.timeIntervalSince1970, forKey: Key.firstLaunchDate)
+            defaults.set(0, forKey: Key.openAccessDays)
         }
+        openAccessDays = defaults.integer(forKey: Key.openAccessDays)
     }
+
+    /// What installs from 1.1 and earlier were promised.
+    static let legacyOpenAccessDays = 7
 
     /// Seconds the currently selected protocol asks for.
     var targetFastSeconds: TimeInterval {
@@ -187,9 +210,11 @@ final class AppSettings {
         static let firstLaunchDate = "settings.firstLaunch"
         static let hasRequestedNotificationPermission = "settings.notifyAsked"
         static let lastReviewRequestVersion = "settings.reviewAskedVersion"
+        static let openAccessDays = "settings.openAccessDays"
 
-        /// `firstLaunchDate` is deliberately absent: wiping it would hand the
-        /// user a fresh 7-day access period every time they cleared data.
+        /// `firstLaunchDate` and `openAccessDays` are deliberately absent:
+        /// wiping them would hand the user a fresh open-access period every
+        /// time they cleared their data.
         static let allResettable = [
             selectedProtocol, customFastMinutes, weightUnit, appearance,
             notifyOnFastComplete, notifyBeforeFastEnds, notifyOnEatingWindowEnd,

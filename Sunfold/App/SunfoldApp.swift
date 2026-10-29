@@ -60,6 +60,7 @@ struct RootView: View {
     /// `.timer` for every real launch; the screenshot run asks for a tab by
     /// name so a whole set can be shot without tapping through the app.
     @State private var selectedTab: Tab = .fromDemoScreen(DemoData.requestedScreen)
+    @State private var showingIntroPaywall = false
 
     enum Tab: Hashable {
         case timer, history, weight, settings
@@ -94,6 +95,19 @@ struct RootView: View {
         }
         .fullScreenCover(isPresented: .constant(!settings.hasCompletedOnboarding)) {
             OnboardingScreen()
+        }
+        .sheet(isPresented: $showingIntroPaywall) { PaywallScreen() }
+        // The paywall is shown once, the moment onboarding ends, and only to an
+        // install that was not given an opening period — which from 1.2 means
+        // every new one.
+        //
+        // Until 1.2 nobody met the paywall at all: everything was open for a
+        // week and the first padlock appeared long after most people had
+        // stopped opening the app. Shown here it is dismissible, and the three
+        // free days are the offer rather than a wall.
+        .onChange(of: settings.hasCompletedOnboarding) { _, completed in
+            guard completed, !entitlements.hasOpeningPeriod, !entitlements.isPro else { return }
+            showingIntroPaywall = true
         }
         .task {
             await entitlements.refresh()

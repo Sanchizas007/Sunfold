@@ -47,8 +47,12 @@ final class StoreKitProvider: PurchaseProviding, @unchecked Sendable {
 
         let monthlyPrice = fetched.first { $0.id == StoreIDs.monthly }?.price
 
-        return fetched.compactMap { product -> SunfoldProduct? in
-            guard let term = Self.term(for: product.id) else { return nil }
+        // A loop rather than compactMap: intro-offer eligibility is an await,
+        // and promising free days to somebody who has already subscribed would
+        // charge them on the spot.
+        var result: [SunfoldProduct] = []
+        for product in fetched {
+            guard let term = Self.term(for: product.id) else { continue }
 
             var perMonth: String?
             var savings: Int?
@@ -62,15 +66,36 @@ final class StoreKitProvider: PurchaseProviding, @unchecked Sendable {
                 }
             }
 
-            return SunfoldProduct(
+            var trialDays: Int?
+            if let subscription = product.subscription,
+               let offer = subscription.introductoryOffer,
+               offer.paymentMode == .freeTrial,
+               await subscription.isEligibleForIntroOffer {
+                trialDays = Self.days(in: offer.period)
+            }
+
+            result.append(SunfoldProduct(
                 id: product.id,
                 term: term,
                 displayPrice: product.displayPrice,
                 perMonthPrice: perMonth,
-                savingsPercent: savings
-            )
+                savingsPercent: savings,
+                freeTrialDays: trialDays
+            ))
         }
+        return result
         .sorted { Self.order($0.term) < Self.order($1.term) }
+    }
+
+    /// An offer is written as a count of some unit; the paywall says days.
+    private static func days(in period: Product.SubscriptionPeriod) -> Int {
+        switch period.unit {
+        case .day: return period.value
+        case .week: return period.value * 7
+        case .month: return period.value * 30
+        case .year: return period.value * 365
+        @unknown default: return period.value
+        }
     }
 
     func purchase(id: String) async throws -> Bool {
