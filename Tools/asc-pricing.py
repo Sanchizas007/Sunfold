@@ -51,25 +51,64 @@ def ref(kind, identifier):
     return {"data": {"type": kind, "id": identifier}}
 
 
+def territories():
+    """Every storefront the subscription is sold in.
+
+    One offer per territory, because the API refuses a request without one —
+    there is no "worldwide" shorthand, despite the App Store Connect web form
+    looking like there is.
+    """
+    items, _ = asc.get_all("/v1/territories", params={"limit": "200"})
+    return [item["id"] for item in items]
+
+
 def ensure_trial(subscription, name):
-    """A worldwide three-day free trial, unless one is already there."""
-    existing, _ = asc.get_all(f"/v1/subscriptions/{subscription}/introductoryOffers")
-    live = [o for o in existing if o["attributes"].get("offerMode") == "FREE_TRIAL"]
-    if live:
-        attributes = live[0]["attributes"]
-        log(f"  {name}: пробный период уже есть — {attributes.get('duration')}, не трогаю")
+    """A three-day free trial in every storefront, skipping any already there."""
+    existing, _ = asc.get_all(f"/v1/subscriptions/{subscription}/introductoryOffers",
+                              params={"include": "territory", "limit": "200"})
+    done = set()
+    for offer in existing:
+        if offer["attributes"].get("offerMode") != "FREE_TRIAL":
+            continue
+        link = offer.get("relationships", {}).get("territory", {}).get("data") or {}
+        done.add(link.get("id"))
+
+    wanted = territories()
+    missing = [t for t in wanted if t not in done]
+    if not missing:
+        log(f"  {name}: пробный период уже во всех {len(wanted)} витринах")
         return
-    act(f"{name}: создаю пробный период {TRIAL_DURATION}", lambda: asc.request(
-        "POST", "/v1/subscriptionIntroductoryOffers", {"data": {
-            "type": "subscriptionIntroductoryOffers",
-            "attributes": {
-                "duration": TRIAL_DURATION,
-                "offerMode": "FREE_TRIAL",
-                "numberOfPeriods": 1,
-            },
-            # No territory relationship: that means every storefront.
-            "relationships": {"subscription": ref("subscriptions", subscription)},
-        }}))
+    if not APPLY:
+        log(f"  [сухой прогон] {name}: создам {TRIAL_DURATION} в {len(missing)} витринах "
+            f"(из {len(wanted)}; уже есть в {len(done)})")
+        return
+
+    log(f"  {name}: создаю {TRIAL_DURATION} в {len(missing)} витринах")
+    failed = []
+    for index, territory in enumerate(missing, 1):
+        try:
+            asc.request("POST", "/v1/subscriptionIntroductoryOffers", {"data": {
+                "type": "subscriptionIntroductoryOffers",
+                "attributes": {
+                    "duration": TRIAL_DURATION,
+                    "offerMode": "FREE_TRIAL",
+                    "numberOfPeriods": 1,
+                },
+                "relationships": {
+                    "subscription": ref("subscriptions", subscription),
+                    "territory": ref("territories", territory),
+                },
+            }})
+        except asc.APIError as error:
+            # A storefront the subscription is not sold in refuses the offer.
+            # That is expected, not a failure of the run.
+            failed.append((territory, error.status))
+        if index % 40 == 0:
+            log(f"    {index}/{len(missing)}")
+    log(f"    создано {len(missing) - len(failed)}, отказано {len(failed)}")
+    if failed:
+        log(f"    отказы: {', '.join(t for t, _ in failed[:12])}"
+            + (" …" if len(failed) > 12 else ""))
 
 
 def price_point(subscription, price):
