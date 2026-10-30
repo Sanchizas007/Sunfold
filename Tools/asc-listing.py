@@ -172,9 +172,18 @@ def upload_screenshots(localization, folder):
                               ref("appStoreVersionLocalizations", localization)}}})["data"]["id"]
 
     current, _ = asc.get_all(f"/v1/appScreenshotSets/{screenshot_set}/appScreenshots")
-    done = [item for item in current
-            if item["attributes"].get("assetDeliveryState", {}).get("state") == "COMPLETE"]
-    if len(done) == len(files) == len(current):
+
+    # "Already there" has to mean the same pictures, not the same number of them.
+    #
+    # A new version inherits the previous version's screenshots, so a count and
+    # a COMPLETE state match on the very first run — and the old frames would
+    # have stayed in place, the stale ones included. The checksum App Store
+    # Connect stored at upload is compared with the file on disk, in order.
+    wanted = [hashlib.md5(path.read_bytes()).hexdigest() for path in files]
+    have = [item["attributes"].get("sourceFileChecksum") for item in current]
+    complete = all(item["attributes"].get("assetDeliveryState", {}).get("state") == "COMPLETE"
+                   for item in current)
+    if complete and have == wanted:
         return "already there"
 
     for item in current:
