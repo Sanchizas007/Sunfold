@@ -130,6 +130,8 @@
     "paywall.terms.subscription": "料金はあなたのApple IDに請求されます。期間終了の24時間前までに解約しない限り、自動的に更新されます。App Storeの設定からいつでも管理・解約できます。",
     "paywall.terms.trial": "無料体験は、終了の24時間前までに解約しない限り有料のサブスクリプションに切り替わります。料金はあなたのApple IDに請求され、サブスクリプションは自動的に更新されます。App Storeの設定からいつでも管理・解約できます。",
     "paywall.title": "Sunfold Pro",
+    "paywall.trial.thenMonth": "%1$lld日間無料、その後 %2$@ / 月",
+    "paywall.trial.thenYear": "%1$lld日間無料、その後 %2$@ / 年",
     "paywall.unavailable.body": "接続を確認して、もう一度お試しください。すでに記録した内容には影響ありません。",
     "paywall.unavailable.title": "価格を読み込めませんでした",
     "phase.autophagy.detail": "わかっていることの多くは動物実験によるものです。人での研究はまだ限られており、スマートフォンから測ることはできません。",

@@ -131,6 +131,8 @@
     "paywall.terms.subscription": "Il pagamento viene addebitato sul tuo ID Apple. L’abbonamento si rinnova automaticamente se non viene annullato almeno 24 ore prima della fine del periodo. Puoi gestirlo o annullarlo quando vuoi nelle impostazioni dell’App Store.",
     "paywall.terms.trial": "La tua prova gratuita diventa un abbonamento a pagamento se non la annulli almeno 24 ore prima della fine. Il pagamento viene addebitato sul tuo ID Apple e l’abbonamento si rinnova automaticamente. Puoi gestirlo o annullarlo quando vuoi nelle impostazioni dell’App Store.",
     "paywall.title": "Sunfold Pro",
+    "paywall.trial.thenMonth": "%1$lld giorni gratis, poi %2$@ / mese",
+    "paywall.trial.thenYear": "%1$lld giorni gratis, poi %2$@ / anno",
     "paywall.unavailable.body": "Controlla la connessione e riprova. Tutto quello che hai già registrato non viene toccato.",
     "paywall.unavailable.title": "Impossibile caricare i prezzi",
     "phase.autophagy.detail": "Quasi tutto quello che si sa viene da studi sugli animali. La ricerca sull’uomo è ancora limitata, e non c’è modo di misurarla da un telefono.",

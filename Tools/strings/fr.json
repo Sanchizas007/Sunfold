@@ -131,6 +131,8 @@
     "paywall.terms.subscription": "Le paiement est débité de votre identifiant Apple. L’abonnement se renouvelle automatiquement sauf résiliation au moins 24 heures avant la fin de la période. Vous pouvez le gérer ou le résilier à tout moment dans les réglages de l’App Store.",
     "paywall.terms.trial": "Votre essai gratuit devient un abonnement payant sauf résiliation au moins 24 heures avant sa fin. Le paiement est débité de votre identifiant Apple et l’abonnement se renouvelle automatiquement. Vous pouvez le gérer ou le résilier à tout moment dans les réglages de l’App Store.",
     "paywall.title": "Sunfold Pro",
+    "paywall.trial.thenMonth": "%1$lld jours offerts, puis %2$@ / mois",
+    "paywall.trial.thenYear": "%1$lld jours offerts, puis %2$@ / an",
     "paywall.unavailable.body": "Vérifiez votre connexion et réessayez. Tout ce que vous avez déjà enregistré reste intact.",
     "paywall.unavailable.title": "Impossible de charger les tarifs",
     "phase.autophagy.detail": "L’essentiel de ce que l’on sait vient d’études animales. La recherche chez l’humain reste limitée, et rien ne permet de le mesurer depuis un téléphone.",

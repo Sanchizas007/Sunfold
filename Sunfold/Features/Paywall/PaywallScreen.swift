@@ -269,6 +269,18 @@ struct PaywallScreen: View {
                 }
             }
 
+            // What the trial turns into, in one line, with the price. The plan
+            // card shows the free days and the amount separately, and a reader
+            // has to join them up; guideline 3.1.2 wants the price after the
+            // trial stated plainly beside the offer, and this is that.
+            if let summary = trialSummary {
+                Text(summary)
+                    .font(Typography.caption.weight(.semibold))
+                    .foregroundStyle(Palette.ink)
+                    .multilineTextAlignment(.center)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+
             // The renewal terms sit immediately above the button, where they
             // are actually read, not folded into a link.
             Text(termsKey)
@@ -293,6 +305,32 @@ struct PaywallScreen: View {
 
     private var selectedProduct: SunfoldProduct? {
         entitlements.products.first { $0.id == selectedID }
+    }
+
+    /// "3 days free, then $29.99 / year" — or nil when the selected plan has no
+    /// trial for this customer, so a returning subscriber is never shown free
+    /// days they will not get.
+    ///
+    /// The Russian, Ukrainian and Polish strings carry the form that fits two
+    /// to four days. That is right for the three-day offer and would read
+    /// wrongly for seven; changing the length means giving those three
+    /// languages plural forms first.
+    private var trialSummary: String? {
+        guard let product = selectedProduct, let days = product.freeTrialDays else { return nil }
+        switch product.term {
+        case .yearly:
+            return String.sunfold(
+                "paywall.trial.thenYear",
+                defaultValue: "\(days) days free, then \(product.displayPrice) / year"
+            )
+        case .monthly:
+            return String.sunfold(
+                "paywall.trial.thenMonth",
+                defaultValue: "\(days) days free, then \(product.displayPrice) / month"
+            )
+        case .lifetime:
+            return nil
+        }
     }
 
     /// What the button says. A trial is not a purchase, and calling it one is

@@ -131,6 +131,8 @@
     "paywall.terms.subscription": "De betaling wordt in rekening gebracht op je Apple ID. Het abonnement wordt automatisch verlengd, tenzij het minstens 24 uur voor het einde van de periode wordt opgezegd. Je kunt het altijd beheren of opzeggen in de App Store-instellingen.",
     "paywall.terms.trial": "Je gratis proefperiode wordt een betaald abonnement als je niet minstens 24 uur voor het einde opzegt. De betaling wordt in rekening gebracht op je Apple ID en het abonnement wordt automatisch verlengd. Je kunt het altijd beheren of opzeggen in de App Store-instellingen.",
     "paywall.title": "Sunfold Pro",
+    "paywall.trial.thenMonth": "%1$lld dagen gratis, daarna %2$@ / maand",
+    "paywall.trial.thenYear": "%1$lld dagen gratis, daarna %2$@ / jaar",
     "paywall.unavailable.body": "Controleer je verbinding en probeer het opnieuw. Alles wat je al hebt vastgelegd blijft ongemoeid.",
     "paywall.unavailable.title": "Prijzen konden niet worden geladen",
     "phase.autophagy.detail": "Het meeste van wat bekend is komt uit dierstudies. Onderzoek bij mensen is nog beperkt, en vanaf een telefoon is het niet te meten.",

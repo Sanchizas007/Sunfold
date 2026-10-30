@@ -133,6 +133,8 @@
     "paywall.terms.subscription": "Płatność jest pobierana z twojego Apple ID. Subskrypcja odnawia się automatycznie, o ile nie zostanie anulowana co najmniej 24 godziny przed końcem okresu. Możesz nią zarządzać lub anulować ją w dowolnej chwili w ustawieniach App Store.",
     "paywall.terms.trial": "Bezpłatny okres zmieni się w płatną subskrypcję, jeśli nie anulujesz go co najmniej 24 godziny przed końcem. Płatność jest pobierana z twojego Apple ID, a subskrypcja odnawia się automatycznie. Możesz nią zarządzać lub anulować ją w każdej chwili w ustawieniach App Store.",
     "paywall.title": "Sunfold Pro",
+    "paywall.trial.thenMonth": "%1$lld dni za darmo, potem %2$@ / miesiąc",
+    "paywall.trial.thenYear": "%1$lld dni za darmo, potem %2$@ / rok",
     "paywall.unavailable.body": "Sprawdź połączenie i spróbuj ponownie. Nic z tego, co już zapisałeś, nie ucierpi.",
     "paywall.unavailable.title": "Nie udało się wczytać cen",
     "phase.autophagy.detail": "Większość tego, co wiadomo, pochodzi z badań na zwierzętach. Badania u ludzi są wciąż ograniczone, a z poziomu telefonu nie da się tego zmierzyć.",

@@ -130,6 +130,8 @@
     "paywall.terms.subscription": "费用将从你的 Apple 账户扣除。除非在当期结束前至少 24 小时取消，否则订阅会自动续订。你可以随时在 App Store 设置中管理或取消。",
     "paywall.terms.trial": "免费试用将在结束前至少 24 小时未取消时转为付费订阅。费用将从你的 Apple 账户扣除，订阅会自动续订。你可以随时在 App Store 设置中管理或取消。",
     "paywall.title": "Sunfold Pro",
+    "paywall.trial.thenMonth": "免费 %1$lld 天，之后 %2$@ / 月",
+    "paywall.trial.thenYear": "免费 %1$lld 天，之后 %2$@ / 年",
     "paywall.unavailable.body": "请检查网络后重试。你已经记录的内容不会受到影响。",
     "paywall.unavailable.title": "无法加载价格",
     "phase.autophagy.detail": "目前所知的大多来自动物研究。人体研究仍然有限，而且也没有办法用手机测量。",

@@ -131,6 +131,8 @@
     "paywall.terms.subscription": "O pagamento é cobrado no seu ID Apple. A assinatura renova automaticamente, a menos que seja cancelada pelo menos 24 horas antes do fim do período. Você pode gerenciar ou cancelar quando quiser nos ajustes da App Store.",
     "paywall.terms.trial": "Seu teste grátis vira uma assinatura paga se você não cancelar pelo menos 24 horas antes do fim. O pagamento é cobrado no seu ID Apple e a assinatura renova automaticamente. Você pode gerenciar ou cancelar quando quiser nos ajustes da App Store.",
     "paywall.title": "Sunfold Pro",
+    "paywall.trial.thenMonth": "%1$lld dias grátis, depois %2$@ / mês",
+    "paywall.trial.thenYear": "%1$lld dias grátis, depois %2$@ / ano",
     "paywall.unavailable.body": "Verifique sua conexão e tente de novo. Nada do que você já registrou é afetado.",
     "paywall.unavailable.title": "Não foi possível carregar os preços",
     "phase.autophagy.detail": "Quase tudo o que se sabe vem de estudos em animais. A pesquisa em humanos ainda é limitada, e não há como medir isso pelo celular.",

@@ -131,6 +131,8 @@
     "paywall.terms.subscription": "Payment is charged to your Apple ID. The subscription renews automatically unless it is cancelled at least 24 hours before the period ends. Manage or cancel it any time in App Store settings.",
     "paywall.terms.trial": "Your free trial becomes a paid subscription unless you cancel at least 24 hours before it ends. Payment is charged to your Apple ID, and the subscription renews automatically. Manage or cancel it any time in App Store settings.",
     "paywall.title": "Sunfold Pro",
+    "paywall.trial.thenMonth": "%1$lld days free, then %2$@ / month",
+    "paywall.trial.thenYear": "%1$lld days free, then %2$@ / year",
     "paywall.unavailable.body": "Check your connection and try again. Everything you have already recorded is unaffected.",
     "paywall.unavailable.title": "Prices could not be loaded",
     "phase.autophagy.detail": "Most of what is known comes from animal studies. Human research is still limited, and there is no way to measure it from a phone.",

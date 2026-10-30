@@ -131,6 +131,8 @@
     "paywall.terms.subscription": "Die Zahlung wird über deine Apple-ID abgerechnet. Das Abo verlängert sich automatisch, sofern es nicht mindestens 24 Stunden vor Ende des Zeitraums gekündigt wird. Du kannst es jederzeit in den App-Store-Einstellungen verwalten oder kündigen.",
     "paywall.terms.trial": "Dein Gratiszeitraum geht in ein kostenpflichtiges Abo über, sofern du nicht mindestens 24 Stunden vor seinem Ende kündigst. Die Zahlung wird über deine Apple-ID abgerechnet, und das Abo verlängert sich automatisch. Du kannst es jederzeit in den App-Store-Einstellungen verwalten oder kündigen.",
     "paywall.title": "Sunfold Pro",
+    "paywall.trial.thenMonth": "%1$lld Tage gratis, danach %2$@ / Monat",
+    "paywall.trial.thenYear": "%1$lld Tage gratis, danach %2$@ / Jahr",
     "paywall.unavailable.body": "Prüfe deine Verbindung und versuche es erneut. Alles, was du bereits erfasst hast, bleibt unberührt.",
     "paywall.unavailable.title": "Preise konnten nicht geladen werden",
     "phase.autophagy.detail": "Das meiste Wissen stammt aus Tierstudien. Die Forschung am Menschen ist noch begrenzt, und vom Telefon aus lässt sich das nicht messen.",
