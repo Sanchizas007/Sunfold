@@ -1,6 +1,9 @@
 {
   "plurals": {
-    "history.stat.days": { "one": "%lld día", "other": "%lld días" }
+    "history.stat.days": {
+      "one": "%lld día",
+      "other": "%lld días"
+    }
   },
   "strings": {
     "a11y.eating": "Ventana de alimentación. Tiempo restante antes del próximo ayuno.",
@@ -104,6 +107,7 @@
     "paywall.benefit.widgets.body": "El temporizador en la pantalla de inicio, la bloqueada y la Dynamic Island.",
     "paywall.cta.buy": "Comprar Sunfold Pro",
     "paywall.cta.subscribe": "Suscribirse",
+    "paywall.cta.trial": "Empezar prueba gratis",
     "paywall.error.notConfigured": "Las compras no están disponibles en esta versión.",
     "paywall.error.title": "Algo ha ido mal",
     "paywall.error.unavailable": "Ese plan no está disponible ahora mismo. Inténtalo más tarde.",
@@ -114,6 +118,7 @@
     "paywall.plan.lifetime.detail": "Un solo pago, sin renovación",
     "paywall.plan.monthly": "Mensual",
     "paywall.plan.monthly.detail": "Se cobra cada mes",
+    "paywall.plan.trialDays": "%lld días gratis",
     "paywall.plan.yearly": "Anual",
     "paywall.plan.yearly.detail": "Se cobra cada año",
     "paywall.plan.yearly.detailPerMonth": "Cobro anual · %@ / mes",
@@ -124,6 +129,7 @@
     "paywall.subtitle.trial": "Tienes acceso completo durante tu primera semana. Consérvalo cuando termine.",
     "paywall.terms.lifetime": "Un pago único sin renovación. Sunfold Pro queda vinculado a tu ID de Apple.",
     "paywall.terms.subscription": "El pago se carga a tu ID de Apple. La suscripción se renueva automáticamente salvo que se cancele al menos 24 horas antes de que termine el periodo. Puedes gestionarla o cancelarla cuando quieras en los ajustes del App Store.",
+    "paywall.terms.trial": "Tu prueba gratis pasa a ser una suscripción de pago si no la cancelas al menos 24 horas antes de que termine. El pago se carga a tu ID de Apple y la suscripción se renueva automáticamente. Puedes gestionarla o cancelarla cuando quieras en los ajustes del App Store.",
     "paywall.title": "Sunfold Pro",
     "paywall.unavailable.body": "Comprueba tu conexión e inténtalo de nuevo. Nada de lo que ya has registrado se ve afectado.",
     "paywall.unavailable.title": "No se han podido cargar los precios",
@@ -270,5 +276,5 @@
     "widget.tapToStart": "Toca para empezar",
     "widget.title": "Temporizador de ayuno",
     "widget.window": "ventana para comer"
-}
+  }
 }

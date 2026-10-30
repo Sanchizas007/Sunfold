@@ -139,26 +139,42 @@ final class AppSettings {
         )
         lastReviewRequestVersion = defaults.string(forKey: Key.lastReviewRequestVersion) ?? ""
 
-        let stored = defaults.double(forKey: Key.firstLaunchDate)
-        if stored > 0 {
-            firstLaunchDate = Date(timeIntervalSince1970: stored)
-            // A launch date already on disk means this install predates 1.2, so
-            // it keeps the seven open days it was given. Written once: after
-            // this the key exists and the branch never runs again.
-            if defaults.object(forKey: Key.openAccessDays) == nil {
-                defaults.set(Self.legacyOpenAccessDays, forKey: Key.openAccessDays)
-            }
+        let storedLaunch = defaults.double(forKey: Key.firstLaunchDate)
+        let hadLaunched = storedLaunch > 0
+        if hadLaunched {
+            firstLaunchDate = Date(timeIntervalSince1970: storedLaunch)
         } else {
             let now = Date.now
             firstLaunchDate = now
             defaults.set(now.timeIntervalSince1970, forKey: Key.firstLaunchDate)
-            defaults.set(0, forKey: Key.openAccessDays)
         }
-        openAccessDays = defaults.integer(forKey: Key.openAccessDays)
+
+        let recorded = defaults.object(forKey: Key.openAccessDays) as? Int
+        openAccessDays = Self.openAccessDays(hasExistingLaunchDate: hadLaunched, stored: recorded)
+        if recorded == nil {
+            defaults.set(openAccessDays, forKey: Key.openAccessDays)
+        }
     }
 
     /// What installs from 1.1 and earlier were promised.
-    static let legacyOpenAccessDays = 7
+    nonisolated static let legacyOpenAccessDays = 7
+
+    /// How many open days an install gets — the whole rule, in one place.
+    ///
+    /// Pure, so it can be tested without a real defaults store, and because
+    /// getting it wrong in either direction is expensive: too generous and the
+    /// paywall never appears, too mean and somebody loses days they were
+    /// already given.
+    ///
+    /// - Parameters:
+    ///   - hasExistingLaunchDate: whether this install had already run before.
+    ///   - stored: the answer from a previous run, if one was recorded.
+    nonisolated static func openAccessDays(hasExistingLaunchDate: Bool, stored: Int?) -> Int {
+        // Decided once and never revisited: an upgrade must not change it.
+        if let stored { return stored }
+        // A launch date with no recorded answer means the install predates 1.2.
+        return hasExistingLaunchDate ? legacyOpenAccessDays : 0
+    }
 
     /// Seconds the currently selected protocol asks for.
     var targetFastSeconds: TimeInterval {

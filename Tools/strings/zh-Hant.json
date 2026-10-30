@@ -1,6 +1,8 @@
 {
   "plurals": {
-    "history.stat.days": { "other": "%lld 天" }
+    "history.stat.days": {
+      "other": "%lld 天"
+    }
   },
   "strings": {
     "a11y.eating": "進食時段。距離下一次斷食的剩餘時間。",
@@ -104,6 +106,7 @@
     "paywall.benefit.widgets.body": "把計時器放到主畫面、鎖定畫面和動態島上。",
     "paywall.cta.buy": "購買 Sunfold Pro",
     "paywall.cta.subscribe": "訂閱",
+    "paywall.cta.trial": "開始免費試用",
     "paywall.error.notConfigured": "此版本無法進行購買。",
     "paywall.error.title": "出了點問題",
     "paywall.error.unavailable": "此方案暫時無法使用，請稍後再試。",
@@ -114,6 +117,7 @@
     "paywall.plan.lifetime.detail": "一次付款，不再續訂",
     "paywall.plan.monthly": "每月",
     "paywall.plan.monthly.detail": "每月扣款",
+    "paywall.plan.trialDays": "%lld 天免費",
     "paywall.plan.yearly": "每年",
     "paywall.plan.yearly.detail": "每年扣款",
     "paywall.plan.yearly.detailPerMonth": "每年扣款 · 每月 %@",
@@ -124,6 +128,7 @@
     "paywall.subtitle.trial": "第一週你擁有全部功能。這一週結束後，也可以繼續留著。",
     "paywall.terms.lifetime": "一次性付款，不會續訂。Sunfold Pro 會留在你的 Apple 帳號下。",
     "paywall.terms.subscription": "費用將從你的 Apple 帳號扣除。除非在當期結束前至少 24 小時取消，否則訂閱會自動續訂。你可以隨時在 App Store 設定中管理或取消。",
+    "paywall.terms.trial": "免費試用將在結束前至少 24 小時未取消時轉為付費訂閱。費用將從你的 Apple 帳號扣除，訂閱會自動續訂。你可以隨時在 App Store 設定中管理或取消。",
     "paywall.title": "Sunfold Pro",
     "paywall.unavailable.body": "請檢查網路後重試。你已經記錄的內容不會受到影響。",
     "paywall.unavailable.title": "無法載入價格",
@@ -270,5 +275,5 @@
     "widget.tapToStart": "點一下開始",
     "widget.title": "斷食計時器",
     "widget.window": "進食時段"
-}
+  }
 }

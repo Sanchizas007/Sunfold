@@ -1,6 +1,9 @@
 {
   "plurals": {
-    "history.stat.days": { "one": "%lld jour", "other": "%lld jours" }
+    "history.stat.days": {
+      "one": "%lld jour",
+      "other": "%lld jours"
+    }
   },
   "strings": {
     "a11y.eating": "Fenêtre alimentaire. Temps restant avant le prochain jeûne.",
@@ -104,6 +107,7 @@
     "paywall.benefit.widgets.body": "Le minuteur sur l’écran d’accueil, l’écran verrouillé et la Dynamic Island.",
     "paywall.cta.buy": "Acheter Sunfold Pro",
     "paywall.cta.subscribe": "S’abonner",
+    "paywall.cta.trial": "Commencer l’essai gratuit",
     "paywall.error.notConfigured": "Les achats ne sont pas disponibles dans cette version.",
     "paywall.error.title": "Un problème est survenu",
     "paywall.error.unavailable": "Cette formule n’est pas disponible pour le moment. Réessayez plus tard.",
@@ -114,6 +118,7 @@
     "paywall.plan.lifetime.detail": "Un seul paiement, sans renouvellement",
     "paywall.plan.monthly": "Mensuel",
     "paywall.plan.monthly.detail": "Facturé chaque mois",
+    "paywall.plan.trialDays": "%lld jours offerts",
     "paywall.plan.yearly": "Annuel",
     "paywall.plan.yearly.detail": "Facturé chaque année",
     "paywall.plan.yearly.detailPerMonth": "Facturé annuellement · %@ / mois",
@@ -124,6 +129,7 @@
     "paywall.subtitle.trial": "Vous avez un accès complet pendant votre première semaine. Gardez-le à la fin de la semaine.",
     "paywall.terms.lifetime": "Un paiement unique, sans renouvellement. Sunfold Pro reste lié à votre identifiant Apple.",
     "paywall.terms.subscription": "Le paiement est débité de votre identifiant Apple. L’abonnement se renouvelle automatiquement sauf résiliation au moins 24 heures avant la fin de la période. Vous pouvez le gérer ou le résilier à tout moment dans les réglages de l’App Store.",
+    "paywall.terms.trial": "Votre essai gratuit devient un abonnement payant sauf résiliation au moins 24 heures avant sa fin. Le paiement est débité de votre identifiant Apple et l’abonnement se renouvelle automatiquement. Vous pouvez le gérer ou le résilier à tout moment dans les réglages de l’App Store.",
     "paywall.title": "Sunfold Pro",
     "paywall.unavailable.body": "Vérifiez votre connexion et réessayez. Tout ce que vous avez déjà enregistré reste intact.",
     "paywall.unavailable.title": "Impossible de charger les tarifs",
@@ -270,5 +276,5 @@
     "widget.tapToStart": "Toucher pour démarrer",
     "widget.title": "Minuteur de jeûne",
     "widget.window": "fenêtre alimentaire"
-}
+  }
 }

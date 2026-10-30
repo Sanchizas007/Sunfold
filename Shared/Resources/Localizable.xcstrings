@@ -9883,6 +9883,101 @@
         }
       }
     },
+    "paywall.cta.trial": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start free trial"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gratiszeitraum starten"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Commencer l’essai gratuit"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Iniciar prueba gratis"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Empezar prueba gratis"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Começar teste grátis"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inizia la prova gratuita"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start gratis proefperiode"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rozpocznij bezpłatny okres"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "無料体験を始める"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "무료 체험 시작"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Начать бесплатный период"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Почати безкоштовний період"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "开始免费试用"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "開始免費試用"
+          }
+        }
+      }
+    },
     "paywall.error.notConfigured": {
       "extractionState": "manual",
       "localizations": {
@@ -10833,6 +10928,101 @@
         }
       }
     },
+    "paywall.plan.trialDays": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld days free"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld Tage gratis"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld jours offerts"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld días gratis"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld días gratis"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld dias grátis"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld giorni gratis"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld dagen gratis"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld dni za darmo"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld日間無料"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld일 무료"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld дня бесплатно"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld дні безкоштовно"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld 天免费"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld 天免費"
+          }
+        }
+      }
+    },
     "paywall.plan.yearly": {
       "extractionState": "manual",
       "localizations": {
@@ -11779,6 +11969,101 @@
           "stringUnit": {
             "state": "translated",
             "value": "費用將從你的 Apple 帳號扣除。除非在當期結束前至少 24 小時取消，否則訂閱會自動續訂。你可以隨時在 App Store 設定中管理或取消。"
+          }
+        }
+      }
+    },
+    "paywall.terms.trial": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your free trial becomes a paid subscription unless you cancel at least 24 hours before it ends. Payment is charged to your Apple ID, and the subscription renews automatically. Manage or cancel it any time in App Store settings."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dein Gratiszeitraum geht in ein kostenpflichtiges Abo über, sofern du nicht mindestens 24 Stunden vor seinem Ende kündigst. Die Zahlung wird über deine Apple-ID abgerechnet, und das Abo verlängert sich automatisch. Du kannst es jederzeit in den App-Store-Einstellungen verwalten oder kündigen."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Votre essai gratuit devient un abonnement payant sauf résiliation au moins 24 heures avant sa fin. Le paiement est débité de votre identifiant Apple et l’abonnement se renouvelle automatiquement. Vous pouvez le gérer ou le résilier à tout moment dans les réglages de l’App Store."
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tu prueba gratis se convierte en una suscripción de paga si no la cancelas al menos 24 horas antes de que termine. El pago se carga a tu ID de Apple y la suscripción se renueva automáticamente. Puedes administrarla o cancelarla cuando quieras en los ajustes del App Store."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tu prueba gratis pasa a ser una suscripción de pago si no la cancelas al menos 24 horas antes de que termine. El pago se carga a tu ID de Apple y la suscripción se renueva automáticamente. Puedes gestionarla o cancelarla cuando quieras en los ajustes del App Store."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Seu teste grátis vira uma assinatura paga se você não cancelar pelo menos 24 horas antes do fim. O pagamento é cobrado no seu ID Apple e a assinatura renova automaticamente. Você pode gerenciar ou cancelar quando quiser nos ajustes da App Store."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La tua prova gratuita diventa un abbonamento a pagamento se non la annulli almeno 24 ore prima della fine. Il pagamento viene addebitato sul tuo ID Apple e l’abbonamento si rinnova automaticamente. Puoi gestirlo o annullarlo quando vuoi nelle impostazioni dell’App Store."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Je gratis proefperiode wordt een betaald abonnement als je niet minstens 24 uur voor het einde opzegt. De betaling wordt in rekening gebracht op je Apple ID en het abonnement wordt automatisch verlengd. Je kunt het altijd beheren of opzeggen in de App Store-instellingen."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bezpłatny okres zmieni się w płatną subskrypcję, jeśli nie anulujesz go co najmniej 24 godziny przed końcem. Płatność jest pobierana z twojego Apple ID, a subskrypcja odnawia się automatycznie. Możesz nią zarządzać lub anulować ją w każdej chwili w ustawieniach App Store."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "無料体験は、終了の24時間前までに解約しない限り有料のサブスクリプションに切り替わります。料金はあなたのApple IDに請求され、サブスクリプションは自動的に更新されます。App Storeの設定からいつでも管理・解約できます。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "무료 체험은 종료 24시간 전까지 취소하지 않으면 유료 구독으로 전환됩니다. 결제는 Apple 계정으로 청구되며 구독은 자동으로 갱신됩니다. App Store 설정에서 언제든 관리하거나 취소할 수 있습니다."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Бесплатный период перейдёт в платную подписку, если не отменить его не позднее чем за 24 часа до окончания. Оплата списывается с вашего Apple ID, подписка продлевается автоматически. Управлять ею и отменить можно в любой момент в настройках App Store."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Безкоштовний період перейде в платну підписку, якщо не скасувати його щонайменше за 24 години до завершення. Оплата списується з вашого Apple ID, підписка поновлюється автоматично. Керувати нею та скасувати можна будь-коли в налаштуваннях App Store."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "免费试用将在结束前至少 24 小时未取消时转为付费订阅。费用将从你的 Apple 账户扣除，订阅会自动续订。你可以随时在 App Store 设置中管理或取消。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "免費試用將在結束前至少 24 小時未取消時轉為付費訂閱。費用將從你的 Apple 帳號扣除，訂閱會自動續訂。你可以隨時在 App Store 設定中管理或取消。"
           }
         }
       }

@@ -1,6 +1,11 @@
 {
   "plurals": {
-    "history.stat.days": { "one": "%lld dzień", "few": "%lld dni", "many": "%lld dni", "other": "%lld dnia" }
+    "history.stat.days": {
+      "few": "%lld dni",
+      "many": "%lld dni",
+      "one": "%lld dzień",
+      "other": "%lld dnia"
+    }
   },
   "strings": {
     "a11y.eating": "Okno jedzenia. Czas pozostały do następnego postu.",
@@ -104,6 +109,7 @@
     "paywall.benefit.widgets.body": "Minutnik na ekranie początkowym, ekranie blokady i w Dynamic Island.",
     "paywall.cta.buy": "Kup Sunfold Pro",
     "paywall.cta.subscribe": "Subskrybuj",
+    "paywall.cta.trial": "Rozpocznij bezpłatny okres",
     "paywall.error.notConfigured": "Zakupy nie są dostępne w tej wersji.",
     "paywall.error.title": "Coś poszło nie tak",
     "paywall.error.unavailable": "Ten plan jest teraz niedostępny. Spróbuj później.",
@@ -114,6 +120,7 @@
     "paywall.plan.lifetime.detail": "Jedna płatność, bez odnawiania",
     "paywall.plan.monthly": "Miesięcznie",
     "paywall.plan.monthly.detail": "Opłata co miesiąc",
+    "paywall.plan.trialDays": "%lld dni za darmo",
     "paywall.plan.yearly": "Rocznie",
     "paywall.plan.yearly.detail": "Opłata co rok",
     "paywall.plan.yearly.detailPerMonth": "Opłata roczna · %@ / miesiąc",
@@ -124,6 +131,7 @@
     "paywall.subtitle.trial": "Przez pierwszy tydzień masz pełny dostęp. Zatrzymaj go, gdy tydzień się skończy.",
     "paywall.terms.lifetime": "Jednorazowa płatność bez odnawiania. Sunfold Pro zostaje przy twoim Apple ID.",
     "paywall.terms.subscription": "Płatność jest pobierana z twojego Apple ID. Subskrypcja odnawia się automatycznie, o ile nie zostanie anulowana co najmniej 24 godziny przed końcem okresu. Możesz nią zarządzać lub anulować ją w dowolnej chwili w ustawieniach App Store.",
+    "paywall.terms.trial": "Bezpłatny okres zmieni się w płatną subskrypcję, jeśli nie anulujesz go co najmniej 24 godziny przed końcem. Płatność jest pobierana z twojego Apple ID, a subskrypcja odnawia się automatycznie. Możesz nią zarządzać lub anulować ją w każdej chwili w ustawieniach App Store.",
     "paywall.title": "Sunfold Pro",
     "paywall.unavailable.body": "Sprawdź połączenie i spróbuj ponownie. Nic z tego, co już zapisałeś, nie ucierpi.",
     "paywall.unavailable.title": "Nie udało się wczytać cen",
@@ -270,5 +278,5 @@
     "widget.tapToStart": "Stuknij, aby zacząć",
     "widget.title": "Minutnik postu",
     "widget.window": "okno jedzenia"
-}
+  }
 }

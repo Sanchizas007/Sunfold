@@ -1,6 +1,8 @@
 {
   "plurals": {
-    "history.stat.days": { "other": "%lld일" }
+    "history.stat.days": {
+      "other": "%lld일"
+    }
   },
   "strings": {
     "a11y.eating": "식사 시간대입니다. 다음 단식까지 남은 시간입니다.",
@@ -104,6 +106,7 @@
     "paywall.benefit.widgets.body": "홈 화면, 잠금 화면, Dynamic Island에 타이머를.",
     "paywall.cta.buy": "Sunfold Pro 구입",
     "paywall.cta.subscribe": "구독하기",
+    "paywall.cta.trial": "무료 체험 시작",
     "paywall.error.notConfigured": "이 빌드에서는 구입할 수 없습니다.",
     "paywall.error.title": "문제가 발생했습니다",
     "paywall.error.unavailable": "지금은 이 요금제를 사용할 수 없습니다. 잠시 후 다시 시도하세요.",
@@ -114,6 +117,7 @@
     "paywall.plan.lifetime.detail": "한 번 결제, 갱신 없음",
     "paywall.plan.monthly": "월간",
     "paywall.plan.monthly.detail": "매달 청구",
+    "paywall.plan.trialDays": "%lld일 무료",
     "paywall.plan.yearly": "연간",
     "paywall.plan.yearly.detail": "매년 청구",
     "paywall.plan.yearly.detailPerMonth": "연간 청구 · 월 %@",
@@ -124,6 +128,7 @@
     "paywall.subtitle.trial": "첫 주 동안은 모두 사용할 수 있습니다. 주가 끝나도 그대로 이어 가세요.",
     "paywall.terms.lifetime": "갱신 없는 일회 결제입니다. Sunfold Pro는 사용 중인 Apple 계정에 남습니다.",
     "paywall.terms.subscription": "결제는 Apple 계정으로 청구됩니다. 기간이 끝나기 최소 24시간 전에 취소하지 않으면 구독이 자동으로 갱신됩니다. App Store 설정에서 언제든 관리하거나 취소할 수 있습니다.",
+    "paywall.terms.trial": "무료 체험은 종료 24시간 전까지 취소하지 않으면 유료 구독으로 전환됩니다. 결제는 Apple 계정으로 청구되며 구독은 자동으로 갱신됩니다. App Store 설정에서 언제든 관리하거나 취소할 수 있습니다.",
     "paywall.title": "Sunfold Pro",
     "paywall.unavailable.body": "연결을 확인하고 다시 시도하세요. 이미 기록한 내용에는 영향이 없습니다.",
     "paywall.unavailable.title": "가격을 불러오지 못했습니다",
@@ -270,5 +275,5 @@
     "widget.tapToStart": "탭하여 시작",
     "widget.title": "단식 타이머",
     "widget.window": "식사 시간대"
-}
+  }
 }

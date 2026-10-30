@@ -1,6 +1,9 @@
 {
   "plurals": {
-    "history.stat.days": { "one": "%lld dia", "other": "%lld dias" }
+    "history.stat.days": {
+      "one": "%lld dia",
+      "other": "%lld dias"
+    }
   },
   "strings": {
     "a11y.eating": "Janela de alimentação. Tempo restante até o próximo jejum.",
@@ -104,6 +107,7 @@
     "paywall.benefit.widgets.body": "O cronômetro na tela de início, na tela bloqueada e na Dynamic Island.",
     "paywall.cta.buy": "Comprar o Sunfold Pro",
     "paywall.cta.subscribe": "Assinar",
+    "paywall.cta.trial": "Começar teste grátis",
     "paywall.error.notConfigured": "As compras não estão disponíveis nesta versão.",
     "paywall.error.title": "Algo deu errado",
     "paywall.error.unavailable": "Esse plano não está disponível agora. Tente de novo mais tarde.",
@@ -114,6 +118,7 @@
     "paywall.plan.lifetime.detail": "Um pagamento só, sem renovação",
     "paywall.plan.monthly": "Mensal",
     "paywall.plan.monthly.detail": "Cobrado todo mês",
+    "paywall.plan.trialDays": "%lld dias grátis",
     "paywall.plan.yearly": "Anual",
     "paywall.plan.yearly.detail": "Cobrado todo ano",
     "paywall.plan.yearly.detailPerMonth": "Cobrança anual · %@ / mês",
@@ -124,6 +129,7 @@
     "paywall.subtitle.trial": "Você tem acesso completo durante a primeira semana. Continue com ele quando a semana acabar.",
     "paywall.terms.lifetime": "Um pagamento único, sem renovação. O Sunfold Pro fica com o seu ID Apple.",
     "paywall.terms.subscription": "O pagamento é cobrado no seu ID Apple. A assinatura renova automaticamente, a menos que seja cancelada pelo menos 24 horas antes do fim do período. Você pode gerenciar ou cancelar quando quiser nos ajustes da App Store.",
+    "paywall.terms.trial": "Seu teste grátis vira uma assinatura paga se você não cancelar pelo menos 24 horas antes do fim. O pagamento é cobrado no seu ID Apple e a assinatura renova automaticamente. Você pode gerenciar ou cancelar quando quiser nos ajustes da App Store.",
     "paywall.title": "Sunfold Pro",
     "paywall.unavailable.body": "Verifique sua conexão e tente de novo. Nada do que você já registrou é afetado.",
     "paywall.unavailable.title": "Não foi possível carregar os preços",
@@ -270,5 +276,5 @@
     "widget.tapToStart": "Toque para começar",
     "widget.title": "Cronômetro de jejum",
     "widget.window": "janela para comer"
-}
+  }
 }

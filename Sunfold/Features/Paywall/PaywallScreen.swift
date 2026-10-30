@@ -193,6 +193,21 @@ struct PaywallScreen: View {
                         }
                     }
 
+                    // The free days get their own line rather than being
+                    // glued onto the billing detail: composing one sentence
+                    // out of two fragments reads badly in half of fifteen
+                    // languages, and this is the line review looks for.
+                    if let days = product.freeTrialDays {
+                        Text(
+                            String.sunfold(
+                                "paywall.plan.trialDays",
+                                defaultValue: "\(days) days free"
+                            )
+                        )
+                        .font(Typography.caption)
+                        .foregroundStyle(Palette.accentDeep)
+                    }
+
                     Text(subtitle(for: product))
                         .font(Typography.caption)
                         .foregroundStyle(Palette.inkSecondary)
@@ -256,7 +271,7 @@ struct PaywallScreen: View {
 
             // The renewal terms sit immediately above the button, where they
             // are actually read, not folded into a link.
-            Text(selectedIsLifetime ? "paywall.terms.lifetime" : "paywall.terms.subscription")
+            Text(termsKey)
                 .font(Typography.caption)
                 .foregroundStyle(Palette.inkSecondary)
                 .multilineTextAlignment(.center)
@@ -268,12 +283,31 @@ struct PaywallScreen: View {
                 if entitlements.isWorking {
                     ProgressView().tint(Palette.onAccent)
                 } else {
-                    Text(selectedIsLifetime ? "paywall.cta.buy" : "paywall.cta.subscribe")
+                    Text(ctaKey)
                 }
             }
             .buttonStyle(PrimaryButtonStyle(tint: .fasting))
             .disabled(selectedID == nil || entitlements.isWorking)
         }
+    }
+
+    private var selectedProduct: SunfoldProduct? {
+        entitlements.products.first { $0.id == selectedID }
+    }
+
+    /// What the button says. A trial is not a purchase, and calling it one is
+    /// both a worse offer and, on a paywall, a claim review checks.
+    private var ctaKey: LocalizedStringKey {
+        if selectedProduct?.freeTrialDays != nil { return "paywall.cta.trial" }
+        return selectedIsLifetime ? "paywall.cta.buy" : "paywall.cta.subscribe"
+    }
+
+    /// Renewal terms. The trial wording has to name the free days and say what
+    /// they turn into — guideline 3.1.2 asks for exactly that, and the version
+    /// without a trial must not claim one.
+    private var termsKey: LocalizedStringKey {
+        if selectedProduct?.freeTrialDays != nil { return "paywall.terms.trial" }
+        return selectedIsLifetime ? "paywall.terms.lifetime" : "paywall.terms.subscription"
     }
 
     private var selectedIsLifetime: Bool {
