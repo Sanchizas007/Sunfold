@@ -17,6 +17,7 @@ or be cancelled. The free trial needs no such care: Apple only ever offers an
 introductory offer to someone who has never subscribed in the group.
 """
 
+import datetime
 import os
 import sys
 
@@ -143,10 +144,15 @@ def raise_yearly():
         log("  уже на новой цене, не трогаю")
         return
     point = price_point(YEARLY, YEARLY_PRICE)
-    act(f"годовая ${now} → ${YEARLY_PRICE}, существующим подписчикам цена сохраняется",
+    # A `startDate` is what makes this a scheduled change rather than a second
+    # attempt at the initial price, which an approved subscription refuses:
+    # "Initial price cannot be created again after subscription is approved."
+    start = (datetime.date.today() + datetime.timedelta(days=1)).isoformat()
+    act(f"годовая ${now} → ${YEARLY_PRICE} с {start}, "
+        f"существующим подписчикам цена сохраняется",
         lambda: asc.request("POST", "/v1/subscriptionPrices", {"data": {
             "type": "subscriptionPrices",
-            "attributes": {"preserveCurrentPrice": True},
+            "attributes": {"preserveCurrentPrice": True, "startDate": start},
             "relationships": {
                 "subscription": ref("subscriptions", YEARLY),
                 "subscriptionPricePoint": ref("subscriptionPricePoints", point),
@@ -199,8 +205,13 @@ def main():
     ensure_trial(MONTHLY, "месячная")
     ensure_trial(YEARLY, "годовая")
     log("\nЦены:")
-    raise_yearly()
-    raise_lifetime()
+    # Each step reports its own failure and the run continues: one refusal
+    # should not hide whether the other change went through.
+    for step in (raise_yearly, raise_lifetime):
+        try:
+            step()
+        except asc.APIError as error:
+            log(f"  🔴 не удалось: {str(error)[:200]}")
     log("\nГотово." if APPLY else "\nСухой прогон окончен.")
 
 
