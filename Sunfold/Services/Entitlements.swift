@@ -71,6 +71,12 @@ final class Entitlements {
             // the weather.
             provider = UnconfiguredPurchaseProvider()
             storeKind = .localTesting
+            // The storefront shows the app as a Pro customer sees it: a new
+            // install has no open period any more, so without this every frame
+            // came out locked — a padlock on the phase pill, "Charts are in
+            // Pro" where the chart should be, "Upgrade" on the timer. The
+            // paywall frame is the one exception, and is shot as a newcomer.
+            isPro = Self.demoIsPro
             provider.configure()
             AccessStore.hasFullAccess = hasFullAccess
             return
@@ -159,7 +165,23 @@ final class Entitlements {
 
     // MARK: Store
 
+    #if DEBUG
+    /// Whether a screenshot run presents as a Pro customer. Everything except
+    /// the paywall itself, which has to show what a newcomer is offered.
+    private static var demoIsPro: Bool { DemoData.requestedScreen != .paywall }
+    #endif
+
     func refresh() async {
+        #if DEBUG
+        if DemoData.isRequested {
+            // The provider would answer "not Pro" and undo the demo state a
+            // moment after launch, which is exactly when the frame is taken.
+            isPro = Self.demoIsPro
+            publishAccess()
+            if products.isEmpty { await loadProducts() }
+            return
+        }
+        #endif
         isPro = await provider.isProActive()
         publishAccess()
         if products.isEmpty {
