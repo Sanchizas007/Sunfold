@@ -27,7 +27,7 @@ import asc  # noqa: E402
 from listing import LISTING, check  # noqa: E402
 
 BUNDLE_ID = "app.sunfold"
-VERSION = "1.1"
+VERSION = "1.2"
 COPYRIGHT = "2026 Olexandr Zhovnir"
 SITE = "https://sanchizas007.github.io/Sunfold"
 
