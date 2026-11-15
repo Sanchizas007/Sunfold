@@ -154,7 +154,9 @@ def raise_yearly():
     # A `startDate` is what makes this a scheduled change rather than a second
     # attempt at the initial price, which an approved subscription refuses:
     # "Initial price cannot be created again after subscription is approved."
-    start = (datetime.date.today() + datetime.timedelta(days=1)).isoformat()
+    # ASC wants a date strictly in the future in its own timezone: today+1 was refused
+    # on 15.11 ("must be on or after 2026-11-17"), so schedule two days ahead.
+    start = (datetime.date.today() + datetime.timedelta(days=2)).isoformat()
     act(f"годовая ${now} → ${YEARLY_PRICE} с {start}, "
         f"существующим подписчикам цена сохраняется",
         lambda: asc.request("POST", "/v1/subscriptionPrices", {"data": {
@@ -180,7 +182,9 @@ def raise_monthly():
         log("  уже на новой цене или запланирована, не трогаю")
         return
     point = price_point(MONTHLY, MONTHLY_PRICE)
-    start = (datetime.date.today() + datetime.timedelta(days=1)).isoformat()
+    # ASC wants a date strictly in the future in its own timezone: today+1 was refused
+    # on 15.11 ("must be on or after 2026-11-17"), so schedule two days ahead.
+    start = (datetime.date.today() + datetime.timedelta(days=2)).isoformat()
     act(f"месячная → ${MONTHLY_PRICE} с {start}, существующим подписчикам цена сохраняется",
         lambda: asc.request("POST", "/v1/subscriptionPrices", {"data": {
             "type": "subscriptionPrices",
