@@ -1,0 +1,459 @@
+{
+ "Zero: Fasting & Food Tracker": {
+  "price": "Free",
+  "iap": [
+   [
+    "Zero Plus Subscription",
+    "$69.99"
+   ],
+   [
+    "Zero Plus Subscription",
+    "$9.99"
+   ],
+   [
+    "Zero Plus Subscription",
+    "$89.99"
+   ]
+  ]
+ },
+ "Simple: AI Weight Loss Coach": {
+  "price": "Free",
+  "iap": [
+   [
+    "Simple Pro",
+    "$29.99"
+   ],
+   [
+    "Simple Pro",
+    "$14.99"
+   ],
+   [
+    "Simple Pro",
+    "$39.99"
+   ],
+   [
+    "Simple Pro",
+    "$49.99"
+   ],
+   [
+    "Simple Premium",
+    "$59.99"
+   ],
+   [
+    "Simple Premium",
+    "$29.99"
+   ],
+   [
+    "Workbooks Bundle",
+    "$29.99"
+   ]
+  ]
+ },
+ "Fastic: Weight Loss & Fasting": {
+  "price": "Free",
+  "iap": [
+   [
+    "Fastic Plus",
+    "$29.99"
+   ],
+   [
+    "Fastic Plus",
+    "$12.99"
+   ],
+   [
+    "Fastic Plus",
+    "$39.99"
+   ],
+   [
+    "Fastic Plus - 1 month",
+    "$14.99"
+   ],
+   [
+    "Fastic Plus - 3 months",
+    "$27.99"
+   ],
+   [
+    "Fastic Plus",
+    "$19.99"
+   ],
+   [
+    "Fastic Plus",
+    "$79.99"
+   ]
+  ]
+ },
+ "BodyFast: Intermittent Fasting": {
+  "price": "Free",
+  "iap": [
+   [
+    "Coach subscription 3 months",
+    "$34.99"
+   ],
+   [
+    "Coach subscription 1 month",
+    "$16.99"
+   ],
+   [
+    "Coach subscription 3 months",
+    "$17.49"
+   ],
+   [
+    "Coach subscription 12 months",
+    "$69.99"
+   ],
+   [
+    "Coach subscription 3 months",
+    "$27.99"
+   ],
+   [
+    "Coach subscription 1 month",
+    "$11.99"
+   ],
+   [
+    "Coach subscription 3 months",
+    "$24.49"
+   ],
+   [
+    "Coach subscription 6 months",
+    "$54.99"
+   ],
+   [
+    "Coach subscription 1 month",
+    "$13.49"
+   ],
+   [
+    "Coach subscription 12 months",
+    "$34.99"
+   ]
+  ]
+ },
+ "FastEasy: Intermittent Fasting": {
+  "price": "Free",
+  "iap": [
+   [
+    "1 Month of FastEasy Premium",
+    "$19.99"
+   ],
+   [
+    "16:8 Intermittent Fasting Plan",
+    "$59.99"
+   ],
+   [
+    "3 Month Premium",
+    "$39.99"
+   ],
+   [
+    "1 Month Premium",
+    "$9.99"
+   ],
+   [
+    "1 Year Premium",
+    "$29.99"
+   ],
+   [
+    "3 Month Premium",
+    "$19.99"
+   ]
+  ]
+ },
+ "Intermittent Fasting Tracker:": {
+  "price": "Free",
+  "iap": [
+   [
+    "Fasty Pro Monthly",
+    "$6.99"
+   ],
+   [
+    "Fasty Pro Yearly",
+    "$19.99"
+   ],
+   [
+    "Fasty Basic Monthly",
+    "$0.99"
+   ],
+   [
+    "Fasty Pro One Time",
+    "$49.99"
+   ],
+   [
+    "Fasty Basic Yearly",
+    "$4.99"
+   ],
+   [
+    "Fasty Monthly Donation",
+    "$0.99"
+   ],
+   [
+    "Fasty Monthly Donation",
+    "$2.99"
+   ]
+  ]
+ },
+ "Intermittent Fasting Tracker -": {
+  "price": "Free",
+  "iap": [
+   [
+    "Annual Subscription",
+    "$39.99"
+   ],
+   [
+    "Monthly Subscription",
+    "$12.99"
+   ],
+   [
+    "Pro: Full Access",
+    "$29.99"
+   ],
+   [
+    "Pro: Unlimited Access",
+    "$49.99"
+   ],
+   [
+    "Premium Yearly",
+    "$29.99"
+   ],
+   [
+    "Annual Premium",
+    "$19.99"
+   ],
+   [
+    "Fasting+: Diet Planner",
+    "$14.99"
+   ],
+   [
+    "Half year subscription",
+    "$29.99"
+   ],
+   [
+    "Remove ads",
+    "$2.99"
+   ],
+   [
+    "Premium Monthly",
+    "$9.99"
+   ]
+  ]
+ },
+ "FastHabit Intermittent Fasting": {
+  "price": "Free",
+  "iap": [
+   [
+    "FastHabit Premium",
+    "$59.99"
+   ],
+   [
+    "Upgrade To Pro",
+    "$2.99"
+   ]
+  ]
+ },
+ "Fasting Tracker & Diet App": {
+  "price": "Free",
+  "iap": []
+ },
+ "Fastin: Intermittent Fasting": {
+  "price": "Free",
+  "iap": [
+   [
+    "PrimeQuarterly",
+    "$19.99"
+   ],
+   [
+    "PrimeMonthly",
+    "$9.99"
+   ],
+   [
+    "PrimeWeekly",
+    "$6.99"
+   ],
+   [
+    "Fasting Prime",
+    "$6.99"
+   ],
+   [
+    "Fasting Prime",
+    "$9.99"
+   ],
+   [
+    "PrimeWeekly",
+    "$9.99"
+   ],
+   [
+    "Fasting Prime",
+    "$29.99"
+   ],
+   [
+    "PrimeYearly",
+    "$49.99"
+   ]
+  ]
+ },
+ "Fasting Tracker • Easy Fast": {
+  "price": "Free",
+  "iap": [
+   [
+    "Easy Fast Pro",
+    "$49.99"
+   ],
+   [
+    "Easy Fast Pro",
+    "$9.99"
+   ],
+   [
+    "Seedling Sponsor",
+    "$1.99"
+   ],
+   [
+    "Tip",
+    "$4.99"
+   ],
+   [
+    "Tip",
+    "$1.99"
+   ],
+   [
+    "Flourish Sponsor",
+    "$4.99"
+   ],
+   [
+    "Seedling Sponsor",
+    "$0.99"
+   ],
+   [
+    "Seedling Sponsor",
+    "$3.99"
+   ],
+   [
+    "Tip",
+    "$9.99"
+   ],
+   [
+    "Seedling Sponsor",
+    "$2.99"
+   ]
+  ]
+ },
+ "Fasting Tracker by Numify": {
+  "price": "Free",
+  "iap": [
+   [
+    "Fasting Plus",
+    "$3.99"
+   ],
+   [
+    "Lose Weight with a Fasting App",
+    "$5.99"
+   ],
+   [
+    "Fasting Plus",
+    "$5.99"
+   ],
+   [
+    "Fasting Plus",
+    "$19.99"
+   ],
+   [
+    "Fasting Plus",
+    "$4.99"
+   ],
+   [
+    "Premium features",
+    "$5.99"
+   ],
+   [
+    "Plus",
+    "$9.99"
+   ],
+   [
+    "Fasting Plus",
+    "$49.99"
+   ]
+  ]
+ },
+ "Intermittent Fasting and Diet.": {
+  "price": "Free",
+  "iap": [
+   [
+    "Dieting with Fasting Method",
+    "$14.99"
+   ],
+   [
+    "3 Months Premium Access",
+    "$34.99"
+   ],
+   [
+    "Yearly Premium Access",
+    "$69.99"
+   ],
+   [
+    "Intermittent fasting and diet",
+    "$59.99"
+   ],
+   [
+    "Dieting with Fasting Method",
+    "$12.99"
+   ],
+   [
+    "3 Months Premium Offer",
+    "$19.99"
+   ],
+   [
+    "Dieting with Fasting Method",
+    "$15.99"
+   ],
+   [
+    "Dieting with Fasting Method",
+    "$8.99"
+   ],
+   [
+    "Yearly Premium Offer",
+    "$29.99"
+   ]
+  ]
+ },
+ "IF: Intermittent Fasting 16:8": {
+  "price": "Free",
+  "iap": [
+   [
+    "1 month premium",
+    "$12.49"
+   ],
+   [
+    "3 months premium",
+    "$24.99"
+   ],
+   [
+    "Lifetime",
+    "$19.99"
+   ],
+   [
+    "1 month premium",
+    "$9.99"
+   ],
+   [
+    "Premium discount",
+    "$14.49"
+   ],
+   [
+    "12 months premium",
+    "$39.99"
+   ],
+   [
+    "3 months premium",
+    "$22.99"
+   ],
+   [
+    "12 months premium",
+    "$59.99"
+   ],
+   [
+    "Lifetime",
+    "$4.99"
+   ],
+   [
+    "Lifetime",
+    "$16.99"
+   ]
+  ]
+ }
+}

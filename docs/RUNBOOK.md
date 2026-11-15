@@ -190,6 +190,12 @@ Financial, Technical, Legal. Для соло-разработчика это о�
 
 ## Тесты: собирать в каталог без пробелов
 
+🔴 **Сначала `build`, потом `test`** (15.11): на чистом каталоге `test` падает с
+`Unable to resolve module dependency: 'Sunfold'` — тестовая цель начинает
+компилироваться раньше, чем собран модуль приложения. После
+`xcodebuild build … -derivedDataPath /tmp/sunfold-dd` тот же `test` проходит
+(71 тест в 10 наборах).
+
 ```bash
 xcodebuild test -project Sunfold.xcodeproj -scheme Sunfold \
   -destination 'platform=iOS Simulator,name=iPhone 17' \

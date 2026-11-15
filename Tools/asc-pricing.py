@@ -31,8 +31,9 @@ YEARLY = "6805538135"
 TRIAL_DURATION = "THREE_DAYS"
 YEARLY_PRICE = "29.99"
 # 15.11.2026, after comparing the fifteen biggest US fasting apps' price lists:
-# the simple trackers (Fasty, Easy Fast, Numify) sell a lifetime purchase at
-# $49.99 and Sunfold's $79.99 was the outlier; and Sunfold's $2.99 month was
+# two simple trackers (Fasty and "Pro: Unlimited Access") sell a one-time
+# purchase at $49.99 and Sunfold's $79.99 was the outlier (data in
+# docs/seo-2026-11-15/competitor-iap.json); and Sunfold's $2.99 month was
 # the cheapest on the shelf by a wide margin ($6.99-$16.99 elsewhere), which also
 # left the yearly plan with a feeble "Save 16%".
 MONTHLY_PRICE = "4.99"
