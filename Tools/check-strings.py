@@ -32,7 +32,7 @@ LATIN_RUN = re.compile(r"[A-Za-z]{2,}")
 # translated — which is exactly what this found.
 ALLOWED_NAMES = {
     "Sunfold", "Apple", "Health", "App", "Store", "StoreKit", "RevenueCat",
-    "Dynamic", "Island", "Pro", "Live", "Activity", "ID", "OK",
+    "Dynamic", "Island", "Pro", "Live", "Activity", "ID", "OK", "Ads", "AdServices",
 }
 
 # Technical tokens that are written in Latin whatever the surrounding script,

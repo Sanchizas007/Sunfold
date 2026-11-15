@@ -3,11 +3,16 @@
 <plist version="1.0">
 <dict>
 	<!--
-	  Sunfold collects nothing itself: no account, no analytics, no advertising,
-	  no server. The only third party in the binary is the RevenueCat SDK, which
-	  ships its own privacy manifest declaring purchase history and a device
-	  identifier; Apple aggregates that with this file, so it is not repeated
-	  here.
+	  Sunfold itself collects nothing: no account, no usage analytics, no advertising,
+	  no server. Fasts, weight and notes stay on the phone.
+
+	  The one third party in the binary is the RevenueCat SDK. It records purchases
+	  against a randomly generated app user ID (purchase history) and, once per
+	  install, forwards Apple's AdServices token so RevenueCat can say which Apple
+	  Ads campaign brought the person (advertising data). Neither is linked to the
+	  person and neither is used for tracking: no advertising identifier is read and
+	  there is no App Tracking Transparency prompt. The two entries below say the
+	  same thing as the App Privacy answers and the privacy policy.
 	-->
 
 	<key>NSPrivacyTracking</key>
@@ -17,7 +22,33 @@
 	<array/>
 
 	<key>NSPrivacyCollectedDataTypes</key>
-	<array/>
+	<array>
+		<dict>
+			<key>NSPrivacyCollectedDataType</key>
+			<string>NSPrivacyCollectedDataTypePurchaseHistory</string>
+			<key>NSPrivacyCollectedDataTypeLinked</key>
+			<false/>
+			<key>NSPrivacyCollectedDataTypeTracking</key>
+			<false/>
+			<key>NSPrivacyCollectedDataTypePurposes</key>
+			<array>
+				<string>NSPrivacyCollectedDataTypePurposeAnalytics</string>
+				<string>NSPrivacyCollectedDataTypePurposeAppFunctionality</string>
+			</array>
+		</dict>
+		<dict>
+			<key>NSPrivacyCollectedDataType</key>
+			<string>NSPrivacyCollectedDataTypeAdvertisingData</string>
+			<key>NSPrivacyCollectedDataTypeLinked</key>
+			<false/>
+			<key>NSPrivacyCollectedDataTypeTracking</key>
+			<false/>
+			<key>NSPrivacyCollectedDataTypePurposes</key>
+			<array>
+				<string>NSPrivacyCollectedDataTypePurposeAnalytics</string>
+			</array>
+		</dict>
+	</array>
 
 	<key>NSPrivacyAccessedAPITypes</key>
 	<array>

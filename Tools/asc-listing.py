@@ -27,7 +27,7 @@ import asc  # noqa: E402
 from listing import LISTING, check  # noqa: E402
 
 BUNDLE_ID = "app.sunfold"
-VERSION = "1.2"
+VERSION = "1.3"
 COPYRIGHT = "2026 Olexandr Zhovnir"
 SITE = "https://sanchizas007.github.io/Sunfold"
 
@@ -47,7 +47,13 @@ SCREENSHOT_FOLDER = {
     "en-US": "en", "de-DE": "de", "fr-FR": "fr", "es-MX": "es-MX", "es-ES": "es-ES",
     "pt-BR": "pt-BR", "it": "it", "ja": "ja", "ko": "ko", "ru": "ru", "uk": "uk",
     "zh-Hans": "zh-Hans", "zh-Hant": "zh-Hant", "nl-NL": "nl", "pl": "pl",
+    # The three English variants show the English frames.
+    "en-GB": "en", "en-AU": "en", "en-CA": "en",
 }
+
+# What goes to the store is the composed set (Tools/store-shots.py), not the raw
+# simulator screens in screenshots/.
+FRAMES = ROOT / "store-shots"
 
 # Where each locale's hosted policy lives. English sits at the site root.
 POLICY_LANGUAGE = {locale: ("" if folder == "en" else f"/{folder}")
@@ -145,8 +151,7 @@ def set_texts(version):
 
 
 def upload_screenshots(localization, folder):
-    files = sorted(path for path in (ROOT / "screenshots" / folder).glob("*.png")
-                   if not path.name.startswith("paywall"))
+    files = sorted((FRAMES / folder).glob("*.png"))
     if not files:
         return "no files"
 
@@ -201,6 +206,17 @@ def upload_screenshots(localization, folder):
     return f"uploaded {len(files)}"
 
 
+def set_review_notes(version):
+    """The notes for App Review, from store/review-notes.txt."""
+    notes = (ROOT / "store" / "review-notes.txt").read_text(encoding="utf-8").strip()
+    if len(notes) > 4000:
+        sys.exit(f"review notes are {len(notes)} characters, the limit is 4000")
+    detail = asc.request("GET", f"/v1/appStoreVersions/{version}/appStoreReviewDetail")["data"]
+    asc.request("PATCH", f"/v1/appStoreReviewDetails/{detail['id']}", {"data": {
+        "type": "appStoreReviewDetails", "id": detail["id"], "attributes": {"notes": notes}}})
+    log(f"review notes: {len(notes)} characters")
+
+
 def main():
     problems = check()
     if problems:
@@ -214,6 +230,7 @@ def main():
     set_names(info)
     log("version texts:")
     localizations = set_texts(version)
+    set_review_notes(version)
 
     if "--texts-only" in sys.argv:
         log("screenshots skipped (--texts-only)")

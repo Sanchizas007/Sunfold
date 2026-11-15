@@ -69,7 +69,7 @@ struct RootView: View {
             switch screen {
             case .history: .history
             case .weight: .weight
-            case .settings: .settings
+            case .settings, .privacy: .settings
             default: .timer
             }
         }

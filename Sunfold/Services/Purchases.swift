@@ -90,6 +90,13 @@ final class RevenueCatProvider: PurchaseProviding, @unchecked Sendable {
         guard !configured, !apiKey.isEmpty else { return }
         Purchases.logLevel = .warn
         Purchases.configure(withAPIKey: apiKey)
+        // Apple Ads attribution. Once per install the SDK asks the system for an
+        // AdServices token and sends it to RevenueCat, which can then tell which
+        // campaign an install came from — the only way to know whether a paid
+        // install ever turns into a subscriber. The token holds no personal data,
+        // needs no App Tracking Transparency prompt and never touches the
+        // advertising identifier.
+        Purchases.shared.attribution.enableAdServicesAttributionTokenCollection()
         configured = true
     }
 

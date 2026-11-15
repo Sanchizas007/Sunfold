@@ -74,6 +74,7 @@ struct PrivacyPolicyScreen: View {
             sections: [
                 ("privacy.stored.title", "privacy.stored.body"),
                 ("privacy.notCollected.title", "privacy.notCollected.body"),
+                ("privacy.attribution.title", "privacy.attribution.body"),
                 ("privacy.purchases.title", "privacy.purchases.body"),
                 ("privacy.notifications.title", "privacy.notifications.body"),
                 ("privacy.health.title", "privacy.health.body"),

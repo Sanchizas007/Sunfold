@@ -30,7 +30,13 @@ YEARLY = "6805538135"
 
 TRIAL_DURATION = "THREE_DAYS"
 YEARLY_PRICE = "29.99"
-LIFETIME_PRICE = "79.99"
+# 15.11.2026, after comparing the fifteen biggest US fasting apps' price lists:
+# the simple trackers (Fasty, Easy Fast, Numify) sell a lifetime purchase at
+# $49.99 and Sunfold's $79.99 was the outlier; and Sunfold's $2.99 month was
+# the cheapest on the shelf by a wide margin ($6.99-$16.99 elsewhere), which also
+# left the yearly plan with a feeble "Save 16%".
+MONTHLY_PRICE = "4.99"
+LIFETIME_PRICE = "49.99"
 LIFETIME_PRODUCT_ID = "app.sunfold.pro.lifetime"
 
 APPLY = "--apply" in sys.argv
@@ -160,6 +166,31 @@ def raise_yearly():
         }}))
 
 
+def raise_monthly():
+    prices, included = asc.get_all(
+        f"/v1/subscriptions/{MONTHLY}/prices",
+        params={"include": "subscriptionPricePoint", "filter[territory]": "USA", "limit": "10"})
+    points = {i["id"]: i for i in included if i["type"] == "subscriptionPricePoints"}
+    current = [points[(p.get("relationships", {}).get("subscriptionPricePoint", {}).get("data") or {}).get("id", "")]
+               ["attributes"].get("customerPrice") for p in prices
+               if (p.get("relationships", {}).get("subscriptionPricePoint", {}).get("data") or {}).get("id", "") in points]
+    log(f"  месячная сейчас: {', '.join('$' + str(c) for c in current)}")
+    if MONTHLY_PRICE in current:
+        log("  уже на новой цене или запланирована, не трогаю")
+        return
+    point = price_point(MONTHLY, MONTHLY_PRICE)
+    start = (datetime.date.today() + datetime.timedelta(days=1)).isoformat()
+    act(f"месячная → ${MONTHLY_PRICE} с {start}, существующим подписчикам цена сохраняется",
+        lambda: asc.request("POST", "/v1/subscriptionPrices", {"data": {
+            "type": "subscriptionPrices",
+            "attributes": {"preserveCurrentPrice": True, "startDate": start},
+            "relationships": {
+                "subscription": ref("subscriptions", MONTHLY),
+                "subscriptionPricePoint": ref("subscriptionPricePoints", point),
+            },
+        }}))
+
+
 def lifetime_id():
     iaps, _ = asc.get_all(f"/v1/apps/{APP}/inAppPurchasesV2")
     for iap in iaps:
@@ -201,13 +232,10 @@ def raise_lifetime():
 def main():
     if not APPLY:
         log("Сухой прогон. Ничего не меняется. Добавьте --apply, чтобы применить.\n")
-    log("Пробный период:")
-    ensure_trial(MONTHLY, "месячная")
-    ensure_trial(YEARLY, "годовая")
-    log("\nЦены:")
+    log("Цены:")
     # Each step reports its own failure and the run continues: one refusal
     # should not hide whether the other change went through.
-    for step in (raise_yearly, raise_lifetime):
+    for step in (raise_monthly, raise_lifetime):
         try:
             step()
         except asc.APIError as error:

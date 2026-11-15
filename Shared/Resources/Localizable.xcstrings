@@ -14443,6 +14443,196 @@
         }
       }
     },
+    "privacy.attribution.body": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Once per install, the app passes an anonymous attribution token from Apple’s AdServices framework to RevenueCat. It tells us whether the install came from an Apple Ads campaign, and which one — nothing else. The token holds no personal information, is not linked to you, and is never used to follow you across other companies’ apps or websites. No advertising identifier is read, and Sunfold never shows an App Tracking Transparency prompt."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Einmal pro Installation gibt die App ein anonymes Zuordnungstoken aus Apples AdServices-Framework an RevenueCat weiter. Es verrät uns, ob die Installation von einer Apple-Ads-Kampagne kam und von welcher — sonst nichts. Das Token enthält keine persönlichen Daten, ist nicht mit dir verknüpft und wird nie genutzt, um dich über Apps oder Websites anderer Unternehmen hinweg zu verfolgen. Es wird keine Werbe-ID gelesen, und Sunfold zeigt nie eine Abfrage zur App-Tracking-Transparenz."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Une fois par installation, l’app transmet à RevenueCat un jeton d’attribution anonyme fourni par le framework AdServices d’Apple. Il indique si l’installation provient d’une campagne Apple Ads, et laquelle — rien d’autre. Ce jeton ne contient aucune information personnelle, n’est pas lié à vous et n’est jamais utilisé pour vous suivre dans les apps ou sites d’autres entreprises. Aucun identifiant publicitaire n’est lu, et Sunfold n’affiche jamais la demande de transparence du suivi des apps."
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Una vez por instalación, la app pasa a RevenueCat un token de atribución anónimo del framework AdServices de Apple. Nos dice si la instalación vino de una campaña de Apple Ads y de cuál, y nada más. El token no contiene información personal, no está vinculado a ti y nunca se usa para seguirte en apps o sitios web de otras empresas. No se lee ningún identificador publicitario y Sunfold nunca muestra el aviso de transparencia de seguimiento de apps."
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Una vez por instalación, la app pasa a RevenueCat un token de atribución anónimo del framework AdServices de Apple. Nos indica si la instalación procede de una campaña de Apple Ads y de cuál, y nada más. El token no contiene información personal, no está vinculado a ti y nunca se usa para seguirte por apps o sitios web de otras empresas. No se lee ningún identificador publicitario y Sunfold nunca muestra el aviso de transparencia de seguimiento de apps."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uma vez por instalação, o app repassa ao RevenueCat um token de atribuição anônimo do framework AdServices da Apple. Ele nos diz se a instalação veio de uma campanha do Apple Ads e de qual — nada além disso. O token não contém informações pessoais, não está vinculado a você e nunca é usado para te seguir em apps ou sites de outras empresas. Nenhum identificador de publicidade é lido, e o Sunfold nunca exibe o aviso de transparência de rastreamento de apps."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Una volta per installazione, l’app passa a RevenueCat un token di attribuzione anonimo del framework AdServices di Apple. Ci dice se l’installazione arriva da una campagna Apple Ads e da quale, nient’altro. Il token non contiene informazioni personali, non è collegato a te e non viene mai usato per seguirti tra app o siti di altre aziende. Nessun identificatore pubblicitario viene letto e Sunfold non mostra mai la richiesta di trasparenza del tracciamento delle app."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eén keer per installatie geeft de app een anoniem attributietoken uit Apples AdServices-framework door aan RevenueCat. Het vertelt ons of de installatie uit een Apple Ads-campagne kwam en uit welke — verder niets. Het token bevat geen persoonlijke gegevens, is niet aan jou gekoppeld en wordt nooit gebruikt om je te volgen in apps of op websites van andere bedrijven. Er wordt geen advertentie-ID gelezen en Sunfold toont nooit de vraag over app-tracking."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Raz na instalację aplikacja przekazuje do RevenueCat anonimowy token atrybucji z frameworka Apple AdServices. Mówi on tylko tyle, czy instalacja pochodzi z kampanii Apple Ads i z której. Token nie zawiera danych osobowych, nie jest z tobą powiązany i nigdy nie służy do śledzenia cię w aplikacjach ani na stronach innych firm. Identyfikator reklamowy nie jest odczytywany, a Sunfold nigdy nie wyświetla prośby o przejrzystość śledzenia aplikacji."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "インストールごとに一度だけ、AppleのAdServicesフレームワークが発行する匿名のアトリビューショントークンを、アプリがRevenueCatに渡します。わかるのは、そのインストールがApple広告のキャンペーン経由かどうか、そしてどのキャンペーンかということだけです。トークンに個人情報は含まれず、あなたに紐づけられることも、他社のアプリやウェブサイトをまたいで追跡するために使われることもありません。広告用識別子は読み取らず、Sunfoldが「Appのトラッキングの透明性」の確認画面を表示することもありません。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "설치할 때마다 한 번, 앱은 Apple AdServices 프레임워크의 익명 어트리뷰션 토큰을 RevenueCat에 전달합니다. 이 토큰으로 알 수 있는 것은 설치가 Apple Ads 캠페인에서 왔는지, 그리고 어느 캠페인인지뿐입니다. 토큰에는 개인 정보가 없고 사용자와 연결되지 않으며, 다른 회사의 앱이나 웹사이트를 넘나들며 추적하는 데 쓰이지도 않습니다. 광고 식별자는 읽지 않으며, Sunfold는 앱 추적 투명성 요청 창을 띄우지 않습니다."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Один раз за установку приложение передаёт в RevenueCat анонимный токен атрибуции из фреймворка Apple AdServices. Он показывает, пришла ли установка из кампании Apple Ads и из какой, и больше ничего. В токене нет личных данных, он не связан с вами и никогда не используется, чтобы следить за вами в приложениях и на сайтах других компаний. Рекламный идентификатор не читается, а Sunfold никогда не показывает запрос о прозрачности отслеживания приложений."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Один раз за встановлення застосунок передає до RevenueCat анонімний токен атрибуції з фреймворку Apple AdServices. Він показує, чи встановлення прийшло з кампанії Apple Ads і з якої, і більше нічого. У токені немає особистих даних, він не пов’язаний із вами й ніколи не використовується, щоб стежити за вами в застосунках і на сайтах інших компаній. Рекламний ідентифікатор не читається, а Sunfold ніколи не показує запит про прозорість відстеження застосунків."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "每次安装时，App 会向 RevenueCat 传递一次来自 Apple AdServices 框架的匿名归因令牌。它只能告诉我们这次安装是否来自 Apple Ads 广告活动，以及是哪一个，除此之外别无其他。令牌不含任何个人信息，不会与你关联，也绝不会被用来在其他公司的 App 或网站之间追踪你。App 不会读取广告标识符，Sunfold 也从不显示「App 跟踪透明度」提示。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "每次安裝時，App 會向 RevenueCat 傳遞一次來自 Apple AdServices 框架的匿名歸因憑證。它只能告訴我們這次安裝是否來自 Apple Ads 廣告活動，以及是哪一個，除此之外別無其他。憑證不含任何個人資訊，不會與你連結，也絕不會被用來在其他公司的 App 或網站之間追蹤你。App 不會讀取廣告識別碼，Sunfold 也從不顯示「App 追蹤透明度」提示。"
+          }
+        }
+      }
+    },
+    "privacy.attribution.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Ads attribution"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple-Ads-Zuordnung"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Attribution Apple Ads"
+          }
+        },
+        "es-MX": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Atribución de Apple Ads"
+          }
+        },
+        "es-ES": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Atribución de Apple Ads"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Atribuição do Apple Ads"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Attribuzione Apple Ads"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Ads-attributie"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Atrybucja Apple Ads"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple広告のアトリビューション"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Ads 어트리뷰션"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Атрибуция Apple Ads"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Атрибуція Apple Ads"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Ads 归因"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Ads 歸因"
+          }
+        }
+      }
+    },
     "privacy.changes.body": {
       "extractionState": "manual",
       "localizations": {
@@ -15494,91 +15684,91 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "No account, no email address, no advertising identifiers, no analytics or tracking SDKs, no location. Nothing you record is sent anywhere, because Sunfold has no server to send it to."
+            "value": "No account, no email address, no location, no advertising identifier, and no tracking of what you do inside the app. Nothing you record is sent anywhere, because Sunfold has no server to send it to."
           }
         },
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kein Account, keine E-Mail-Adresse, keine Werbe-IDs, keine Analyse- oder Tracking-SDKs, kein Standort. Nichts von dem, was du erfasst, wird irgendwohin gesendet, denn Sunfold hat keinen Server, an den es gesendet werden könnte."
+            "value": "Kein Konto, keine E-Mail-Adresse, kein Standort, keine Werbe-ID und kein Tracking dessen, was du in der App tust. Nichts von dem, was du erfasst, wird irgendwohin gesendet, denn Sunfold hat keinen Server, an den es gesendet werden könnte."
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Pas de compte, pas d’adresse e-mail, pas d’identifiant publicitaire, pas de SDK d’analyse ou de pistage, pas de localisation. Rien de ce que vous enregistrez n’est envoyé où que ce soit, car Sunfold n’a aucun serveur où l’envoyer."
+            "value": "Pas de compte, pas d’adresse e-mail, pas de localisation, pas d’identifiant publicitaire et aucun suivi de ce que vous faites dans l’app. Rien de ce que vous enregistrez n’est envoyé où que ce soit, car Sunfold n’a aucun serveur où l’envoyer."
           }
         },
         "es-MX": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sin cuenta, sin correo electrónico, sin identificadores publicitarios, sin SDK de analítica o rastreo, sin ubicación. Nada de lo que registras se envía a ningún sitio, porque Sunfold no tiene servidor al que enviarlo."
+            "value": "Sin cuenta, sin correo electrónico, sin ubicación, sin identificador publicitario y sin rastreo de lo que haces dentro de la app. Nada de lo que registras se envía a ningún sitio, porque Sunfold no tiene servidor al que enviarlo."
           }
         },
         "es-ES": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sin cuenta, sin correo electrónico, sin identificadores publicitarios, sin SDK de analítica o rastreo, sin ubicación. Nada de lo que registras se envía a ningún sitio, porque Sunfold no tiene servidor al que enviarlo."
+            "value": "Sin cuenta, sin correo electrónico, sin ubicación, sin identificador publicitario y sin seguimiento de lo que haces dentro de la app. Nada de lo que registras se envía a ningún sitio, porque Sunfold no tiene servidor al que enviarlo."
           }
         },
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sem conta, sem e-mail, sem identificadores de publicidade, sem SDKs de análise ou rastreamento, sem localização. Nada do que você registra é enviado a lugar nenhum, porque o Sunfold não tem servidor para onde enviar."
+            "value": "Sem conta, sem e-mail, sem localização, sem identificador de publicidade e sem rastreamento do que você faz dentro do app. Nada do que você registra é enviado a lugar nenhum, porque o Sunfold não tem servidor para onde enviar."
           }
         },
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nessun account, nessun indirizzo e-mail, nessun identificatore pubblicitario, nessun SDK di analisi o tracciamento, nessuna posizione. Nulla di ciò che registri viene inviato da qualche parte, perché Sunfold non ha un server a cui inviarlo."
+            "value": "Nessun account, nessun indirizzo e-mail, nessuna posizione, nessun identificatore pubblicitario e nessun tracciamento di ciò che fai dentro l’app. Nulla di ciò che registri viene inviato da qualche parte, perché Sunfold non ha un server a cui inviarlo."
           }
         },
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Geen account, geen e-mailadres, geen advertentie-ID’s, geen analyse- of trackingsoftware, geen locatie. Niets van wat je vastlegt wordt ergens naartoe gestuurd, want Sunfold heeft geen server om het naartoe te sturen."
+            "value": "Geen account, geen e-mailadres, geen locatie, geen advertentie-ID en geen volgen van wat je in de app doet. Niets van wat je vastlegt wordt ergens naartoe gestuurd, want Sunfold heeft geen server om het naartoe te sturen."
           }
         },
         "pl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Żadnego konta, adresu e-mail, identyfikatorów reklamowych, pakietów analitycznych ani śledzących, żadnej lokalizacji. Nic z tego, co zapisujesz, nigdzie nie trafia, bo Sunfold nie ma serwera, na który mógłby to wysłać."
+            "value": "Żadnego konta, adresu e-mail, lokalizacji, identyfikatora reklamowego ani śledzenia tego, co robisz w aplikacji. Nic z tego, co zapisujesz, nigdzie nie trafia, bo Sunfold nie ma serwera, na który mógłby to wysłać."
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "アカウントもメールアドレスも広告IDも、解析やトラッキングのSDKも、位置情報もありません。記録した内容はどこにも送られません。送る先のサーバーが、そもそも存在しないからです。"
+            "value": "アカウントも、メールアドレスも、位置情報も、広告用識別子もありません。アプリの中での行動を追跡することもありません。記録した内容はどこにも送られません。送る先のサーバーが、そもそも存在しないからです。"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "계정도, 이메일 주소도, 광고 식별자도, 분석이나 추적 SDK도, 위치 정보도 없습니다. 기록한 내용은 어디로도 전송되지 않습니다. 보낼 서버 자체가 없기 때문입니다."
+            "value": "계정도, 이메일 주소도, 위치 정보도, 광고 식별자도 없고, 앱 안에서 하는 행동을 추적하지도 않습니다. 기록한 내용은 어디로도 전송되지 않습니다. 보낼 서버 자체가 없기 때문입니다."
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ни аккаунта, ни электронной почты, ни рекламных идентификаторов, ни аналитики или трекинговых SDK, ни геолокации. Ничего из записанного вами никуда не отправляется, потому что у Sunfold просто нет сервера."
+            "value": "Нет аккаунта, адреса почты, геопозиции, рекламного идентификатора и слежения за тем, что вы делаете в приложении. Ничего из того, что вы записываете, никуда не отправляется: у Sunfold нет сервера, на который можно было бы это отправить."
           }
         },
         "uk": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ні акаунта, ні електронної пошти, ні рекламних ідентифікаторів, ні аналітики чи трекінгових SDK, ні геолокації. Нічого із записаного вами нікуди не надсилається, бо в Sunfold просто немає сервера."
+            "value": "Немає акаунта, адреси пошти, геопозиції, рекламного ідентифікатора та стеження за тим, що ви робите в застосунку. Ніщо з того, що ви записуєте, нікуди не надсилається: у Sunfold немає сервера, на який це можна було б надіслати."
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "没有账户，没有电子邮件地址，没有广告标识符，没有分析或追踪 SDK，没有位置。你记录的内容不会被发送到任何地方，因为 Sunfold 根本没有可以发送的服务器。"
+            "value": "没有账户，没有电子邮件地址，没有位置信息，没有广告标识符，也不追踪你在 App 内的任何操作。你记录的内容不会被发送到任何地方，因为 Sunfold 根本没有可以发送的服务器。"
           }
         },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "沒有帳號，沒有電子郵件地址，沒有廣告識別碼，沒有分析或追蹤 SDK，沒有位置。你記錄的內容不會被傳送到任何地方，因為 Sunfold 根本沒有可以傳送的伺服器。"
+            "value": "沒有帳號，沒有電子郵件地址，沒有位置資訊，沒有廣告識別碼，也不追蹤你在 App 內的任何操作。你記錄的內容不會被傳送到任何地方，因為 Sunfold 根本沒有可以傳送的伺服器。"
           }
         }
       }
@@ -16349,91 +16539,91 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Last updated: August 2026"
+            "value": "Last updated: November 2026"
           }
         },
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Zuletzt aktualisiert: August 2026"
+            "value": "Zuletzt aktualisiert: November 2026"
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dernière mise à jour : août 2026"
+            "value": "Dernière mise à jour : novembre 2026"
           }
         },
         "es-MX": {
           "stringUnit": {
             "state": "translated",
-            "value": "Última actualización: agosto de 2026"
+            "value": "Última actualización: noviembre de 2026"
           }
         },
         "es-ES": {
           "stringUnit": {
             "state": "translated",
-            "value": "Última actualización: agosto de 2026"
+            "value": "Última actualización: noviembre de 2026"
           }
         },
         "pt-BR": {
           "stringUnit": {
             "state": "translated",
-            "value": "Última atualização: agosto de 2026"
+            "value": "Última atualização: novembro de 2026"
           }
         },
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ultimo aggiornamento: agosto 2026"
+            "value": "Ultimo aggiornamento: novembre 2026"
           }
         },
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Laatst bijgewerkt: augustus 2026"
+            "value": "Laatst bijgewerkt: november 2026"
           }
         },
         "pl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ostatnia aktualizacja: sierpień 2026"
+            "value": "Ostatnia aktualizacja: listopad 2026"
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "最終更新：2026年8月"
+            "value": "最終更新：2026年11月"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "마지막 업데이트: 2026년 8월"
+            "value": "마지막 업데이트: 2026년 11월"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Обновлено: август 2026"
+            "value": "Последнее обновление: ноябрь 2026 г."
           }
         },
         "uk": {
           "stringUnit": {
             "state": "translated",
-            "value": "Оновлено: серпень 2026"
+            "value": "Останнє оновлення: листопад 2026 р."
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "最后更新：2026 年 8 月"
+            "value": "最后更新：2026 年 11 月"
           }
         },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "最後更新：2026 年 8 月"
+            "value": "最後更新：2026 年 11 月"
           }
         }
       }

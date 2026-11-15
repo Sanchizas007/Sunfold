@@ -36,7 +36,14 @@ OUT="$ROOT/screenshots"
 # saved unnumbered: it carries prices, and a store listing that shows a price
 # needs a fresh review every time that price changes. It exists only for the
 # "review screenshot" field of an in-app purchase.
-SCREENS=(timer phases history weight protocols settings)
+# SUNFOLD_SCREENS="privacy" re-shoots one frame in every locale instead of the
+# whole set, which is what a change to a single screen needs.
+ALL_SCREENS=(timer phases history weight protocols settings privacy)
+if [ -n "${SUNFOLD_SCREENS:-}" ]; then
+    read -r -a SCREENS <<< "$SUNFOLD_SCREENS"
+else
+    SCREENS=("${ALL_SCREENS[@]}")
+fi
 
 # Keep in step with LANGUAGES in Tools/build-strings.py: a locale shot here but
 # not translated there comes out in English and looks like a working frame.
@@ -125,19 +132,20 @@ xcrun simctl status_bar "$UDID" override \
 # brightness; a bare background is flat. Flattens to RGB on success, because
 # App Store Connect rejects an alpha channel and blames the dimensions.
 shoot() {
-    python3 - "$1" <<'CHECK'
+    python3 - "$1" "$2" <<'CHECK'
 import sys
-from PIL import Image, ImageStat
-path = sys.argv[1]
+from PIL import Image, ImageChops, ImageStat
+path, later = sys.argv[1], sys.argv[2]
 try:
-    im = Image.open(path)
+    first, second = Image.open(path), Image.open(later)
 except Exception:
     sys.exit(1)
-w, h = im.size
+w, h = second.size
+frame = second.convert("RGB")
 # Ignore the status bar and the tab bar: both carry content on an empty screen.
 # Converted first: simctl writes RGBA, and the mean of four channels does not
 # unpack into three — which made every single frame fail this check.
-body = im.convert("RGB").crop((0, int(h * 0.12), w, int(h * 0.88)))
+body = frame.crop((0, int(h * 0.12), w, int(h * 0.88)))
 if ImageStat.Stat(body.convert("L")).stddev[0] < 8:
     sys.exit(1)
 
@@ -149,7 +157,41 @@ if ImageStat.Stat(body.convert("L")).stddev[0] < 8:
 red, _, blue = [round(channel) for channel in ImageStat.Stat(body).mean]
 if red < blue + 10:
     sys.exit(1)
-im.convert("RGB").save(path, "PNG", dpi=(72, 72))
+
+# The corners. A sheet caught half-way up its slide is cream with enormous
+# rounded corners over the simulator's blue-green wallpaper: stddev passes, the
+# body is warm, and the frame is garbage — this reached the contact sheet once
+# and looked, in the owner's words, terrible. Every real Sunfold screen is warm
+# right out to its four corners, sheets included (the dimmed app shows there).
+for x, y in ((0.02, 0.02), (0.98, 0.02), (0.02, 0.98), (0.98, 0.98)):
+    cx, cy = int(w * x), int(h * y)
+    patch = frame.crop((cx - 12, cy - 12, cx + 12, cy + 12))
+    r, _, b = [round(c) for c in ImageStat.Stat(patch).mean]
+    if r < b + 3:
+        sys.exit(1)
+
+# The Dynamic Island. The simulator draws its black pill into a capture only when
+# a Live Activity is spinning up or winding down, and that one frame then looks
+# like a hardware cut-out sitting inside the phone mock-up — it reached the
+# Dutch timer frame once while the other fourteen were clean. A clean frame has
+# the plain status bar there.
+pill = frame.crop((int(w * 0.42), int(h * 0.027), int(w * 0.58), int(h * 0.045)))
+if ImageStat.Stat(pill.convert("L")).mean[0] < 80:
+    sys.exit(1)
+
+# Stillness. Two captures a moment apart must agree: if anything is still
+# sliding, fading or loading, they do not. The running timer is the one thing
+# that legitimately changes between them, so the band it lives in is left out.
+a = first.convert("L").resize((w // 4, h // 4))
+b = second.convert("L").resize((w // 4, h // 4))
+moved = ImageChops.difference(a, b)
+top, bottom = int(moved.height * 0.20), int(moved.height * 0.42)
+mask = Image.new("L", moved.size, 255)
+mask.paste(0, (0, top, moved.width, bottom))
+if ImageStat.Stat(moved, mask).mean[0] > 0.45:
+    sys.exit(1)
+
+second.convert("RGB").save(path, "PNG", dpi=(72, 72))
 CHECK
 }
 
@@ -157,20 +199,24 @@ CHECK
 # something on it.
 capture() {
     local screen="$1" file="$2"
-    local attempt
+    local attempt later="${2%.png}.later.png"
     for attempt in 1 2 3 4 5 6; do
         xcrun simctl terminate "$UDID" "$BUNDLE" 2>/dev/null || true
         xcrun simctl launch "$UDID" "$BUNDLE" \
             -SunfoldDemoData -SunfoldDemoScreen "$screen" \
             -AppleLanguages "($locale)" -AppleLocale "$(locale_id "$locale")" >/dev/null
-        sleep $((2 + attempt))
+        sleep $((3 + attempt))
         xcrun simctl io "$UDID" screenshot --type png "$file" 2>/dev/null
-        if shoot "$file"; then
+        sleep 1.5
+        xcrun simctl io "$UDID" screenshot --type png "$later" 2>/dev/null
+        if shoot "$file" "$later"; then
+            rm -f "$later"
             echo "    $locale/$(basename "$file")"
             return 0
         fi
     done
-    echo "    !! $locale/$(basename "$file") came out blank after 6 tries" >&2
+    rm -f "$later"
+    echo "    !! $locale/$(basename "$file") never settled after 6 tries" >&2
     return 1
 }
 
@@ -178,16 +224,25 @@ blank=0
 
 for locale in "${LOCALES[@]}"; do
     mkdir -p "$OUT/$locale"
-    index=1
     for screen in "${SCREENS[@]}"; do
+        # The number belongs to the screen, not to its place in this run: a
+        # one-screen re-shoot must overwrite 07-privacy.png, not start a new
+        # 01-privacy.png beside the old set.
+        index=1
+        for known in "${ALL_SCREENS[@]}"; do
+            [ "$known" = "$screen" ] && break
+            index=$((index + 1))
+        done
         file=$(printf "%s/%s/%02d-%s.png" "$OUT" "$locale" "$index" "$screen")
         capture "$screen" "$file" || blank=$((blank + 1))
-        index=$((index + 1))
     done
 
     # The paywall, for the in-app purchase review field. Unnumbered so it can
     # never be mistaken for part of the store set.
-    capture paywall "$OUT/$locale/paywall-for-review.png" || blank=$((blank + 1))
+    # A one-screen re-shoot does not need it again.
+    if [ -z "${SUNFOLD_SCREENS:-}" ]; then
+        capture paywall "$OUT/$locale/paywall-for-review.png" || blank=$((blank + 1))
+    fi
 done
 
 if [ "$blank" -gt 0 ]; then

@@ -13,7 +13,9 @@ struct SettingsScreen: View {
 
     @State private var showingPaywall = false
     @State private var showingDeleteConfirmation = false
-    @State private var showingPrivacy = false
+    // Opened by name for the storefront frame about privacy — the sheet is the
+    // clearest picture of what the app does not do.
+    @State private var showingPrivacy = DemoData.requestedScreen == .privacy
     @State private var showingDisclaimer = false
     @State private var exportURL: URL?
 

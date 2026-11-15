@@ -1,0 +1,392 @@
+{
+ "en": {
+  "timer": {
+   "h": "One *ring.*\nOne number.",
+   "s": "Start when you stop eating. Sunfold counts from there."
+  },
+  "privacy": {
+   "h": "No account.\nNo feed. *No ads.*",
+   "s": "Your fasts stay on your phone. Export them or erase them in one tap."
+  },
+  "phases": {
+   "h": "Know where you are *in the fast.*",
+   "s": "Five phases in plain language — approximations, never promises."
+  },
+  "schedules": {
+   "h": "16:8, 18:6, 5:2\n*or your own.*",
+   "s": "Switch in the middle of a fast and the goal moves with you."
+  },
+  "history": {
+   "h": "A month, *at a glance.*",
+   "s": "Streaks, averages and every fast you have logged."
+  },
+  "weight": {
+   "h": "Weight — *only if you want it.*",
+   "s": "A quiet trend line. No goal weight, no BMI, no judgement."
+  }
+ },
+ "de": {
+  "timer": {
+   "h": "Ein *Ring.*\nEine Zahl.",
+   "s": "Starte, wenn du aufhörst zu essen. Sunfold zählt ab da."
+  },
+  "privacy": {
+   "h": "Kein Konto.\nKein Feed. *Keine Werbung.*",
+   "s": "Deine Fastenzeiten bleiben auf deinem Telefon. Exportieren oder löschen mit einem Tipp."
+  },
+  "phases": {
+   "h": "Wisse, wo du *im Fasten* stehst.",
+   "s": "Fünf Phasen in klarer Sprache — Näherungen, keine Versprechen."
+  },
+  "schedules": {
+   "h": "16:8, 18:6, 5:2\n*oder dein Rhythmus.*",
+   "s": "Wechsle mitten im Fasten, und das Ziel wandert mit."
+  },
+  "history": {
+   "h": "Ein Monat *auf einen Blick.*",
+   "s": "Serien, Durchschnitte und jedes Fasten, das du erfasst hast."
+  },
+  "weight": {
+   "h": "Gewicht — *nur wenn du willst.*",
+   "s": "Eine ruhige Trendlinie. Kein Zielgewicht, kein BMI, keine Bewertung."
+  }
+ },
+ "fr": {
+  "timer": {
+   "h": "Un *anneau.*\nUn chiffre.",
+   "s": "Démarrez quand vous arrêtez de manger. Sunfold compte à partir de là."
+  },
+  "privacy": {
+   "h": "Pas de compte.\nPas de fil. *Pas de pub.*",
+   "s": "Vos jeûnes restent sur votre téléphone. Exportez-les ou effacez-les d’un geste."
+  },
+  "phases": {
+   "h": "Sachez où vous en êtes *dans le jeûne.*",
+   "s": "Cinq phases en langage clair — des approximations, jamais des promesses."
+  },
+  "schedules": {
+   "h": "16:8, 18:6, 5:2\n*ou le vôtre.*",
+   "s": "Changez en plein jeûne : l’objectif suit."
+  },
+  "history": {
+   "h": "Un mois, *d’un coup d’œil.*",
+   "s": "Séries, moyennes et chaque jeûne que vous avez noté."
+  },
+  "weight": {
+   "h": "Le poids — *seulement si vous voulez.*",
+   "s": "Une courbe discrète. Ni poids cible, ni IMC, ni jugement."
+  }
+ },
+ "es-MX": {
+  "timer": {
+   "h": "Un *anillo.*\nUn número.",
+   "s": "Empieza cuando termines de comer. Sunfold cuenta desde ahí."
+  },
+  "privacy": {
+   "h": "Sin cuenta.\nSin feed. *Sin anuncios.*",
+   "s": "Tus ayunos se quedan en tu teléfono. Expórtalos o bórralos con un toque."
+  },
+  "phases": {
+   "h": "Sabe dónde estás *en tu ayuno.*",
+   "s": "Cinco fases en lenguaje claro: aproximaciones, nunca promesas."
+  },
+  "schedules": {
+   "h": "16:8, 18:6, 5:2\n*o el tuyo.*",
+   "s": "Cambia a mitad del ayuno y la meta se mueve contigo."
+  },
+  "history": {
+   "h": "Un mes, *de un vistazo.*",
+   "s": "Rachas, promedios y cada ayuno que has registrado."
+  },
+  "weight": {
+   "h": "Peso, *solo si quieres.*",
+   "s": "Una tendencia discreta. Sin peso meta, sin IMC, sin juicios."
+  }
+ },
+ "es-ES": {
+  "timer": {
+   "h": "Un *anillo.*\nUn número.",
+   "s": "Empieza cuando termines de comer. Sunfold cuenta desde ahí."
+  },
+  "privacy": {
+   "h": "Sin cuenta.\nSin feed. *Sin anuncios.*",
+   "s": "Tus ayunos se quedan en tu móvil. Expórtalos o bórralos con un toque."
+  },
+  "phases": {
+   "h": "Sabe en qué punto estás *del ayuno.*",
+   "s": "Cinco fases en lenguaje claro: aproximaciones, nunca promesas."
+  },
+  "schedules": {
+   "h": "16:8, 18:6, 5:2\n*o la tuya.*",
+   "s": "Cámbiala a mitad del ayuno y el objetivo se mueve contigo."
+  },
+  "history": {
+   "h": "Un mes, *de un vistazo.*",
+   "s": "Rachas, medias y cada ayuno que has registrado."
+  },
+  "weight": {
+   "h": "Peso, *solo si quieres.*",
+   "s": "Una tendencia discreta. Sin peso objetivo, sin IMC, sin juicios."
+  }
+ },
+ "pt-BR": {
+  "timer": {
+   "h": "Um *anel.*\nUm número.",
+   "s": "Comece quando parar de comer. O Sunfold conta a partir daí."
+  },
+  "privacy": {
+   "h": "Sem conta.\nSem feed. *Sem anúncios.*",
+   "s": "Seus jejuns ficam no seu celular. Exporte ou apague com um toque."
+  },
+  "phases": {
+   "h": "Saiba onde você está *no jejum.*",
+   "s": "Cinco fases em linguagem simples — aproximações, nunca promessas."
+  },
+  "schedules": {
+   "h": "16:8, 18:6, 5:2\n*ou o seu.*",
+   "s": "Mude no meio do jejum e a meta vai junto."
+  },
+  "history": {
+   "h": "Um mês, *num relance.*",
+   "s": "Sequências, médias e cada jejum que você registrou."
+  },
+  "weight": {
+   "h": "Peso — *só se quiser.*",
+   "s": "Uma tendência discreta. Sem peso-alvo, sem IMC, sem julgamento."
+  }
+ },
+ "it": {
+  "timer": {
+   "h": "Un *anello.*\nUn numero.",
+   "s": "Parti quando smetti di mangiare. Sunfold conta da lì."
+  },
+  "privacy": {
+   "h": "Niente account.\nNiente feed. *Niente pubblicità.*",
+   "s": "I tuoi digiuni restano sul telefono. Esportali o cancellali con un tocco."
+  },
+  "phases": {
+   "h": "Sai a che punto sei *del digiuno.*",
+   "s": "Cinque fasi in parole semplici — approssimazioni, mai promesse."
+  },
+  "schedules": {
+   "h": "16:8, 18:6, 5:2\n*o il tuo.*",
+   "s": "Cambia a digiuno iniziato e l’obiettivo si sposta con te."
+  },
+  "history": {
+   "h": "Un mese, *a colpo d’occhio.*",
+   "s": "Serie, medie e ogni digiuno che hai registrato."
+  },
+  "weight": {
+   "h": "Il peso — *solo se vuoi.*",
+   "s": "Un andamento discreto. Niente peso obiettivo, niente IMC, niente giudizi."
+  }
+ },
+ "nl": {
+  "timer": {
+   "h": "Eén *ring.*\nEén getal.",
+   "s": "Start zodra je stopt met eten. Sunfold telt vanaf dan."
+  },
+  "privacy": {
+   "h": "Geen account.\nGeen feed. *Geen advertenties.*",
+   "s": "Je vastenperiodes blijven op je telefoon. Exporteer of wis ze met één tik."
+  },
+  "phases": {
+   "h": "Weet waar je bent *in het vasten.*",
+   "s": "Vijf fasen in gewone taal — benaderingen, nooit beloften."
+  },
+  "schedules": {
+   "h": "16:8, 18:6, 5:2\n*of je eigen.*",
+   "s": "Wissel midden in het vasten en het doel schuift mee."
+  },
+  "history": {
+   "h": "Een maand, *in één oogopslag.*",
+   "s": "Reeksen, gemiddelden en elke vastenperiode die je hebt vastgelegd."
+  },
+  "weight": {
+   "h": "Gewicht — *alleen als je wilt.*",
+   "s": "Een rustig verloop. Geen streefgewicht, geen BMI, geen oordeel."
+  }
+ },
+ "pl": {
+  "timer": {
+   "h": "Jeden *pierścień.*\nJedna liczba.",
+   "s": "Zacznij, kiedy przestajesz jeść. Sunfold liczy od tej chwili."
+  },
+  "privacy": {
+   "h": "Bez konta.\nBez tablicy. *Bez reklam.*",
+   "s": "Twoje posty zostają w telefonie. Wyeksportuj je albo usuń jednym stuknięciem."
+  },
+  "phases": {
+   "h": "Wiedz, gdzie jesteś *w poście.*",
+   "s": "Pięć faz prostym językiem — przybliżenia, nigdy obietnice."
+  },
+  "schedules": {
+   "h": "16:8, 18:6, 5:2\n*albo własny.*",
+   "s": "Zmień w trakcie postu, a cel przesunie się razem z tobą."
+  },
+  "history": {
+   "h": "Miesiąc *jednym rzutem oka.*",
+   "s": "Serie, średnie i każdy zapisany post."
+  },
+  "weight": {
+   "h": "Waga — *tylko jeśli chcesz.*",
+   "s": "Spokojny przebieg. Bez wagi docelowej, bez BMI, bez oceniania."
+  }
+ },
+ "ru": {
+  "timer": {
+   "h": "Одно *кольцо.*\nОдно число.",
+   "s": "Начните, когда перестали есть. Sunfold считает с этого момента."
+  },
+  "privacy": {
+   "h": "Без аккаунта.\nБез ленты. *Без рекламы.*",
+   "s": "Ваши голодания остаются в телефоне. Экспорт или удаление — одним касанием."
+  },
+  "phases": {
+   "h": "Знайте, где вы *в голодании.*",
+   "s": "Пять фаз простым языком — приблизительно, без обещаний."
+  },
+  "schedules": {
+   "h": "16:8, 18:6, 5:2\n*или свой.*",
+   "s": "Меняйте график прямо в ходе голодания — цель сдвинется вместе с вами."
+  },
+  "history": {
+   "h": "Месяц *одним взглядом.*",
+   "s": "Серии, средние значения и каждое записанное голодание."
+  },
+  "weight": {
+   "h": "Вес — *только если хотите.*",
+   "s": "Спокойная линия тренда. Без целевого веса, ИМТ и оценок."
+  }
+ },
+ "uk": {
+  "timer": {
+   "h": "Одне *кільце.*\nОдне число.",
+   "s": "Почніть, коли перестали їсти. Sunfold рахує від цієї миті."
+  },
+  "privacy": {
+   "h": "Без акаунта.\nБез стрічки. *Без реклами.*",
+   "s": "Ваші голодування лишаються в телефоні. Експорт або видалення — одним дотиком."
+  },
+  "phases": {
+   "h": "Знайте, де ви *в голодуванні.*",
+   "s": "П’ять фаз простою мовою — приблизно, без обіцянок."
+  },
+  "schedules": {
+   "h": "16:8, 18:6, 5:2\n*або свій.*",
+   "s": "Змінюйте розклад просто під час голодування — ціль зсунеться разом із вами."
+  },
+  "history": {
+   "h": "Місяць *одним поглядом.*",
+   "s": "Серії, середні значення й кожне записане голодування."
+  },
+  "weight": {
+   "h": "Вага — *лише якщо хочете.*",
+   "s": "Спокійна лінія тренду. Без цільової ваги, ІМТ і оцінок."
+  }
+ },
+ "ja": {
+  "timer": {
+   "h": "ひとつの*リング。*\nひとつの数字。",
+   "s": "食べ終えたら開始。|Sunfoldはそこから数えます。"
+  },
+  "privacy": {
+   "h": "アカウントなし。\nフィードなし。*広告なし。*",
+   "s": "記録は端末の中だけ。|書き出しも削除も、ワンタップで。"
+  },
+  "phases": {
+   "h": "いま、断食の*どこにいるか。*",
+   "s": "5つのフェーズをやさしい言葉で。|目安であって、約束ではありません。"
+  },
+  "schedules": {
+   "h": "16:8, 18:6, 5:2\n*または自分で。*",
+   "s": "途中で変えても、目標がついてきます。"
+  },
+  "history": {
+   "h": "ひと月を、*ひと目で。*",
+   "s": "連続記録、平均、記録したすべての断食。"
+  },
+  "weight": {
+   "h": "体重は、*記録したいときだけ。*",
+   "s": "静かな推移だけ。|目標体重もBMIも評価もありません。"
+  }
+ },
+ "ko": {
+  "timer": {
+   "h": "링 하나.\n*숫자* 하나.",
+   "s": "식사를 마치면 시작하세요. Sunfold가 거기서부터 셉니다."
+  },
+  "privacy": {
+   "h": "계정 없음.\n피드 없음. *광고 없음.*",
+   "s": "기록은 기기 안에만 남습니다. 내보내기와 삭제는 한 번의 탭으로."
+  },
+  "phases": {
+   "h": "지금 단식의 *어디쯤*인지.",
+   "s": "다섯 단계를 쉬운 말로. 어림값일 뿐, 약속이 아닙니다."
+  },
+  "schedules": {
+   "h": "16:8, 18:6, 5:2\n*또는 직접.*",
+   "s": "단식 도중에 바꿔도 목표가 함께 움직입니다."
+  },
+  "history": {
+   "h": "한 달을 *한눈에.*",
+   "s": "연속 기록, 평균, 남긴 모든 단식."
+  },
+  "weight": {
+   "h": "체중은 *원할 때만.*",
+   "s": "조용한 변화 추이만. 목표 체중도, BMI도, 평가도 없습니다."
+  }
+ },
+ "zh-Hans": {
+  "timer": {
+   "h": "一个*圆环*\n一个数字",
+   "s": "吃完最后一餐就开始，|Sunfold 从那一刻起计时。"
+  },
+  "privacy": {
+   "h": "没有账户\n没有信息流 *没有广告*",
+   "s": "断食记录只留在你的手机里。|导出或清除，一键完成。"
+  },
+  "phases": {
+   "h": "知道自己*走到了哪一步*",
+   "s": "五个阶段，通俗解释——|只是近似，从不承诺。"
+  },
+  "schedules": {
+   "h": "16:8, 18:6, 5:2\n*或自己定*",
+   "s": "断食途中换方案，|目标会跟着一起移动。"
+  },
+  "history": {
+   "h": "一个月，*一眼看清*",
+   "s": "连续记录、平均时长，|以及你记录过的每一次断食。"
+  },
+  "weight": {
+   "h": "体重，*想记再记*",
+   "s": "安静的走势线。|没有目标体重，没有 BMI，没有评判。"
+  }
+ },
+ "zh-Hant": {
+  "timer": {
+   "h": "一個*圓環*\n一個數字",
+   "s": "吃完最後一餐就開始，|Sunfold 從那一刻起計時。"
+  },
+  "privacy": {
+   "h": "沒有帳號\n沒有動態消息 *沒有廣告*",
+   "s": "斷食紀錄只留在你的手機裡。|輸出或清除，一鍵完成。"
+  },
+  "phases": {
+   "h": "知道自己*走到了哪一步*",
+   "s": "五個階段，通俗解釋——|只是近似，從不承諾。"
+  },
+  "schedules": {
+   "h": "16:8, 18:6, 5:2\n*或自己定*",
+   "s": "斷食途中換方式，|目標會跟著一起移動。"
+  },
+  "history": {
+   "h": "一個月，*一眼看清*",
+   "s": "連續紀錄、平均時長，|以及你記錄過的每一次斷食。"
+  },
+  "weight": {
+   "h": "體重，*想記再記*",
+   "s": "安靜的走勢線。|沒有目標體重，沒有 BMI，沒有評判。"
+  }
+ }
+}

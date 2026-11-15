@@ -18,6 +18,7 @@ script: App Review compares the hosted policy against the one in the binary, and
 two copies maintained by hand drift apart within a release or two.
 """
 
+import datetime
 import html
 import importlib.util
 import json
@@ -33,12 +34,14 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 #
 #     SUNFOLD_ORIGIN=https://sanchizas007.github.io SUNFOLD_BASE=/Sunfold \
 #         python3 Tools/build-site.py
-ORIGIN = os.environ.get("SUNFOLD_ORIGIN", "https://sunfold.app").rstrip("/")
-# The support address shown on every page. Overridable because support@sunfold.app
-# does not exist until the domain is bought, and a support contact that bounces
-# is worse than no site at all.
-EMAIL = os.environ.get("SUNFOLD_EMAIL", "support@sunfold.app")
-BASE = "/" + os.environ.get("SUNFOLD_BASE", "").strip("/") if os.environ.get("SUNFOLD_BASE") else ""
+ORIGIN = os.environ.get("SUNFOLD_ORIGIN", "https://sanchizas007.github.io").rstrip("/")
+# The support address shown on every page. The defaults are the live deployment
+# (GitHub Pages under /Sunfold, a mailbox that exists): a bare run once published
+# sunfold.app links and a bouncing support@sunfold.app, which broke every
+# in-page link on the live site. When the domain exists, pass
+#     SUNFOLD_ORIGIN=https://sunfold.app SUNFOLD_BASE= SUNFOLD_EMAIL=support@sunfold.app
+EMAIL = os.environ.get("SUNFOLD_EMAIL", "zhvnir1345@yahoo.com")
+BASE = "/" + os.environ.get("SUNFOLD_BASE", "/Sunfold").strip("/") if os.environ.get("SUNFOLD_BASE", "/Sunfold").strip("/") else ""
 
 
 def load_app_strings():
@@ -75,6 +78,49 @@ def load_site_strings(language):
 
 
 SITE = {language: load_site_strings(language) for language in LANGUAGES}
+
+APP_STORE_ID = "6801442221"
+APP_STORE_URL = f"https://apps.apple.com/app/id{APP_STORE_ID}"
+
+# Site language -> App Store locale file under store/listing/. The landing page is
+# built from the very listing text that ships to the store, so the title, the
+# description and the search wording on the web cannot drift from the store page.
+LISTING_LOCALE = {"en": "en-US", "de": "de-DE", "fr": "fr-FR", "nl": "nl-NL"}
+
+GET_BUTTON = {
+    "en": "Download on the App Store", "de": "Im App Store laden",
+    "fr": "Télécharger dans l’App Store", "es-ES": "Descargar en el App Store",
+    "es-MX": "Descargar en el App Store", "pt-BR": "Baixar na App Store",
+    "it": "Scarica dall’App Store", "nl": "Download in de App Store",
+    "pl": "Pobierz z App Store", "ru": "Загрузить в App Store",
+    "uk": "Завантажити з App Store", "ja": "App Storeでダウンロード",
+    "ko": "App Store에서 다운로드", "zh-Hans": "在 App Store 下载",
+    "zh-Hant": "在 App Store 下載",
+}
+
+
+def load_listing(language):
+    path = os.path.join(ROOT, "store", "listing", f"{LISTING_LOCALE.get(language, language)}.json")
+    with open(path, encoding="utf-8") as handle:
+        return json.load(handle)
+
+
+LISTING = {language: load_listing(language) for language in LANGUAGES}
+
+
+def landing_sections(language):
+    """The store description as web sections: each paragraph that opens with a
+    short heading line becomes an h2. The nine-paragraph layout is asserted so a
+    reshuffled description fails the build instead of publishing a wrong page."""
+    paragraphs = LISTING[language]["description"].split("\n\n")
+    assert len(paragraphs) == 9, f"{language}: description layout changed ({len(paragraphs)} paragraphs)"
+    chosen = paragraphs[2:6] + [paragraphs[8]]          # the sections, then the health note
+    out = []
+    for block in chosen:
+        head, _, rest = block.partition("\n")
+        out.append(f"<h2>{html.escape(head)}</h2>\n      <p>{html.escape(rest)}</p>")
+    out.append(f'<p><small>{html.escape(paragraphs[6])}</small></p>')   # renewal terms, as in the store
+    return "\n      ".join(out)
 
 
 def site(key, language):
@@ -140,7 +186,7 @@ def url(language, slug):
     return f"{ORIGIN}{path(language, slug)}"
 
 
-def page(language, slug, title, body_html, description):
+def page(language, slug, title, body_html, description, extra_head=""):
     """Wraps content in the shared shell, with hreflang for every language."""
     canonical = url(language, slug)
     alternates = "\n    ".join(
@@ -173,6 +219,13 @@ def page(language, slug, title, body_html, description):
     <link rel="canonical" href="{canonical}">
     {alternates}
     <link rel="alternate" hreflang="x-default" href="{url('en', slug)}">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Sunfold">
+    <meta property="og:title" content="{html.escape(title)}">
+    <meta property="og:description" content="{html.escape(description)}">
+    <meta property="og:url" content="{canonical}">
+    <meta property="og:locale" content="{language.replace('-', '_')}">
+    {extra_head}
     <style>{STYLE}</style>
   </head>
   <body>
@@ -201,6 +254,7 @@ def sections_html(language, keys):
 PRIVACY_SECTIONS = [
     ("privacy.stored.title", "privacy.stored.body"),
     ("privacy.notCollected.title", "privacy.notCollected.body"),
+    ("privacy.attribution.title", "privacy.attribution.body"),
     ("privacy.purchases.title", "privacy.purchases.body"),
     ("privacy.notifications.title", "privacy.notifications.body"),
     ("privacy.health.title", "privacy.health.body"),
@@ -233,14 +287,34 @@ def build():
         base = prefix(language).lstrip("/")
         base = f"{base}/" if base else ""
 
-        # Landing
-        body = f"""<h1>Sunfold</h1>
-      <p class="lede">{html.escape(site("site.tagline", language))}</p>
+        # Landing — title, lede and sections come from the store listing.
+        listing = LISTING[language]
+        landing_title = f'{listing["name"]} — {listing["subtitle"]}'
+        body = f"""<h1>{html.escape(listing["name"])}</h1>
+      <p class="lede">{html.escape(listing["subtitle"])}</p>
+      <p>{html.escape(listing["promotionalText"])}</p>
+      <p><a class="button" href="{APP_STORE_URL}">{html.escape(GET_BUTTON[language])}</a></p>
       <div class="card">
-        <p>{html.escape(tr("privacy.lede", language))}</p>
-      </div>"""
+        <p>{html.escape(listing["description"].split(chr(10) * 2)[0])}</p>
+        <p>{html.escape(listing["description"].split(chr(10) * 2)[1])}</p>
+      </div>
+      {landing_sections(language)}"""
+        jsonld = json.dumps({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": listing["name"],
+            "operatingSystem": "iOS",
+            "applicationCategory": "HealthApplication",
+            "description": listing["promotionalText"],
+            "inLanguage": language,
+            "url": url(language, ""),
+            "downloadUrl": APP_STORE_URL,
+            "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+        }, ensure_ascii=False)
+        extra = (f'<meta name="apple-itunes-app" content="app-id={APP_STORE_ID}">\n    '
+                 f'<script type="application/ld+json">{jsonld}</script>')
         written.append(write(f"{base}index.html", page(
-            language, "", "Sunfold", body, site("site.tagline", language))))
+            language, "", landing_title, body, listing["promotionalText"], extra)))
 
         # Privacy policy — text imported from the app's own string table.
         body = f"""<h1>{html.escape(tr("privacy.heading", language))}</h1>
@@ -292,10 +366,11 @@ def build():
         f"User-agent: *\nAllow: /\n\nSitemap: {ORIGIN}{BASE}/sitemap.xml\n"
     ))
 
+    TODAY = datetime.date.today().isoformat()
     urls = []
     for language in LANGUAGES:
         for slug in ("", "privacy/", "health/", "terms/", "support/"):
-            urls.append(f"  <url><loc>{url(language, slug)}</loc></url>")
+            urls.append(f"  <url><loc>{url(language, slug)}</loc><lastmod>{TODAY}</lastmod></url>")
     sitemap = ('<?xml version="1.0" encoding="UTF-8"?>\n'
                '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
                + "\n".join(urls) + "\n</urlset>\n")

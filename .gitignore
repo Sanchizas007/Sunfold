@@ -26,3 +26,7 @@ screenshots/
 # Local secrets. The RevenueCat publishable key lives in Config/Sunfold-Info.plist
 # and is safe to commit; anything genuinely secret belongs here.
 *.local.xcconfig
+
+# Composed store frames (1206x2622 x 90). Regenerated from screenshots/ by
+# Tools/store-shots.py; 120 MB that would sit in every clone otherwise.
+store-shots/

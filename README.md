@@ -116,12 +116,17 @@ App Store требует публичный URL политики приватн�
 что и экраны приложения — разойтись они не могут:
 
 ```bash
-SUNFOLD_ORIGIN=https://sanchizas007.github.io SUNFOLD_BASE=/Sunfold python3 Tools/build-site.py
+python3 Tools/build-site.py
 ```
+
+Значения по умолчанию — живой адрес (GitHub Pages, `/Sunfold`, рабочая почта
+поддержки). Раньше голый запуск без переменных публиковал ссылки на `sunfold.app`
+и отбивающийся `support@sunfold.app`, из-за чего на живом сайте ломались все
+внутренние ссылки.
 
 Опубликовано на GitHub Pages: **https://sanchizas007.github.io/Sunfold/**.
 Деплой автоматический — любой пуш, меняющий `site/`, публикует заново.
-Когда появится домен, пересобрать без переменных окружения.
+Когда появится домен: `SUNFOLD_ORIGIN=https://sunfold.app SUNFOLD_BASE= SUNFOLD_EMAIL=support@sunfold.app python3 Tools/build-site.py`.
 
 Кладёт в `site/` пятнадцать страниц (лендинг, политика, застереження о здоровье,
 условия, поддержка — каждая на en/uk/ru) плюс `robots.txt` и `sitemap.xml`, с

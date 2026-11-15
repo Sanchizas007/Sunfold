@@ -22,6 +22,12 @@ HERE = pathlib.Path(__file__).resolve().parent
 LOCALES = (
     "en-US", "de-DE", "fr-FR", "es-MX", "es-ES", "pt-BR", "it", "ja",
     "ko", "ru", "uk", "zh-Hans", "zh-Hant", "nl-NL", "pl",
+    # The same English text under three more storefront locales. Each locale has
+    # its own 100-character keyword field and is indexed on its own storefront,
+    # so GB, Australia and Canada — markets with far weaker competition for the
+    # same queries than the US — get a full set of keywords instead of falling
+    # back on en-US.
+    "en-GB", "en-AU", "en-CA",
 )
 
 # Apple's own limits. Exceeding one is a 409 from the API, not a warning.

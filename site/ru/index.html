@@ -3,25 +3,33 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sunfold</title>
-    <meta name="description" content="Спокойный таймер интервального голодания для iPhone. Всё остаётся на вашем устройстве.">
-    <link rel="canonical" href="https://sunfold.app/ru/">
-    <link rel="alternate" hreflang="en" href="https://sunfold.app/">
-    <link rel="alternate" hreflang="de" href="https://sunfold.app/de/">
-    <link rel="alternate" hreflang="fr" href="https://sunfold.app/fr/">
-    <link rel="alternate" hreflang="es-MX" href="https://sunfold.app/es-MX/">
-    <link rel="alternate" hreflang="es-ES" href="https://sunfold.app/es-ES/">
-    <link rel="alternate" hreflang="pt-BR" href="https://sunfold.app/pt-BR/">
-    <link rel="alternate" hreflang="it" href="https://sunfold.app/it/">
-    <link rel="alternate" hreflang="nl" href="https://sunfold.app/nl/">
-    <link rel="alternate" hreflang="pl" href="https://sunfold.app/pl/">
-    <link rel="alternate" hreflang="ja" href="https://sunfold.app/ja/">
-    <link rel="alternate" hreflang="ko" href="https://sunfold.app/ko/">
-    <link rel="alternate" hreflang="ru" href="https://sunfold.app/ru/">
-    <link rel="alternate" hreflang="uk" href="https://sunfold.app/uk/">
-    <link rel="alternate" hreflang="zh-Hans" href="https://sunfold.app/zh-Hans/">
-    <link rel="alternate" hreflang="zh-Hant" href="https://sunfold.app/zh-Hant/">
-    <link rel="alternate" hreflang="x-default" href="https://sunfold.app/">
+    <title>Sunfold: голодание 16:8 — Таймер, виджет и фазы</title>
+    <meta name="description" content="Без аккаунта, ленты и рекламы — только кольцо и ваш темп. Таймер голодания для экрана блокировки, который хранит данные в вашем телефоне.">
+    <link rel="canonical" href="https://sanchizas007.github.io/Sunfold/ru/">
+    <link rel="alternate" hreflang="en" href="https://sanchizas007.github.io/Sunfold/">
+    <link rel="alternate" hreflang="de" href="https://sanchizas007.github.io/Sunfold/de/">
+    <link rel="alternate" hreflang="fr" href="https://sanchizas007.github.io/Sunfold/fr/">
+    <link rel="alternate" hreflang="es-MX" href="https://sanchizas007.github.io/Sunfold/es-MX/">
+    <link rel="alternate" hreflang="es-ES" href="https://sanchizas007.github.io/Sunfold/es-ES/">
+    <link rel="alternate" hreflang="pt-BR" href="https://sanchizas007.github.io/Sunfold/pt-BR/">
+    <link rel="alternate" hreflang="it" href="https://sanchizas007.github.io/Sunfold/it/">
+    <link rel="alternate" hreflang="nl" href="https://sanchizas007.github.io/Sunfold/nl/">
+    <link rel="alternate" hreflang="pl" href="https://sanchizas007.github.io/Sunfold/pl/">
+    <link rel="alternate" hreflang="ja" href="https://sanchizas007.github.io/Sunfold/ja/">
+    <link rel="alternate" hreflang="ko" href="https://sanchizas007.github.io/Sunfold/ko/">
+    <link rel="alternate" hreflang="ru" href="https://sanchizas007.github.io/Sunfold/ru/">
+    <link rel="alternate" hreflang="uk" href="https://sanchizas007.github.io/Sunfold/uk/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://sanchizas007.github.io/Sunfold/zh-Hans/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://sanchizas007.github.io/Sunfold/zh-Hant/">
+    <link rel="alternate" hreflang="x-default" href="https://sanchizas007.github.io/Sunfold/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Sunfold">
+    <meta property="og:title" content="Sunfold: голодание 16:8 — Таймер, виджет и фазы">
+    <meta property="og:description" content="Без аккаунта, ленты и рекламы — только кольцо и ваш темп. Таймер голодания для экрана блокировки, который хранит данные в вашем телефоне.">
+    <meta property="og:url" content="https://sanchizas007.github.io/Sunfold/ru/">
+    <meta property="og:locale" content="ru">
+    <meta name="apple-itunes-app" content="app-id=6801442221">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Sunfold: голодание 16:8", "operatingSystem": "iOS", "applicationCategory": "HealthApplication", "description": "Без аккаунта, ленты и рекламы — только кольцо и ваш темп. Таймер голодания для экрана блокировки, который хранит данные в вашем телефоне.", "inLanguage": "ru", "url": "https://sanchizas007.github.io/Sunfold/ru/", "downloadUrl": "https://apps.apple.com/app/id6801442221", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
     <style>
 :root {
   --canvas: #FBF5EE; --surface: #FFFCF8; --ink: #3B2E27;
@@ -66,16 +74,39 @@ footer { margin-top: 44px; padding-top: 20px; border-top: 1px solid var(--line);
   <body>
     <div class="wrap">
       <header>
-        <a class="brand" href="/ru/">Sunfold</a>
-        <nav><a href="/ru/privacy/">Конфиденциальность</a><a href="/ru/health/">Предупреждение</a><a href="/ru/terms/">Условия</a><a href="/ru/support/">Поддержка</a></nav>
+        <a class="brand" href="/Sunfold/ru/">Sunfold</a>
+        <nav><a href="/Sunfold/ru/privacy/">Конфиденциальность</a><a href="/Sunfold/ru/health/">Предупреждение</a><a href="/Sunfold/ru/terms/">Условия</a><a href="/Sunfold/ru/support/">Поддержка</a></nav>
       </header>
-      <h1>Sunfold</h1>
-      <p class="lede">Спокойный таймер интервального голодания для iPhone. Всё остаётся на вашем устройстве.</p>
+      <h1>Sunfold: голодание 16:8</h1>
+      <p class="lede">Таймер, виджет и фазы</p>
+      <p>Без аккаунта, ленты и рекламы — только кольцо и ваш темп. Таймер голодания для экрана блокировки, который хранит данные в вашем телефоне.</p>
+      <p><a class="button" href="https://apps.apple.com/app/id6801442221">Загрузить в App Store</a></p>
       <div class="card">
-        <p>У Sunfold нет аккаунта, сервера и аналитики. Всё, что вы записываете, живёт на вашем устройстве.</p>
+        <p>Sunfold — таймер голодания для тех, кто предпочитает голодать, а не листать ленту.</p>
+        <p>Одно кольцо показывает, как далеко вы продвинулись. Запустите его, когда закончите последний приём пищи, отложите телефон и возвращайтесь, когда захотите: счёт не сбивается, даже после перезагрузки.</p>
       </div>
-      <p class="langs"><a href="/">EN</a> <a href="/de/">DE</a> <a href="/fr/">FR</a> <a href="/es-MX/">ES-MX</a> <a href="/es-ES/">ES-ES</a> <a href="/pt-BR/">PT-BR</a> <a href="/it/">IT</a> <a href="/nl/">NL</a> <a href="/pl/">PL</a> <a href="/ja/">JA</a> <a href="/ko/">KO</a> <span class="on">RU</span> <a href="/uk/">UK</a> <a href="/zh-Hans/">ZH-HANS</a> <a href="/zh-Hant/">ZH-HANT</a></p>
-      <footer>© 2026 Sunfold · <a href="mailto:support@sunfold.app">support@sunfold.app</a></footer>
+      <h2>ПО ХОДУ ДЕЛА</h2>
+      <p>Пять фаз — от сытого состояния до аутофагии — простым языком и с честной оговоркой, что часы приблизительные, а не измеренные. 16:8, 18:6, 20:4, 5:2 или любая длина от 4 до 48 часов: меняйте график прямо в ходе голодания, и цель сдвинется вместе с вами. Календарь серий и средних значений с заметкой о том, как прошло каждое голодание. И вес — только если захотите: спокойная линия тренда без целевого веса, ИМТ и вердиктов.</p>
+      <h2>В ТЕЛЕФОНЕ, НО НЕ НА ПУТИ</h2>
+      <p>Таймер живёт на экране «Домой», на экране блокировки и в Dynamic Island как Live Activity и продолжает считать, не разряжая батарею. Напоминания приходят, когда голодание завершено, за полчаса до этого и когда закрывается окно питания — всё планируется на вашем iPhone, без сервера уведомлений.</p>
+      <h2>ЧЕГО В SUNFOLD НЕТ</h2>
+      <p>Нет аккаунта, входа, ленты, тренера, подсчёта калорий и рекламы. То, что вы записываете, остаётся на устройстве; экспортируйте в CSV или удалите одним касанием. Единственный сетевой трафик — к RevenueCat, чтобы проверить, активен ли Pro, и один анонимный токен атрибуции Apple Ads на установку.</p>
+      <h2>SUNFOLD PRO</h2>
+      <p>График 16:8 и последние семь дней всегда с вами. Pro добавляет все графики, неограниченную историю, диаграммы, подробности по фазам и виджеты. Выберите помесячно, на год или разовый платёж; новая подписка начинается с трёх бесплатных дней.</p>
+      <h2>ВАЖНО</h2>
+      <p>Sunfold — это таймер и дневник, а не медицинское устройство. Он не диагностирует,
+не лечит и не даёт медицинских советов. Посоветуйтесь с врачом перед голоданием,
+если вы беременны или кормите грудью, если вам меньше 18 лет, если у вас диабет
+или вы принимаете лекарства, влияющие на уровень сахара в крови, если лекарство
+нужно принимать с едой, если у вас недостаточный вес или хроническое
+заболевание. Если у вас есть или было расстройство пищевого поведения,
+пожалуйста, обратитесь за помощью, прежде чем пользоваться приложением для
+голодания.</p>
+      <p><small>Оплата списывается с вашего Apple ID. Подписки продлеваются автоматически, если
+их не отменить минимум за 24 часа до конца периода; управлять ими можно в любой
+момент в настройках App Store.</small></p>
+      <p class="langs"><a href="/Sunfold/">EN</a> <a href="/Sunfold/de/">DE</a> <a href="/Sunfold/fr/">FR</a> <a href="/Sunfold/es-MX/">ES-MX</a> <a href="/Sunfold/es-ES/">ES-ES</a> <a href="/Sunfold/pt-BR/">PT-BR</a> <a href="/Sunfold/it/">IT</a> <a href="/Sunfold/nl/">NL</a> <a href="/Sunfold/pl/">PL</a> <a href="/Sunfold/ja/">JA</a> <a href="/Sunfold/ko/">KO</a> <span class="on">RU</span> <a href="/Sunfold/uk/">UK</a> <a href="/Sunfold/zh-Hans/">ZH-HANS</a> <a href="/Sunfold/zh-Hant/">ZH-HANT</a></p>
+      <footer>© 2026 Sunfold · <a href="mailto:zhvnir1345@yahoo.com">zhvnir1345@yahoo.com</a></footer>
     </div>
   </body>
 </html>
